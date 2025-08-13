@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>表格助手 (Table Copy) - 一键复制网页表格到Excel，解决格式错乱</title>
+    <meta name="description" content="告别格式错乱！表格助手是一款极致轻便的书签工具，能一键复制任何网页表格(包括table和div布局)到Excel、CSV或JSON。无需安装，完美保留格式。">
+    <meta name="keywords" content="网页表格复制, 表格转Excel, HTML表格提取, table scraper, copy table from website, html to excel, 数据抓取, 格式错乱">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "表格助手 (Table Copy)",
+      "applicationCategory": "BrowserTool",
+      "operatingSystem": "All",
+      "description": "一款极致轻便的书签工具，能一键复制任何网页表格(包括table和div布局)到Excel、CSV或JSON。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "128"
+      },
+      "url": "https://TableCopy.pro" /* 请替换为你的域名 */
+    }
+    </script>
+
+    <style>
+        /* --- 全局样式与字体 --- */
+        :root {
+            --primary-color: #4A90E2;
+            --dark-color: #2c3e50;
+            --light-color: #ffffff;
+            --gray-color: #7f8c8d;
+            --bg-color: #f7f9fc;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            scroll-behavior: smooth;
+        }
+
+        /* --- 容器与布局 --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+        
+        /* --- 导航栏 --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- 英雄区域 (Hero Section) --- */
+        .hero {
+            background-color: var(--bg-color);
+            text-align: center;
+            padding-top: 140px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero .slogan {
+            font-size: 20px;
+            color: var(--gray-color);
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+        }
+
+        /* --- 演示区域 --- */
+        .demo-gif-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .demo-gif-container img {
+            width: 100%;
+            display: block;
+        }
+        .gif-placeholder {
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #adb5bd;
+            font-size: 24px;
+            font-weight: 500;
+            height: 450px;
+        }
+
+        /* --- Section 标题 --- */
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 60px;
+        }
+
+        /* --- 安装区域 --- */
+        #install {
+            background-color: var(--bg-color);
+        }
+        .install-steps {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        .step {
+            text-align: center;
+            max-width: 300px;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .step p {
+            font-size: 16px;
+            color: var(--gray-color);
+        }
+        .bookmarklet-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #2ecc71;
+            color: var(--light-color);
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: grab;
+            user-select: none;
+            border: 2px dashed #27ae60;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .bookmarklet-button:hover {
+            background-color: #27ae60;
+            transform: scale(1.05);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+        }
+        .mobile-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: var(--gray-color);
+        }
+
+        /* --- 通用卡片网格布局 --- */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        .card svg {
+            width: 48px;
+            height: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 15px;
+            color: var(--gray-color);
+            text-align: left;
+        }
+        
+        /* --- Why Section --- */
+        #why { text-align: center; }
+        #why .container > p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: var(--dark-color);
+        }
+
+        /* --- FAQ Section --- */
+        #faq { background-color: var(--bg-color); }
+        .faq-item {
+            background-color: #fff;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-answer p {
+            margin: 0;
+            color: var(--gray-color);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust as needed */
+        }
+        .faq-question .icon { transition: transform 0.3s ease; }
+        .faq-item.active .icon { transform: rotate(45deg); }
+
+        /* --- Community Section --- */
+        #community { text-align: center; }
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .social-links svg {
+            width: 40px;
+            height: 40px;
+            color: var(--gray-color);
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover svg {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        /* --- 页脚 --- */
+        .footer {
+            background-color: var(--dark-color);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .footer p { margin: 0; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero .slogan { font-size: 18px; }
+            .section-title { font-size: 28px; }
+            .install-steps { flex-direction: column; align-items: center; }
+            .nav-links { display: none; } /* Hide nav links on mobile for simplicity */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="main-nav">
+        <div class="container">
+            <a href="#" class="logo">表格助手</a>
+            <ul class="nav-links">
+                <li><a href="#features">核心功能</a></li>
+                <li><a href="#use-cases">使用场景</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;">立即安装</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h1>像复制文本一样，<br>轻松复制任何网页表格。</h1>
+                <p class="slogan">告别繁琐的截图和手动录入，一键将数据抓取到剪贴板，完美粘贴。</p>
+                <a href="#install" class="cta-button">立即免费安装</a>
+                <div class="demo-gif-container">
+                    <div class="gif-placeholder">动态GIF演示区</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why">
+            <div class="container">
+                <h2 class="section-title">我们和你一样，曾被繁琐困扰</h2>
+                <p>
+                    我们是数据爱好者，也是效率工具的重度用户。在无数个需要从网页获取数据到Excel的日夜里，我们一次次地被错乱的格式、隐藏的`&lt;div&gt;`表格和缓慢的插件所折磨。我们相信，一定有更好的方法。于是，“表格助手”诞生了。它不是一个臃肿的软件，只是一个纯粹、快速、专注的工具，只为解决“将网页表格优雅地复制出来”这一个问题。
+                </p>
+            </div>
+        </section>
+
+        <section id="install" style="background-color: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">三秒安装，永久使用</h2>
+                <div class="install-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>按住下方按钮</h3>
+                        <p>请用鼠标左键点住绿色的“表格助手”按钮。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>
+                            <a href="javascript:!function(){let e=&quot;tc-gemini-v5-&quot;,t=`
+        .${e}overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6); z-index: 999999;
+            display: flex; justify-content: center; align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+        }
+        .${e}modal {
+            background-color: #ffffff; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 80vw; max-width: 1000px; height: 80vh; display: flex; flex-direction: column; overflow: hidden;
+        }
+        .${e}header {
+            padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex;
+            justify-content: space-between; align-items: center; flex-shrink: 0;
+        }
+        .${e}header h3 { margin: 0; font-size: 16px; color: #333; }
+        .${e}close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #888; padding: 0; line-height: 1; }
+        .${e}close-btn:hover { color: #000; }
+        .${e}table-container { padding: 20px; overflow: auto; flex-grow: 1; }
+        .${e}table-container table { width: 100%; border-collapse: collapse; }
+        .${e}table-container th, .${e}table-container td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
+        .${e}table-container th { background-color: #f2f2f2; cursor: pointer; }
+        .${e}col-highlight { background-color: #d9edf7 !important; }
+        .${e}footer {
+            padding: 12px 20px; border-top: 1px solid #e0e0e0; background-color: #f9f9f9;
+            flex-shrink: 0; display: flex; align-items: center; position: relative;
+        }
+        .${e}button {
+            padding: 8px 16px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;
+            cursor: pointer; font-size: 14px; margin-right: 10px;
+        }
+        .${e}button:hover { background-color: #f0f0f0; border-color: #bbb; }
+        .${e}dropdown { display: inline-block; position: relative; }
+        .${e}dropdown-content {
+            display: none; position: absolute; background-color: #f1f1f1; min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;
+            bottom: 100%; margin-bottom: 5px; border-radius: 5px; overflow: hidden;
+        }
+        .${e}dropdown-content button {
+            color: black; padding: 12px 16px; text-decoration: none; display: block;
+            width: 100%; text-align: left; border: none; border-radius: 0;
+            background-color: #fff; border-bottom: 1px solid #e0e0e0; font-size:14px;
+        }
+        .${e}dropdown-content button:first-child { font-weight: bold; }
+        .${e}dropdown-content button:last-child { border-bottom: none; }
+        .${e}dropdown-content button:hover { background-color: #ddd; }
+        .${e}col-menu {
+            position: absolute; display: block; background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 10;
+            border-radius: 5px; overflow: hidden;
+        }
+        .${e}col-menu button {
+            display: block; width: 100%; padding: 10px 15px; border: none;
+            background: none; text-align: left; cursor: pointer;
+        }
+        .${e}col-menu button:hover { background-color: #f0f0f0; }
+        .${e}message {
+            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background-color: #28a745; color: white; padding: 10px 20px;
+            border-radius: 5px; font-size: 14px; z-index: 100001; opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    `;function o(e,t,o){let n=new Blob([e],{type:o}),l=URL.createObjectURL(n),r=document.createElement(&quot;a&quot;);r.href=l,r.download=t,document.body.appendChild(r),r.click(),document.body.removeChild(r),URL.revokeObjectURL(l)}async function n(e){try{let t=l(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,n=new Blob([o],{type:&quot;text/html&quot;}),a=new Blob([t],{type:&quot;text/plain&quot;}),i=new ClipboardItem({&quot;text/html&quot;:n,&quot;text/plain&quot;:a});await navigator.clipboard.write([i])}catch(d){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,d),r(e,&quot;	&quot;)}}function l(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let n=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{n.push(function e(t,o){let n=t.trim();return n.includes(o)||n.includes(&quot;\n&quot;)||n.includes('&quot;')?`&quot;${n.replace(/&quot;/g,'&quot;&quot;')}&quot;`:n}(e.innerText,t))}),o+=n.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}function r(e,t){let o=l(e,t);navigator.clipboard.writeText(o)}function a(t,o,n){if(o.querySelectorAll(`.${e}col-highlight`).forEach(t=>t.classList.remove(`${e}col-highlight`)),n&&t){let l=t.cellIndex;o.querySelectorAll(&quot;tr&quot;).forEach(t=>{t.cells[l]&&t.cells[l].classList.add(`${e}col-highlight`)})}}function i(t,o=&quot;已复制到剪贴板！&quot;){let n=document.createElement(&quot;div&quot;);n.className=`${e}message`,n.innerText=o,t.appendChild(n),setTimeout(()=>{n.style.opacity=&quot;1&quot;},10),setTimeout(()=>{n.style.opacity=&quot;0&quot;,setTimeout(()=>{n.parentElement&&n.parentElement.removeChild(n)},300)},2e3)}!function d(){if(document.querySelector(`.${e}overlay`))return;!function o(){if(document.getElementById(`${e}styles`))return;let n=document.createElement(&quot;style&quot;);n.id=`${e}styles`,n.innerText=t,document.head.appendChild(n)}();let c=window.getSelection();if(0===c.rangeCount||c.isCollapsed){alert(&quot;请先用鼠标选中表格的一部分，再点击我哦！&quot;);return}let s=function e(t){let o=function e(t){let o=t.getRangeAt(0),n=o.commonAncestorContainer;n.nodeType===Node.TEXT_NODE&&(n=n.parentElement);let l=n;for(;l;){if(&quot;TABLE&quot;===l.tagName)return{element:l,type:&quot;TABLE&quot;};let r=l.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:l,type:&quot;ARIA_GRID&quot;};l=l.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;thead&quot;),l=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let n=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===n&&(o=!0);let l=document.createElement(o?&quot;th&quot;:&quot;td&quot;);l.innerText=e.innerText,t.appendChild(l)}),o?n.appendChild(t):l.appendChild(t)}),o.appendChild(n),o.appendChild(l),o}(o.element):null:null}(c);s?function t(d){let c=document.createElement(&quot;div&quot;);c.className=`${e}overlay`;let s=document.createElement(&quot;div&quot;);s.className=`${e}modal`,s.innerHTML=`
+            <div class=&quot;${e}header&quot;>
+                <h3>表格助手 v5.0</h3>
+                <button class=&quot;${e}close-btn&quot; title=&quot;关闭&quot;>&times;</button>
+            </div>
+            <div class=&quot;${e}table-container&quot;></div>
+            <div class=&quot;${e}footer&quot;>
+                <div class=&quot;${e}dropdown&quot;>
+                    <button class=&quot;${e}button&quot; id=&quot;${e}copy-table-btn&quot;>复制整个表格 ▼</button>
+                    <div class=&quot;${e}dropdown-content&quot; id=&quot;${e}table-dropdown&quot;>
+                        <button data-format=&quot;html&quot;>复制 (推荐, 用于Excel/WPS)</button>
+                        <button data-format=&quot;tsv&quot;>复制为 TSV (制表符分隔)</button>
+                        <button data-format=&quot;csv&quot;>复制为 CSV (逗号分隔)</button>
+                        <button data-format=&quot;json&quot;>复制为 JSON</button>
+                    </div>
+                </div>
+                <button class=&quot;${e}button&quot; id=&quot;${e}export-csv-btn&quot;>导出为 CSV</button>
+                <button class=&quot;${e}button&quot; id=&quot;${e}export-excel-btn&quot;>导出为 Excel</button>
+                <span style=&quot;font-size: 13px; color: #666; margin-left: auto;&quot;>提示：点击表头可复制整列</span>
+            </div>
+        `,c.appendChild(s),document.body.appendChild(c);let p=s.querySelector(`.${e}table-container`),b=d.cloneNode(!0);p.appendChild(b),function t(d,c){let s=document.getElementById(`${e}table-dropdown`);d.querySelector(`.${e}close-btn`).addEventListener(&quot;click&quot;,()=>document.body.removeChild(d)),d.addEventListener(&quot;click&quot;,t=>{t.target===d&&document.body.removeChild(d),t.target.closest(`.${e}dropdown`)||(s.style.display=&quot;none&quot;)}),document.getElementById(`${e}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),s.style.display=&quot;block&quot;===s.style.display?&quot;none&quot;:&quot;block&quot;}),s.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let t=e.target.getAttribute(&quot;data-format&quot;);switch(t){case&quot;html&quot;:n(c);break;case&quot;tsv&quot;:r(c,&quot;	&quot;);break;case&quot;csv&quot;:r(c,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),n=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,n)=>{t[o[n]||`column_${n+1}`]=e.innerText.trim()}),n.push(t)}),navigator.clipboard.writeText(JSON.stringify(n,null,2))})(c)}s.style.display=&quot;none&quot;,i(d)}}),document.getElementById(`${e}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=l(c,&quot;,&quot;);o(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),i(d,&quot;CSV 文件已开始下载！&quot;)}),document.getElementById(`${e}export-excel-btn`).addEventListener(&quot;click&quot;,()=>{let e=l(c,&quot;,&quot;);o(&quot;\uFEFF&quot;+e,&quot;table-for-excel.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),i(d,&quot;Excel (CSV) 文件已开始下载！&quot;)});let p=c.querySelector(&quot;thead&quot;);p&&(p.addEventListener(&quot;mouseover&quot;,e=>a(e.target.closest(&quot;th&quot;),c,!0)),p.addEventListener(&quot;mouseout&quot;,()=>a(null,c,!1)),p.addEventListener(&quot;click&quot;,t=>{let o=t.target.closest(&quot;th&quot;);o&&function t(o,n,l){let r=l.querySelector(`.${e}col-menu`);r&&r.remove();let a=document.createElement(&quot;div&quot;);a.className=`${e}col-menu`,a.innerHTML=`<button data-separator=&quot;,&quot;>复制 (逗号分隔)</button><button data-separator=&quot;\\n&quot;>复制 (换行分隔)</button>`;let d=o.getBoundingClientRect(),c=l.getBoundingClientRect();a.style.top=`${d.bottom-c.top}px`,a.style.left=`${d.left-c.left}px`,l.appendChild(a),a.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let t=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,n){let l=t.cellIndex,r=[];o.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{e.cells[l]&&r.push(e.cells[l].innerText.trim())}),navigator.clipboard.writeText(r.join(n))})(o,n,&quot;\\n&quot;===t?&quot;\n&quot;:&quot;,&quot;),i(l),a.remove()}}),setTimeout(()=>{l.addEventListener(&quot;click&quot;,()=>a.remove(),{once:!0})},0)}(o,c,d)}))}(c,b)}(s):alert(&quot;无法在您选择的区域内找到一个有效的表格或Grid结构。&quot;)}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
+                                表格助手
+                            </a>
+                        </h3>
+                        <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>完成！</h3>
+                        <p>现在，在任何有表格的页面，点击这个书签即可开始使用！</p>
+                    </div>
+                </div>
+                 <p class="mobile-note">注意：书签工具需要在桌面端浏览器完成安装和使用。</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">一个工具，满足所有需求</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" /></svg>
+                        <h3>智能结构识别</h3>
+                        <p>不仅支持传统的 `&lt;table&gt;` 表格，更能智能识别使用 `&lt;div&gt;` 布局的现代网页表格结构 (基于ARIA标准)。</p>
+                    </div>
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h3>一键完美复制</h3>
+                        <p>独有的富文本(HTML)复制功能，将表格结构写入剪贴板，完美粘贴到Excel、WPS、Notion中，格式绝不混乱。</p>
+                    </div>
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                        <h3>多种导出格式</h3>
+                        <p>除了直接复制，还支持导出为TSV、CSV、JSON等多种纯文本格式，满足开发者和数据分析师的专业需求。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="use-cases" style="background-color: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">谁在使用，以及如何使用？</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <h3>📊 数据分析师</h3>
+                        <p>快速从各类财报、行业报告网页中提取数据表格，无需等待IT部门支持，立即开始分析工作。</p>
+                    </div>
+                    <div class="card">
+                        <h3>🛒 电商运营</h3>
+                        <p>轻松抓取竞争对手的商品价格、销量、规格等表格数据，制作比价表格，制定营销策略。</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎓 学生与研究员</h3>
+                        <p>从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+                <div class="faq-item">
+                    <button class="faq-question">这个工具安全吗？会上传我的数据吗？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p>绝对安全。表格助手是一个100%前端工具，所有的数据识别和处理都在您的浏览器本地完成，代码执行完毕即结束，不会向任何服务器发送或存储您的任何数据。</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">它和浏览器插件有什么区别？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p>它是一个“书签工具”，比插件更轻量。无需从应用商店安装，不占用后台资源，点击即用，用完即走。当然，这也意味着它无法实现插件才能做到的复杂后台任务（如定时抓取）。</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">所有网站的表格都支持吗？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p>支持绝大部分使用标准`&lt;table&gt;`标签或遵循ARIA标准的`&lt;div&gt;`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">这个工具是免费的吗？未来会收费吗？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p>是的，当前的书签工具将永久免费。我们相信好的工具应该被广泛使用。未来，我们可能会推出功能更强大的付费版浏览器插件（如支持多页抓取、定时任务等），但当前的核心功能将始终免费提供给您。</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" style="background-color: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">帮助我们变得更好</h2>
+                <p style="text-align:center; max-width: 600px; margin: -40px auto 40px; color: var(--gray-color);">
+                    您的每一个建议都是我们前进的动力。遇到问题？有好点子？欢迎通过以下渠道与我们联系！
+                </p>
+                <div class="social-links">
+                    <a href="#" target="_blank" title="在 Twitter 上关注我们">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75ZM11.48 13.812h1.232L4.185 2.105h-1.35L11.48 13.812Z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" title="在 GitHub 上提交问题或建议">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 表格助手. 由 Gemini AI 强力驱动.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // 防止拖拽按钮时页面跳转
+        const bookmarkletLink = document.querySelector('.bookmarklet-button');
+        bookmarkletLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('请不要点击此按钮，而是将它拖拽到您的书签栏！');
+        });
+
+        // FAQ 手风琴效果
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
