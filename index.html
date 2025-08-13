@@ -6,7 +6,9 @@
     
     <title>表格助手 (Table Copy) - 一键复制网页表格到Excel，解决格式错乱</title>
     <meta name="description" content="告别格式错乱！表格助手是一款极致轻便的书签工具，能一键复制任何网页表格(包括table和div布局)到Excel、CSV或JSON。无需安装，完美保留格式。">
-    <meta name="keywords" content="网页表格复制, 表格转Excel, HTML表格提取, table scraper, copy table from website, html to excel, 数据抓取, 格式错乱">
+    <meta name="keywords" content="html table generator, html css copy table, copytables, html to table, online html table copy, generate html tables, generate html table online, export html table to excel, export html table to csv, generate html table from excel, copy paste html table, copy paste html table online, 网页表格复制, 表格转Excel, HTML表格提取, table scraper, copy table from website, html to excel, 数据抓取, 格式错乱">
+<!-- 添加 favicon 图标 -->
+    <link rel="icon" type="image/png" href="tc_icon.png">
 
     <script type="application/ld+json">
     {
@@ -353,12 +355,14 @@
 
     <nav class="navbar" id="main-nav">
         <div class="container">
-            <a href="#" class="logo">表格助手</a>
+            <a href="#" class="logo" data-lang-key="logo">表格助手</a>
             <ul class="nav-links">
-                <li><a href="#features">核心功能</a></li>
-                <li><a href="#use-cases">使用场景</a></li>
-                <li><a href="#faq">常见问题</a></li>
-                <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;">立即安装</a></li>
+                <li><a href="#features" data-lang-key="nav_features">核心功能</a></li>
+                <li><a href="#use-cases" data-lang-key="nav_use_cases">使用场景</a></li>
+                <li><a href="#faq" data-lang-key="nav_faq">常见问题</a></li>
+                <li><a href="#" id="lang-switcher" style="font-weight: 700; margin-left: 15px;"></a></li>
+                <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;" data-lang-key="nav_install">立即安装</a></li>
+                
             </ul>
         </div>
     </nav>
@@ -366,19 +370,19 @@
     <main>
         <section class="hero" id="hero">
             <div class="container">
-                <h1>像复制文本一样，<br>轻松复制任何网页表格。</h1>
-                <p class="slogan">告别繁琐的截图和手动录入，一键将数据抓取到剪贴板，完美粘贴。</p>
-                <a href="#install" class="cta-button">立即免费安装</a>
+                <h1 data-lang-key="hero_h1">像复制文本一样，<br>轻松复制任何网页表格。</h1>
+                <p class="slogan" data-lang-key="hero_slogan">告别繁琐的截图和手动录入，一键将数据抓取到剪贴板，完美粘贴。</p>
+                <a href="#install" class="cta-button" data-lang-key="hero_cta">立即免费安装</a>
                 <div class="demo-gif-container">
-                    <div class="gif-placeholder">动态GIF演示区</div>
+                    <div class="gif-placeholder" data-lang-key="hero_gif_placeholder">动态GIF演示区</div>
                 </div>
             </div>
         </section>
 
         <section id="why">
             <div class="container">
-                <h2 class="section-title">我们和你一样，曾被繁琐困扰</h2>
-                <p>
+                <h2 class="section-title" data-lang-key="why_title">我们和你一样，曾被繁琐困扰</h2>
+                <p data-lang-key="why_p">
                     我们是数据爱好者，也是效率工具的重度用户。在无数个需要从网页获取数据到Excel的日夜里，我们一次次地被错乱的格式、隐藏的`&lt;div&gt;`表格和缓慢的插件所折磨。我们相信，一定有更好的方法。于是，“表格助手”诞生了。它不是一个臃肿的软件，只是一个纯粹、快速、专注的工具，只为解决“将网页表格优雅地复制出来”这一个问题。
                 </p>
             </div>
@@ -386,133 +390,139 @@
 
         <section id="install" style="background-color: var(--bg-color);">
             <div class="container">
-                <h2 class="section-title">三秒安装，永久使用</h2>
+                <h2 class="section-title" data-lang-key="install_title">三秒安装，永久使用</h2>
                 <div class="install-steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>按住下方按钮</h3>
-                        <p>请用鼠标左键点住绿色的“表格助手”按钮。</p>
+                        <h3 data-lang-key="install_step1_h3">按住下方按钮</h3>
+                        <p data-lang-key="install_step1_p">请用鼠标左键点住绿色的“表格助手”按钮。</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>
-                            <a href="javascript:!function(){let e=&quot;tc-gemini-v5-&quot;,t=`
-        .${e}overlay {
+                        <h3 data-lang-key="install_step2_h3">拖到书签栏</h3>
+                            <a href="javascript:!function(){let e={en:{alert_select_first:&quot;Please select part of a table first, then click me!&quot;,alert_no_table_found:&quot;Could not find a valid table or grid structure in your selection.&quot;,modal_title:&quot;Table Copy v5.1&quot;,modal_close_title:&quot;Close&quot;,copy_dropdown_button:&quot;Copy Full Table ▼&quot;,copy_dropdown_html:&quot;Copy (Recommended, for Excel/WPS)&quot;,copy_dropdown_tsv:&quot;Copy as TSV (Tab-separated)&quot;,copy_dropdown_csv:&quot;Copy as CSV (Comma-separated)&quot;,copy_dropdown_json:&quot;Copy as JSON&quot;,copy_dropdown_html_source:&quot;Copy as HTML Source&quot;,export_csv_button:&quot;Export as CSV&quot;,export_excel_button:&quot;Export as Excel&quot;,footer_tip:&quot;Tip: Click a header to copy the column&quot;,message_csv_downloading:&quot;CSV file download has started!&quot;,message_excel_downloading:&quot;Excel (CSV) file download has started!&quot;,col_menu_copy_comma:&quot;Copy (Comma-separated)&quot;,col_menu_copy_newline:&quot;Copy (Newline-separated)&quot;,message_copied:&quot;Copied to clipboard!&quot;},zh:{alert_select_first:&quot;请先用鼠标选中表格的一部分，再点击我哦！&quot;,alert_no_table_found:&quot;无法在您选择的区域内找到一个有效的表格或Grid结构。&quot;,modal_title:&quot;表格助手 v5.1&quot;,modal_close_title:&quot;关闭&quot;,copy_dropdown_button:&quot;复制整个表格 ▼&quot;,copy_dropdown_html:&quot;复制 (推荐, 用于Excel/WPS)&quot;,copy_dropdown_tsv:&quot;复制为 TSV (制表符分隔)&quot;,copy_dropdown_csv:&quot;复制为 CSV (逗号分隔)&quot;,copy_dropdown_json:&quot;复制为 JSON&quot;,copy_dropdown_html_source:&quot;复制为 HTML 源码&quot;,export_csv_button:&quot;导出为 CSV&quot;,export_excel_button:&quot;导出为 Excel&quot;,footer_tip:&quot;提示：点击表头可复制整列&quot;,message_csv_downloading:&quot;CSV 文件已开始下载！&quot;,message_excel_downloading:&quot;Excel (CSV) 文件已开始下载！&quot;,col_menu_copy_comma:&quot;复制 (逗号分隔)&quot;,col_menu_copy_newline:&quot;复制 (换行分隔)&quot;,message_copied:&quot;已复制到剪贴板！&quot;}},t=(navigator.language||navigator.userLanguage).toLowerCase().startsWith(&quot;zh&quot;)?&quot;zh&quot;:&quot;en&quot;,o=o=>e[t][o]||e.en[o],n=&quot;tc-gemini-v5-&quot;,l=`
+        .${n}overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-color: rgba(0, 0, 0, 0.6); z-index: 999999;
             display: flex; justify-content: center; align-items: center;
             font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
         }
-        .${e}modal {
+        .${n}modal {
             background-color: #ffffff; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             width: 80vw; max-width: 1000px; height: 80vh; display: flex; flex-direction: column; overflow: hidden;
         }
-        .${e}header {
+        .${n}header {
             padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex;
             justify-content: space-between; align-items: center; flex-shrink: 0;
         }
-        .${e}header h3 { margin: 0; font-size: 16px; color: #333; }
-        .${e}close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #888; padding: 0; line-height: 1; }
-        .${e}close-btn:hover { color: #000; }
-        .${e}table-container { padding: 20px; overflow: auto; flex-grow: 1; }
-        .${e}table-container table { width: 100%; border-collapse: collapse; }
-        .${e}table-container th, .${e}table-container td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
-        .${e}table-container th { background-color: #f2f2f2; cursor: pointer; }
-        .${e}col-highlight { background-color: #d9edf7 !important; }
-        .${e}footer {
+        .${n}header h3 { margin: 0; font-size: 16px; color: #333; }
+        .${n}close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #888; padding: 0; line-height: 1; }
+        .${n}close-btn:hover { color: #000; }
+        .${n}table-container { padding: 20px; overflow: auto; flex-grow: 1; }
+        .${n}table-container table { width: 100%; border-collapse: collapse; }
+        .${n}table-container th, .${n}table-container td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
+        .${n}table-container th { background-color: #f2f2f2; cursor: pointer; }
+        .${n}col-highlight { background-color: #d9edf7 !important; }
+        .${n}footer {
             padding: 12px 20px; border-top: 1px solid #e0e0e0; background-color: #f9f9f9;
             flex-shrink: 0; display: flex; align-items: center; position: relative;
         }
-        .${e}button {
+        .${n}button {
             padding: 8px 16px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;
             cursor: pointer; font-size: 14px; margin-right: 10px;
         }
-        .${e}button:hover { background-color: #f0f0f0; border-color: #bbb; }
-        .${e}dropdown { display: inline-block; position: relative; }
-        .${e}dropdown-content {
+        .${n}button:hover { background-color: #f0f0f0; border-color: #bbb; }
+        .${n}dropdown { display: inline-block; position: relative; }
+        .${n}dropdown-content {
             display: none; position: absolute; background-color: #f1f1f1; min-width: 220px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;
             bottom: 100%; margin-bottom: 5px; border-radius: 5px; overflow: hidden;
         }
-        .${e}dropdown-content button {
+        .${n}dropdown-content button {
             color: black; padding: 12px 16px; text-decoration: none; display: block;
             width: 100%; text-align: left; border: none; border-radius: 0;
             background-color: #fff; border-bottom: 1px solid #e0e0e0; font-size:14px;
         }
-        .${e}dropdown-content button:first-child { font-weight: bold; }
-        .${e}dropdown-content button:last-child { border-bottom: none; }
-        .${e}dropdown-content button:hover { background-color: #ddd; }
-        .${e}col-menu {
+        .${n}dropdown-content button:first-child { font-weight: bold; }
+        .${n}dropdown-content button:last-child { border-bottom: none; }
+        .${n}dropdown-content button:hover { background-color: #ddd; }
+        .${n}col-menu {
             position: absolute; display: block; background-color: #fff;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 10;
             border-radius: 5px; overflow: hidden;
         }
-        .${e}col-menu button {
+        .${n}col-menu button {
             display: block; width: 100%; padding: 10px 15px; border: none;
             background: none; text-align: left; cursor: pointer;
         }
-        .${e}col-menu button:hover { background-color: #f0f0f0; }
-        .${e}message {
+        .${n}col-menu button:hover { background-color: #f0f0f0; }
+        .${n}message {
             position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
             background-color: #28a745; color: white; padding: 10px 20px;
             border-radius: 5px; font-size: 14px; z-index: 100001; opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
-    `;function o(e,t,o){let n=new Blob([e],{type:o}),l=URL.createObjectURL(n),r=document.createElement(&quot;a&quot;);r.href=l,r.download=t,document.body.appendChild(r),r.click(),document.body.removeChild(r),URL.revokeObjectURL(l)}async function n(e){try{let t=l(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,n=new Blob([o],{type:&quot;text/html&quot;}),a=new Blob([t],{type:&quot;text/plain&quot;}),i=new ClipboardItem({&quot;text/html&quot;:n,&quot;text/plain&quot;:a});await navigator.clipboard.write([i])}catch(d){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,d),r(e,&quot;	&quot;)}}function l(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let n=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{n.push(function e(t,o){let n=t.trim();return n.includes(o)||n.includes(&quot;\n&quot;)||n.includes('&quot;')?`&quot;${n.replace(/&quot;/g,'&quot;&quot;')}&quot;`:n}(e.innerText,t))}),o+=n.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}function r(e,t){let o=l(e,t);navigator.clipboard.writeText(o)}function a(t,o,n){if(o.querySelectorAll(`.${e}col-highlight`).forEach(t=>t.classList.remove(`${e}col-highlight`)),n&&t){let l=t.cellIndex;o.querySelectorAll(&quot;tr&quot;).forEach(t=>{t.cells[l]&&t.cells[l].classList.add(`${e}col-highlight`)})}}function i(t,o=&quot;已复制到剪贴板！&quot;){let n=document.createElement(&quot;div&quot;);n.className=`${e}message`,n.innerText=o,t.appendChild(n),setTimeout(()=>{n.style.opacity=&quot;1&quot;},10),setTimeout(()=>{n.style.opacity=&quot;0&quot;,setTimeout(()=>{n.parentElement&&n.parentElement.removeChild(n)},300)},2e3)}!function d(){if(document.querySelector(`.${e}overlay`))return;!function o(){if(document.getElementById(`${e}styles`))return;let n=document.createElement(&quot;style&quot;);n.id=`${e}styles`,n.innerText=t,document.head.appendChild(n)}();let c=window.getSelection();if(0===c.rangeCount||c.isCollapsed){alert(&quot;请先用鼠标选中表格的一部分，再点击我哦！&quot;);return}let s=function e(t){let o=function e(t){let o=t.getRangeAt(0),n=o.commonAncestorContainer;n.nodeType===Node.TEXT_NODE&&(n=n.parentElement);let l=n;for(;l;){if(&quot;TABLE&quot;===l.tagName)return{element:l,type:&quot;TABLE&quot;};let r=l.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:l,type:&quot;ARIA_GRID&quot;};l=l.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;thead&quot;),l=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let n=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===n&&(o=!0);let l=document.createElement(o?&quot;th&quot;:&quot;td&quot;);l.innerText=e.innerText,t.appendChild(l)}),o?n.appendChild(t):l.appendChild(t)}),o.appendChild(n),o.appendChild(l),o}(o.element):null:null}(c);s?function t(d){let c=document.createElement(&quot;div&quot;);c.className=`${e}overlay`;let s=document.createElement(&quot;div&quot;);s.className=`${e}modal`,s.innerHTML=`
-            <div class=&quot;${e}header&quot;>
-                <h3>表格助手 v5.0</h3>
-                <button class=&quot;${e}close-btn&quot; title=&quot;关闭&quot;>&times;</button>
+    `;function r(e,t,o){let n=new Blob([e],{type:o}),l=URL.createObjectURL(n),r=document.createElement(&quot;a&quot;);r.href=l,r.download=t,document.body.appendChild(r),r.click(),document.body.removeChild(r),URL.revokeObjectURL(l)}async function a(e){try{let t=d(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,n=new Blob([o],{type:&quot;text/html&quot;}),l=new Blob([t],{type:&quot;text/plain&quot;}),r=new ClipboardItem({&quot;text/html&quot;:n,&quot;text/plain&quot;:l});await navigator.clipboard.write([r])}catch(a){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,a),c(e,&quot;	&quot;)}}function d(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let n=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{n.push(function e(t,o){let n=t.trim();return n.includes(o)||n.includes(&quot;\n&quot;)||n.includes('&quot;')?`&quot;${n.replace(/&quot;/g,'&quot;&quot;')}&quot;`:n}(e.innerText,t))}),o+=n.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}function c(e,t){let o=d(e,t);navigator.clipboard.writeText(o)}function i(e,t,o){if(t.querySelectorAll(`.${n}col-highlight`).forEach(e=>e.classList.remove(`${n}col-highlight`)),o&&e){let l=e.cellIndex;t.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[l]&&e.cells[l].classList.add(`${n}col-highlight`)})}}function s(e,t=o(&quot;message_copied&quot;)){let l=document.createElement(&quot;div&quot;);l.className=`${n}message`,l.innerText=t,e.appendChild(l),setTimeout(()=>{l.style.opacity=&quot;1&quot;},10),setTimeout(()=>{l.style.opacity=&quot;0&quot;,setTimeout(()=>{l.parentElement&&l.parentElement.removeChild(l)},300)},2e3)}!function e(){if(document.querySelector(`.${n}overlay`))return;!function e(){if(document.getElementById(`${n}styles`))return;let t=document.createElement(&quot;style&quot;);t.id=`${n}styles`,t.innerText=l,document.head.appendChild(t)}();let t=window.getSelection();if(0===t.rangeCount||t.isCollapsed){alert(o(&quot;alert_select_first&quot;));return}let p=function e(t){let o=function e(t){let o=t.getRangeAt(0),n=o.commonAncestorContainer;n.nodeType===Node.TEXT_NODE&&(n=n.parentElement);let l=n;for(;l;){if(&quot;TABLE&quot;===l.tagName)return{element:l,type:&quot;TABLE&quot;};let r=l.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:l,type:&quot;ARIA_GRID&quot;};l=l.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;thead&quot;),l=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let n=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===n&&(o=!0);let l=document.createElement(o?&quot;th&quot;:&quot;td&quot;);l.innerText=e.innerText,t.appendChild(l)}),o?n.appendChild(t):l.appendChild(t)}),o.appendChild(n),o.appendChild(l),o}(o.element):null:null}(t);p?function e(t){let l=document.createElement(&quot;div&quot;);l.className=`${n}overlay`;let p=document.createElement(&quot;div&quot;);p.className=`${n}modal`,p.innerHTML=`
+            <div class=&quot;${n}header&quot;>
+                <h3>${o(&quot;modal_title&quot;)}</h3>
+                <button class=&quot;${n}close-btn&quot; title=&quot;${o(&quot;modal_close_title&quot;)}&quot;>&times;</button>
             </div>
-            <div class=&quot;${e}table-container&quot;></div>
-            <div class=&quot;${e}footer&quot;>
-                <div class=&quot;${e}dropdown&quot;>
-                    <button class=&quot;${e}button&quot; id=&quot;${e}copy-table-btn&quot;>复制整个表格 ▼</button>
-                    <div class=&quot;${e}dropdown-content&quot; id=&quot;${e}table-dropdown&quot;>
-                        <button data-format=&quot;html&quot;>复制 (推荐, 用于Excel/WPS)</button>
-                        <button data-format=&quot;tsv&quot;>复制为 TSV (制表符分隔)</button>
-                        <button data-format=&quot;csv&quot;>复制为 CSV (逗号分隔)</button>
-                        <button data-format=&quot;json&quot;>复制为 JSON</button>
+            <div class=&quot;${n}table-container&quot;></div>
+            <div class=&quot;${n}footer&quot;>
+                <div class=&quot;${n}dropdown&quot;>
+                    <button class=&quot;${n}button&quot; id=&quot;${n}copy-table-btn&quot;>${o(&quot;copy_dropdown_button&quot;)}</button>
+                    <div class=&quot;${n}dropdown-content&quot; id=&quot;${n}table-dropdown&quot;>
+                        <button data-format=&quot;html&quot;>${o(&quot;copy_dropdown_html&quot;)}</button>
+                        <button data-format=&quot;tsv&quot;>${o(&quot;copy_dropdown_tsv&quot;)}</button>
+                        <button data-format=&quot;csv&quot;>${o(&quot;copy_dropdown_csv&quot;)}</button>
+                        <button data-format=&quot;json&quot;>${o(&quot;copy_dropdown_json&quot;)}</button>
+                        <button data-format=&quot;html_source&quot;>${o(&quot;copy_dropdown_html_source&quot;)}</button>
                     </div>
                 </div>
-                <button class=&quot;${e}button&quot; id=&quot;${e}export-csv-btn&quot;>导出为 CSV</button>
-                <button class=&quot;${e}button&quot; id=&quot;${e}export-excel-btn&quot;>导出为 Excel</button>
-                <span style=&quot;font-size: 13px; color: #666; margin-left: auto;&quot;>提示：点击表头可复制整列</span>
+                <button class=&quot;${n}button&quot; id=&quot;${n}export-csv-btn&quot;>${o(&quot;export_csv_button&quot;)}</button>
+                <button class=&quot;${n}button&quot; id=&quot;${n}export-excel-btn&quot;>${o(&quot;export_excel_button&quot;)}</button>
+                <span style=&quot;font-size: 13px; color: #666; margin-left: auto;&quot;>${o(&quot;footer_tip&quot;)}</span>
             </div>
-        `,c.appendChild(s),document.body.appendChild(c);let p=s.querySelector(`.${e}table-container`),b=d.cloneNode(!0);p.appendChild(b),function t(d,c){let s=document.getElementById(`${e}table-dropdown`);d.querySelector(`.${e}close-btn`).addEventListener(&quot;click&quot;,()=>document.body.removeChild(d)),d.addEventListener(&quot;click&quot;,t=>{t.target===d&&document.body.removeChild(d),t.target.closest(`.${e}dropdown`)||(s.style.display=&quot;none&quot;)}),document.getElementById(`${e}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),s.style.display=&quot;block&quot;===s.style.display?&quot;none&quot;:&quot;block&quot;}),s.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let t=e.target.getAttribute(&quot;data-format&quot;);switch(t){case&quot;html&quot;:n(c);break;case&quot;tsv&quot;:r(c,&quot;	&quot;);break;case&quot;csv&quot;:r(c,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),n=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,n)=>{t[o[n]||`column_${n+1}`]=e.innerText.trim()}),n.push(t)}),navigator.clipboard.writeText(JSON.stringify(n,null,2))})(c)}s.style.display=&quot;none&quot;,i(d)}}),document.getElementById(`${e}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=l(c,&quot;,&quot;);o(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),i(d,&quot;CSV 文件已开始下载！&quot;)}),document.getElementById(`${e}export-excel-btn`).addEventListener(&quot;click&quot;,()=>{let e=l(c,&quot;,&quot;);o(&quot;\uFEFF&quot;+e,&quot;table-for-excel.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),i(d,&quot;Excel (CSV) 文件已开始下载！&quot;)});let p=c.querySelector(&quot;thead&quot;);p&&(p.addEventListener(&quot;mouseover&quot;,e=>a(e.target.closest(&quot;th&quot;),c,!0)),p.addEventListener(&quot;mouseout&quot;,()=>a(null,c,!1)),p.addEventListener(&quot;click&quot;,t=>{let o=t.target.closest(&quot;th&quot;);o&&function t(o,n,l){let r=l.querySelector(`.${e}col-menu`);r&&r.remove();let a=document.createElement(&quot;div&quot;);a.className=`${e}col-menu`,a.innerHTML=`<button data-separator=&quot;,&quot;>复制 (逗号分隔)</button><button data-separator=&quot;\\n&quot;>复制 (换行分隔)</button>`;let d=o.getBoundingClientRect(),c=l.getBoundingClientRect();a.style.top=`${d.bottom-c.top}px`,a.style.left=`${d.left-c.left}px`,l.appendChild(a),a.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let t=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,n){let l=t.cellIndex,r=[];o.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{e.cells[l]&&r.push(e.cells[l].innerText.trim())}),navigator.clipboard.writeText(r.join(n))})(o,n,&quot;\\n&quot;===t?&quot;\n&quot;:&quot;,&quot;),i(l),a.remove()}}),setTimeout(()=>{l.addEventListener(&quot;click&quot;,()=>a.remove(),{once:!0})},0)}(o,c,d)}))}(c,b)}(s):alert(&quot;无法在您选择的区域内找到一个有效的表格或Grid结构。&quot;)}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">
+        `,l.appendChild(p),document.body.appendChild(l);let u=p.querySelector(`.${n}table-container`),b=t.cloneNode(!0);u.appendChild(b),function e(t,l){let p=document.getElementById(`${n}table-dropdown`);t.querySelector(`.${n}close-btn`).addEventListener(&quot;click&quot;,()=>document.body.removeChild(t)),t.addEventListener(&quot;click&quot;,e=>{e.target===t&&document.body.removeChild(t),e.target.closest(`.${n}dropdown`)||(p.style.display=&quot;none&quot;)}),document.getElementById(`${n}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),p.style.display=&quot;block&quot;===p.style.display?&quot;none&quot;:&quot;block&quot;}),p.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-format&quot;);switch(o){case&quot;html&quot;:a(l);break;case&quot;tsv&quot;:c(l,&quot;	&quot;);break;case&quot;csv&quot;:c(l,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),n=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,n)=>{t[o[n]||`column_${n+1}`]=e.innerText.trim()}),n.push(t)}),navigator.clipboard.writeText(JSON.stringify(n,null,2))})(l);break;case&quot;html_source&quot;:(function e(t){let o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>
+${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}p.style.display=&quot;none&quot;,s(t)}}),document.getElementById(`${n}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=d(l,&quot;,&quot;);r(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),s(t,o(&quot;message_csv_downloading&quot;))}),document.getElementById(`${n}export-excel-btn`).addEventListener(&quot;click&quot;,()=>{let e=d(l,&quot;,&quot;);r(&quot;\uFEFF&quot;+e,&quot;table-for-excel.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),s(t,o(&quot;message_excel_downloading&quot;))});let u=l.querySelector(&quot;thead&quot;);u&&(u.addEventListener(&quot;mouseover&quot;,e=>i(e.target.closest(&quot;th&quot;),l,!0)),u.addEventListener(&quot;mouseout&quot;,()=>i(null,l,!1)),u.addEventListener(&quot;click&quot;,e=>{let r=e.target.closest(&quot;th&quot;);r&&function e(t,l,r){let a=r.querySelector(`.${n}col-menu`);a&&a.remove();let d=document.createElement(&quot;div&quot;);d.className=`${n}col-menu`,d.innerHTML=`<button data-separator=&quot;,&quot;>${o(&quot;col_menu_copy_comma&quot;)}</button><button data-separator=&quot;\\n&quot;>${o(&quot;col_menu_copy_newline&quot;)}</button>`;let c=t.getBoundingClientRect(),i=r.getBoundingClientRect();d.style.top=`${c.bottom-i.top}px`,d.style.left=`${c.left-i.left}px`,r.appendChild(d),d.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,n){let l=t.cellIndex,r=[];o.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{e.cells[l]&&r.push(e.cells[l].innerText.trim())}),navigator.clipboard.writeText(r.join(n))})(t,l,&quot;\\n&quot;===o?&quot;\n&quot;:&quot;,&quot;),s(r),d.remove()}}),setTimeout(()=>{r.addEventListener(&quot;click&quot;,()=>d.remove(),{once:!0})},0)}(r,l,t)}))}(l,b)}(p):alert(o(&quot;alert_no_table_found&quot;))}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
-                                表格助手
+                                <span data-lang-key="bookmarklet_button_text">表格助手</span>
                             </a>
-                        </h3>
-                        <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
+                        <p data-lang-key="install_step2_p"><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>完成！</h3>
-                        <p>现在，在任何有表格的页面，点击这个书签即可开始使用！</p>
+                        <h3 data-lang-key="install_step3_h3">完成！</h3>
+                        <p data-lang-key="install_step3_p">现在，在任何有表格的页面，点击这个书签即可开始使用！</p>
                     </div>
                 </div>
-                 <p class="mobile-note">注意：书签工具需要在桌面端浏览器完成安装和使用。</p>
+                 <p class="mobile-note" data-lang-key="install_mobile_note">注意：书签工具需要在桌面端浏览器完成安装和使用。</p>
             </div>
         </section>
 
         <section id="features">
             <div class="container">
-                <h2 class="section-title">一个工具，满足所有需求</h2>
+                <h2 class="section-title" data-lang-key="features_title">一个工具，满足所有需求</h2>
                 <div class="grid-layout">
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" /></svg>
-                        <h3>智能结构识别</h3>
-                        <p>不仅支持传统的 `&lt;table&gt;` 表格，更能智能识别使用 `&lt;div&gt;` 布局的现代网页表格结构 (基于ARIA标准)。</p>
+                        <h3 data-lang-key="feature1_h3">智能结构识别</h3>
+                        <p data-lang-key="feature1_p">不仅支持传统的 `&lt;table&gt;` 表格，更能智能识别使用 `&lt;div&gt;` 布局的现代网页表格结构 (基于ARIA标准)。</p>
                     </div>
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <h3>一键完美复制</h3>
-                        <p>独有的富文本(HTML)复制功能，将表格结构写入剪贴板，完美粘贴到Excel、WPS、Notion中，格式绝不混乱。</p>
+                        <h3 data-lang-key="feature2_h3">一键完美复制</h3>
+                        <p data-lang-key="feature2_p">独有的富文本(HTML)复制功能，将表格结构写入剪贴板，完美粘贴到Excel、WPS、Notion中，格式绝不混乱。</p>
                     </div>
                     <div class="card">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-                        <h3>多种导出格式</h3>
-                        <p>除了直接复制，还支持导出为TSV、CSV、JSON等多种纯文本格式，满足开发者和数据分析师的专业需求。</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 12" /></svg>
+                        <h3 data-lang-key="feature3_h3">灵活的导出选项</h3>
+                        <p data-lang-key="feature3_p">不仅能复制为富文本、TSV、CSV、JSON，还能直接导出为CSV文件（完美兼容Excel），甚至可以复制表格的HTML源码，满足不同场景下的所有需求。</p>
+                    </div>
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                        <h3 data-lang-key="feature4_h3">极致轻便与安全</h3>
+                        <p data-lang-key="feature4_p">只是一个书签，无需安装，不占用任何后台资源，点击即用。所有操作均在您的浏览器本地完成，我们不查看、不发送、不存储您的任何数据。</p>
                     </div>
                 </div>
             </div>
@@ -520,19 +530,19 @@
         
         <section id="use-cases" style="background-color: var(--bg-color);">
             <div class="container">
-                <h2 class="section-title">谁在使用，以及如何使用？</h2>
+                <h2 class="section-title" data-lang-key="use_cases_title">谁在使用，以及如何使用？</h2>
                 <div class="grid-layout">
                     <div class="card">
-                        <h3>📊 数据分析师</h3>
-                        <p>快速从各类财报、行业报告网页中提取数据表格，无需等待IT部门支持，立即开始分析工作。</p>
+                        <h3 data-lang-key="use_case1_h3">📊 数据分析师</h3>
+                        <p data-lang-key="use_case1_p">快速从各类财报、行业报告网页中提取数据表格，无需等待IT部门支持，立即开始分析工作。</p>
                     </div>
                     <div class="card">
-                        <h3>🛒 电商运营</h3>
-                        <p>轻松抓取竞争对手的商品价格、销量、规格等表格数据，制作比价表格，制定营销策略。</p>
+                        <h3 data-lang-key="use_case2_h3">🛒 电商运营</h3>
+                        <p data-lang-key="use_case2_p">轻松抓取竞争对手的商品价格、销量、规格等表格数据，制作比价表格，制定营销策略。</p>
                     </div>
                     <div class="card">
-                        <h3>🎓 学生与研究员</h3>
-                        <p>从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。</p>
+                        <h3 data-lang-key="use_case3_h3">🎓 学生与研究员</h3>
+                        <p data-lang-key="use_case3_p">从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。</p>
                     </div>
                 </div>
             </div>
@@ -540,34 +550,34 @@
 
         <section id="faq">
             <div class="container" style="max-width: 800px;">
-                <h2 class="section-title">常见问题 (FAQ)</h2>
+                <h2 class="section-title" data-lang-key="faq_title">常见问题 (FAQ)</h2>
                 <div class="faq-item">
-                    <button class="faq-question">这个工具安全吗？会上传我的数据吗？<span class="icon">+</span></button>
-                    <div class="faq-answer"><p>绝对安全。表格助手是一个100%前端工具，所有的数据识别和处理都在您的浏览器本地完成，代码执行完毕即结束，不会向任何服务器发送或存储您的任何数据。</p></div>
+                    <button class="faq-question" data-lang-key="faq1_q">这个工具安全吗？会上传我的数据吗？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq1_a">绝对安全。表格助手是一个100%前端工具，所有的数据识别和处理都在您的浏览器本地完成，代码执行完毕即结束，不会向任何服务器发送或存储您的任何数据。</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">它和浏览器插件有什么区别？<span class="icon">+</span></button>
-                    <div class="faq-answer"><p>它是一个“书签工具”，比插件更轻量。无需从应用商店安装，不占用后台资源，点击即用，用完即走。当然，这也意味着它无法实现插件才能做到的复杂后台任务（如定时抓取）。</p></div>
+                    <button class="faq-question" data-lang-key="faq2_q">它和浏览器插件有什么区别？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq2_a">它是一个“书签工具”，比插件更轻量。无需从应用商店安装，不占用后台资源，点击即用，用完即走。当然，这也意味着它无法实现插件才能做到的复杂后台任务（如定时抓取）。</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">所有网站的表格都支持吗？<span class="icon">+</span></button>
-                    <div class="faq-answer"><p>支持绝大部分使用标准`&lt;table&gt;`标签或遵循ARIA标准的`&lt;div&gt;`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。</p></div>
+                    <button class="faq-question" data-lang-key="faq3_q">所有网站的表格都支持吗？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq3_a">支持绝大部分使用标准`&lt;table&gt;`标签或遵循ARIA标准的`&lt;div&gt;`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">这个工具是免费的吗？未来会收费吗？<span class="icon">+</span></button>
-                    <div class="faq-answer"><p>是的，当前的书签工具将永久免费。我们相信好的工具应该被广泛使用。未来，我们可能会推出功能更强大的付费版浏览器插件（如支持多页抓取、定时任务等），但当前的核心功能将始终免费提供给您。</p></div>
+                    <button class="faq-question" data-lang-key="faq4_q">这个工具是免费的吗？未来会收费吗？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq4_a">是的，当前的书签工具将永久免费。我们相信好的工具应该被广泛使用。未来，我们可能会推出功能更强大的付费版浏览器插件（如支持多页抓取、定时任务等），但当前的核心功能将始终免费提供给您。</p></div>
                 </div>
             </div>
         </section>
 
         <section id="community" style="background-color: var(--bg-color);">
             <div class="container">
-                <h2 class="section-title">帮助我们变得更好</h2>
-                <p style="text-align:center; max-width: 600px; margin: -40px auto 40px; color: var(--gray-color);">
+                <h2 class="section-title" data-lang-key="community_title">帮助我们变得更好</h2>
+                <p style="text-align:center; max-width: 600px; margin: -40px auto 40px; color: var(--gray-color);" data-lang-key="community_p">
                     您的每一个建议都是我们前进的动力。遇到问题？有好点子？欢迎通过以下渠道与我们联系！
                 </p>
                 <div class="social-links">
-                    <a href="#" target="_blank" title="在 Twitter 上关注我们">
+                    <a href="https://x.com/tablecopy_tiny" target="https://x.com/tablecopy_tiny" title="在 Twitter 上关注我们">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75ZM11.48 13.812h1.232L4.185 2.105h-1.35L11.48 13.812Z"/></svg>
                     </a>
                     <a href="#" target="_blank" title="在 GitHub 上提交问题或建议">
@@ -581,7 +591,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 表格助手. 由 Gemini AI 强力驱动.</p>
+            <p data-lang-key="footer_p">&copy; 2025 表格助手. 由 Gemini AI 强力驱动.</p>
         </div>
     </footer>
 
@@ -596,13 +606,6 @@
             }
         });
 
-        // 防止拖拽按钮时页面跳转
-        const bookmarkletLink = document.querySelector('.bookmarklet-button');
-        bookmarkletLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('请不要点击此按钮，而是将它拖拽到您的书签栏！');
-        });
-
         // FAQ 手风琴效果
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
@@ -615,6 +618,197 @@
                 }
             });
         });
+
+        // --- I18n (多语言) 脚本 ---
+        const translations = {
+            en: {
+                // Meta
+                meta_title: "Table Copy - One-Click Copy Web Tables to Excel, No More Messy Formatting",
+                meta_description: "Say goodbye to messy formatting! Table Copy is a lightweight bookmarklet that lets you copy any web table (including those made with divs) to Excel, CSV, or JSON with one click. No installation needed, perfect formatting.",
+                meta_keywords: "copy table from website, html to excel, table scraper, web data extraction, copy html table, table to csv, table to json, fix table copy paste",
+                // Nav & Logo
+                logo: "Table Copy",
+                nav_features: "Features",
+                nav_use_cases: "Use Cases",
+                nav_faq: "FAQ",
+                nav_install: "Install Now",
+                lang_switcher_text: "中文",
+                // Hero
+                hero_h1: "Copy Any Web Table,<br>as Easily as Copying Text.",
+                hero_slogan: "Ditch the tedious screenshots and manual entry. One click to grab data to your clipboard for a perfect paste.",
+                hero_cta: "Install for Free Now",
+                hero_gif_placeholder: "Live Demo GIF",
+                // Why
+                why_title: "Like You, We Were Tired of the Tedium",
+                why_p: "We are data enthusiasts and heavy users of productivity tools. For countless days and nights, needing to get data from web pages into Excel, we were tormented by broken formatting, hidden `<div>` tables, and slow extensions. We believed there had to be a better way. And so, 'Table Copy' was born. It's not bloated software, just a pure, fast, and focused tool designed to solve one problem: elegantly copying web tables.",
+                // Install
+                install_title: "3-Second Install, Use Forever",
+                install_step1_h3: "Press and Hold the Button",
+                install_step1_p: "Click and hold the green 'Table Copy' button with your left mouse button.",
+                install_step2_h3: "Drag to Your Bookmarks Bar",
+                install_step2_p: "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+                bookmarklet_button_text: "Table Copy",
+                bookmarklet_title: "Drag me to your bookmarks bar",
+                install_step3_h3: "Done!",
+                install_step3_p: "Now, on any page with a table, just click this bookmark to start!",
+                install_mobile_note: "Note: This bookmarklet must be installed and used on a desktop browser.",
+                alert_text: "Please don't click this button. Instead, drag it to your bookmarks bar!",
+                // Features
+                features_title: "One Tool for All Your Needs",
+                feature1_h3: "Smart Structure Detection",
+                feature1_p: "Supports not only traditional `<table>` elements but also intelligently recognizes modern tables built with `<div>` layouts (based on ARIA standards).",
+                feature2_h3: "Perfect One-Click Copy",
+                feature2_p: "Our unique Rich Text (HTML) copy feature writes the table structure to the clipboard, ensuring a perfect, format-preserving paste into Excel, WPS, or Notion.",
+                feature3_h3: "Flexible Export Options",
+                feature3_p: "Copy as Rich Text, TSV, CSV, or JSON. Export directly to a CSV file (perfect for Excel) or even copy the table's raw HTML source code to meet all your needs.",
+                feature4_h3: "Lightweight & Secure",
+                feature4_p: "It's just a bookmarklet. No installation, no background processes, ready when you are. All operations are performed locally in your browser. We never see, send, or store any of your data.",
+                // Use Cases
+                use_cases_title: "Who Uses It, and How?",
+                use_case1_h3: "📊 Data Analysts",
+                use_case1_p: "Quickly extract data tables from financial statements and industry reports online without waiting for IT support, and start your analysis immediately.",
+                use_case2_h3: "🛒 E-commerce Managers",
+                use_case2_p: "Easily grab competitor product prices, sales volumes, and specifications to create comparison sheets and inform your marketing strategy.",
+                use_case3_h3: "🎓 Students & Researchers",
+                use_case3_p: "Efficiently collect data from Wikipedia, academic sites, and government reports for papers and research, significantly boosting your literature review productivity.",
+                // FAQ
+                faq_title: "Frequently Asked Questions (FAQ)",
+                faq1_q: "Is this tool safe? Will it upload my data?",
+                faq1_a: "Absolutely safe. Table Copy is a 100% client-side tool. All data recognition and processing happens locally in your browser. Nothing is ever sent to or stored on any server.",
+                faq2_q: "How is it different from a browser extension?",
+                faq2_a: "It's a 'bookmarklet,' which is much lighter than an extension. No installation from an app store, no background resource usage. Click to use, and it's gone when you're done. Of course, this also means it can't perform complex background tasks like scheduled scraping, which extensions can.",
+                faq3_q: "Does it work on all websites?",
+                faq3_a: "It supports the vast majority of tables using standard `<table>` tags or ARIA-compliant `<div>` structures. For pages built with extremely complex or non-standard frontend frameworks, it might not work perfectly. We are continuously improving the algorithm.",
+                faq4_q: "Is this tool free? Will it cost money in the future?",
+                faq4_a: "Yes, the current bookmarklet will always be free. We believe good tools should be widely accessible. In the future, we might release a more powerful paid browser extension (e.g., with multi-page scraping, scheduled tasks), but the core functionality you see today will always be free.",
+                // Community & Footer
+                community_title: "Help Us Get Better",
+                community_p: "Every piece of feedback is what drives us forward. Ran into an issue? Have a great idea? Feel free to contact us through the channels below!",
+                footer_p: "© 2025 Table Copy. Powered by Gemini AI."
+            },
+            zh: {
+                // Meta
+                meta_title: "表格助手 (Table Copy) - 一键复制网页表格到Excel，解决格式错乱",
+                meta_description: "告别格式错乱！表格助手是一款极致轻便的书签工具，能一键复制任何网页表格(包括table和div布局)到Excel、CSV或JSON。无需安装，完美保留格式。",
+                meta_keywords: "网页表格复制, 表格转Excel, HTML表格提取, table scraper, copy table from website, html to excel, 数据抓取, 格式错乱",
+                // Nav & Logo
+                logo: "表格助手",
+                nav_features: "核心功能",
+                nav_use_cases: "使用场景",
+                nav_faq: "常见问题",
+                nav_install: "立即安装",
+                lang_switcher_text: "English",
+                // Hero
+                hero_h1: "像复制文本一样，<br>轻松复制任何网页表格。",
+                hero_slogan: "告别繁琐的截图和手动录入，一键将数据抓取到剪贴板，完美粘贴。",
+                hero_cta: "立即免费安装",
+                hero_gif_placeholder: "动态GIF演示区",
+                // Why
+                why_title: "我们和你一样，曾被繁琐困扰",
+                why_p: "我们是数据爱好者，也是效率工具的重度用户。在无数个需要从网页获取数据到Excel的日夜里，我们一次次地被错乱的格式、隐藏的`<div>`表格和缓慢的插件所折磨。我们相信，一定有更好的方法。于是，“表格助手”诞生了。它不是一个臃肿的软件，只是一个纯粹、快速、专注的工具，只为解决“将网页表格优雅地复制出来”这一个问题。",
+                // Install
+                install_title: "三秒安装，永久使用",
+                install_step1_h3: "按住下方按钮",
+                install_step1_p: "请用鼠标左键点住绿色的“表格助手”按钮。",
+                install_step2_h3: "拖到书签栏",
+                install_step2_p: "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
+                bookmarklet_button_text: "表格助手",
+                bookmarklet_title: "按住我拖动到书签栏",
+                install_step3_h3: "完成！",
+                install_step3_p: "现在，在任何有表格的页面，点击这个书签即可开始使用！",
+                install_mobile_note: "注意：书签工具需要在桌面端浏览器完成安装和使用。",
+                alert_text: "请不要点击此按钮，而是将它拖拽到您的书签栏！",
+                // Features
+                features_title: "一个工具，满足所有需求",
+                feature1_h3: "智能结构识别",
+                feature1_p: "不仅支持传统的 `<table>` 表格，更能智能识别使用 `<div>` 布局的现代网页表格结构 (基于ARIA标准)。",
+                feature2_h3: "一键完美复制",
+                feature2_p: "独有的富文本(HTML)复制功能，将表格结构写入剪贴板，完美粘贴到Excel、WPS、Notion中，格式绝不混乱。",
+                feature3_h3: "灵活的导出选项",
+                feature3_p: "不仅能复制为富文本、TSV、CSV、JSON，还能直接导出为CSV文件（完美兼容Excel），甚至可以复制表格的HTML源码，满足不同场景下的所有需求。",
+                feature4_h3: "极致轻便与安全",
+                feature4_p: "只是一个书签，无需安装，不占用任何后台资源，点击即用。所有操作均在您的浏览器本地完成，我们不查看、不发送、不存储您的任何数据。",
+                // Use Cases
+                use_cases_title: "谁在使用，以及如何使用？",
+                use_case1_h3: "📊 数据分析师",
+                use_case1_p: "快速从各类财报、行业报告网页中提取数据表格，无需等待IT部门支持，立即开始分析工作。",
+                use_case2_h3: "🛒 电商运营",
+                use_case2_p: "轻松抓取竞争对手的商品价格、销量、规格等表格数据，制作比价表格，制定营销策略。",
+                use_case3_h3: "🎓 学生与研究员",
+                use_case3_p: "从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。",
+                // FAQ
+                faq_title: "常见问题 (FAQ)",
+                faq1_q: "这个工具安全吗？会上传我的数据吗？",
+                faq1_a: "绝对安全。表格助手是一个100%前端工具，所有的数据识别和处理都在您的浏览器本地完成，代码执行完毕即结束，不会向任何服务器发送或存储您的任何数据。",
+                faq2_q: "它和浏览器插件有什么区别？",
+                faq2_a: "它是一个“书签工具”，比插件更轻量。无需从应用商店安装，不占用后台资源，点击即用，用完即走。当然，这也意味着它无法实现插件才能做到的复杂后台任务（如定时抓取）。",
+                faq3_q: "所有网站的表格都支持吗？",
+                faq3_a: "支持绝大部分使用标准`<table>`标签或遵循ARIA标准的`<div>`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。",
+                faq4_q: "这个工具是免费的吗？未来会收费吗？",
+                faq4_a: "是的，当前的书签工具将永久免费。我们相信好的工具应该被广泛使用。未来，我们可能会推出功能更强大的付费版浏览器插件（如支持多页抓取、定时任务等），但当前的核心功能将始终免费提供给您。",
+                // Community & Footer
+                community_title: "帮助我们变得更好",
+                community_p: "您的每一个建议都是我们前进的动力。遇到问题？有好点子？欢迎通过以下渠道与我们联系！",
+                footer_p: "© 2025 表格助手. 由 Gemini AI 强力驱动."
+            }
+        };
+
+        const langSwitcher = document.getElementById('lang-switcher');
+        const bookmarkletLink = document.querySelector('.bookmarklet-button');
+        let currentLang = 'zh';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const langData = translations[lang];
+            document.documentElement.lang = lang.startsWith('zh') ? 'zh-CN' : 'en';
+            
+            document.title = langData.meta_title;
+            document.querySelector('meta[name="description"]').setAttribute('content', langData.meta_description);
+            document.querySelector('meta[name="keywords"]').setAttribute('content', langData.meta_keywords);
+
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (langData[key]) {
+                    // Use innerHTML for keys that contain HTML tags like <br> or <strong>
+                    if (['hero_h1', 'install_step2_p'].includes(key)) {
+                        el.innerHTML = langData[key];
+                    } else {
+                        el.innerText = langData[key];
+                    }
+                }
+            });
+
+            bookmarkletLink.title = langData.bookmarklet_title;
+            langSwitcher.innerText = langData.lang_switcher_text;
+            localStorage.setItem('tableCopyLang', lang);
+        }
+
+        bookmarkletLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert(translations[currentLang].alert_text);
+        });
+
+        langSwitcher.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newLang = currentLang === 'zh' ? 'en' : 'zh';
+            setLanguage(newLang);
+        });
+
+        function initLanguage() {
+            const savedLang = localStorage.getItem('tableCopyLang');
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            let defaultLang = 'zh';
+            if (savedLang) {
+                defaultLang = savedLang;
+            } else if (browserLang && browserLang.toLowerCase().startsWith('en')) {
+                defaultLang = 'en';
+            }
+            
+            setLanguage(defaultLang);
+        }
+
+        initLanguage();
     </script>
 
 </body>
