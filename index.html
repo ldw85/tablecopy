@@ -564,6 +564,18 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}p.style.display=&quot;none
                     <div class="faq-answer"><p data-lang-key="faq3_a">支持绝大部分使用标准`&lt;table&gt;`标签或遵循ARIA标准的`&lt;div&gt;`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。</p></div>
                 </div>
                 <div class="faq-item">
+                    <button class="faq-question" data-lang-key="faq7_q">如何只复制网页上的某一列？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq7_a">我们的工具让**列复制**变得异常简单，无需安装任何额外的**列复制插件 (Column Copy extension)**。当“表格助手”窗口弹出后，您只需直接点击目标列的表头。这时会弹出一个小菜单，让您轻松完成**表格列复制粘贴 (Table column copy/paste)**。您可以选择以逗号或换行符作为分隔符来复制列数据，非常灵活。这个便捷的功能也是 **Tablecopy (表格助手)** 在众多工具中脱颖而出的核心优势之一。</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-lang-key="faq6_q">如何从网页上复制一个表格？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq6_a">操作非常简单，只需三步：<br>1. 在任何网页上，用鼠标选中您想复制的表格的任意一部分。<br>2. 点击您浏览器书签栏中的“表格助手”书签。<br>3. 在弹出的窗口中，您可以预览抓取到的表格，然后选择“复制”（推荐使用HTML格式以完美粘贴到Excel）或直接“导出为CSV”文件。</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-lang-key="faq5_q">什么是表格助手 (Table Copy)？<span class="icon">+</span></button>
+                    <div class="faq-answer"><p data-lang-key="faq5_a">表格助手 (Table Copy) 是一款为解决网页数据复制难题而生的强大书签工具。它的核心使命是让您彻底**告别手动复制，格式混乱**的困境。当您从网页直接复制表格到Excel或文档时，经常会遇到格式错乱、单元格合并、数据丢失等问题，极大影响工作效率。表格助手通过智能解析网页结构（包括传统的`&lt;table&gt;`和现代的`&lt;div&gt;`布局），确保您复制的内容能以完美的格式粘贴。更重要的是，它与笨重的浏览器插件完全不同，您**告别了需要下载安装、占用空间的Chrome extension**。作为一个轻量级书签，它**轻量下载，快捷响应**，不占用任何后台资源，点击即用，安全高效。您**不需要任何Chrome扩展程序(do not need a Chrome extension)**就能将网页上的**HTML表格导出(export as)为Excel兼容的CSV文件(HTML table to CSV)**，或直接复制为富文本、JSON等多种格式，满足您在数据分析、报告撰写、学术研究等各种场景下的需求。</p></div>
+                </div>
+                <div class="faq-item">
                     <button class="faq-question" data-lang-key="faq4_q">这个工具是免费的吗？未来会收费吗？<span class="icon">+</span></button>
                     <div class="faq-answer"><p data-lang-key="faq4_a">是的，当前的书签工具将永久免费。我们相信好的工具应该被广泛使用。未来，我们可能会推出功能更强大的付费版浏览器插件（如支持多页抓取、定时任务等），但当前的核心功能将始终免费提供给您。</p></div>
                 </div>
@@ -610,11 +622,20 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}p.style.display=&quot;none
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                faqItems.forEach(i => i.classList.remove('active'));
+
+                // 先关闭所有FAQ项
+                faqItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-answer').style.maxHeight = null; // 移除内联样式
+                });
+
+                // 如果当前项不是激活状态，则展开它
                 if (!isActive) {
                     item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px"; // 设置为内容实际高度
                 }
             });
         });
@@ -679,8 +700,14 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}p.style.display=&quot;none
                 faq2_a: "It's a 'bookmarklet,' which is much lighter than an extension. No installation from an app store, no background resource usage. Click to use, and it's gone when you're done. Of course, this also means it can't perform complex background tasks like scheduled scraping, which extensions can.",
                 faq3_q: "Does it work on all websites?",
                 faq3_a: "It supports the vast majority of tables using standard `<table>` tags or ARIA-compliant `<div>` structures. For pages built with extremely complex or non-standard frontend frameworks, it might not work perfectly. We are continuously improving the algorithm.",
+                faq7_q: "How do I copy just one column from a website table?",
+                faq7_a: "Our tool makes this incredibly simple, acting like a specialized **Column Copy** tool without needing a separate extension. When the TableCopy modal is open, just click on the header of the column you want to copy. A small menu will appear, allowing you to perform a **table column copy/paste** with a single click. You can choose to copy the data separated by commas or newlines, giving you full control. This feature is one of the core reasons users love **Tablecopy** for its efficiency.",
                 faq4_q: "Is this tool free? Will it cost money in the future?",
                 faq4_a: "Yes, the current bookmarklet will always be free. We believe good tools should be widely accessible. In the future, we might release a more powerful paid browser extension (e.g., with multi-page scraping, scheduled tasks), but the core functionality you see today will always be free.",
+                faq6_q: "How do I copy a table from a webpage?",
+                faq6_a: "It's very simple, just three steps:<br>1. On any webpage, use your mouse to select any part of the table you want to copy.<br>2. Click the 'Table Copy' bookmarklet that you installed in your bookmarks bar.<br>3. In the pop-up window, you can preview the captured table, then choose to 'Copy' (HTML format is recommended for a perfect paste into Excel) or directly 'Export as CSV'.",
+                faq5_q: "What is Table Copy?",
+                faq5_a: "Table Copy is a powerful bookmarklet tool born to solve the challenges of copying web data. Its core mission is to let you say goodbye to the frustration of manual copying and messy formatting. When you copy tables directly from a webpage to Excel or Docs, you often face issues like broken layouts, merged cells, and lost data, which significantly impacts productivity. Table Copy intelligently parses the web page's structure (including both traditional `<table>` and modern `<div>` layouts) to ensure that what you copy can be pasted with its original formatting perfectly preserved. More importantly, it is fundamentally different from bulky browser plugins. You can forget about installing space-consuming Chrome extensions. As a lightweight bookmarklet, it is quick to respond and ready on demand, consuming no background resources. You **do not need a Chrome extension** to use its full capabilities. You can easily **export any HTML table as an Excel-compatible CSV** file or convert an **HTML table to CSV**. It also allows you to copy data directly as rich text, JSON, and other formats, meeting all your needs for data analysis, reporting, and academic research.",
                 // Community & Footer
                 community_title: "Help Us Get Better",
                 community_p: "Every piece of feedback is what drives us forward. Ran into an issue? Have a great idea? Feel free to contact us through the channels below!",
@@ -744,6 +771,12 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}p.style.display=&quot;none
                 faq2_a: "它是一个“书签工具”，比插件更轻量。无需从应用商店安装，不占用后台资源，点击即用，用完即走。当然，这也意味着它无法实现插件才能做到的复杂后台任务（如定时抓取）。",
                 faq3_q: "所有网站的表格都支持吗？",
                 faq3_a: "支持绝大部分使用标准`<table>`标签或遵循ARIA标准的`<div>`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。",
+                faq7_q: "如何只复制网页上的某一列？",
+                faq7_a: "我们的工具让**列复制**变得异常简单，无需安装任何额外的**列复制插件 **。当“表格助手”窗口弹出后，您只需直接点击目标列的表头。这时会弹出一个小菜单，让您轻松完成**表格列复制粘贴 **。您可以选择以逗号或换行符作为分隔符来复制列数据，非常灵活。这个便捷的功能也是 **Tablecopy (表格助手)** 在众多工具中脱颖而出的核心优势之一。",
+                faq6_q: "如何从网页上复制一个表格？",
+                faq6_a: "操作非常简单，只需三步：<br>1. 在任何网页上，用鼠标选中您想复制的表格的任意一部分。<br>2. 点击您浏览器书签栏中的“表格助手”书签。<br>3. 在弹出的窗口中，您可以预览抓取到的表格，然后选择“复制”（推荐使用HTML格式以完美粘贴到Excel）或直接“导出为CSV”文件。",
+                faq5_q: "什么是表格助手 (Table Copy)？",
+                faq5_a: "表格助手 (Table Copy) 是一款为解决网页数据复制难题而生的强大书签工具。它的核心使命是让您彻底**告别手动复制，格式混乱**的困境。当您从网页直接复制表格到Excel或文档时，经常会遇到格式错乱、单元格合并、数据丢失等问题，极大影响工作效率。表格助手通过智能解析网页结构（包括传统的`<table>`和现代的`<div>`布局），确保您复制的内容能以完美的格式粘贴。更重要的是，它与笨重的浏览器插件完全不同，您**告别了需要下载安装、占用空间的Chrome extension**。作为一个轻量级书签，它**轻量下载，快捷响应**，不占用任何后台资源，点击即用，安全高效。您**不需要任何Chrome扩展程序(do not need a Chrome extension)**就能将网页上的**HTML表格导出(export as)为Excel兼容的CSV文件(HTML table to CSV)**，或直接复制为富文本、JSON等多种格式，满足您在数据分析、报告撰写、学术研究等各种场景下的需求。",
                 faq4_q: "这个工具是免费的吗？未来会收费吗？",
                 faq4_a: "是的，当前的书签工具将永久免费。我们相信好的工具应该被广泛使用。未来，我们可能会推出功能更强大的付费版浏览器插件（如支持多页抓取、定时任务等），但当前的核心功能将始终免费提供给您。",
                 // Community & Footer
@@ -770,7 +803,7 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}p.style.display=&quot;none
                 const key = el.getAttribute('data-lang-key');
                 if (langData[key]) {
                     // Use innerHTML for keys that contain HTML tags like <br> or <strong>
-                    if (['hero_h1', 'install_step2_p'].includes(key)) {
+                    if (['hero_h1', 'install_step2_p', 'faq6_a'].includes(key)) {
                         el.innerHTML = langData[key];
                     } else {
                         el.innerText = langData[key];
