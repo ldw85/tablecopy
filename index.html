@@ -268,6 +268,40 @@
             text-align: left;
         }
         
+        /* --- Blog Section --- */
+        #blog {
+            background-color: var(--light-color);
+        }
+        .blog-post-card {
+            background-color: var(--light-color);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #eef;
+        }
+        .blog-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(74, 144, 226, 0.1);
+        }
+        .blog-post-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .blog-post-card h3 a {
+            text-decoration: none;
+            color: var(--dark-color);
+            transition: color 0.3s ease;
+        }
+        .blog-post-card h3 a:hover { color: var(--primary-color); }
+        .blog-post-card p { font-size: 16px; color: var(--gray-color); margin-bottom: 25px; }
+        .blog-post-card .read-more { font-weight: 700; color: var(--primary-color); text-decoration: none; }
+
         /* --- Why Section --- */
         #why { text-align: center; }
         #why .container > p {
@@ -359,6 +393,7 @@
             <ul class="nav-links">
                 <li><a href="#features" data-lang-key="nav_features">核心功能</a></li>
                 <li><a href="#use-cases" data-lang-key="nav_use_cases">使用场景</a></li>
+                <li><a href="#blog" data-lang-key="nav_blog">博客</a></li>
                 <li><a href="#faq" data-lang-key="nav_faq">常见问题</a></li>
                 <li><a href="#" id="lang-switcher" style="font-weight: 700; margin-left: 15px;"></a></li>
                 <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;" data-lang-key="nav_install">立即安装</a></li>
@@ -465,7 +500,7 @@
             border-radius: 5px; font-size: 14px; z-index: 100001; opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
-    `;async function r(e){try{let t=d(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,n=new Blob([o],{type:&quot;text/html&quot;}),l=new Blob([t],{type:&quot;text/plain&quot;}),r=new ClipboardItem({&quot;text/html&quot;:n,&quot;text/plain&quot;:l});await navigator.clipboard.write([r])}catch(i){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,i),a(e,&quot;	&quot;)}}function d(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let n=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{n.push(function e(t,o){let n=t.trim();return n.includes(o)||n.includes(&quot;\n&quot;)||n.includes('&quot;')?`&quot;${n.replace(/&quot;/g,'&quot;&quot;')}&quot;`:n}(e.innerText,t))}),o+=n.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}function a(e,t){let o=d(e,t);navigator.clipboard.writeText(o)}function i(e,t,o){if(t.querySelectorAll(`.${n}col-highlight`).forEach(e=>e.classList.remove(`${n}col-highlight`)),o&&e){let l=e.cellIndex;t.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[l]&&e.cells[l].classList.add(`${n}col-highlight`)})}}function c(e,t=o(&quot;message_copied&quot;)){let l=document.createElement(&quot;div&quot;);l.className=`${n}message`,l.innerText=t,e.appendChild(l),setTimeout(()=>{l.style.opacity=&quot;1&quot;},10),setTimeout(()=>{l.style.opacity=&quot;0&quot;,setTimeout(()=>{l.parentElement&&l.parentElement.removeChild(l)},300)},2e3)}!function e(){if(document.querySelector(`.${n}overlay`))return;!function e(){if(document.getElementById(`${n}styles`))return;let t=document.createElement(&quot;style&quot;);t.id=`${n}styles`,t.innerText=l,document.head.appendChild(t)}();let t=window.getSelection();if(0===t.rangeCount||t.isCollapsed){alert(o(&quot;alert_select_first&quot;));return}let s=function e(t){let o=function e(t){let o=t.getRangeAt(0),n=o.commonAncestorContainer;n.nodeType===Node.TEXT_NODE&&(n=n.parentElement);let l=n;for(;l;){if(&quot;TABLE&quot;===l.tagName)return{element:l,type:&quot;TABLE&quot;};let r=l.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:l,type:&quot;ARIA_GRID&quot;};if(l.children.length>1&&[&quot;DIV&quot;,&quot;UL&quot;,&quot;OL&quot;].includes(l.tagName)){let d=Array.from(l.children).filter(e=>e.children.length>1&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(d.length>1&&d.length/l.children.length>.7&&d[0].children.length>0&&d[0].children.length===d[1].children.length)return{element:l,type:&quot;HEURISTIC_DIV&quot;}}l=l.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;thead&quot;),l=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let n=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===n&&(o=!0);let l=document.createElement(o?&quot;th&quot;:&quot;td&quot;);l.innerText=e.innerText,t.appendChild(l)}),o?n.appendChild(t):l.appendChild(t)}),o.appendChild(n),o.appendChild(l),o}(o.element):&quot;HEURISTIC_DIV&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;tbody&quot;),l=Array.from(t.children).filter(e=>e.children.length>0&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(0===l.length)return null;let r=null,d=l,a=l[0],i=a.className&&&quot;string&quot;==typeof a.className?a.className.toLowerCase():&quot;&quot;;if((i.includes(&quot;header&quot;)||i.includes(&quot;head&quot;)||[&quot;THEAD&quot;].includes(a.tagName))&&(r=a,d=l.slice(1)),r){let c=document.createElement(&quot;thead&quot;),s=document.createElement(&quot;tr&quot;);for(let p of r.children){let u=document.createElement(&quot;th&quot;);u.innerText=p.innerText,s.appendChild(u)}c.appendChild(s),o.appendChild(c)}for(let b of d){let f=document.createElement(&quot;tr&quot;);for(let h of b.children){let m=document.createElement(&quot;td&quot;);m.innerText=h.innerText,f.appendChild(m)}n.appendChild(f)}return o.appendChild(n),o}(o.element):null:null}(t);s?function e(t){let l=document.createElement(&quot;div&quot;);l.className=`${n}overlay`;let s=document.createElement(&quot;div&quot;);s.className=`${n}modal`,s.innerHTML=`
+    `;async function r(e){try{let t=a(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,n=new Blob([o],{type:&quot;text/html&quot;}),l=new Blob([t],{type:&quot;text/plain&quot;}),r=new ClipboardItem({&quot;text/html&quot;:n,&quot;text/plain&quot;:l});await navigator.clipboard.write([r])}catch(i){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,i),d(e,&quot;	&quot;)}}function a(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let n=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{n.push(function e(t,o){let n=t.trim();return n.includes(o)||n.includes(&quot;\n&quot;)||n.includes('&quot;')?`&quot;${n.replace(/&quot;/g,'&quot;&quot;')}&quot;`:n}(e.innerText,t))}),o+=n.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}async function d(e,t){let o=a(e,t);try{let n=new Blob([o],{type:&quot;text/plain&quot;}),l=new ClipboardItem({&quot;text/plain&quot;:n});await navigator.clipboard.write([l])}catch(r){console.error(&quot;ClipboardItem API failed, falling back to writeText:&quot;,r),navigator.clipboard.writeText(o)}}function i(e,t,o){if(t.querySelectorAll(`.${n}col-highlight`).forEach(e=>e.classList.remove(`${n}col-highlight`)),o&&e){let l=e.cellIndex;t.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[l]&&e.cells[l].classList.add(`${n}col-highlight`)})}}function c(e,t=o(&quot;message_copied&quot;)){let l=document.createElement(&quot;div&quot;);l.className=`${n}message`,l.innerText=t,e.appendChild(l),setTimeout(()=>{l.style.opacity=&quot;1&quot;},10),setTimeout(()=>{l.style.opacity=&quot;0&quot;,setTimeout(()=>{l.parentElement&&l.parentElement.removeChild(l)},300)},2e3)}!function e(){if(document.querySelector(`.${n}overlay`))return;!function e(){if(document.getElementById(`${n}styles`))return;let t=document.createElement(&quot;style&quot;);t.id=`${n}styles`,t.innerText=l,document.head.appendChild(t)}();let t=window.getSelection();if(0===t.rangeCount||t.isCollapsed){alert(o(&quot;alert_select_first&quot;));return}let s=function e(t){let o=function e(t){let o=t.getRangeAt(0),n=o.commonAncestorContainer;n.nodeType===Node.TEXT_NODE&&(n=n.parentElement);let l=n;for(;l;){if(&quot;TABLE&quot;===l.tagName)return{element:l,type:&quot;TABLE&quot;};let r=l.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:l,type:&quot;ARIA_GRID&quot;};if(l.children.length>1&&[&quot;DIV&quot;,&quot;UL&quot;,&quot;OL&quot;].includes(l.tagName)){let a=Array.from(l.children).filter(e=>e.children.length>1&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(a.length>1&&a.length/l.children.length>.7&&a[0].children.length>0&&a[0].children.length===a[1].children.length)return{element:l,type:&quot;HEURISTIC_DIV&quot;}}l=l.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;thead&quot;),l=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let n=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===n&&(o=!0);let l=document.createElement(o?&quot;th&quot;:&quot;td&quot;);l.innerText=e.innerText,t.appendChild(l)}),o?n.appendChild(t):l.appendChild(t)}),o.appendChild(n),o.appendChild(l),o}(o.element):&quot;HEURISTIC_DIV&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),n=document.createElement(&quot;tbody&quot;),l=Array.from(t.children).filter(e=>e.children.length>0&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(0===l.length)return null;let r=null,a=l,d=l[0],i=d.className&&&quot;string&quot;==typeof d.className?d.className.toLowerCase():&quot;&quot;;if((i.includes(&quot;header&quot;)||i.includes(&quot;head&quot;)||[&quot;THEAD&quot;].includes(d.tagName))&&(r=d,a=l.slice(1)),r){let c=document.createElement(&quot;thead&quot;),s=document.createElement(&quot;tr&quot;);for(let p of r.children){let u=document.createElement(&quot;th&quot;);u.innerText=p.innerText,s.appendChild(u)}c.appendChild(s),o.appendChild(c)}for(let b of a){let f=document.createElement(&quot;tr&quot;);for(let h of b.children){let m=document.createElement(&quot;td&quot;);m.innerText=h.innerText,f.appendChild(m)}n.appendChild(f)}return o.appendChild(n),o}(o.element):null:null}(t);s?function e(t){let l=document.createElement(&quot;div&quot;);l.className=`${n}overlay`;let s=document.createElement(&quot;div&quot;);s.className=`${n}modal`,s.innerHTML=`
             <div class=&quot;${n}header&quot;>
                 <h3>${o(&quot;modal_title&quot;)}</h3>
                 <button class=&quot;${n}close-btn&quot; title=&quot;${o(&quot;modal_close_title&quot;)}&quot;>&times;</button>
@@ -487,8 +522,8 @@
                 </div>
                 <button class=&quot;${n}button&quot; id=&quot;${n}export-csv-btn&quot;>${o(&quot;export_csv_button&quot;)}</button>
             </div>
-        `,l.appendChild(s),document.body.appendChild(l);let p=s.querySelector(`.${n}table-container`),u=t.cloneNode(!0);p.appendChild(u),function e(t,l){let s=document.getElementById(`${n}table-dropdown`);t.querySelector(`.${n}close-btn`).addEventListener(&quot;click&quot;,()=>document.body.removeChild(t)),t.addEventListener(&quot;click&quot;,e=>{e.target===t&&document.body.removeChild(t),e.target.closest(`.${n}dropdown`)||(s.style.display=&quot;none&quot;)}),document.getElementById(`${n}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),s.style.display=&quot;block&quot;===s.style.display?&quot;none&quot;:&quot;block&quot;}),s.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-format&quot;);switch(o){case&quot;html&quot;:r(l);break;case&quot;tsv&quot;:a(l,&quot;	&quot;);break;case&quot;csv&quot;:a(l,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),n=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,n)=>{t[o[n]||`column_${n+1}`]=e.innerText.trim()}),n.push(t)}),navigator.clipboard.writeText(JSON.stringify(n,null,2))})(l);break;case&quot;html_source&quot;:(function e(t){let o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>
-${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none&quot;,c(t)}}),document.getElementById(`${n}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=d(l,&quot;,&quot;);(function e(t,o,n){let l=new Blob([t],{type:n}),r=URL.createObjectURL(l),d=document.createElement(&quot;a&quot;);d.href=r,d.download=o,document.body.appendChild(d),d.click(),document.body.removeChild(d),URL.revokeObjectURL(r)})(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),c(t,o(&quot;message_csv_downloading&quot;))}),l.addEventListener(&quot;mouseover&quot;,e=>{let t=e.target.closest(&quot;td, th&quot;);i(t,l,!0)}),l.addEventListener(&quot;mouseout&quot;,e=>{l.contains(e.relatedTarget)||i(null,l,!1)}),l.addEventListener(&quot;click&quot;,e=>{let r=e.target.closest(&quot;td, th&quot;);r&&function e(t,l,r){let d=r.querySelector(`.${n}col-menu`);d&&d.remove();let a=document.createElement(&quot;div&quot;);a.className=`${n}col-menu`,a.innerHTML=`<button data-separator=&quot;,&quot;>${o(&quot;col_menu_copy_comma&quot;)}</button><button data-separator=&quot;\\n&quot;>${o(&quot;col_menu_copy_newline&quot;)}</button>`;let i=t.getBoundingClientRect(),s=r.getBoundingClientRect();a.style.top=`${i.bottom-s.top}px`,a.style.left=`${i.left-s.left}px`,r.appendChild(a),a.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,n){let l=t.cellIndex,r=[];o.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[l]&&r.push(e.cells[l].innerText.trim())}),navigator.clipboard.writeText(r.join(n))})(t,l,&quot;\\n&quot;===o?&quot;\n&quot;:&quot;,&quot;),c(r),a.remove()}}),setTimeout(()=>{r.addEventListener(&quot;click&quot;,()=>a.remove(),{once:!0})},0)}(r,l,t)})}(l,u)}(s):alert(o(&quot;alert_no_table_found&quot;))}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">
+        `,l.appendChild(s),document.body.appendChild(l);let p=s.querySelector(`.${n}table-container`),u=t.cloneNode(!0);p.appendChild(u),function e(t,l){let s=document.getElementById(`${n}table-dropdown`);t.querySelector(`.${n}close-btn`).addEventListener(&quot;click&quot;,()=>document.body.removeChild(t)),t.addEventListener(&quot;click&quot;,e=>{e.target===t&&document.body.removeChild(t),e.target.closest(`.${n}dropdown`)||(s.style.display=&quot;none&quot;)}),document.getElementById(`${n}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),s.style.display=&quot;block&quot;===s.style.display?&quot;none&quot;:&quot;block&quot;}),s.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-format&quot;);switch(o){case&quot;html&quot;:r(l);break;case&quot;tsv&quot;:d(l,&quot;	&quot;);break;case&quot;csv&quot;:d(l,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),n=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,n)=>{t[o[n]||`column_${n+1}`]=e.innerText.trim()}),n.push(t)}),navigator.clipboard.writeText(JSON.stringify(n,null,2))})(l);break;case&quot;html_source&quot;:(function e(t){let o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>
+${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none&quot;,c(t)}}),document.getElementById(`${n}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=a(l,&quot;,&quot;);(function e(t,o,n){let l=new Blob([t],{type:n}),r=URL.createObjectURL(l),a=document.createElement(&quot;a&quot;);a.href=r,a.download=o,document.body.appendChild(a),a.click(),document.body.removeChild(a),URL.revokeObjectURL(r)})(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),c(t,o(&quot;message_csv_downloading&quot;))}),l.addEventListener(&quot;mouseover&quot;,e=>{let t=e.target.closest(&quot;td, th&quot;);i(t,l,!0)}),l.addEventListener(&quot;mouseout&quot;,e=>{l.contains(e.relatedTarget)||i(null,l,!1)}),l.addEventListener(&quot;click&quot;,e=>{let r=e.target.closest(&quot;td, th&quot;);r&&function e(t,l,r){let a=r.querySelector(`.${n}col-menu`);a&&a.remove();let d=document.createElement(&quot;div&quot;);d.className=`${n}col-menu`,d.innerHTML=`<button data-separator=&quot;,&quot;>${o(&quot;col_menu_copy_comma&quot;)}</button><button data-separator=&quot;\\n&quot;>${o(&quot;col_menu_copy_newline&quot;)}</button>`;let i=t.getBoundingClientRect(),s=r.getBoundingClientRect();d.style.top=`${i.bottom-s.top}px`,d.style.left=`${i.left-s.left}px`,r.appendChild(d),d.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,n){let l=t.cellIndex,r=[];o.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[l]&&r.push(e.cells[l].innerText.trim())}),navigator.clipboard.writeText(r.join(n))})(t,l,&quot;\\n&quot;===o?&quot;\n&quot;:&quot;,&quot;),c(r),d.remove()}}),setTimeout(()=>{r.addEventListener(&quot;click&quot;,()=>d.remove(),{once:!0})},0)}(r,l,t)})}(l,u)}(s):alert(o(&quot;alert_no_table_found&quot;))}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
                                 <span data-lang-key="bookmarklet_button_text">表格助手</span>
                             </a>
@@ -549,6 +584,18 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none
                         <p data-lang-key="use_case3_p">从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container">
+                <h2 class="section-title" data-lang-key="blog_title">来自我们的博客</h2>
+                <div class="blog-post-card">
+                    <h3><a href="blog/how-to-copy-web-tables-to-excel-in-one-click.html" data-lang-key="blog1_title">How to Copy Web Tables to Excel in One Click: A Beginner’s Guide</a></h3>
+                    <p data-lang-key="blog1_desc">Frustrated with messy pastes? Learn how to copy any web table to Excel perfectly in one click with a simple, installation-free tool.</p>
+                    <a href="blog/how-to-copy-web-tables-to-excel-in-one-click.html" class="read-more" data-lang-key="blog_read_more">阅读更多 &rarr;</a>
+                </div>
+                <!-- Future blog posts can be added here -->
             </div>
         </section>
 
@@ -655,6 +702,7 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none
                 logo: "Table Copy",
                 nav_features: "Features",
                 nav_use_cases: "Use Cases",
+                nav_blog: "Blog",
                 nav_faq: "FAQ",
                 nav_install: "Install Now",
                 lang_switcher_text: "中文",
@@ -694,6 +742,11 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none
                 use_case1_p: "Quickly extract data tables from financial statements and industry reports online without waiting for IT support, and start your analysis immediately.",
                 use_case2_h3: "🛒 E-commerce Managers",
                 use_case2_p: "Easily grab competitor product prices, sales volumes, and specifications to create comparison sheets and inform your marketing strategy.",
+                // Blog
+                blog_title: "From Our Blog",
+                blog1_title: "How to Copy Web Tables to Excel in One Click: A Beginner’s Guide",
+                blog1_desc: "Frustrated with messy pastes? Learn how to copy any web table to Excel perfectly in one click with a simple, installation-free tool.",
+                blog_read_more: "Read More →",
                 use_case3_h3: "🎓 Students & Researchers",
                 use_case3_p: "Efficiently collect data from Wikipedia, academic sites, and government reports for papers and research, significantly boosting your literature review productivity.",
                 // FAQ
@@ -726,6 +779,7 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none
                 logo: "表格助手",
                 nav_features: "核心功能",
                 nav_use_cases: "使用场景",
+                nav_blog: "博客",
                 nav_faq: "常见问题",
                 nav_install: "立即安装",
                 lang_switcher_text: "English",
@@ -765,6 +819,11 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(l)}s.style.display=&quot;none
                 use_case1_p: "快速从各类财报、行业报告网页中提取数据表格，无需等待IT部门支持，立即开始分析工作。",
                 use_case2_h3: "🛒 电商运营",
                 use_case2_p: "轻松抓取竞争对手的商品价格、销量、规格等表格数据，制作比价表格，制定营销策略。",
+                // Blog
+                blog_title: "来自我们的博客",
+                blog1_title: "如何一键将网页表格复制到Excel：初学者指南",
+                blog1_desc: "还在为格式混乱的粘贴而烦恼吗？学习如何使用一个简单免安装的工具，一键完美地将任何网页表格复制到Excel。",
+                blog_read_more: "阅读更多 →",
                 use_case3_h3: "🎓 学生与研究员",
                 use_case3_p: "从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。",
                 // FAQ
