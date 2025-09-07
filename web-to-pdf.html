@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页转PDF - 一键保存任何网页为PDF</title>
+    <meta name="description" content="Web to PDF 是一款轻量级的免费书签工具，让您可以通过一次点击，调用浏览器打印功能将当前网页高质量地保存为PDF文档，完美保留布局和文本。">
+    <meta name="keywords" content="web to pdf, 网页转pdf, 保存网页为pdf, html to pdf, 网页打印, bookmarklet, 免费工具">
+    <link rel="icon" type="image/png" href="tc_icon.png">
+    <style>
+        :root {
+            --primary-color: #D9534F; /* A PDF-like red color */
+            --dark-color: #2c3e50;
+            --light-color: #ffffff;
+            --gray-color: #7f8c8d;
+            --bg-color: #f7f9fc;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        .navbar {
+            position: fixed; top: 0; width: 100%; padding: 20px 0; z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 900; color: var(--primary-color); text-decoration: none; }
+        .hero { background-color: var(--bg-color); text-align: center; padding-top: 140px; }
+        .hero h1 { font-size: 48px; font-weight: 900; margin-bottom: 20px; line-height: 1.2; }
+        .hero .slogan { font-size: 20px; color: var(--gray-color); margin-bottom: 40px; }
+        .section-title { text-align: center; font-size: 36px; font-weight: 900; margin-bottom: 60px; }
+        #install { background-color: var(--bg-color); }
+        .install-steps { display: flex; justify-content: center; align-items: flex-start; gap: 40px; }
+        .step { text-align: center; max-width: 300px; }
+        .step-number {
+            width: 50px; height: 50px; background-color: var(--primary-color); color: var(--light-color);
+            border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;
+            font-size: 24px; font-weight: 700; margin-bottom: 20px;
+        }
+        .bookmarklet-button {
+            display: inline-block; padding: 12px 24px; background-color: var(--primary-color); color: var(--light-color);
+            border-radius: 8px; font-weight: 700; cursor: grab; user-select: none;
+            border: 2px dashed #B54541; transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(217, 83, 79, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0); }
+        }
+        .footer { background-color: var(--dark-color); color: #bdc3c7; text-align: center; padding: 40px 0; }
+        .footer p { margin: 0; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .install-steps { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">网页转换器</a>
+        </div>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>一键保存网页为PDF</h1>
+                <p class="slogan">无需复杂软件，将任何网页高质量、可搜索的PDF文件。</p>
+                <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">立即使用</a>
+            </div>
+        </section>
+        <section id="install">
+            <div class="container">
+                <h2 class="section-title">三秒安装，永久使用</h2>
+                <div class="install-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>按住下方按钮</h3>
+                        <p>请用鼠标左键点住红色的“网页转换器”按钮。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>拖到书签栏</h3>
+                        <a href="javascript:(function(){var e=document.createElement('script');e.src='http://tablecopy/tools/tablecopy/web-converter.js?t='+Date.now();document.body.appendChild(e);})();" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
+                        <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>完成！</h3>
+                        <p>在任何想保存的页面，点击这个书签即可开始转换！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 网页转换器. 由 Gemini AI 强力驱动.</p>
+        </div>
+    </footer>
+</body>
+</html>
