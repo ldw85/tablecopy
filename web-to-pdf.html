@@ -89,7 +89,90 @@
                     <div class="step">
                         <div class="step-number">2</div>
                         <h3>拖到书签栏</h3>
-                        <a href="javascript:(function(){var e=document.createElement('script');e.src='http://tablecopy/tools/tablecopy/web-converter.js?t='+Date.now();document.body.appendChild(e);})();" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
+                        <a href="javascript:!function(){if(document.getElementById(&quot;wc-modal-style&quot;))return;let e=&quot;web-converter-&quot;,t=`
+        #${e}modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2147483646; /* Max z-index - 1 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+        }
+        #${e}modal {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        #${e}modal h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 22px;
+        }
+        #${e}modal .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        #${e}modal button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            color: #fff;
+        }
+        #${e}save-pdf {
+            background-color: #D9534F; /* Red for PDF */
+        }
+        #${e}save-pdf:hover {
+            background-color: #C9302C;
+            transform: scale(1.02);
+        }
+        #${e}save-image {
+            background-color: #5CB85C; /* Green for Image */
+        }
+        #${e}save-image:hover {
+            background-color: #4CAE4C;
+            transform: scale(1.02);
+        }
+        #${e}close {
+            margin-top: 10px;
+            background: none;
+            color: #888;
+            font-size: 14px;
+        }
+        #${e}close:hover {
+            color: #333;
+        }
+        #${e}status {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+            min-height: 20px;
+        }
+    `,o=`
+        <div id=&quot;${e}modal&quot;>
+            <h3>保存当前网页</h3>
+            <div class=&quot;button-container&quot;>
+                <button id=&quot;${e}save-pdf&quot;>保存为 PDF</button>
+                <button id=&quot;${e}save-image&quot;>保存为图片 (PNG)</button>
+            </div>
+            <div id=&quot;${e}status&quot;></div>
+            <button id=&quot;${e}close&quot;>关闭</button>
+        </div>
+    `;function n(){let t=document.getElementById(`${e}modal-overlay`);t.style.display=&quot;none&quot;,window.print(),t.style.display=&quot;flex&quot;}function l(){let t=document.getElementById(`${e}status`);t.textContent=&quot;正在准备截图...&quot;;let o=()=>{t.textContent=&quot;正在截取页面... 请稍候...&quot;;let o=document.getElementById(`${e}modal-overlay`);o.style.display=&quot;none&quot;,html2canvas(document.documentElement,{useCORS:!0,scale:window.devicePixelRatio,logging:!1,onclone(t){let o=t.getElementById(`${e}modal-overlay`);o&&o.remove()}}).then(e=>{t.textContent=&quot;截取成功，正在生成下载...&quot;;let o=document.createElement(&quot;a&quot;);o.download=(document.title||&quot;web-capture&quot;)+&quot;.png&quot;,o.href=e.toDataURL(&quot;image/png&quot;),o.click(),a()}).catch(e=>{console.error(&quot;Web Converter Error:&quot;,e),t.textContent=&quot;抱歉，截图失败。请查看控制台获取详情。&quot;,o.style.display=&quot;flex&quot;})};if(&quot;undefined&quot;!=typeof html2canvas)o();else{t.textContent=&quot;首次使用，正在加载截图组件...&quot;;let n=document.createElement(&quot;script&quot;);n.src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js&quot;,n.onload=o,n.onerror=()=>{t.textContent=&quot;无法加载截图组件，请检查网络或广告拦截器。&quot;},document.head.appendChild(n)}}function a(){let t=document.getElementById(`${e}modal-overlay`),o=document.getElementById(&quot;wc-modal-style&quot;);t&&document.body.removeChild(t),o&&document.head.removeChild(o)}!function d(){let r=function n(){let l=document.createElement(&quot;style&quot;);l.id=&quot;wc-modal-style&quot;,l.innerText=t,document.head.appendChild(l);let a=document.createElement(&quot;div&quot;);return a.id=`${e}modal-overlay`,a.innerHTML=o,document.body.appendChild(a),a}();document.getElementById(`${e}save-pdf`).addEventListener(&quot;click&quot;,n),document.getElementById(`${e}save-image`).addEventListener(&quot;click&quot;,l),document.getElementById(`${e}close`).addEventListener(&quot;click&quot;,a),r.addEventListener(&quot;click&quot;,t=>{t.target.id===`${e}modal-overlay`&&a()})}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
                         <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
                     </div>
                     <div class="step">
