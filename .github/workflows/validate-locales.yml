@@ -1,0 +1,37 @@
+name: Build & Validate Locales
+
+on:
+  pull_request:
+    paths:
+      - 'tools/tablecopy/**'
+  push:
+    branches:
+      - feature/static-locales
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install (no-op if none)
+        run: |
+          cd tools/tablecopy || exit 0
+          if [ -f package.json ]; then npm ci || true; fi
+
+      - name: Build locales
+        run: |
+          node tools/tablecopy/scripts/build_locales.js
+
+      - name: Validate generated locales
+        run: |
+          node tools/tablecopy/scripts/validate_jsonld.js --lang=en tools/tablecopy/en/web-to-image.html tools/tablecopy/en/web-to-pdf.html
+          node tools/tablecopy/scripts/validate_jsonld.js --lang=pt tools/tablecopy/pt/web-to-image.html tools/tablecopy/pt/web-to-pdf.html
+          node tools/tablecopy/scripts/validate_jsonld.js --lang=es tools/tablecopy/es/web-to-image.html tools/tablecopy/es/web-to-pdf.html
+          node tools/tablecopy/scripts/validate_jsonld.js --lang=zh tools/tablecopy/zh/web-to-image.html tools/tablecopy/zh/web-to-pdf.html
