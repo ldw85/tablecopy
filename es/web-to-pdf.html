@@ -1,0 +1,508 @@
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Web to PDF",
+      "description": "Exporta cualquier página como PDF de alta calidad y buscable (preservando diseño, estilos y texto seleccionable).",
+      "applicationCategory": "BrowserTool",
+      "operatingSystem": "Any",
+      "url": "https://tablecopy.pro/web-to-pdf",
+      "author": {
+        "@type": "Organization",
+        "name": "TableCopy",
+        "url": "https://tablecopy.pro"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Esta herramienta subirá el contenido de mi página?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Todo el procesamiento (impresión o captura) se realiza localmente en el navegador y el archivo exportado se descarga en su dispositivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué el PDF impreso difiere de la página en pantalla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Muchos sitios incluyen estilos @media print que cambian la salida de impresión. Verifique la vista previa de impresión para paginación, escala y márgenes; use el modo de captura para fidelidad visual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo debo usar captura (PNG) en lugar de imprimir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuando la página contiene canvas complejos, WebGL o visualizaciones dinámicas, imprimir puede no renderizar correctamente; use el modo captura para capturar la salida visual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo preservar texto buscable al imprimir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prefiera la impresión nativa del navegador (window.print()) que preserva el texto del DOM. Evite el modo captura si necesita texto seleccionable/buscable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Y si las bibliotecas CDN fallan por bloqueadores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si html2canvas u otras bibliotecas CDN fallan, el script muestra un mensaje de fallback y sugiere usar la impresión del navegador o permitir el CDN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo reporto bugs o contribuyo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Abra un issue o PR en el repositorio (ruta: tools/tablecopy/) con un ejemplo reproducible o grabación."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="icon" type="image/png" href="tc_icon.png">
+    <style>
+        :root {
+            --primary-color: #D9534F; /* A PDF-like red color */
+            --dark-color: #2c3e50;
+            --light-color: #ffffff;
+            --gray-color: #7f8c8d;
+            --bg-color: #f7f9fc;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        .navbar {
+            position: fixed; top: 0; width: 100%; padding: 20px 0; z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 900; color: var(--primary-color); text-decoration: none; }
+        .hero { background-color: var(--bg-color); text-align: center; padding-top: 140px; }
+        .hero h1 { font-size: 48px; font-weight: 900; margin-bottom: 20px; line-height: 1.2; }
+        .hero .slogan { font-size: 20px; color: var(--gray-color); margin-bottom: 40px; }
+        .section-title { text-align: center; font-size: 36px; font-weight: 900; margin-bottom: 60px; }
+        #install { background-color: var(--bg-color); }
+        .install-steps { display: flex; justify-content: center; align-items: flex-start; gap: 40px; }
+        .step { text-align: center; max-width: 300px; }
+        .step-number {
+            width: 50px; height: 50px; background-color: var(--primary-color); color: var(--light-color);
+            border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;
+            font-size: 24px; font-weight: 700; margin-bottom: 20px;
+        }
+        .bookmarklet-button {
+            display: inline-block; padding: 12px 24px; background-color: var(--primary-color); color: var(--light-color);
+            border-radius: 8px; font-weight: 700; cursor: grab; user-select: none;
+            border: 2px dashed #B54541; transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(217, 83, 79, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0); }
+        }
+        .footer { background-color: var(--dark-color); color: #bdc3c7; text-align: center; padding: 40px 0; }
+        .footer p { margin: 0; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .install-steps { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">网页转换器</a>
+            <div style="display:flex;align-items:center;gap:12px">
+                <label for="lang-select" style="font-size:14px;color:#555;margin-right:6px;">语言</label>
+                <select id="lang-select" aria-label="Select language" style="padding:6px;border-radius:6px;border:1px solid #ddd;">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Guardar página como PDF con un clic — Web to PDF (Alta calidad, buscable)</h1>
+                <h2 class="slogan">Exporta cualquier página como PDF de alta calidad y buscable (preservando diseño, estilos y texto seleccionable).</h2>
+                <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">Usar ahora</a>
+            </div>
+        </section>
+        <section id="install">
+            <div class="container">
+                <h2 class="section-title">三秒安装，永久使用</h2>
+                <div class="install-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>按住下方按钮</h3>
+                        <p>请用鼠标左键点住红色的“网页转换器”按钮。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>拖到书签栏</h3>
+                        <a href="javascript:!function(){if(document.getElementById(&quot;wc-modal-style&quot;))return;let e=&quot;web-converter-&quot;,t=`
+        #${e}modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2147483646; /* Max z-index - 1 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+        }
+        #${e}modal {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        #${e}modal h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 22px;
+        }
+        #${e}modal .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        #${e}modal button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            color: #fff;
+        }
+        #${e}save-pdf {
+            background-color: #D9534F; /* Red for PDF */
+        }
+        #${e}save-pdf:hover {
+            background-color: #C9302C;
+            transform: scale(1.02);
+        }
+        #${e}save-image {
+            background-color: #5CB85C; /* Green for Image */
+        }
+        #${e}save-image:hover {
+            background-color: #4CAE4C;
+            transform: scale(1.02);
+        }
+        #${e}close {
+            margin-top: 10px;
+            background: none;
+            color: #888;
+            font-size: 14px;
+        }
+        #${e}close:hover {
+            color: #333;
+        }
+        #${e}status {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+            min-height: 20px;
+        }
+    `,o=`
+        <div id=&quot;${e}modal&quot;>
+            <h3>保存当前网页</h3>
+            <div class=&quot;button-container&quot;>
+                <button id=&quot;${e}save-pdf&quot;>保存为 PDF</button>
+                <button id=&quot;${e}save-image&quot;>保存为图片 (PNG)</button>
+            </div>
+            <div id=&quot;${e}status&quot;></div>
+            <button id=&quot;${e}close&quot;>关闭</button>
+        </div>
+    `;function n(){let t=document.getElementById(`${e}modal-overlay`);t.style.display=&quot;none&quot;,window.print(),t.style.display=&quot;flex&quot;}function l(){let t=document.getElementById(`${e}status`);t.textContent=&quot;正在准备截图...&quot;;let o=()=>{t.textContent=&quot;正在截取页面... 请稍候...&quot;;let o=document.getElementById(`${e}modal-overlay`);o.style.display=&quot;none&quot;,html2canvas(document.documentElement,{useCORS:!0,scale:window.devicePixelRatio,logging:!1,onclone(t){let o=t.getElementById(`${e}modal-overlay`);o&&o.remove()}}).then(e=>{t.textContent=&quot;截取成功，正在生成下载...&quot;;let o=document.createElement(&quot;a&quot;);o.download=(document.title||&quot;web-capture&quot;)+&quot;.png&quot;,o.href=e.toDataURL(&quot;image/png&quot;),o.click(),a()}).catch(e=>{console.error(&quot;Web Converter Error:&quot;,e),t.textContent=&quot;抱歉，截图失败。请查看控制台获取详情。&quot;,o.style.display=&quot;flex&quot;})};if(&quot;undefined&quot;!=typeof html2canvas)o();else{t.textContent=&quot;首次使用，正在加载截图组件...&quot;;let n=document.createElement(&quot;script&quot;);n.src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js&quot;,n.onload=o,n.onerror=()=>{t.textContent=&quot;无法加载截图组件，请检查网络或广告拦截器。&quot;},document.head.appendChild(n)}}function a(){let t=document.getElementById(`${e}modal-overlay`),o=document.getElementById(&quot;wc-modal-style&quot;);t&&document.body.removeChild(t),o&&document.head.removeChild(o)}!function d(){let r=function n(){let l=document.createElement(&quot;style&quot;);l.id=&quot;wc-modal-style&quot;,l.innerText=t,document.head.appendChild(l);let a=document.createElement(&quot;div&quot;);return a.id=`${e}modal-overlay`,a.innerHTML=o,document.body.appendChild(a),a}();document.getElementById(`${e}save-pdf`).addEventListener(&quot;click&quot;,n),document.getElementById(`${e}save-image`).addEventListener(&quot;click&quot;,l),document.getElementById(`${e}close`).addEventListener(&quot;click&quot;,a),r.addEventListener(&quot;click&quot;,t=>{t.target.id===`${e}modal-overlay`&&a()})}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
+                        <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>完成！</h3>
+                        <p>在任何想保存的页面，点击这个书签即可开始转换！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features: SEO-friendly, EEAT-focused -->
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">Características — Web to PDF / Guardar como PDF</h2>
+                <p>本页面为站内工具页模板，详细说明了“网页转 PDF”的功能、本地实现方式和适用场景，便于用户快速理解并信任工具。页面内容兼顾技术细节与使用指南，满足 Google EEAT（专业性/经验/权威性/可信度）。</p>
+                <ul>
+                    <li><strong>高保真打印：</strong>通过浏览器的打印（`window.print()`）生成 PDF，保留页面 CSS、字体与排版，适合生成可打印、分页友好的 PDF 文件。</li>
+                    <li><strong>可搜索文本：</strong>优先使用浏览器原生打印保证文本可选中、可复制，保留可访问性语义（屏幕阅读器友好）。</li>
+                    <li><strong>截图备选方案：</strong>当打印无法满足（例如复杂 canvas 或动态内容）时，页面会加载 `html2canvas` 并导出高分辨率 PNG 作为备选。</li>
+                    <li><strong>隐私保护：</strong>所有操作均在用户浏览器本地完成，不上传任何页面内容到第三方服务器（详见下方“关于和隐私”）。</li>
+                    <li><strong>跨站点兼容：</strong>使用 `useCORS` 选项和动态脚本加载以提高兼容性，但受限于目标页面的 CSP / 广告拦截器。</li>
+                </ul>
+                <p>还可以试用：<a href="web-to-image.html">网页转图片 (Web to Image)</a> — 将整个页面导出为 PNG 图像。</p>
+            </div>
+        </section>
+
+        <!-- How it works / EEAT section -->
+        <section id="about" style="background-color: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">Acerca de esta herramienta (Cómo funciona & EEAT)</h2>
+                <p><strong>作者与维护：</strong>本工具由 TableCopy 团队和开源社区协作维护，源代码及实现位于本项目的 <code>tools/tablecopy/</code> 目录，欢迎审计与贡献。</p>
+                <p><strong>实现原理：</strong>首选调用浏览器的打印子系统（`window.print()`）以保留页面文本和样式；若需图像备份则动态加载 `html2canvas`（CDN）进行截图并下载 PNG。代码在页面中以书签（bookmarklet）方式注入，相关 JS 逻辑示例位于 <code>web-converter.js</code>。</p>
+                <p><strong>可验证的安全性与隐私：</strong>不含远程数据上报；截图与 PDF 在客户端生成并直接下载。第三方库（如 html2canvas）从公开 CDN 加载，脚本在加载失败时提供友好提示。</p>
+                <p><strong>最佳实践（建议）：</strong>在打印前关闭浮动工具栏与模态窗口；对长页建议先使用“页面设置”调整纸张与缩放以获得最佳分页效果。</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container" style="max-width: 800px;">
+            <h2 class="section-title">Preguntas Frecuentes (FAQ)</h2>
+                <div class="faq-item">
+                    <h3>¿Esta herramienta subirá el contenido de mi página?</h3>
+                    <p>No. Todo el procesamiento (impresión o captura) se realiza localmente en el navegador y el archivo exportado se descarga en su dispositivo.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Por qué el PDF impreso difiere de la página en pantalla?</h3>
+                    <p>Muchos sitios incluyen estilos @media print que cambian la salida de impresión. Verifique la vista previa de impresión para paginación, escala y márgenes; use el modo de captura para fidelidad visual.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cuándo debo usar captura (PNG) en lugar de imprimir?</h3>
+                    <p>Cuando la página contiene canvas complejos, WebGL o visualizaciones dinámicas, imprimir puede no renderizar correctamente; use el modo captura para capturar la salida visual.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cómo preservar texto buscable al imprimir?</h3>
+                    <p>Prefiera la impresión nativa del navegador (window.print()) que preserva el texto del DOM. Evite el modo captura si necesita texto seleccionable/buscable.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Y si las bibliotecas CDN fallan por bloqueadores?</h3>
+                    <p>Si html2canvas u otras bibliotecas CDN fallan, el script muestra un mensaje de fallback y sugiere usar la impresión del navegador o permitir el CDN.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cómo reporto bugs o contribuyo?</h3>
+                    <p>Abra un issue o PR en el repositorio (ruta: tools/tablecopy/) con un ejemplo reproducible o grabación.</p>
+                </div>
+                <p style="margin-top:18px;">需要可搜索文本或更好的打印效果？请跳转到：<a href="web-to-pdf.html">网页转 PDF（Web to PDF）</a>。</p>
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p data-lang-key="footer_p">&copy; 2025 网页转换器. 由 Gemini AI 强力驱动.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- localized FAQ JSON-LD injector ---
+        function buildFaqJsonLdFromDom(lang) {
+            const faqSelectors = ['#faq h3', '#faq summary', '.faq h3', '.faq summary', 'h3.faq-question', 'summary.faq-question'];
+            const nodes = [];
+            faqSelectors.forEach(sel => document.querySelectorAll(sel)).forEach(list => list.forEach(node => nodes.push(node)));
+
+            if (nodes.length === 0) {
+                document.querySelectorAll('main h3').forEach(n => nodes.push(n));
+            }
+
+            const mainEntity = nodes.map((node) => {
+                const question = node.innerText.trim();
+                let answer = '';
+                let next = node.nextElementSibling;
+                if (next && (next.tagName.toLowerCase() === 'p' || next.tagName.toLowerCase() === 'div')) {
+                    answer = next.innerText.trim();
+                } else if (node.tagName.toLowerCase() === 'summary') {
+                    const details = node.closest('details');
+                    if (details) answer = details.querySelector('div, p') ? (details.querySelector('div, p').innerText || '') : '';
+                }
+                return {
+                    '@type': 'Question',
+                    'name': question,
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': answer || ''
+                    }
+                };
+            }).filter(item => item.name);
+
+            return {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                'mainEntity': mainEntity
+            };
+        }
+
+        function injectLocalizedFaqJsonLd(lang) {
+            document.querySelectorAll('script[data-tc-localized-jsonld]').forEach(s => s.remove());
+            const faqJson = buildFaqJsonLdFromDom(lang);
+            if (!faqJson.mainEntity || faqJson.mainEntity.length === 0) return;
+            const s = document.createElement('script');
+            s.type = 'application/ld+json';
+            s.setAttribute('data-tc-localized-jsonld', lang);
+            s.textContent = JSON.stringify(faqJson, null, 2);
+            document.head.appendChild(s);
+        }
+
+        (function() {
+            const sel = document.getElementById('lang-select');
+            if (!sel) return;
+            sel.addEventListener('change', function() {
+                const lang = sel.value || 'zh';
+                setTimeout(() => injectLocalizedFaqJsonLd(lang), 50);
+            });
+            const initialLang = sel.value || window.localStorage && localStorage.tableCopyLang || 'zh';
+            setTimeout(() => injectLocalizedFaqJsonLd(initialLang), 150);
+        })();
+
+        // Minimal i18n: zh (default), en, pt, es
+        const tcTranslationsPDF = {
+            zh: {
+                hero_h1: '一键保存网页为 PDF — Web to PDF / Save Webpage as PDF（高质量、可搜索）',
+                hero_slogan: '将任意网页导出为可搜索、可复制文本的高质量 PDF（保留布局、样式与可访问文本）',
+                install_cta: '立即使用',
+                features_title: '功能亮点 — PDF 导出（Web to PDF / Save as PDF）',
+                about_title: '关于本工具（How it works & EEAT）',
+                faq_title: '常见问题（FAQ）',
+                footer_p: '© 2025 网页转换器. 由 Gemini AI 强力驱动.'
+            },
+            en: {
+                hero_h1: 'One-click save webpage as PDF — Web to PDF (High-quality, Searchable)',
+                hero_slogan: 'Export any webpage as a high-quality, searchable PDF (preserving layout, styles and selectable text).',
+                install_cta: 'Use Now',
+                features_title: 'Features — Web to PDF / Save as PDF',
+                about_title: 'About this tool (How it works & EEAT)',
+                faq_title: 'FAQ',
+                footer_p: '© 2025 Web Converter. Powered by Gemini AI.'
+            },
+            pt: {
+                hero_h1: 'Salvar página como PDF com um clique — Web to PDF (Alta qualidade, pesquisável)',
+                hero_slogan: 'Exporte qualquer página web como PDF pesquisável e de alta qualidade (mantendo layout, estilos e texto selecionável).',
+                install_cta: 'Usar Agora',
+                features_title: 'Destaques — PDF Export (Web to PDF)',
+                about_title: 'Sobre esta ferramenta (Como funciona & EEAT)',
+                faq_title: 'Perguntas Frequentes (FAQ)',
+                footer_p: '© 2025 Web Converter. Powered by Gemini AI.'
+            },
+            es: {
+                hero_h1: 'Guardar página como PDF con un clic — Web to PDF (Alta calidad, buscable)',
+                hero_slogan: 'Exporta cualquier página web como un PDF de alta calidad y buscable (preservando diseño, estilos y texto seleccionable).',
+                install_cta: 'Usar ahora',
+                features_title: 'Características — Web to PDF / Guardar como PDF',
+                about_title: 'Acerca de esta herramienta (Cómo funciona & EEAT)',
+                faq_title: 'Preguntas Frecuentes (FAQ)',
+                footer_p: '© 2025 Web Converter. Powered by Gemini AI.'
+            }
+        };
+
+        function applyTcLangPDF(lang) {
+            if (!tcTranslationsPDF[lang]) lang = 'zh';
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (!key) return;
+                const val = tcTranslationsPDF[lang][key];
+                if (val) {
+                    if (key === 'hero_h1' || key === 'hero_slogan') el.innerHTML = val; else el.innerText = val;
+                }
+            });
+        }
+
+        // Mark key elements
+        document.querySelector('.hero h1').setAttribute('data-lang-key', 'hero_h1');
+        document.querySelector('.hero .slogan').setAttribute('data-lang-key', 'hero_slogan');
+        document.querySelector('#features .section-title').setAttribute('data-lang-key', 'features_title');
+        document.querySelector('#about .section-title').setAttribute('data-lang-key', 'about_title');
+        document.querySelector('#faq .section-title').setAttribute('data-lang-key', 'faq_title');
+
+        // Localized JSON-LD for en/pt/es (keep zh static JSON-LD in head)
+        const localizedJsonLdPDF = {
+            en: {
+                "@context":"https://schema.org",
+                "@type":"SoftwareApplication",
+                "name":"Web to PDF",
+                "description":"Web to PDF: export webpages to searchable, high-quality PDF or PNG locally in the browser.",
+                "applicationCategory":"BrowserTool",
+                "operatingSystem":"Any",
+                "url":"https://tablecopy.pro/web-to-pdf",
+                "author":{"@type":"Organization","name":"TableCopy","url":"https://tablecopy.pro"}
+            },
+            pt: {
+                "@context":"https://schema.org",
+                "@type":"SoftwareApplication",
+                "name":"Web to PDF",
+                "description":"Web to PDF: exporte páginas web para PDF pesquisável ou PNG de alta qualidade localmente no navegador.",
+                "applicationCategory":"BrowserTool",
+                "operatingSystem":"Any",
+                "url":"https://tablecopy.pro/web-to-pdf",
+                "author":{"@type":"Organization","name":"TableCopy","url":"https://tablecopy.pro"}
+            },
+            es: {
+                "@context":"https://schema.org",
+                "@type":"SoftwareApplication",
+                "name":"Web to PDF",
+                "description":"Web to PDF: exporta páginas web a PDF buscable o PNG de alta calidad localmente en el navegador.",
+                "applicationCategory":"BrowserTool",
+                "operatingSystem":"Any",
+                "url":"https://tablecopy.pro/web-to-pdf",
+                "author":{"@type":"Organization","name":"TableCopy","url":"https://tablecopy.pro"}
+            }
+        };
+
+        function injectJsonLdPDF(lang){
+            document.querySelectorAll('script[data-tc-localized-jsonld]').forEach(s=>s.remove());
+            if(lang === 'zh') return;
+            const node = localizedJsonLdPDF[lang];
+            if(!node) return;
+            const s = document.createElement('script');
+            s.type = 'application/ld+json';
+            s.setAttribute('data-tc-localized-jsonld','1');
+            s.textContent = JSON.stringify(node);
+            document.head.appendChild(s);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let lang = urlParams.get('lang') || localStorage.getItem('tableCopyLang') || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'zh');
+        if (!['zh','en','pt','es'].includes(lang)) lang = 'zh';
+        applyTcLangPDF(lang);
+        injectJsonLdPDF(lang);
+        localStorage.setItem('tableCopyLang', lang);
+
+        // wire select
+        const langSelect = document.getElementById('lang-select');
+        if(langSelect){
+            langSelect.value = lang;
+            langSelect.addEventListener('change', (e)=>{
+                const v = e.target.value; applyTcLangPDF(v); injectJsonLdPDF(v); localStorage.setItem('tableCopyLang', v);
+            });
+        }
+    </script>
+</body>
+</html>

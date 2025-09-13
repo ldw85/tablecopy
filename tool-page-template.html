@@ -1,0 +1,135 @@
+<!--
+  Tool Page Template
+  ------------------
+  Instructions:
+  - Copy this file to create new tool pages (rename as needed).
+  - Replace placeholders marked with {{PLACEHOLDER}}.
+  - Update the JSON-LD fields (application name, url, description, author) to match the new tool.
+  - Use canonical domain: https://tablecopy.pro
+  - Keep markup minimal and avoid inline scripts that use innerHTML; prefer DOM APIs as in tablecopy_v5.js.
+-->
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{TOOL_TITLE}} - TableCopy</title>
+  <meta name="description" content="{{TOOL_DESCRIPTION}}" />
+  <link rel="canonical" href="https://tablecopy.pro/{{TOOL_SLUG}}" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:site_name" content="TableCopy" />
+  <meta property="og:title" content="{{TOOL_TITLE}} - TableCopy" />
+  <meta property="og:description" content="{{TOOL_DESCRIPTION}}" />
+  <meta property="og:url" content="https://tablecopy.pro/{{TOOL_SLUG}}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured data scaffold: update before publishing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{TOOL_TITLE}}",
+    "url": "https://tablecopy.pro/{{TOOL_SLUG}}",
+    "description": "{{TOOL_DESCRIPTION}}",
+    "applicationCategory": "DeveloperTool",
+    "operatingSystem": "All",
+    "author": {
+      "@type": "Organization",
+      "name": "TableCopy",
+      "url": "https://tablecopy.pro"
+    }
+  }
+  </script>
+
+  <style>
+    /* Minimal page styles - keep namespaced to avoid collisions */
+    :root { --tc-accent: #0a8; --tc-maxw: 900px; }
+    body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;padding:24px;color:#111}
+    .tc-container{max-width:var(--tc-maxw);margin:0 auto}
+    header h1{font-size:1.6rem;margin:0 0 8px}
+    header p.lead{color:#333;margin:0 0 18px}
+    section{margin:28px 0}
+    .tc-cta{display:inline-block;background:var(--tc-accent);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none}
+    .tc-grid{display:grid;grid-template-columns:1fr 280px;gap:20px}
+    .tc-card{padding:14px;border:1px solid #eee;border-radius:8px;background:#fff}
+    footer{font-size:0.9rem;color:#666;margin-top:40px}
+  </style>
+</head>
+<body>
+  <div class="tc-container">
+    <header>
+      <h1>{{TOOL_TITLE}}</h1>
+      <p class="lead">{{TOOL_TAGLINE}}</p>
+      <p><a class="tc-cta" href="#usage">立即使用 / 使用示例</a></p>
+    </header>
+
+    <main class="tc-grid">
+      <div>
+        <section id="overview" class="tc-card">
+          <h2>功能简介</h2>
+          <p>{{TOOL_DESCRIPTION}}</p>
+          <ul>
+            <li>快速、本地运行 - 不上传页面</li>
+            <li>兼容常见表格与动态可视化</li>
+            <li>导出为多种格式（CSV, XLSX, PNG, PDF）</li>
+          </ul>
+        </section>
+
+        <section id="how-it-works" class="tc-card">
+          <h2>工作原理</h2>
+          <ol>
+            <li>脚本在页面上识别表格或可视化 DOM 结构。</li>
+            <li>使用 DOM API 提取并序列化数据。</li>
+            <li>通过下载或剪贴板 API 将结果传给用户。</li>
+          </ol>
+          <p>如需更改提取逻辑，请编辑 <code>tools/tablecopy/tablecopy_v5.js</code> 中的解析函数（例如 <code>findParentStructure</code>）。</p>
+        </section>
+
+        <section id="usage" class="tc-card">
+          <h2>安装与使用</h2>
+          <p>把工具页中的绿色按钮拖到书签栏，打开目标网页后点击书签即可注入脚本并显示导出 UI。</p>
+          <h3>示例</h3>
+          <pre><code>// 在本地打开 index.html 并将按钮拖入书签栏
+http://localhost:8000/tools/tablecopy/index.html</code></pre>
+        </section>
+
+        <section id="faq" class="tc-card">
+          <h2>常见问题</h2>
+          <details>
+            <summary>此工具会上传我的网页内容吗？</summary>
+            <p>不会。默认在本地浏览器执行所有处理，导出结果直接下载到你的设备，除非你主动上传。</p>
+          </details>
+          <details>
+            <summary>打印与截图有什么区别？</summary>
+            <p>打印通常保留文本可搜索性；截图会保留像素级展示但会将内容转为图像。</p>
+          </details>
+        </section>
+      </div>
+
+      <aside>
+        <div class="tc-card">
+          <h3>关于 TableCopy</h3>
+          <p>TableCopy 是一个客户端工具集合，专注于从网页复制与导出表格数据。源代码公开，欢迎贡献。</p>
+          <p><a href="/tools/tablecopy/">工具首页</a></p>
+        </div>
+
+        <div class="tc-card">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="/tools/tablecopy/web-to-image.html">导出为图片</a></li>
+            <li><a href="/tools/tablecopy/web-to-pdf.html">导出为 PDF</a></li>
+            <li><a href="/tools/tablecopy/index.html">演示与书签工具</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>版权 &copy; TableCopy. 如果你要修改模板：替换所有 <code>{{PLACEHOLDER}}</code> 并更新 JSON-LD。发布前请运行 Google Rich Results Test 验证结构化数据。</p>
+    </footer>
+  </div>
+</body>
+</html>
