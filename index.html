@@ -21,253 +21,252 @@
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "128"
-      },
-      "url": "https://TableCopy.pro" /* 请替换为你的域名 */
-    }
-    </script>
-
-    <style>
-        /* --- 全局样式与字体 --- */
-        :root {
-            --primary-color: #4A90E2;
-            --dark-color: #2c3e50;
-            --light-color: #ffffff;
-            --gray-color: #7f8c8d;
-            --bg-color: #f7f9fc;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
-
-        body {
-            font-family: 'Inter', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
-            margin: 0;
-            line-height: 1.7;
-            color: var(--dark-color);
-            background-color: var(--light-color);
-            scroll-behavior: smooth;
-        }
-
-        /* --- 容器与布局 --- */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-        
-        /* --- 导航栏 --- */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 0;
-            z-index: 1000;
-            transition: all 0.3s ease-in-out;
-        }
-        .navbar.scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 15px 0;
-        }
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: 900;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 30px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* --- 英雄区域 (Hero Section) --- */
-        .hero {
-            background-color: var(--bg-color);
-            text-align: center;
-            padding-top: 140px;
-        }
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .hero .slogan {
-            font-size: 20px;
-            color: var(--gray-color);
-            margin-bottom: 40px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 700;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
-        }
-
-        /* --- 演示区域 --- */
-        .demo-gif-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 40px auto 0;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            border: 1px solid #e0e0e0;
-        }
-        .demo-gif-container img {
-            width: 100%;
-            display: block;
-        }
-        .gif-placeholder {
-            background-color: #e9ecef;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #adb5bd;
-            font-size: 24px;
-            font-weight: 500;
-            height: 450px;
-        }
-
-        /* --- Section 标题 --- */
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 900;
-            margin-bottom: 60px;
-        }
-
-        /* --- 安装区域 --- */
-        #install {
-            background-color: var(--bg-color);
-        }
-        .install-steps {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-        }
-        .step {
-            text-align: center;
-            max-width: 300px;
-        }
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            border-radius: 50%;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        .step p {
-            font-size: 16px;
-            color: var(--gray-color);
-        }
-        .bookmarklet-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #2ecc71;
-            color: var(--light-color);
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: grab;
-            user-select: none;
-            border: 2px dashed #27ae60;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        .bookmarklet-button:hover {
-            background-color: #27ae60;
-            transform: scale(1.05);
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
-        }
-        .mobile-note {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: var(--gray-color);
-        }
-
-        /* --- 通用卡片网格布局 --- */
-        .grid-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background-color: var(--light-color);
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-        }
-        .card svg {
-            width: 48px;
-            height: 48px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .card p {
-            font-size: 15px;
-            color: var(--gray-color);
-            text-align: left;
-        }
-        
+        // --- I18n (多语言) 脚本 ---
+        const translations = {
+            en: {
+                // Meta
+                meta_title: "Table Copy - One-Click Copy Web Tables to Excel, No More Messy Formatting",
+                meta_description: "Say goodbye to messy formatting! Table Copy is a lightweight bookmarklet that lets you copy any web table (including those made with divs) to Excel, CSV, or JSON with one click. No installation needed, perfect formatting.",
+                meta_keywords: "copy table from website, html to excel, table scraper, web data extraction, copy html table, table to csv, table to json, fix table copy paste",
+                // Nav & Logo
+                logo: "Table Copy",
+                nav_features: "Features",
+                nav_use_cases: "Use Cases",
+                nav_blog: "Blog",
+                nav_faq: "FAQ",
+                nav_install: "Install Now",
+                lang_switcher_text: "中文",
+                // Hero
+                hero_h1: "Copy Any Web Table,<br>as Easily as Copying Text.",
+                hero_slogan: "Ditch the tedious screenshots and manual entry. One click to grab data to your clipboard for a perfect paste.",
+                hero_cta: "Install for Free Now",
+                hero_gif_placeholder: "Live Demo GIF",
+                // Why
+                why_title: "Like You, We Were Tired of the Tedium",
+                why_p: "We are data enthusiasts and heavy users of productivity tools. For countless days and nights, needing to get data from web pages into Excel, we were tormented by broken formatting, hidden `<div>` tables, and slow extensions. We believed there had to be a better way. And so, 'Table Copy' was born. It's not bloated software, just a pure, fast, and focused tool designed to solve one problem: elegantly copying web tables.",
+                // Install
+                install_title: "3-Second Install, Use Forever",
+                install_step1_h3: "Press and Hold the Button",
+                install_step1_p: "Click and hold the green 'Table Copy' button with your left mouse button.",
+                install_step2_h3: "Drag to Your Bookmarks Bar",
+                install_step2_p: "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+                bookmarklet_button_text: "Table Copy",
+                bookmarklet_title: "Drag me to your bookmarks bar",
+                install_step3_h3: "Done!",
+                install_step3_p: "Now, on any page with a table, just click this bookmark to start!",
+                install_mobile_note: "Note: This bookmarklet must be installed and used on a desktop browser.",
+                alert_text: "Please don't click this button. Instead, drag it to your bookmarks bar!",
+                // Features
+                features_title: "One Tool for All Your Needs",
+                feature1_h3: "Smart Structure Detection",
+                feature1_p: "Supports not only traditional `<table>` elements but also intelligently recognizes modern tables built with `<div>` layouts (based on ARIA standards).",
+                feature2_h3: "Perfect One-Click Copy",
+                feature2_p: "Our unique Rich Text (HTML) copy feature writes the table structure to the clipboard, ensuring a perfect, format-preserving paste into Excel, WPS, or Notion.",
+                feature3_h3: "Flexible Export Options",
+                feature3_p: "Copy as Rich Text, TSV, CSV, or JSON. Export directly to a CSV file (perfect for Excel) or even copy the table's raw HTML source code to meet all your needs.",
+                feature4_h3: "Lightweight & Secure",
+                feature4_p: "It's just a bookmarklet. No installation, no background processes, ready when you are. All operations are performed locally in your browser. We never see, send, or store any of your data.",
+                feature5_h3: "Export as Picture",
+                feature5_p: "Save the table as a PNG image with one click. Perfect for sharing in presentations, reports, or on social media. What you see is what you get.",
+                // Use Cases
+                use_cases_title: "Who Uses It, and How?",
+                use_case1_h3: "📊 Data Analysts",
+                use_case1_p: "Quickly extract data tables from financial statements and industry reports online without waiting for IT support, and start your analysis immediately.",
+                use_case2_h3: "🛒 E-commerce Managers",
+                use_case2_p: "Easily grab competitor product prices, sales volumes, and specifications to create comparison sheets and inform your marketing strategy.",
+                // Blog
+                blog_title: "From Our Blog",
+                blog1_title: "How to Copy Web Tables to Excel in One Click: A Beginner’s Guide",
+                blog1_desc: "Frustrated with messy pastes? Learn how to copy any web table to Excel perfectly in one click with a simple, installation-free tool.",
+                blog2_title: "How to Copy a Table from Perplexity AI (Without Losing Your Mind)",
+                blog2_desc: "A step-by-step guide on how to copy tables from Perplexity AI. Learn simple copy-paste, format requests, and browser extensions to easily extract web data into Excel.",
+                blog3_title: "How to Copy a Column from a Website: All The Best Methods",
+                blog3_desc: "Stop wrestling with jumbled data. This guide reveals 3 proven methods to perfectly copy a single column from any web page table into Excel or Sheets.",
+                blog_read_more: "Read More →",
+                use_case3_h3: "🎓 Students & Researchers",
+                use_case3_p: "Efficiently collect data from Wikipedia, academic sites, and government reports for papers and research, significantly boosting your literature review productivity.",
+                // FAQ
+                faq_title: "Frequently Asked Questions (FAQ)",
+                faq1_q: "Is this tool safe? Will it upload my data?",
+                faq1_a: "Absolutely safe. Table Copy is a 100% client-side tool. All data recognition and processing happens locally in your browser. Nothing is ever sent to or stored on any server.",
+                faq2_q: "How is it different from a browser extension?",
+                faq2_a: "It's a 'bookmarklet,' which is much lighter than an extension. No installation from an app store, no background resource usage. Click to use, and it's gone when you're done. Of course, this also means it can't perform complex background tasks like scheduled scraping, which extensions can.",
+                faq3_q: "Does it work on all websites?",
+                faq3_a: "It supports the vast majority of tables using standard `<table>` tags or ARIA-compliant `<div>` structures. For pages built with extremely complex or non-standard frontend frameworks, it might not work perfectly. We are continuously improving the algorithm.",
+                faq7_q: "How do I copy just one column from a website table?",
+                faq7_a: "Our tool makes this incredibly simple, acting like a specialized **Column Copy** tool without needing a separate extension. When the TableCopy modal is open, just click on the header of the column you want to copy. A small menu will appear, allowing you to perform a **table column copy/paste** with a single click. You can choose to copy the data separated by commas or newlines, giving you full control. This feature is one of the core reasons users love **Tablecopy** for its efficiency.",
+                faq4_q: "Is this tool free? Will it cost money in the future?",
+                faq4_a: "Yes, the current bookmarklet will always be free. We believe good tools should be widely accessible. In the future, we might release a more powerful paid browser extension (e.g., with multi-page scraping, scheduled tasks), but the core functionality you see today will always be free.",
+                faq6_q: "How do I copy a table from a webpage?",
+                faq6_a: "It's very simple, just three steps:<br>1. On any webpage, use your mouse to select any part of the table you want to copy.<br>2. Click the 'Table Copy' bookmarklet that you installed in your bookmarks bar.<br>3. In the pop-up window, you can preview the captured table, then choose to 'Copy' (HTML format is recommended for a perfect paste into Excel) or directly 'Export as CSV'.",
+                faq5_q: "What is Table Copy?",
+                faq5_a: "Table Copy is a powerful bookmarklet tool born to solve the challenges of copying web data. Its core mission is to let you say goodbye to the frustration of manual copying and messy formatting. When you copy tables directly from a webpage to Excel or Docs, you often face issues like broken layouts, merged cells, and lost data, which significantly impacts productivity. Table Copy intelligently parses the web page's structure (including both traditional `<table>` and modern `<div>` layouts) to ensure that what you copy can be pasted with its original formatting perfectly preserved. More importantly, it is fundamentally different from bulky browser plugins. You can forget about installing space-consuming Chrome extensions. As a lightweight bookmarklet, it is quick to respond and ready on demand, consuming no background resources. You **do not need a Chrome extension** to use its full capabilities. You can easily **export any HTML table as an Excel-compatible CSV** file or convert an **HTML table to CSV**. It also allows you to copy data directly as rich text, JSON, and other formats, meeting all your needs for data analysis, reporting, and academic research.",
+                // Community & Footer
+                community_title: "Share & Connect",
+                community_p: "If you find this tool useful, share it with your friends! For feedback and ideas, connect with us.",
+                community_share_twitter: "Share on X (Twitter)",
+                community_share_facebook: "Share on Facebook",
+                community_share_linkedin: "Share on LinkedIn",
+                community_share_reddit: "Share on Reddit",
+                community_github: "Submit an issue on GitHub",
+                footer_p: "© 2025 Table Copy. Powered by Gemini AI.",
+                // More Tools
+                more_tools_title: "More Tools",
+                web_to_pdf_h3: "Web to PDF",
+                web_to_pdf_p: "Convert any web page to a PDF file.",
+                web_to_image_h3: "Web to Image",
+                web_to_image_p: "Convert any web page to an image."
+            },
+            pt: {
+                meta_title: "Table Copy - Copie tabelas da web para Excel em um clique",
+                meta_description: "Acabe com a formatação bagunçada! Table Copy é um bookmarklet leve que permite copiar qualquer tabela da web (incluindo layouts em div) para Excel, CSV ou JSON com um clique. Sem instalação.",
+                meta_keywords: "copiar tabela da web, html para excel, extrair tabela, tabela para csv, tabela para json",
+                // Nav & Logo
+                logo: "Table Copy",
+                nav_features: "Características",
+                nav_use_cases: "Casos de Uso",
+                nav_blog: "Blog",
+                nav_faq: "FAQ",
+                nav_install: "Instalar",
+                lang_switcher_text: "中文",
+                hero_h1: "Copie qualquer tabela da web,<br>tão fácil quanto copiar texto.",
+                hero_slogan: "Esqueça capturas de tela e entradas manuais. Um clique para copiar dados para a área de transferência com colagem perfeita.",
+                hero_cta: "Instalar Gratuitamente",
+                features_title: "Uma ferramenta para todas as suas necessidades",
+                feature1_h3: "Detecção inteligente de estrutura",
+                feature1_p: "Suporta elementos `<table>` tradicionais e reconhece tabelas modernas feitas com `<div>` (compatível com ARIA).",
+                feature2_h3: "Cópia perfeita com um clique",
+                feature2_p: "A cópia em Rich Text preserva a estrutura para colar no Excel com formatação perfeita.",
+                feature3_h3: "Opções de exportação flexíveis",
+                feature3_p: "Copie como Rich Text, TSV, CSV ou JSON. Exporte diretamente para CSV.",
+                feature4_h3: "Leve e Seguro",
+                feature4_p: "É um bookmarklet. Sem instalação e sem processos em segundo plano. Todas as operações são locais no seu navegador.",
+                faq_title: "Perguntas Frequentes (FAQ)",
+                faq1_q: "Esta ferramenta é segura? Envia meus dados?",
+                faq1_a: "Sim. Table Copy roda totalmente no cliente. Nenhum dado é enviado a servidores.",
+                faq2_q: "Qual a diferença para uma extensão?",
+                faq2_a: "É um bookmarklet — bem mais leve; não roda tarefas em background.",
+                faq3_q: "Funciona em todos os sites?",
+                faq3_a: "Funciona na maioria das tabelas padrão ou com divs ARIA; sites muito personalizados podem ter problemas.",
+                footer_p: "© 2025 Table Copy. Powered by Gemini AI.",
+            },
+            es: {
+                meta_title: "Table Copy - Copia tablas web a Excel con un clic",
+                meta_description: "Di adiós a formatos desordenados. Table Copy es un bookmarklet ligero que te permite copiar cualquier tabla web (incluso construidas con divs) a Excel, CSV o JSON con un clic. Sin instalación.",
+                meta_keywords: "copiar tabla web, html a excel, extraer tabla, tabla a csv, tabla a json",
+                logo: "Table Copy",
+                nav_features: "Características",
+                nav_use_cases: "Casos de uso",
+                nav_blog: "Blog",
+                nav_faq: "FAQ",
+                nav_install: "Instalar",
+                lang_switcher_text: "中文",
+                hero_h1: "Copia cualquier tabla web,<br>tan fácil como copiar texto.",
+                hero_slogan: "Olvida capturas de pantalla y entradas manuales. Un clic para obtener datos listos para pegar perfectamente.",
+                hero_cta: "Instalar Gratis",
+                features_title: "Una herramienta para todas tus necesidades",
+                feature1_h3: "Detección inteligente de estructura",
+                feature1_p: "Admite `<table>` y tablas modernas con `<div>` basadas en ARIA.",
+                feature2_h3: "Copia perfecta con un clic",
+                feature2_p: "La copia en Rich Text preserva la estructura para pegar en Excel sin perder formato.",
+                faq_title: "Preguntas Frecuentes (FAQ)",
+                faq1_q: "¿Es seguro? ¿Envía mis datos?",
+                faq1_a: "Sí. Table Copy funciona totalmente en el cliente; no envía datos a servidores.",
+                footer_p: "© 2025 Table Copy. Powered by Gemini AI.",
+            },
+            zh: {
+                // Meta
+                meta_title: "表格助手 (Table Copy) - 一键复制网页表格到Excel，解决格式错乱",
+                meta_description: "告别格式错乱！表格助手是一款极致轻便的书签工具，能一键复制任何网页表格(包括table和div布局)到Excel、CSV或JSON。无需安装，完美保留格式。",
+                meta_keywords: "网页表格复制, 表格转Excel, HTML表格提取, table scraper, copy table from website, html to excel, 数据抓取, 格式错乱",
+                // Nav & Logo
+                logo: "表格助手",
+                nav_features: "核心功能",
+                nav_use_cases: "使用场景",
+                nav_blog: "博客",
+                nav_faq: "常见问题",
+                nav_install: "立即安装",
+                lang_switcher_text: "English",
+                // Hero
+                hero_h1: "像复制文本一样，<br>轻松复制任何网页表格。",
+                hero_slogan: "告别繁琐的截图和手动录入，一键将数据抓取到剪贴板，完美粘贴。",
+                hero_cta: "立即免费安装",
+                hero_gif_placeholder: "动态GIF演示区",
+                // Why
+                why_title: "我们和你一样，曾被繁琐困扰",
+                why_p: "我们是数据爱好者，也是效率工具的重度用户。在无数个需要从网页获取数据到Excel的日夜里，我们一次次地被错乱的格式、隐藏的`<div>`表格和缓慢的插件所折磨。我们相信，一定有更好的方法。于是，“表格助手”诞生了。它不是一个臃肿的软件，只是一个纯粹、快速、专注的工具，只为解决“将网页表格优雅地复制出来”这一个问题。",
+                // Install
+                install_title: "三秒安装，永久使用",
+                install_step1_h3: "按住下方按钮",
+                install_step1_p: "请用鼠标左键点住绿色的“表格助手”按钮。",
+                install_step2_h3: "拖到书签栏",
+                install_step2_p: "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
+                bookmarklet_button_text: "表格助手",
+                bookmarklet_title: "按住我拖动到书签栏",
+                install_step3_h3: "完成！",
+                install_step3_p: "现在，在任何有表格的页面，点击这个书签即可开始使用！",
+                install_mobile_note: "注意：书签工具需要在桌面端浏览器完成安装和使用。",
+                alert_text: "请不要点击此按钮，而是将它拖拽到您的书签栏！",
+                // Features
+                features_title: "一个工具，满足所有需求",
+                feature1_h3: "智能结构识别",
+                feature1_p: "不仅支持传统的 `<table>` 表格，更能智能识别使用 `<div>` 布局的现代网页表格结构 (基于ARIA标准)。",
+                feature2_h3: "一键完美复制",
+                feature2_p: "独有的富文本(HTML)复制功能，将表格结构写入剪贴板，完美粘贴到Excel、WPS、Notion中，格式绝不混乱。",
+                feature3_h3: "灵活的导出选项",
+                feature3_p: "不仅能复制为富文本、TSV、CSV、JSON，还能直接导出为CSV文件（完美兼容Excel），甚至可以复制表格的HTML源码，满足不同场景下的所有需求。",
+                feature4_h3: "极致轻便与安全",
+                feature4_p: "只是一个书签，无需安装，不占用任何后台资源，点击即用。所有操作均在您的浏览器本地完成，我们不查看、不发送、不存储您的任何数据。",
+                feature5_h3: "导出为图片",
+                feature5_p: "一键将表格保存为PNG图片，方便在演示文稿、报告或社交媒体中分享，所见即所得。",
+                // Use Cases
+                use_cases_title: "谁在使用，以及如何使用？",
+                use_case1_h3: "📊 数据分析师",
+                use_case1_p: "快速从各类财报、行业报告网页中提取数据表格，无需等待IT部门支持，立即开始分析工作。",
+                use_case2_h3: "🛒 电商运营",
+                use_case2_p: "轻松抓取竞争对手的商品价格、销量、规格等表格数据，制作比价表格，制定营销策略。",
+                // Blog
+                blog_title: "来自我们的博客",
+                blog1_title: "如何一键将网页表格复制到Excel：初学者指南",
+                blog1_desc: "还在为格式混乱的粘贴而烦恼吗？学习如何使用一个简单免安装的工具，一键完美地将任何网页表格复制到Excel。",
+                blog2_title: "如何从 Perplexity AI 复制表格（且不抓狂）",
+                blog2_desc: "一份关于如何从 Perplexity AI 复制表格的分步指南。学习简单的复制粘贴、格式请求和浏览器扩展，轻松将网页数据提取到 Excel。",
+                blog3_title: "如何从网站复制一整列：所有最佳方法",
+                blog3_desc: "别再跟混乱的数据作斗争了。本指南揭示了3种行之有效的方法，可以完美地将任何网页表格的单列复制到Excel或Sheets中。",
+                blog_read_more: "阅读更多 →",
+                use_case3_h3: "🎓 学生与研究员",
+                use_case3_p: "从维基百科、学术网站、政府报告中高效收集数据，用于论文写作和学术研究，大幅提升文献整理效率。",
+                // FAQ
+                faq_title: "常见问题 (FAQ)",
+                faq1_q: "这个工具安全吗？会上传我的数据吗？",
+                faq1_a: "绝对安全。表格助手是一个100%前端工具，所有的数据识别和处理都在您的浏览器本地完成，代码执行完毕即结束，不会向任何服务器发送或存储您的任何数据。",
+                faq2_q: "它和浏览器插件有什么区别？",
+                faq2_a: "它是一个“书签工具”，比插件更轻量。无需从应用商店安装，不占用后台资源，点击即用，用完即走。当然，这也意味着它无法实现插件才能做到的复杂后台任务（如定时抓取）。",
+                faq3_q: "所有网站的表格都支持吗？",
+                faq3_a: "支持绝大部分使用标准`<table>`标签或遵循ARIA标准的`<div>`表格。对于一些使用极端复杂或非标准前端框架构建的页面，可能无法完美识别。我们正在持续改进算法。",
+                faq7_q: "如何只复制网页上的某一列？",
+                faq7_a: "我们的工具让**列复制**变得异常简单，无需安装任何额外的**列复制插件 **。当“表格助手”窗口弹出后，您只需直接点击目标列的表头。这时会弹出一个小菜单，让您轻松完成**表格列复制粘贴 **。您可以选择以逗号或换行符作为分隔符来复制列数据，非常灵活。这个便捷的功能也是 **Tablecopy (表格助手)** 在众多工具中脱颖而出的核心优势之一。",
+                faq6_q: "如何从网页上复制一个表格？",
+                faq6_a: "操作非常简单，只需三步：<br>1. 在任何网页上，用鼠标选中您想复制的表格的任意一部分。<br>2. 点击您浏览器书签栏中的“表格助手”书签。<br>3. 在弹出的窗口中，您可以预览抓取到的表格，然后选择“复制”（推荐使用HTML格式以完美粘贴到Excel）或直接“导出为CSV”文件。",
+                faq5_q: "什么是表格助手 (Table Copy)？",
+                faq5_a: "表格助手 (Table Copy) 是一款为解决网页数据复制难题而生的强大书签工具。它的核心使命是让您彻底**告别手动复制，格式混乱**的困境。当您从网页直接复制表格到Excel或文档时，经常会遇到格式错乱、单元格合并、数据丢失等问题，极大影响工作效率。表格助手通过智能解析网页结构（包括传统的`<table>`和现代的`<div>`布局），确保您复制的内容能以完美的格式粘贴。更重要的是，它与笨重的浏览器插件完全不同，您**告别了需要下载安装、占用空间的Chrome extension**。作为一个轻量级书签，它**轻量下载，快捷响应**，不占用任何后台资源，点击即用，安全高效。您**不需要任何Chrome扩展程序(do not need a Chrome extension)**就能将网页上的**HTML表格导出(export as)为Excel兼容的CSV文件(HTML table to CSV)**，或直接复制为富文本、JSON等多种格式，满足您在数据分析、报告撰写、学术研究等各种场景下的需求。",
+                // Community & Footer
+                community_title: "分享与交流",
+                community_p: "如果您觉得这个工具好用，请分享给您的朋友！有任何建议或想法，欢迎通过以下渠道联系我们。",
+                community_share_twitter: "分享到 X (Twitter)",
+                community_share_facebook: "分享到 Facebook",
+                community_share_linkedin: "分享到 领英 (LinkedIn)",
+                community_share_reddit: "分享到 Reddit",
+                community_github: "在 GitHub 上提交问题",
+                footer_p: "© 2025 表格助手. 由 Gemini AI 强力驱动.",
+                // More Tools
+                more_tools_title: "更多工具",
+                web_to_pdf_h3: "网页转PDF",
+                web_to_pdf_p: "将任何网页转换为PDF文件。",
+                web_to_image_h3: "网页转图片",
+                web_to_image_p: "将任何网页转换为图片。"
+            }
+        };
         /* --- Blog Section --- */
         #blog {
             background-color: var(--light-color);
@@ -395,7 +394,15 @@
                 <li><a href="#use-cases" data-lang-key="nav_use_cases">使用场景</a></li>
                 <li><a href="#blog" data-lang-key="nav_blog">博客</a></li>
                 <li><a href="#faq" data-lang-key="nav_faq">常见问题</a></li>
-                <li><a href="#" id="lang-switcher" style="font-weight: 700; margin-left: 15px;"></a></li>
+                <li style="margin-left:8px">
+                    <label for="lang-select" style="font-size:13px;color:#555;margin-right:6px;">语言</label>
+                    <select id="lang-select" aria-label="Select language" style="padding:6px;border-radius:6px;border:1px solid #ddd;">
+                        <option value="zh">中文</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                        <option value="es">Español</option>
+                    </select>
+                </li>
                 <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;" data-lang-key="nav_install">立即安装</a></li>
                 
             </ul>
@@ -724,6 +731,64 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none
                 meta_keywords: "copy table from website, html to excel, table scraper, web data extraction, copy html table, table to csv, table to json, fix table copy paste",
                 // Nav & Logo
                 logo: "Table Copy",
+                },
+                pt: {
+                    meta_title: "Table Copy - Copie tabelas da web para Excel em um clique",
+                    meta_description: "Acabe com a formatação bagunçada! Table Copy é um bookmarklet leve que permite copiar qualquer tabela da web (incluindo layouts em div) para Excel, CSV ou JSON com um clique. Sem instalação.",
+                    meta_keywords: "copiar tabela da web, html para excel, extrair tabela, tabela para csv, tabela para json",
+                    // Nav & Logo
+                    logo: "Table Copy",
+                    nav_features: "Características",
+                    nav_use_cases: "Casos de Uso",
+                    nav_blog: "Blog",
+                    nav_faq: "FAQ",
+                    nav_install: "Instalar",
+                    lang_switcher_text: "中文",
+                    hero_h1: "Copie qualquer tabela da web,<br>tão fácil quanto copiar texto.",
+                    hero_slogan: "Esqueça capturas de tela e entradas manuais. Um clique para copiar dados para a área de transferência com colagem perfeita.",
+                    hero_cta: "Instalar Gratuitamente",
+                    features_title: "Uma ferramenta para todas as suas necessidades",
+                    feature1_h3: "Detecção inteligente de estrutura",
+                    feature1_p: "Suporta elementos `<table>` tradicionais e reconhece tabelas modernas feitas com `<div>` (compatível com ARIA).",
+                    feature2_h3: "Cópia perfeita com um clique",
+                    feature2_p: "A cópia em Rich Text preserva a estrutura para colar no Excel com formatação perfeita.",
+                    feature3_h3: "Opções de exportação flexíveis",
+                    feature3_p: "Copie como Rich Text, TSV, CSV ou JSON. Exporte diretamente para CSV.",
+                    feature4_h3: "Leve e Seguro",
+                    feature4_p: "É um bookmarklet. Sem instalação e sem processos em segundo plano. Todas as operações são locais no seu navegador.",
+                    faq_title: "Perguntas Frequentes (FAQ)",
+                    faq1_q: "Esta ferramenta é segura? Envia meus dados?",
+                    faq1_a: "Sim. Table Copy roda totalmente no cliente. Nenhum dado é enviado a servidores.",
+                    faq2_q: "Qual a diferença para uma extensão?",
+                    faq2_a: "É um bookmarklet — bem mais leve; não roda tarefas em background.",
+                    faq3_q: "Funciona em todos os sites?",
+                    faq3_a: "Funciona na maioria das tabelas padrão ou com divs ARIA; sites muito personalizados podem ter problemas.",
+                    footer_p: "© 2025 Table Copy. Powered by Gemini AI.",
+                },
+                es: {
+                    meta_title: "Table Copy - Copia tablas web a Excel con un clic",
+                    meta_description: "Di adiós a formatos desordenados. Table Copy es un bookmarklet ligero que te permite copiar cualquier tabla web (incluso construidas con divs) a Excel, CSV o JSON con un clic. Sin instalación.",
+                    meta_keywords: "copiar tabla web, html a excel, extraer tabla, tabla a csv, tabla a json",
+                    logo: "Table Copy",
+                    nav_features: "Características",
+                    nav_use_cases: "Casos de uso",
+                    nav_blog: "Blog",
+                    nav_faq: "FAQ",
+                    nav_install: "Instalar",
+                    lang_switcher_text: "中文",
+                    hero_h1: "Copia cualquier tabla web,<br>tan fácil como copiar texto.",
+                    hero_slogan: "Olvida capturas de pantalla y entradas manuales. Un clic para obtener datos listos para pegar perfectamente.",
+                    hero_cta: "Instalar Gratis",
+                    features_title: "Una herramienta para todas tus necesidades",
+                    feature1_h3: "Detección inteligente de estructura",
+                    feature1_p: "Admite `<table>` y tablas modernas con `<div>` basadas en ARIA.",
+                    feature2_h3: "Copia perfecta con un clic",
+                    feature2_p: "La copia en Rich Text preserva la estructura para pegar en Excel sin perder formato.",
+                    faq_title: "Preguntas Frecuentes (FAQ)",
+                    faq1_q: "¿Es seguro? ¿Envía mis datos?",
+                    faq1_a: "Sí. Table Copy funciona totalmente en el cliente; no envía datos a servidores.",
+                    footer_p: "© 2025 Table Copy. Powered by Gemini AI.",
+                },
                 nav_features: "Features",
                 nav_use_cases: "Use Cases",
                 nav_blog: "Blog",
@@ -907,7 +972,8 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none
             }
         };
 
-        const langSwitcher = document.getElementById('lang-switcher');
+    const langSwitcher = document.getElementById('lang-switcher');
+    const langSelect = document.getElementById('lang-select');
         const bookmarkletLink = document.querySelector('.bookmarklet-button');
         let currentLang = 'zh';
 
@@ -937,7 +1003,8 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none
             });
 
             bookmarkletLink.title = langData.bookmarklet_title;
-            langSwitcher.innerText = langData.lang_switcher_text;
+            if (langSelect) langSelect.value = lang;
+            if (langSwitcher) langSwitcher.innerText = langData.lang_switcher_text;
             localStorage.setItem('tableCopyLang', lang);
         }
 
@@ -946,11 +1013,12 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none
             alert(translations[currentLang].alert_text);
         });
 
-        langSwitcher.addEventListener('click', (e) => {
-            e.preventDefault();
-            const newLang = currentLang === 'zh' ? 'en' : 'zh';
-            setLanguage(newLang);
-        });
+        if (langSelect) {
+            langSelect.addEventListener('change', (e) => {
+                const newLang = e.target.value;
+                setLanguage(newLang);
+            });
+        }
 
         function initLanguage() {
             const savedLang = localStorage.getItem('tableCopyLang');
@@ -964,6 +1032,7 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none
             }
             
             setLanguage(defaultLang);
+            if (langSelect) langSelect.value = defaultLang;
         }
 
         initLanguage();

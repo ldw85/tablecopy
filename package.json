@@ -1,0 +1,15 @@
+{
+  "name": "tablecopy-jsonld-validate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small helper to validate JSON-LD in local TableCopy HTML pages",
+  "main": "scripts/validate_jsonld.js",
+  "scripts": {
+    "validate-jsonld": "node scripts/validate_jsonld.js ./web-to-image.html ./web-to-pdf.html",
+    "build-locales": "node scripts/build_locales.js",
+    "build": "npm run build-locales"
+  },
+  "author": "TableCopy",
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,11 +1,76 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网页转PDF - 一键保存任何网页为PDF</title>
-    <meta name="description" content="Web to PDF 是一款轻量级的免费书签工具，让您可以通过一次点击，调用浏览器打印功能将当前网页高质量地保存为PDF文档，完美保留布局和文本。">
-    <meta name="keywords" content="web to pdf, 网页转pdf, 保存网页为pdf, html to pdf, 网页打印, bookmarklet, 免费工具">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "Web to PDF",
+                    "description": "Web to PDF：通过浏览器打印或截图导出可搜索、高质量的 PDF，所有处理在本地完成。",
+                    "applicationCategory": "BrowserTool",
+                    "operatingSystem": "Any",
+                    "url": "https://tablecopy.pro/web-to-pdf",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "TableCopy",
+                        "url": "https://tablecopy.pro"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "此工具会上传我的网页内容吗？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "不会。默认情况下所有处理（例如调用打印或截图）都在本地浏览器执行，导出的文件会直接下载到你的设备，除非你主动上传，否则不会有第三方接触你的页面内容。"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "为何打印出来的 PDF 与页面显示不同？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "许多网站会为打印制定专有的 @media print 样式表，导致打印输出与屏幕显示不同。建议在打印预览中检查分页、缩放和页边距设置；如果需要保留屏幕视觉，考虑使用截图模式（PNG）。"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "什么情况下会使用截图（PNG）而不是打印生成 PDF？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "当页面包含复杂的 canvas、WebGL、动画或动态可视化组件时，浏览器打印可能无法完整呈现这些元素。脚本会在检测此类内容或用户选择“保存为图片”时加载 html2canvas 并导出 PNG。"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "如何在打印时保留页面的可搜索文本？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "优先使用浏览器自带的打印功能（通过 window.print() 调用），这通常会保留 DOM 文本信息。避免使用截图模式以保留文本可选性和可复制性。"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "浏览器兼容性和广告拦截器导致库加载失败怎么办？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "如果 html2canvas 或其他 CDN 库无法加载，脚本会显示提示并建议使用浏览器内置打印作为回退；你也可以临时禁用广告拦截器或将 CDN 列入白名单。"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "我如何反馈 bug 或贡献改进？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "请在仓库提交 Issue 或 Pull Request（仓库路径： tools/tablecopy/）。提交可复现示例页面或录像将有助于快速修复问题。"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
     <link rel="icon" type="image/png" href="tc_icon.png">
     <style>
         :root {
@@ -67,13 +132,22 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">网页转换器</a>
+            <div style="display:flex;align-items:center;gap:12px">
+                <label for="lang-select" style="font-size:14px;color:#555;margin-right:6px;">语言</label>
+                <select id="lang-select" aria-label="Select language" style="padding:6px;border-radius:6px;border:1px solid #ddd;">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
         </div>
     </nav>
     <main>
         <section class="hero">
             <div class="container">
-                <h1>一键保存网页为PDF</h1>
-                <p class="slogan">无需复杂软件，将任何网页高质量、可搜索的PDF文件。</p>
+                <h1>一键保存网页为 PDF — Web to PDF / Save Webpage as PDF（高质量、可搜索）</h1>
+                <h2 class="slogan">将任意网页导出为可搜索、可复制文本的高质量 PDF（保留布局、样式与可访问文本）</h2>
                 <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">立即使用</a>
             </div>
         </section>
@@ -183,11 +257,252 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Features: SEO-friendly, EEAT-focused -->
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">功能亮点 — PDF 导出（Web to PDF / Save as PDF）</h2>
+                <p>本页面为站内工具页模板，详细说明了“网页转 PDF”的功能、本地实现方式和适用场景，便于用户快速理解并信任工具。页面内容兼顾技术细节与使用指南，满足 Google EEAT（专业性/经验/权威性/可信度）。</p>
+                <ul>
+                    <li><strong>高保真打印：</strong>通过浏览器的打印（`window.print()`）生成 PDF，保留页面 CSS、字体与排版，适合生成可打印、分页友好的 PDF 文件。</li>
+                    <li><strong>可搜索文本：</strong>优先使用浏览器原生打印保证文本可选中、可复制，保留可访问性语义（屏幕阅读器友好）。</li>
+                    <li><strong>截图备选方案：</strong>当打印无法满足（例如复杂 canvas 或动态内容）时，页面会加载 `html2canvas` 并导出高分辨率 PNG 作为备选。</li>
+                    <li><strong>隐私保护：</strong>所有操作均在用户浏览器本地完成，不上传任何页面内容到第三方服务器（详见下方“关于和隐私”）。</li>
+                    <li><strong>跨站点兼容：</strong>使用 `useCORS` 选项和动态脚本加载以提高兼容性，但受限于目标页面的 CSP / 广告拦截器。</li>
+                </ul>
+                <p>还可以试用：<a href="web-to-image.html">网页转图片 (Web to Image)</a> — 将整个页面导出为 PNG 图像。</p>
+            </div>
+        </section>
+
+        <!-- How it works / EEAT section -->
+        <section id="about" style="background-color: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">关于本工具（How it works & EEAT）</h2>
+                <p><strong>作者与维护：</strong>本工具由 TableCopy 团队和开源社区协作维护，源代码及实现位于本项目的 <code>tools/tablecopy/</code> 目录，欢迎审计与贡献。</p>
+                <p><strong>实现原理：</strong>首选调用浏览器的打印子系统（`window.print()`）以保留页面文本和样式；若需图像备份则动态加载 `html2canvas`（CDN）进行截图并下载 PNG。代码在页面中以书签（bookmarklet）方式注入，相关 JS 逻辑示例位于 <code>web-converter.js</code>。</p>
+                <p><strong>可验证的安全性与隐私：</strong>不含远程数据上报；截图与 PDF 在客户端生成并直接下载。第三方库（如 html2canvas）从公开 CDN 加载，脚本在加载失败时提供友好提示。</p>
+                <p><strong>最佳实践（建议）：</strong>在打印前关闭浮动工具栏与模态窗口；对长页建议先使用“页面设置”调整纸张与缩放以获得最佳分页效果。</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="section-title">常见问题（FAQ）</h2>
+                <div class="faq-item">
+                    <h3>此工具会上传我的网页内容吗？</h3>
+                    <p>不会。默认情况下所有处理（例如调用打印或截图）都在本地浏览器执行，导出的文件会直接下载到你的设备。除非你手动把文件上传到外部服务，否则不会有第三方接触你的页面内容。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>为何打印出来的 PDF 与页面显示不同？</h3>
+                    <p>许多网站会为打印制定专有的 `@media print` 样式表，导致打印输出与屏幕显示不同。建议在打印预览中检查分页、缩放和页边距设置；如果需要保留屏幕视觉，考虑使用截图模式（PNG）作为备选方案。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>什么情况下会使用截图（PNG）而不是打印生成 PDF？</h3>
+                    <p>当页面包含复杂的 canvas、WebGL、动画或动态渲染的可视化组件时，浏览器打印可能无法完整呈现这些元素。脚本会在检测到这些情况或当用户选择“保存为图片”时加载 <code>html2canvas</code> 并导出 PNG。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何在打印时保留页面的可搜索文本？</h3>
+                    <p>优先使用浏览器自带的打印功能（本工具通过调用 <code>window.print()</code>），这通常会保留 DOM 文本信息。若你需要可搜索与可复制的文本，请避免使用截图模式。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>浏览器兼容性和广告拦截器导致库加载失败怎么办？</h3>
+                    <p>如果 <code>html2canvas</code> 或其他 CDN 库无法加载，脚本会显示提示并建议使用浏览器内置打印作为回退。你可以临时禁用广告拦截器或将 CDN 列入白名单以恢复功能。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>我如何反馈 bug 或贡献改进？</h3>
+                    <p>请在仓库中提交 Issue 或 Pull Request（仓库路径：<code>tools/tablecopy/</code>）。提交时请附上复现步骤或示例页面，有助于我们快速定位并修复问题。</p>
+                </div>
+                <p style="margin-top:18px;">还可以试试：<a href="web-to-image.html">网页转图片（Web to Image）</a> 或返回 <a href="index.html">首页</a>。</p>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 网页转换器. 由 Gemini AI 强力驱动.</p>
+            <p data-lang-key="footer_p">&copy; 2025 网页转换器. 由 Gemini AI 强力驱动.</p>
         </div>
     </footer>
+
+    <script>
+        // --- localized FAQ JSON-LD injector ---
+        function buildFaqJsonLdFromDom(lang) {
+            const faqSelectors = ['#faq h3', '#faq summary', '.faq h3', '.faq summary', 'h3.faq-question', 'summary.faq-question'];
+            const nodes = [];
+            faqSelectors.forEach(sel => document.querySelectorAll(sel)).forEach(list => list.forEach(node => nodes.push(node)));
+
+            if (nodes.length === 0) {
+                document.querySelectorAll('main h3').forEach(n => nodes.push(n));
+            }
+
+            const mainEntity = nodes.map((node) => {
+                const question = node.innerText.trim();
+                let answer = '';
+                let next = node.nextElementSibling;
+                if (next && (next.tagName.toLowerCase() === 'p' || next.tagName.toLowerCase() === 'div')) {
+                    answer = next.innerText.trim();
+                } else if (node.tagName.toLowerCase() === 'summary') {
+                    const details = node.closest('details');
+                    if (details) answer = details.querySelector('div, p') ? (details.querySelector('div, p').innerText || '') : '';
+                }
+                return {
+                    '@type': 'Question',
+                    'name': question,
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': answer || ''
+                    }
+                };
+            }).filter(item => item.name);
+
+            return {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                'mainEntity': mainEntity
+            };
+        }
+
+        function injectLocalizedFaqJsonLd(lang) {
+            document.querySelectorAll('script[data-tc-localized-jsonld]').forEach(s => s.remove());
+            const faqJson = buildFaqJsonLdFromDom(lang);
+            if (!faqJson.mainEntity || faqJson.mainEntity.length === 0) return;
+            const s = document.createElement('script');
+            s.type = 'application/ld+json';
+            s.setAttribute('data-tc-localized-jsonld', lang);
+            s.textContent = JSON.stringify(faqJson, null, 2);
+            document.head.appendChild(s);
+        }
+
+        (function() {
+            const sel = document.getElementById('lang-select');
+            if (!sel) return;
+            sel.addEventListener('change', function() {
+                const lang = sel.value || 'zh';
+                setTimeout(() => injectLocalizedFaqJsonLd(lang), 50);
+            });
+            const initialLang = sel.value || window.localStorage && localStorage.tableCopyLang || 'zh';
+            setTimeout(() => injectLocalizedFaqJsonLd(initialLang), 150);
+        })();
+
+        // Minimal i18n: zh (default), en, pt, es
+        const tcTranslationsPDF = {
+            zh: {
+                hero_h1: '一键保存网页为 PDF — Web to PDF / Save Webpage as PDF（高质量、可搜索）',
+                hero_slogan: '将任意网页导出为可搜索、可复制文本的高质量 PDF（保留布局、样式与可访问文本）',
+                install_cta: '立即使用',
+                features_title: '功能亮点 — PDF 导出（Web to PDF / Save as PDF）',
+                about_title: '关于本工具（How it works & EEAT）',
+                faq_title: '常见问题（FAQ）',
+                footer_p: '© 2025 网页转换器. 由 Gemini AI 强力驱动.'
+            },
+            en: {
+                hero_h1: 'One-click save webpage as PDF — Web to PDF (High-quality, Searchable)',
+                hero_slogan: 'Export any webpage as a high-quality, searchable PDF (preserving layout, styles and selectable text).',
+                install_cta: 'Use Now',
+                features_title: 'Features — Web to PDF / Save as PDF',
+                about_title: 'About this tool (How it works & EEAT)',
+                faq_title: 'FAQ',
+                footer_p: '© 2025 Web Converter. Powered by Gemini AI.'
+            },
+            pt: {
+                hero_h1: 'Salvar página como PDF com um clique — Web to PDF (Alta qualidade, pesquisável)',
+                hero_slogan: 'Exporte qualquer página web como PDF pesquisável e de alta qualidade (mantendo layout, estilos e texto selecionável).',
+                install_cta: 'Usar Agora',
+                features_title: 'Destaques — PDF Export (Web to PDF)',
+                about_title: 'Sobre esta ferramenta (Como funciona & EEAT)',
+                faq_title: 'Perguntas Frequentes (FAQ)',
+                footer_p: '© 2025 Web Converter. Powered by Gemini AI.'
+            },
+            es: {
+                hero_h1: 'Guardar página como PDF con un clic — Web to PDF (Alta calidad, buscable)',
+                hero_slogan: 'Exporta cualquier página web como un PDF de alta calidad y buscable (preservando diseño, estilos y texto seleccionable).',
+                install_cta: 'Usar ahora',
+                features_title: 'Características — Web to PDF / Guardar como PDF',
+                about_title: 'Acerca de esta herramienta (Cómo funciona & EEAT)',
+                faq_title: 'Preguntas Frecuentes (FAQ)',
+                footer_p: '© 2025 Web Converter. Powered by Gemini AI.'
+            }
+        };
+
+        function applyTcLangPDF(lang) {
+            if (!tcTranslationsPDF[lang]) lang = 'zh';
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (!key) return;
+                const val = tcTranslationsPDF[lang][key];
+                if (val) {
+                    if (key === 'hero_h1' || key === 'hero_slogan') el.innerHTML = val; else el.innerText = val;
+                }
+            });
+        }
+
+        // Mark key elements
+        document.querySelector('.hero h1').setAttribute('data-lang-key', 'hero_h1');
+        document.querySelector('.hero .slogan').setAttribute('data-lang-key', 'hero_slogan');
+        document.querySelector('#features .section-title').setAttribute('data-lang-key', 'features_title');
+        document.querySelector('#about .section-title').setAttribute('data-lang-key', 'about_title');
+        document.querySelector('#faq .section-title').setAttribute('data-lang-key', 'faq_title');
+
+        // Localized JSON-LD for en/pt/es (keep zh static JSON-LD in head)
+        const localizedJsonLdPDF = {
+            en: {
+                "@context":"https://schema.org",
+                "@type":"SoftwareApplication",
+                "name":"Web to PDF",
+                "description":"Web to PDF: export webpages to searchable, high-quality PDF or PNG locally in the browser.",
+                "applicationCategory":"BrowserTool",
+                "operatingSystem":"Any",
+                "url":"https://tablecopy.pro/web-to-pdf",
+                "author":{"@type":"Organization","name":"TableCopy","url":"https://tablecopy.pro"}
+            },
+            pt: {
+                "@context":"https://schema.org",
+                "@type":"SoftwareApplication",
+                "name":"Web to PDF",
+                "description":"Web to PDF: exporte páginas web para PDF pesquisável ou PNG de alta qualidade localmente no navegador.",
+                "applicationCategory":"BrowserTool",
+                "operatingSystem":"Any",
+                "url":"https://tablecopy.pro/web-to-pdf",
+                "author":{"@type":"Organization","name":"TableCopy","url":"https://tablecopy.pro"}
+            },
+            es: {
+                "@context":"https://schema.org",
+                "@type":"SoftwareApplication",
+                "name":"Web to PDF",
+                "description":"Web to PDF: exporta páginas web a PDF buscable o PNG de alta calidad localmente en el navegador.",
+                "applicationCategory":"BrowserTool",
+                "operatingSystem":"Any",
+                "url":"https://tablecopy.pro/web-to-pdf",
+                "author":{"@type":"Organization","name":"TableCopy","url":"https://tablecopy.pro"}
+            }
+        };
+
+        function injectJsonLdPDF(lang){
+            document.querySelectorAll('script[data-tc-localized-jsonld]').forEach(s=>s.remove());
+            if(lang === 'zh') return;
+            const node = localizedJsonLdPDF[lang];
+            if(!node) return;
+            const s = document.createElement('script');
+            s.type = 'application/ld+json';
+            s.setAttribute('data-tc-localized-jsonld','1');
+            s.textContent = JSON.stringify(node);
+            document.head.appendChild(s);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let lang = urlParams.get('lang') || localStorage.getItem('tableCopyLang') || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'zh');
+        if (!['zh','en','pt','es'].includes(lang)) lang = 'zh';
+        applyTcLangPDF(lang);
+        injectJsonLdPDF(lang);
+        localStorage.setItem('tableCopyLang', lang);
+
+        // wire select
+        const langSelect = document.getElementById('lang-select');
+        if(langSelect){
+            langSelect.value = lang;
+            langSelect.addEventListener('change', (e)=>{
+                const v = e.target.value; applyTcLangPDF(v); injectJsonLdPDF(v); localStorage.setItem('tableCopyLang', v);
+            });
+        }
+    </script>
 </body>
 </html>
