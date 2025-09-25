@@ -21,7 +21,7 @@
     
     <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/index.html">
 
-    <link rel="icon" type="image/png" href="/tc_icon.png">
+    <link rel="icon" type="image/png" href="assets/tc_icon.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -63,8 +63,8 @@
         <h1>Copy Any Web Table,<br>as Easily as Copying Text.</h1>
         <p class="slogan">Ditch the tedious screenshots and manual entry. One click to grab data to your clipboard for a perfect paste.</p>
         <a href="#install" class="cta-button">Install for Free Now</a>
-        <div class="demo-gif-container" style="border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden;">
-           <video src="/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
+        <div class="demo-gif-container">
+           <video src="assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
                Your browser does not support the video tag.
            </video>
         </div>
@@ -90,70 +90,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>Drag to Your Bookmarks Bar</h3>
-                    <a href="javascript:!function(){let e={en:{alert_select_first:&quot;Please select part of a table first, then click me!&quot;,alert_no_table_found:&quot;Could not find a valid table or grid structure in your selection.&quot;,modal_title:&quot;Table Copy v5.3&quot;,modal_close_title:&quot;Close&quot;,copy_dropdown_button:&quot;Copy Full Table ▼&quot;,copy_dropdown_html:&quot;Copy (Recommended, for Excel/WPS)&quot;,copy_dropdown_tsv:&quot;Copy as TSV (Tab-separated)&quot;,copy_dropdown_csv:&quot;Copy as CSV (Comma-separated)&quot;,copy_dropdown_json:&quot;Copy as JSON&quot;,copy_dropdown_html_source:&quot;Copy as HTML Source&quot;,export_csv_button:&quot;Export as CSV&quot;,export_picture_button:&quot;Export as Picture&quot;,footer_tip:&quot;Tip: Click a header to copy the column&quot;,message_csv_downloading:&quot;CSV file download has started!&quot;,message_picture_downloading:&quot;Picture download has started!&quot;,message_library_loading:&quot;Loading required library...&quot;,alert_library_failed:&quot;Failed to load the required library. Please check your network or ad blocker.&quot;,col_menu_copy_comma:&quot;Copy (Comma-separated)&quot;,col_menu_copy_newline:&quot;Copy (Newline-separated)&quot;,message_copied:&quot;Copied to clipboard!&quot;},zh:{alert_select_first:&quot;请先用鼠标选中表格的一部分，再点击我哦！&quot;,alert_no_table_found:&quot;无法在您选择的区域内找到一个有效的表格或Grid结构。&quot;,modal_title:&quot;表格助手 v5.3&quot;,modal_close_title:&quot;关闭&quot;,copy_dropdown_button:&quot;复制整个表格 ▼&quot;,copy_dropdown_html:&quot;复制 (推荐, 用于Excel/WPS)&quot;,copy_dropdown_tsv:&quot;复制为 TSV (制表符分隔)&quot;,copy_dropdown_csv:&quot;复制为 CSV (逗号分隔)&quot;,copy_dropdown_json:&quot;复制为 JSON&quot;,copy_dropdown_html_source:&quot;复制为 HTML 源码&quot;,export_csv_button:&quot;导出为 CSV&quot;,export_picture_button:&quot;导出为图片&quot;,footer_tip:&quot;提示：点击表头可复制整列&quot;,message_csv_downloading:&quot;CSV 文件已开始下载！&quot;,message_picture_downloading:&quot;图片已开始下载！&quot;,message_library_loading:&quot;正在加载所需组件...&quot;,alert_library_failed:&quot;无法加载所需组件。请检查您的网络连接或广告拦截器。&quot;,col_menu_copy_comma:&quot;复制 (逗号分隔)&quot;,col_menu_copy_newline:&quot;复制 (换行分隔)&quot;,message_copied:&quot;已复制到剪贴板！&quot;}},t=(navigator.language||navigator.userLanguage).toLowerCase().startsWith(&quot;zh&quot;)?&quot;zh&quot;:&quot;en&quot;,o=o=>e[t][o]||e.en[o],l=&quot;tc-gemini-v5-&quot;,n=`
-        .${l}overlay {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background-color: rgba(0, 0, 0, 0.6); z-index: 999999;
-            display: flex; justify-content: center; align-items: center;
-            font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
-        }
-        .${l}modal {
-            background-color: #ffffff; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            width: 80vw; max-width: 1000px; height: 80vh; display: flex; flex-direction: column; overflow: hidden;
-        }
-        .${l}header {
-            padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex;
-            justify-content: space-between; align-items: center; flex-shrink: 0;
-        }
-        .${l}header h3 { margin: 0; font-size: 16px; color: #333; }
-        .${l}close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #888; padding: 0; line-height: 1; }
-        .${l}close-btn:hover { color: #000; }
-        .${l}table-container { padding: 20px; overflow: auto; flex-grow: 1; }
-        .${l}table-container table { width: 100%; border-collapse: collapse; }
-        .${l}table-container th, .${l}table-container td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; color: #000; }
-        .${l}table-container th { background-color: #f2f2f2; cursor: pointer; }
-        .${l}col-highlight { background-color: #d9edf7 !important; }
-        .${l}footer {
-            padding: 12px 20px; border-top: 1px solid #e0e0e0; background-color: #f9f9f9;
-            flex-shrink: 0; display: flex; align-items: center; position: relative;
-        }
-        .${l}button {
-            padding: 8px 16px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;
-            cursor: pointer; font-size: 14px; margin-right: 10px;
-        }
-        .${l}button:hover { background-color: #f0f0f0; border-color: #bbb; }
-        .${l}dropdown { display: inline-block; position: relative; }
-        .${l}dropdown-content {
-            display: none; position: absolute; background-color: #f1f1f1; min-width: 220px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;
-            bottom: 100%; margin-bottom: 5px; border-radius: 5px; overflow: hidden;
-        }
-        .${l}dropdown-content button {
-            color: black; padding: 12px 16px; text-decoration: none; display: block;
-            width: 100%; text-align: left; border: none; border-radius: 0;
-            background-color: #fff; border-bottom: 1px solid #e0e0e0; font-size:14px;
-        }
-        .${l}dropdown-content button:first-child { font-weight: bold; }
-        .${l}dropdown-content button:last-child { border-bottom: none; }
-        .${l}dropdown-content button:hover { background-color: #ddd; }
-        .${l}col-menu {
-            position: absolute; display: block; background-color: #fff;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 10;
-            border-radius: 5px; overflow: hidden;
-        }
-        .${l}col-menu button {
-            display: block; width: 100%; padding: 10px 15px; border: none;
-            background: none; text-align: left; cursor: pointer;
-        }
-        .${l}col-menu button:hover { background-color: #f0f0f0; }
-        .${l}message {
-            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-            background-color: #28a745; color: white; padding: 10px 20px;
-            border-radius: 5px; font-size: 14px; z-index: 100001; opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-    `;function r(e,t,o){let l=document.createElement(&quot;a&quot;),n;if(e.startsWith(&quot;data:&quot;))l.href=e;else{let r=new Blob([e],{type:o});n=URL.createObjectURL(r),l.href=n}l.download=t,document.body.appendChild(l),l.click(),document.body.removeChild(l),n&&URL.revokeObjectURL(n)}async function a(e){try{let t=d(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,l=new Blob([o],{type:&quot;text/html&quot;}),n=new Blob([t],{type:&quot;text/plain&quot;}),r=new ClipboardItem({&quot;text/html&quot;:l,&quot;text/plain&quot;:n});await navigator.clipboard.write([r])}catch(a){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,a),i(e,&quot;	&quot;)}}function d(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let l=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{l.push(function e(t,o){let l=t.trim();return l.includes(o)||l.includes(&quot;\n&quot;)||l.includes('&quot;')?`&quot;${l.replace(/&quot;/g,'&quot;&quot;')}&quot;`:l}(e.innerText,t))}),o+=l.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}async function i(e,t){let o=d(e,t);try{let l=new Blob([o],{type:&quot;text/plain&quot;}),n=new ClipboardItem({&quot;text/plain&quot;:l});await navigator.clipboard.write([n])}catch(r){console.error(&quot;ClipboardItem API failed, falling back to writeText:&quot;,r),navigator.clipboard.writeText(o)}}function c(e,t,o){if(t.querySelectorAll(`.${l}col-highlight`).forEach(e=>e.classList.remove(`${l}col-highlight`)),o&&e){let n=e.cellIndex;t.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[n]&&e.cells[n].classList.add(`${l}col-highlight`)})}}function p(e,t=o(&quot;message_copied&quot;)){let n=document.createElement(&quot;div&quot;);n.className=`${l}message`,n.innerText=t,e.appendChild(n),setTimeout(()=>{n.style.opacity=&quot;1&quot;},10),setTimeout(()=>{n.style.opacity=&quot;0&quot;,setTimeout(()=>{n.parentElement&&n.parentElement.removeChild(n)},300)},2e3)}!function e(){if(document.querySelector(`.${l}overlay`))return;!function e(){if(document.getElementById(`${l}styles`))return;let t=document.createElement(&quot;style&quot;);t.id=`${l}styles`,t.innerText=n,document.head.appendChild(t)}();let t=window.getSelection();if(0===t.rangeCount||t.isCollapsed){alert(o(&quot;alert_select_first&quot;));return}let s=function e(t){let o=function e(t){let o=t.getRangeAt(0),l=o.commonAncestorContainer;l.nodeType===Node.TEXT_NODE&&(l=l.parentElement);let n=l;for(;n;){if(&quot;TABLE&quot;===n.tagName)return{element:n,type:&quot;TABLE&quot;};let r=n.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:n,type:&quot;ARIA_GRID&quot;};if(n.children.length>1&&[&quot;DIV&quot;,&quot;UL&quot;,&quot;OL&quot;].includes(n.tagName)){let a=Array.from(n.children).filter(e=>e.children.length>1&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(a.length>1&&a.length/n.children.length>.7&&a[0].children.length>0&&a[0].children.length===a[1].children.length)return{element:n,type:&quot;HEURISTIC_DIV&quot;}}if([&quot;UL&quot;,&quot;OL&quot;].includes(n.tagName)&&n.children.length>1){let d=Array.from(n.children).filter(e=>&quot;LI&quot;===e.tagName);if(d.length/n.children.length>.8)return{element:n,type:&quot;LIST&quot;}}n=n.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),l=document.createElement(&quot;thead&quot;),n=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let l=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===l&&(o=!0);let n=document.createElement(o?&quot;th&quot;:&quot;td&quot;);n.innerText=e.innerText,t.appendChild(n)}),o?l.appendChild(t):n.appendChild(t)}),o.appendChild(l),o.appendChild(n),o}(o.element):&quot;HEURISTIC_DIV&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),l=document.createElement(&quot;tbody&quot;),n=Array.from(t.children).filter(e=>e.children.length>0&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(0===n.length)return null;let r=null,a=n,d=n[0],i=d.className&&&quot;string&quot;==typeof d.className?d.className.toLowerCase():&quot;&quot;;if((i.includes(&quot;header&quot;)||i.includes(&quot;head&quot;)||[&quot;THEAD&quot;].includes(d.tagName))&&(r=d,a=n.slice(1)),r){let c=document.createElement(&quot;thead&quot;),p=document.createElement(&quot;tr&quot;);for(let s of r.children){let m=document.createElement(&quot;th&quot;);m.innerText=s.innerText,p.appendChild(m)}c.appendChild(p),o.appendChild(c)}for(let u of a){let h=document.createElement(&quot;tr&quot;);for(let f of u.children){let b=document.createElement(&quot;td&quot;);b.innerText=f.innerText,h.appendChild(b)}l.appendChild(h)}return o.appendChild(l),o}(o.element):&quot;LIST&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),l=document.createElement(&quot;thead&quot;),n=document.createElement(&quot;tbody&quot;),r=document.createElement(&quot;tr&quot;),a=document.createElement(&quot;th&quot;);return a.innerText=&quot;Item&quot;,r.appendChild(a),l.appendChild(r),o.appendChild(l),Array.from(t.children).forEach(e=>{if(&quot;LI&quot;===e.tagName){let t=document.createElement(&quot;tr&quot;),o=document.createElement(&quot;td&quot;);o.innerText=e.innerText.trim(),t.appendChild(o),n.appendChild(t)}}),o.appendChild(n),o}(o.element):null:null}(t);s?function e(t){let n=document.createElement(&quot;div&quot;);n.className=`${l}overlay`;let s=document.createElement(&quot;div&quot;);s.className=`${l}modal`;let m=document.createElement(&quot;div&quot;);m.className=`${l}header`;let u=document.createElement(&quot;h3&quot;);u.innerText=o(&quot;modal_title&quot;);let h=document.createElement(&quot;button&quot;);h.className=`${l}close-btn`,h.title=o(&quot;modal_close_title&quot;),h.innerText=&quot;\xd7&quot;,m.appendChild(u),m.appendChild(h);let f=document.createElement(&quot;div&quot;);f.style.cssText=&quot;padding: 0 20px; margin-top: 10px;&quot;;let b=document.createElement(&quot;span&quot;);b.style.cssText=&quot;font-size: 13px; color: #666; font-weight: bold;&quot;,b.innerText=o(&quot;footer_tip&quot;),f.appendChild(b);let g=document.createElement(&quot;div&quot;);g.className=`${l}table-container`;let y=document.createElement(&quot;div&quot;);y.className=`${l}footer`;let x=document.createElement(&quot;div&quot;);x.className=`${l}dropdown`;let $=document.createElement(&quot;button&quot;);$.className=`${l}button`,$.id=`${l}copy-table-btn`,$.innerText=o(&quot;copy_dropdown_button&quot;);let E=document.createElement(&quot;div&quot;);E.className=`${l}dropdown-content`,E.id=`${l}table-dropdown`,[{format:&quot;html&quot;,textKey:&quot;copy_dropdown_html&quot;},{format:&quot;tsv&quot;,textKey:&quot;copy_dropdown_tsv&quot;},{format:&quot;csv&quot;,textKey:&quot;copy_dropdown_csv&quot;},{format:&quot;json&quot;,textKey:&quot;copy_dropdown_json&quot;},{format:&quot;html_source&quot;,textKey:&quot;copy_dropdown_html_source&quot;}].forEach(e=>{let t=document.createElement(&quot;button&quot;);t.setAttribute(&quot;data-format&quot;,e.format),t.innerText=o(e.textKey),E.appendChild(t)}),x.appendChild($),x.appendChild(E);let w=document.createElement(&quot;button&quot;);w.className=`${l}button`,w.id=`${l}export-csv-btn`,w.innerText=o(&quot;export_csv_button&quot;);let v=document.createElement(&quot;button&quot;);v.className=`${l}button`,v.id=`${l}export-pic-btn`,v.innerText=o(&quot;export_picture_button&quot;),y.appendChild(x),y.appendChild(w),y.appendChild(v),s.append(m,f,g,y),n.appendChild(s),document.body.appendChild(n);let C=t.cloneNode(!0);g.appendChild(C),function e(t,n){let s=document.getElementById(`${l}table-dropdown`);t.querySelector(`.${l}close-btn`).addEventListener(&quot;click&quot;,()=>t.remove()),t.addEventListener(&click&quot;,e=>{e.target===t&&document.body.removeChild(t),e.target.closest(`.${l}dropdown`)||(s.style.display=&quot;none&quot;)}),document.getElementById(`${l}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),s.style.display=&quot;block&quot;===s.style.display?&quot;none&quot;:&quot;block&quot;}),s.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-format&quot;);switch(o){case&quot;html&quot;:a(n);break;case&quot;tsv&quot;:i(n,&quot;	&quot;);break;case&quot;csv&quot;:i(n,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),l=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,l)=>{t[o[l]||`column_${l+1}`]=e.innerText.trim()}),l.push(t)}),navigator.clipboard.writeText(JSON.stringify(l,null,2))})(n);break;case&quot;html_source&quot;:(function e(t){let o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>
-${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none&quot;,p(t)}}),document.getElementById(`${l}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=d(n,&quot;,&quot;);r(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),p(t,o(&quot;message_csv_downloading&quot;))}),document.getElementById(`${l}export-pic-btn`).addEventListener(&quot;click&quot;,()=>{(function e(t,l){let n=()=>{p(l,o(&quot;message_picture_downloading&quot;)),html2canvas(t,{useCORS:!0,scale:2,backgroundColor:&quot;#FFFFFF&quot;}).then(e=>{r(e.toDataURL(&quot;image/png&quot;),&quot;table-export.png&quot;)}).catch(e=>{console.error(&quot;html2canvas error:&quot;,e),alert(&quot;Sorry, failed to create picture.&quot;)})};if(&quot;undefined&quot;!=typeof html2canvas)return n();let a=document.createElement(&quot;script&quot;);a.src=&quot;https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js&quot;,a.onload=n,a.onerror=()=>{p(l,o(&quot;alert_library_failed&quot;))},document.head.appendChild(a)})(n,t)}),n.addEventListener(&quot;mouseover&quot;,e=>{let t=e.target.closest(&quot;td, th&quot;);c(t,n,!0)}),n.addEventListener(&quot;mouseout&quot;,e=>{n.contains(e.relatedTarget)||c(null,n,!1)}),n.addEventListener(&quot;click&quot;,e=>{let r=e.target.closest(&quot;td, th&quot;);r&&function e(t,n,r){let a=r.querySelector(`.${l}col-menu`);a&&a.remove();let d=document.createElement(&quot;div&quot;);d.className=`${l}col-menu`;let i=document.createElement(&quot;button&quot;);i.setAttribute(&quot;data-separator&quot;,&quot;,&quot;),i.innerText=o(&quot;col_menu_copy_comma&quot;);let c=document.createElement(&quot;button&quot;);c.setAttribute(&quot;data-separator&quot;,&quot;\\n&quot;),c.innerText=o(&quot;col_menu_copy_newline&quot;),d.append(i,c);let s=t.getBoundingClientRect(),m=r.getBoundingClientRect();d.style.top=`${s.bottom-m.top}px`,d.style.left=`${s.left-m.left}px`,r.appendChild(d),d.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,l){let n=t.cellIndex,r=[];o.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[n]&&r.push(e.cells[n].innerText.trim())}),navigator.clipboard.writeText(r.join(l))})(t,n,&quot;\\n&quot;===o?&quot;\n&quot;:&quot;,&quot;),p(r),d.remove()}}),setTimeout(()=>{r.addEventListener(&quot;click&quot;,()=>d.remove(),{once:!0})},0)}(r,n,t)})}(n,C)}(s):alert(o(&quot;alert_no_table_found&quot;))}()}();" class="bookmarklet-button" title="Drag me to your bookmarks bar">
+                    <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Drag me to your bookmarks bar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
                         <span>Table Copy</span>
                     </a>
@@ -246,14 +183,30 @@ ${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none
     <script src="/assets/js/main.js"></script>
     
 <script>
-    // 阻止书签按钮的默认点击行为，并显示提示
-    const bookmarkletLink = document.querySelector('.bookmarklet-button');
-    if (bookmarkletLink) {
-        bookmarkletLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert("Please don&#39;t click this button. Instead, drag it to your bookmarks bar!");
-        });
-    }
+    // 动态加载并设置书签脚本
+    fetch('assets/js/tablecopy_v4.0.js')
+        .then(response => response.text())
+        .then(scriptContent => {
+            // 对脚本内容进行最小化和编码，以创建 javascript: URL
+            const minifiedScript = scriptContent
+                .replace(/(\r\n|\n|\r)/gm, "") // 移除换行符
+                .replace(/\s+/g, " ")          // 将多个空格压缩为一个
+                .replace(/;\s/g, ";");         // 移除分号后的空格
+
+            const bookmarkletHref = `javascript:!function(){${encodeURIComponent(minifiedScript)}}();`;
+            
+            const bookmarkletLink = document.getElementById('bookmarklet-link');
+            if (bookmarkletLink) {
+                bookmarkletLink.setAttribute('href', bookmarkletHref);
+
+                // 为桌面用户添加提示，阻止默认点击行为
+                bookmarkletLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert("Please don&#39;t click this button. Instead, drag it to your bookmarks bar!");
+                });
+            }
+        })
+        .catch(error => console.error('Error loading bookmarklet script:', error));
 </script>
 
 </body>

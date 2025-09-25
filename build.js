@@ -42,14 +42,6 @@ async function build() {
     if (await fs.pathExists(assetsSrc)) {
         await fs.copy(assetsSrc, assetsDist);
     }
-    // 复制根目录下的其他资源
-    const rootFilesToCopy = ['tc_icon.png', 'tablecopy_show.mov', 'tablecopy_v4.0.js', 'web-converter.js'];
-    for (const file of rootFilesToCopy) {
-        const srcFile = path.join(rootDir, file); // 这些文件与 build.js 在同一目录
-        if (await fs.pathExists(srcFile)) {
-            await fs.copy(srcFile, path.join(config.distDir, file));
-        }
-    }
     console.log('✅ Copied static assets.');
 
     // 3. 加载所有翻译文件
