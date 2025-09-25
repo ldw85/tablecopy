@@ -1,0 +1,16 @@
+{
+  "name": "tablecopy",
+  "version": "1.0.0",
+  "description": "Static site for TableCopy tools.",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && echo 'Build complete. Open dist/index.html in your browser.'"
+  },
+  "author": "Gemini Code Assist",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "nunjucks": "^3.2.4"
+  }
+}
