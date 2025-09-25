@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Web to PDF - One-Click Save Any Webpage as PDF | TableCopy</title>
+    <meta name="description" content="Web to PDF is a lightweight, free bookmarklet that lets you save the current webpage as a high-quality PDF document using your browser&#39;s print function with a single click.">
+    <meta name="keywords" content="web to pdf, save webpage as pdf, html to pdf, print webpage, bookmarklet, free tool">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/en/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/web-to-pdf.html">
+
+    <link rel="icon" type="image/png" href="/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/page.css">
+    <style>
+        :root { --primary-color: #D9534F; } /* PDF-like red */
+        .bookmarklet-button {
+            border-color: #B54541;
+            animation-name: pulse-pdf;
+        }
+        @keyframes pulse-pdf {
+            0% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(217, 83, 79, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0); }
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/en/" class="logo">Web Converter</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    
+                    <li><a href="/en/">Home</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="web-to-pdf" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" >中文</option>
+                <option value="en" selected>English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h1>One-Click Save Webpage as PDF</h1>
+        <h2 class="slogan">No complex software needed. Save any webpage as a high-quality, searchable PDF file.</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">Use Now</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Features — Web to PDF</h2>
+        <ul>
+            
+                <li><strong>Native Print Function:</strong> Leverages the browser's powerful built-in PDF rendering engine for maximum compatibility and fidelity.</li>
+            
+                <li><strong>Searchable & Selectable Text:</strong> The generated PDF retains all text information, making it easy to search, copy, and archive.</li>
+            
+                <li><strong>Lightweight & Secure:</strong> A pure JavaScript bookmarklet that relies on no external servers. All operations are done locally, protecting your privacy.</li>
+            
+        </ul>
+        <p>Need to save the webpage as an image? Use our: <a href="/en/web-to-image.html">Web to Image Converter</a>.</p>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">3-Second Install, Use Forever</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Press and Hold Button</h3>
+                <p>Click and hold the red &#39;Web Converter&#39; button.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Drag to Bookmarks Bar</h3>
+                <a href="javascript:!function(){if(document.getElementById(&quot;wc-modal-style&quot;))return;let e=&quot;web-converter-&quot;,t=`\n        #${e}modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2147483646; display: flex; justify-content: center; align-items: center; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; }\n        #${e}modal { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); text-align: center; max-width: 400px; width: 90%; }\n        #${e}modal h3 { margin-top: 0; margin-bottom: 20px; color: #333; font-size: 22px; }\n        #${e}modal .button-container { display: flex; flex-direction: column; gap: 15px; }\n        #${e}modal button { padding: 12px 20px; border: none; border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; transition: background-color 0.3s, transform 0.2s; color: #fff; }\n        #${e}save-pdf { background-color: #D9534F; }\n        #${e}save-pdf:hover { background-color: #C9302C; transform: scale(1.02); }\n        #${e}save-image { background-color: #5CB85C; }\n        #${e}save-image:hover { background-color: #4CAE4C; transform: scale(1.02); }\n        #${e}close { margin-top: 10px; background: none; color: #888; font-size: 14px; }\n        #${e}close:hover { color: #333; }\n        #${e}status { margin-top: 15px; font-size: 14px; color: #555; min-height: 20px; }\n    `,o=`\n        <div id=&quot;${e}modal&quot;>\n            <h3>保存当前网页</h3>\n            <div class=&quot;button-container&quot;>\n                <button id=&quot;${e}save-pdf&quot;>保存为 PDF</button>\n                <button id=&quot;${e}save-image&quot;>保存为图片 (PNG)</button>\n            </div>\n            <div id=&quot;${e}status&quot;></div>\n            <button id=&quot;${e}close&quot;>关闭</button>\n        </div>\n    `;function n(){let t=document.getElementById(`${e}modal-overlay`);t.style.display=&quot;none&quot;,window.print(),t.style.display=&quot;flex&quot;}function l(){let t=document.getElementById(`${e}status`);t.textContent=&quot;正在准备截图...&quot;;let o=()=>{t.textContent=&quot;正在截取页面... 请稍候...&quot;;let o=document.getElementById(`${e}modal-overlay`);o.style.display=&quot;none&quot;,html2canvas(document.documentElement,{useCORS:!0,scale:window.devicePixelRatio,logging:!1,onclone(t){let o=t.getElementById(`${e}modal-overlay`);o&&o.remove()}}).then(e=>{t.textContent=&quot;截取成功，正在生成下载...&quot;;let o=document.createElement(&quot;a&quot;);o.download=(document.title||&quot;web-capture&quot;)+&quot;.png&quot;,o.href=e.toDataURL(&quot;image/png&quot;),o.click(),a()}).catch(e=>{console.error(&quot;Web Converter Error:&quot;,e),t.textContent=&quot;抱歉，截图失败。请查看控制台获取详情。&quot;,o.style.display=&quot;flex&quot;})};if(&quot;undefined&quot;!=typeof html2canvas)o();else{t.textContent=&quot;首次使用，正在加载截图组件...&quot;;let n=document.createElement(&quot;script&quot;);n.src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js&quot;,n.onload=o,n.onerror=()=>{t.textContent=&quot;无法加载截图组件，请检查网络或广告拦截器。&quot;},document.head.appendChild(n)}}function a(){let t=document.getElementById(`${e}modal-overlay`),o=document.getElementById(&quot;wc-modal-style&quot;);t&&document.body.removeChild(t),o&&document.head.removeChild(o)}!function d(){let r=function n(){let l=document.createElement(&quot;style&quot;);l.id=&quot;wc-modal-style&quot;,l.innerText=t,document.head.appendChild(l);let a=document.createElement(&quot;div&quot;);return a.id=`${e}modal-overlay`,a.innerHTML=o,document.body.appendChild(a),a}();document.getElementById(`${e}save-pdf`).addEventListener(&quot;click&quot;,n),document.getElementById(`${e}save-image`).addEventListener(&quot;click&quot;,l),document.getElementById(`${e}close`).addEventListener(&quot;click&quot;,a),r.addEventListener(&quot;click&quot;,t=>{t.target.id===`${e}modal-overlay`&&a()})}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">Web Converter</a>
+                <p><strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Done!</h3>
+                <p>On any page you want to save, click this bookmark to start!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <p>© 2025 Web Converter. Powered by Gemini AI.</p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    
+</body>
+</html>

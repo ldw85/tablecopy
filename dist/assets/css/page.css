@@ -1,0 +1,28 @@
+/* 页面特定样式，例如 web-to-image */
+
+:root {
+    --primary-color: #5CB85C; /* A picture-like green color */
+}
+
+.hero {
+    background-color: var(--bg-color);
+}
+
+#features ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#features li {
+    margin-bottom: 10px;
+}
+
+#faq .faq-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+#faq .faq-item p {
+    margin-top: 0;
+    color: var(--gray-color);
+}

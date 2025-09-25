@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>网页转PDF - 一键保存任何网页为PDF | TableCopy</title>
+    <meta name="description" content="Web to PDF 是一款轻量级的免费书签工具，让您可以通过一次点击，调用浏览器打印功能将当前网页高质量地保存为PDF文档，完美保留布局和文本。">
+    <meta name="keywords" content="web to pdf, 网页转pdf, 保存网页为pdf, html to pdf, 网页打印, bookmarklet, 免费工具">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/web-to-pdf.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/web-to-pdf.html">
+
+    <link rel="icon" type="image/png" href="/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/page.css">
+    <style>
+        :root { --primary-color: #D9534F; } /* PDF-like red */
+        .bookmarklet-button {
+            border-color: #B54541;
+            animation-name: pulse-pdf;
+        }
+        @keyframes pulse-pdf {
+            0% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(217, 83, 79, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0); }
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/" class="logo">网页转换器</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    
+                    <li><a href="/">首页</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="web-to-pdf" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" selected>中文</option>
+                <option value="en" >English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h1>一键保存网页为PDF</h1>
+        <h2 class="slogan">无需复杂软件，将任何网页高质量、可搜索的PDF文件。</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">立即使用</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">功能亮点 — 网页转PDF</h2>
+        <ul>
+            
+                <li><strong>调用原生打印：</strong>利用浏览器内置的最强大的PDF渲染引擎，确保最佳的兼容性和页面保真度。</li>
+            
+                <li><strong>文本可搜索与复制：</strong>生成的PDF文件保留了所有文本信息，方便您进行搜索、复制和归档。</li>
+            
+                <li><strong>轻量与安全：</strong>纯粹的JavaScript书签工具，不依赖任何服务器，所有操作都在本地完成，保护您的隐私。</li>
+            
+        </ul>
+        <p>需要将网页保存为图片？请使用：<a href="/web-to-image.html">网页转图片</a>。</p>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">三秒安装，永久使用</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>按住下方按钮</h3>
+                <p>请用鼠标左键点住红色的“网页转换器”按钮。</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>拖到书签栏</h3>
+                <a href="javascript:!function(){if(document.getElementById(&quot;wc-modal-style&quot;))return;let e=&quot;web-converter-&quot;,t=`\n        #${e}modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2147483646; display: flex; justify-content: center; align-items: center; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; }\n        #${e}modal { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); text-align: center; max-width: 400px; width: 90%; }\n        #${e}modal h3 { margin-top: 0; margin-bottom: 20px; color: #333; font-size: 22px; }\n        #${e}modal .button-container { display: flex; flex-direction: column; gap: 15px; }\n        #${e}modal button { padding: 12px 20px; border: none; border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; transition: background-color 0.3s, transform 0.2s; color: #fff; }\n        #${e}save-pdf { background-color: #D9534F; }\n        #${e}save-pdf:hover { background-color: #C9302C; transform: scale(1.02); }\n        #${e}save-image { background-color: #5CB85C; }\n        #${e}save-image:hover { background-color: #4CAE4C; transform: scale(1.02); }\n        #${e}close { margin-top: 10px; background: none; color: #888; font-size: 14px; }\n        #${e}close:hover { color: #333; }\n        #${e}status { margin-top: 15px; font-size: 14px; color: #555; min-height: 20px; }\n    `,o=`\n        <div id=&quot;${e}modal&quot;>\n            <h3>保存当前网页</h3>\n            <div class=&quot;button-container&quot;>\n                <button id=&quot;${e}save-pdf&quot;>保存为 PDF</button>\n                <button id=&quot;${e}save-image&quot;>保存为图片 (PNG)</button>\n            </div>\n            <div id=&quot;${e}status&quot;></div>\n            <button id=&quot;${e}close&quot;>关闭</button>\n        </div>\n    `;function n(){let t=document.getElementById(`${e}modal-overlay`);t.style.display=&quot;none&quot;,window.print(),t.style.display=&quot;flex&quot;}function l(){let t=document.getElementById(`${e}status`);t.textContent=&quot;正在准备截图...&quot;;let o=()=>{t.textContent=&quot;正在截取页面... 请稍候...&quot;;let o=document.getElementById(`${e}modal-overlay`);o.style.display=&quot;none&quot;,html2canvas(document.documentElement,{useCORS:!0,scale:window.devicePixelRatio,logging:!1,onclone(t){let o=t.getElementById(`${e}modal-overlay`);o&&o.remove()}}).then(e=>{t.textContent=&quot;截取成功，正在生成下载...&quot;;let o=document.createElement(&quot;a&quot;);o.download=(document.title||&quot;web-capture&quot;)+&quot;.png&quot;,o.href=e.toDataURL(&quot;image/png&quot;),o.click(),a()}).catch(e=>{console.error(&quot;Web Converter Error:&quot;,e),t.textContent=&quot;抱歉，截图失败。请查看控制台获取详情。&quot;,o.style.display=&quot;flex&quot;})};if(&quot;undefined&quot;!=typeof html2canvas)o();else{t.textContent=&quot;首次使用，正在加载截图组件...&quot;;let n=document.createElement(&quot;script&quot;);n.src=&quot;https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js&quot;,n.onload=o,n.onerror=()=>{t.textContent=&quot;无法加载截图组件，请检查网络或广告拦截器。&quot;},document.head.appendChild(n)}}function a(){let t=document.getElementById(`${e}modal-overlay`),o=document.getElementById(&quot;wc-modal-style&quot;);t&&document.body.removeChild(t),o&&document.head.removeChild(o)}!function d(){let r=function n(){let l=document.createElement(&quot;style&quot;);l.id=&quot;wc-modal-style&quot;,l.innerText=t,document.head.appendChild(l);let a=document.createElement(&quot;div&quot;);return a.id=`${e}modal-overlay`,a.innerHTML=o,document.body.appendChild(a),a}();document.getElementById(`${e}save-pdf`).addEventListener(&quot;click&quot;,n),document.getElementById(`${e}save-image`).addEventListener(&quot;click&quot;,l),document.getElementById(`${e}close`).addEventListener(&quot;click&quot;,a),r.addEventListener(&quot;click&quot;,t=>{t.target.id===`${e}modal-overlay`&&a()})}()}();" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
+                <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>完成！</h3>
+                <p>在任何想保存的页面，点击这个书签即可开始转换！</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <p>© 2025 网页转换器. 由 Gemini AI 强力驱动.</p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    
+</body>
+</html>

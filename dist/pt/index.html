@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Table Copy - Copie Tabelas da Web para Excel com Um Clique, Sem Formatação Desorganizada</title>
+    <meta name="description" content="Diga adeus à formatação desorganizada! O Table Copy é um bookmarklet leve que permite copiar qualquer tabela da web (incluindo as feitas com divs) para Excel, CSV ou JSON com um clique. Não é necessária instalação, formatação perfeita.">
+    <meta name="keywords" content="copiar tabela de site, html para excel, scraper de tabelas, extração de dados da web, copiar tabela html, tabela para csv, tabela para json, corrigir copiar e colar de tabela">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/pt/index.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/index.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/index.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/index.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/index.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/index.html">
+
+    <link rel="icon" type="image/png" href="/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/pt/" class="logo">Table Copy</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#use-cases">Casos de Uso</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;">Instalar Agora</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="index" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" >中文</option>
+                <option value="en" >English</option>
+                <option value="es" >Español</option>
+                <option value="pt" selected>Português</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero" id="hero">
+    <div class="container">
+        <h1>Copie Qualquer Tabela da Web,<br>Tão Facilmente Como Copiar Texto.</h1>
+        <p class="slogan">Abandone as capturas de ecrã tediosas e a inserção manual. Um clique para copiar os dados para a sua área de transferência para uma colagem perfeita.</p>
+        <a href="#install" class="cta-button">Instale Grátis Agora</a>
+        <div class="demo-gif-container" style="border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden;">
+           <video src="/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
+               Your browser does not support the video tag.
+           </video>
+        </div>
+    </div>
+</section>
+
+<section id="why">
+    <div class="container">
+        <h2 class="section-title">Como Você, Estávamos Cansados do Tédio</h2>
+        <p>Somos entusiastas de dados e utilizadores intensivos de ferramentas de produtividade. Durante inúmeros dias e noites, a precisar de passar dados de páginas web para o Excel, fomos atormentados por formatação quebrada, tabelas `&lt;div&gt;` ocultas e extensões lentas. Acreditávamos que tinha de haver uma maneira melhor. E assim, nasceu o &#39;Table Copy&#39;. Não é um software pesado, apenas uma ferramenta pura, rápida e focada, projetada para resolver um problema: copiar tabelas da web com elegância.</p>
+    </div>
+</section>
+
+<section id="install" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">Instale em 3 Segundos, Use Para Sempre</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Pressione e Segure o Botão</h3>
+                <p>Clique e segure o botão verde &#39;Table Copy&#39; com o botão esquerdo do rato.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Arraste para a Sua Barra de Favoritos</h3>
+                    <a href="javascript:!function(){let e={en:{alert_select_first:&quot;Please select part of a table first, then click me!&quot;,alert_no_table_found:&quot;Could not find a valid table or grid structure in your selection.&quot;,modal_title:&quot;Table Copy v5.3&quot;,modal_close_title:&quot;Close&quot;,copy_dropdown_button:&quot;Copy Full Table ▼&quot;,copy_dropdown_html:&quot;Copy (Recommended, for Excel/WPS)&quot;,copy_dropdown_tsv:&quot;Copy as TSV (Tab-separated)&quot;,copy_dropdown_csv:&quot;Copy as CSV (Comma-separated)&quot;,copy_dropdown_json:&quot;Copy as JSON&quot;,copy_dropdown_html_source:&quot;Copy as HTML Source&quot;,export_csv_button:&quot;Export as CSV&quot;,export_picture_button:&quot;Export as Picture&quot;,footer_tip:&quot;Tip: Click a header to copy the column&quot;,message_csv_downloading:&quot;CSV file download has started!&quot;,message_picture_downloading:&quot;Picture download has started!&quot;,message_library_loading:&quot;Loading required library...&quot;,alert_library_failed:&quot;Failed to load the required library. Please check your network or ad blocker.&quot;,col_menu_copy_comma:&quot;Copy (Comma-separated)&quot;,col_menu_copy_newline:&quot;Copy (Newline-separated)&quot;,message_copied:&quot;Copied to clipboard!&quot;},zh:{alert_select_first:&quot;请先用鼠标选中表格的一部分，再点击我哦！&quot;,alert_no_table_found:&quot;无法在您选择的区域内找到一个有效的表格或Grid结构。&quot;,modal_title:&quot;表格助手 v5.3&quot;,modal_close_title:&quot;关闭&quot;,copy_dropdown_button:&quot;复制整个表格 ▼&quot;,copy_dropdown_html:&quot;复制 (推荐, 用于Excel/WPS)&quot;,copy_dropdown_tsv:&quot;复制为 TSV (制表符分隔)&quot;,copy_dropdown_csv:&quot;复制为 CSV (逗号分隔)&quot;,copy_dropdown_json:&quot;复制为 JSON&quot;,copy_dropdown_html_source:&quot;复制为 HTML 源码&quot;,export_csv_button:&quot;导出为 CSV&quot;,export_picture_button:&quot;导出为图片&quot;,footer_tip:&quot;提示：点击表头可复制整列&quot;,message_csv_downloading:&quot;CSV 文件已开始下载！&quot;,message_picture_downloading:&quot;图片已开始下载！&quot;,message_library_loading:&quot;正在加载所需组件...&quot;,alert_library_failed:&quot;无法加载所需组件。请检查您的网络连接或广告拦截器。&quot;,col_menu_copy_comma:&quot;复制 (逗号分隔)&quot;,col_menu_copy_newline:&quot;复制 (换行分隔)&quot;,message_copied:&quot;已复制到剪贴板！&quot;}},t=(navigator.language||navigator.userLanguage).toLowerCase().startsWith(&quot;zh&quot;)?&quot;zh&quot;:&quot;en&quot;,o=o=>e[t][o]||e.en[o],l=&quot;tc-gemini-v5-&quot;,n=`
+        .${l}overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6); z-index: 999999;
+            display: flex; justify-content: center; align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+        }
+        .${l}modal {
+            background-color: #ffffff; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 80vw; max-width: 1000px; height: 80vh; display: flex; flex-direction: column; overflow: hidden;
+        }
+        .${l}header {
+            padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex;
+            justify-content: space-between; align-items: center; flex-shrink: 0;
+        }
+        .${l}header h3 { margin: 0; font-size: 16px; color: #333; }
+        .${l}close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #888; padding: 0; line-height: 1; }
+        .${l}close-btn:hover { color: #000; }
+        .${l}table-container { padding: 20px; overflow: auto; flex-grow: 1; }
+        .${l}table-container table { width: 100%; border-collapse: collapse; }
+        .${l}table-container th, .${l}table-container td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; color: #000; }
+        .${l}table-container th { background-color: #f2f2f2; cursor: pointer; }
+        .${l}col-highlight { background-color: #d9edf7 !important; }
+        .${l}footer {
+            padding: 12px 20px; border-top: 1px solid #e0e0e0; background-color: #f9f9f9;
+            flex-shrink: 0; display: flex; align-items: center; position: relative;
+        }
+        .${l}button {
+            padding: 8px 16px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;
+            cursor: pointer; font-size: 14px; margin-right: 10px;
+        }
+        .${l}button:hover { background-color: #f0f0f0; border-color: #bbb; }
+        .${l}dropdown { display: inline-block; position: relative; }
+        .${l}dropdown-content {
+            display: none; position: absolute; background-color: #f1f1f1; min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;
+            bottom: 100%; margin-bottom: 5px; border-radius: 5px; overflow: hidden;
+        }
+        .${l}dropdown-content button {
+            color: black; padding: 12px 16px; text-decoration: none; display: block;
+            width: 100%; text-align: left; border: none; border-radius: 0;
+            background-color: #fff; border-bottom: 1px solid #e0e0e0; font-size:14px;
+        }
+        .${l}dropdown-content button:first-child { font-weight: bold; }
+        .${l}dropdown-content button:last-child { border-bottom: none; }
+        .${l}dropdown-content button:hover { background-color: #ddd; }
+        .${l}col-menu {
+            position: absolute; display: block; background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 10;
+            border-radius: 5px; overflow: hidden;
+        }
+        .${l}col-menu button {
+            display: block; width: 100%; padding: 10px 15px; border: none;
+            background: none; text-align: left; cursor: pointer;
+        }
+        .${l}col-menu button:hover { background-color: #f0f0f0; }
+        .${l}message {
+            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background-color: #28a745; color: white; padding: 10px 20px;
+            border-radius: 5px; font-size: 14px; z-index: 100001; opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    `;function r(e,t,o){let l=document.createElement(&quot;a&quot;),n;if(e.startsWith(&quot;data:&quot;))l.href=e;else{let r=new Blob([e],{type:o});n=URL.createObjectURL(r),l.href=n}l.download=t,document.body.appendChild(l),l.click(),document.body.removeChild(l),n&&URL.revokeObjectURL(n)}async function a(e){try{let t=d(e,&quot;	&quot;),o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>${e.outerHTML}`,l=new Blob([o],{type:&quot;text/html&quot;}),n=new Blob([t],{type:&quot;text/plain&quot;}),r=new ClipboardItem({&quot;text/html&quot;:l,&quot;text/plain&quot;:n});await navigator.clipboard.write([r])}catch(a){console.error(&quot;Failed to copy rich text, falling back to plain text: &quot;,a),i(e,&quot;	&quot;)}}function d(e,t){let o=&quot;&quot;;return e.querySelectorAll(&quot;tr&quot;).forEach(e=>{let l=[];e.querySelectorAll(&quot;th, td&quot;).forEach(e=>{l.push(function e(t,o){let l=t.trim();return l.includes(o)||l.includes(&quot;\n&quot;)||l.includes('&quot;')?`&quot;${l.replace(/&quot;/g,'&quot;&quot;')}&quot;`:l}(e.innerText,t))}),o+=l.join(t)+&quot;\n&quot;}),o.endsWith(&quot;\n&quot;)?o.slice(0,-1):o}async function i(e,t){let o=d(e,t);try{let l=new Blob([o],{type:&quot;text/plain&quot;}),n=new ClipboardItem({&quot;text/plain&quot;:l});await navigator.clipboard.write([n])}catch(r){console.error(&quot;ClipboardItem API failed, falling back to writeText:&quot;,r),navigator.clipboard.writeText(o)}}function c(e,t,o){if(t.querySelectorAll(`.${l}col-highlight`).forEach(e=>e.classList.remove(`${l}col-highlight`)),o&&e){let n=e.cellIndex;t.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[n]&&e.cells[n].classList.add(`${l}col-highlight`)})}}function p(e,t=o(&quot;message_copied&quot;)){let n=document.createElement(&quot;div&quot;);n.className=`${l}message`,n.innerText=t,e.appendChild(n),setTimeout(()=>{n.style.opacity=&quot;1&quot;},10),setTimeout(()=>{n.style.opacity=&quot;0&quot;,setTimeout(()=>{n.parentElement&&n.parentElement.removeChild(n)},300)},2e3)}!function e(){if(document.querySelector(`.${l}overlay`))return;!function e(){if(document.getElementById(`${l}styles`))return;let t=document.createElement(&quot;style&quot;);t.id=`${l}styles`,t.innerText=n,document.head.appendChild(t)}();let t=window.getSelection();if(0===t.rangeCount||t.isCollapsed){alert(o(&quot;alert_select_first&quot;));return}let s=function e(t){let o=function e(t){let o=t.getRangeAt(0),l=o.commonAncestorContainer;l.nodeType===Node.TEXT_NODE&&(l=l.parentElement);let n=l;for(;n;){if(&quot;TABLE&quot;===n.tagName)return{element:n,type:&quot;TABLE&quot;};let r=n.getAttribute(&quot;role&quot;);if(&quot;grid&quot;===r||&quot;table&quot;===r)return{element:n,type:&quot;ARIA_GRID&quot;};if(n.children.length>1&&[&quot;DIV&quot;,&quot;UL&quot;,&quot;OL&quot;].includes(n.tagName)){let a=Array.from(n.children).filter(e=>e.children.length>1&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(a.length>1&&a.length/n.children.length>.7&&a[0].children.length>0&&a[0].children.length===a[1].children.length)return{element:n,type:&quot;HEURISTIC_DIV&quot;}}if([&quot;UL&quot;,&quot;OL&quot;].includes(n.tagName)&&n.children.length>1){let d=Array.from(n.children).filter(e=>&quot;LI&quot;===e.tagName);if(d.length/n.children.length>.8)return{element:n,type:&quot;LIST&quot;}}n=n.parentElement}return null}(t);return o?&quot;TABLE&quot;===o.type?o.element:&quot;ARIA_GRID&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),l=document.createElement(&quot;thead&quot;),n=document.createElement(&quot;tbody&quot;),r=t.querySelectorAll('[role=&quot;row&quot;]');return r.forEach(e=>{let t=document.createElement(&quot;tr&quot;),o=!1,r=e.querySelectorAll('[role=&quot;gridcell&quot;], [role=&quot;columnheader&quot;], [role=&quot;cell&quot;]');r.forEach(e=>{let l=e.getAttribute(&quot;role&quot;);&quot;columnheader&quot;===l&&(o=!0);let n=document.createElement(o?&quot;th&quot;:&quot;td&quot;);n.innerText=e.innerText,t.appendChild(n)}),o?l.appendChild(t):n.appendChild(t)}),o.appendChild(l),o.appendChild(n),o}(o.element):&quot;HEURISTIC_DIV&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),l=document.createElement(&quot;tbody&quot;),n=Array.from(t.children).filter(e=>e.children.length>0&&![&quot;SCRIPT&quot;,&quot;STYLE&quot;,&quot;NOSCRIPT&quot;].includes(e.tagName));if(0===n.length)return null;let r=null,a=n,d=n[0],i=d.className&&&quot;string&quot;==typeof d.className?d.className.toLowerCase():&quot;&quot;;if((i.includes(&quot;header&quot;)||i.includes(&quot;head&quot;)||[&quot;THEAD&quot;].includes(d.tagName))&&(r=d,a=n.slice(1)),r){let c=document.createElement(&quot;thead&quot;),p=document.createElement(&quot;tr&quot;);for(let s of r.children){let m=document.createElement(&quot;th&quot;);m.innerText=s.innerText,p.appendChild(m)}c.appendChild(p),o.appendChild(c)}for(let u of a){let h=document.createElement(&quot;tr&quot;);for(let f of u.children){let b=document.createElement(&quot;td&quot;);b.innerText=f.innerText,h.appendChild(b)}l.appendChild(h)}return o.appendChild(l),o}(o.element):&quot;LIST&quot;===o.type?function e(t){let o=document.createElement(&quot;table&quot;),l=document.createElement(&quot;thead&quot;),n=document.createElement(&quot;tbody&quot;),r=document.createElement(&quot;tr&quot;),a=document.createElement(&quot;th&quot;);return a.innerText=&quot;Item&quot;,r.appendChild(a),l.appendChild(r),o.appendChild(l),Array.from(t.children).forEach(e=>{if(&quot;LI&quot;===e.tagName){let t=document.createElement(&quot;tr&quot;),o=document.createElement(&quot;td&quot;);o.innerText=e.innerText.trim(),t.appendChild(o),n.appendChild(t)}}),o.appendChild(n),o}(o.element):null:null}(t);s?function e(t){let n=document.createElement(&quot;div&quot;);n.className=`${l}overlay`;let s=document.createElement(&quot;div&quot;);s.className=`${l}modal`;let m=document.createElement(&quot;div&quot;);m.className=`${l}header`;let u=document.createElement(&quot;h3&quot;);u.innerText=o(&quot;modal_title&quot;);let h=document.createElement(&quot;button&quot;);h.className=`${l}close-btn`,h.title=o(&quot;modal_close_title&quot;),h.innerText=&quot;\xd7&quot;,m.appendChild(u),m.appendChild(h);let f=document.createElement(&quot;div&quot;);f.style.cssText=&quot;padding: 0 20px; margin-top: 10px;&quot;;let b=document.createElement(&quot;span&quot;);b.style.cssText=&quot;font-size: 13px; color: #666; font-weight: bold;&quot;,b.innerText=o(&quot;footer_tip&quot;),f.appendChild(b);let g=document.createElement(&quot;div&quot;);g.className=`${l}table-container`;let y=document.createElement(&quot;div&quot;);y.className=`${l}footer`;let x=document.createElement(&quot;div&quot;);x.className=`${l}dropdown`;let $=document.createElement(&quot;button&quot;);$.className=`${l}button`,$.id=`${l}copy-table-btn`,$.innerText=o(&quot;copy_dropdown_button&quot;);let E=document.createElement(&quot;div&quot;);E.className=`${l}dropdown-content`,E.id=`${l}table-dropdown`,[{format:&quot;html&quot;,textKey:&quot;copy_dropdown_html&quot;},{format:&quot;tsv&quot;,textKey:&quot;copy_dropdown_tsv&quot;},{format:&quot;csv&quot;,textKey:&quot;copy_dropdown_csv&quot;},{format:&quot;json&quot;,textKey:&quot;copy_dropdown_json&quot;},{format:&quot;html_source&quot;,textKey:&quot;copy_dropdown_html_source&quot;}].forEach(e=>{let t=document.createElement(&quot;button&quot;);t.setAttribute(&quot;data-format&quot;,e.format),t.innerText=o(e.textKey),E.appendChild(t)}),x.appendChild($),x.appendChild(E);let w=document.createElement(&quot;button&quot;);w.className=`${l}button`,w.id=`${l}export-csv-btn`,w.innerText=o(&quot;export_csv_button&quot;);let v=document.createElement(&quot;button&quot;);v.className=`${l}button`,v.id=`${l}export-pic-btn`,v.innerText=o(&quot;export_picture_button&quot;),y.appendChild(x),y.appendChild(w),y.appendChild(v),s.append(m,f,g,y),n.appendChild(s),document.body.appendChild(n);let C=t.cloneNode(!0);g.appendChild(C),function e(t,n){let s=document.getElementById(`${l}table-dropdown`);t.querySelector(`.${l}close-btn`).addEventListener(&quot;click&quot;,()=>t.remove()),t.addEventListener(&click&quot;,e=>{e.target===t&&document.body.removeChild(t),e.target.closest(`.${l}dropdown`)||(s.style.display=&quot;none&quot;)}),document.getElementById(`${l}copy-table-btn`).addEventListener(&quot;click&quot;,e=>{e.stopPropagation(),s.style.display=&quot;block&quot;===s.style.display?&quot;none&quot;:&quot;block&quot;}),s.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-format&quot;);switch(o){case&quot;html&quot;:a(n);break;case&quot;tsv&quot;:i(n,&quot;	&quot;);break;case&quot;csv&quot;:i(n,&quot;,&quot;);break;case&quot;json&quot;:(function e(t){let o=Array.from(t.querySelectorAll(&quot;thead th&quot;)).map(e=>e.innerText.trim()),l=[];t.querySelectorAll(&quot;tbody tr&quot;).forEach(e=>{let t={};e.querySelectorAll(&quot;td&quot;).forEach((e,l)=>{t[o[l]||`column_${l+1}`]=e.innerText.trim()}),l.push(t)}),navigator.clipboard.writeText(JSON.stringify(l,null,2))})(n);break;case&quot;html_source&quot;:(function e(t){let o=`<style>table { border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; } th { background-color: #f2f2f2; }</style>
+${t.outerHTML}`;navigator.clipboard.writeText(o)})(n)}s.style.display=&quot;none&quot;,p(t)}}),document.getElementById(`${l}export-csv-btn`).addEventListener(&quot;click&quot;,()=>{let e=d(n,&quot;,&quot;);r(e,&quot;table-export.csv&quot;,&quot;text/csv;charset=utf-8;&quot;),p(t,o(&quot;message_csv_downloading&quot;))}),document.getElementById(`${l}export-pic-btn`).addEventListener(&quot;click&quot;,()=>{(function e(t,l){let n=()=>{p(l,o(&quot;message_picture_downloading&quot;)),html2canvas(t,{useCORS:!0,scale:2,backgroundColor:&quot;#FFFFFF&quot;}).then(e=>{r(e.toDataURL(&quot;image/png&quot;),&quot;table-export.png&quot;)}).catch(e=>{console.error(&quot;html2canvas error:&quot;,e),alert(&quot;Sorry, failed to create picture.&quot;)})};if(&quot;undefined&quot;!=typeof html2canvas)return n();let a=document.createElement(&quot;script&quot;);a.src=&quot;https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js&quot;,a.onload=n,a.onerror=()=>{p(l,o(&quot;alert_library_failed&quot;))},document.head.appendChild(a)})(n,t)}),n.addEventListener(&quot;mouseover&quot;,e=>{let t=e.target.closest(&quot;td, th&quot;);c(t,n,!0)}),n.addEventListener(&quot;mouseout&quot;,e=>{n.contains(e.relatedTarget)||c(null,n,!1)}),n.addEventListener(&quot;click&quot;,e=>{let r=e.target.closest(&quot;td, th&quot;);r&&function e(t,n,r){let a=r.querySelector(`.${l}col-menu`);a&&a.remove();let d=document.createElement(&quot;div&quot;);d.className=`${l}col-menu`;let i=document.createElement(&quot;button&quot;);i.setAttribute(&quot;data-separator&quot;,&quot;,&quot;),i.innerText=o(&quot;col_menu_copy_comma&quot;);let c=document.createElement(&quot;button&quot;);c.setAttribute(&quot;data-separator&quot;,&quot;\\n&quot;),c.innerText=o(&quot;col_menu_copy_newline&quot;),d.append(i,c);let s=t.getBoundingClientRect(),m=r.getBoundingClientRect();d.style.top=`${s.bottom-m.top}px`,d.style.left=`${s.left-m.left}px`,r.appendChild(d),d.addEventListener(&quot;click&quot;,e=>{if(&quot;BUTTON&quot;===e.target.tagName){let o=e.target.getAttribute(&quot;data-separator&quot;);(function e(t,o,l){let n=t.cellIndex,r=[];o.querySelectorAll(&quot;tr&quot;).forEach(e=>{e.cells[n]&&r.push(e.cells[n].innerText.trim())}),navigator.clipboard.writeText(r.join(l))})(t,n,&quot;\\n&quot;===o?&quot;\n&quot;:&quot;,&quot;),p(r),d.remove()}}),setTimeout(()=>{r.addEventListener(&quot;click&quot;,()=>d.remove(),{once:!0})},0)}(r,n,t)})}(n,C)}(s):alert(o(&quot;alert_no_table_found&quot;))}()}();" class="bookmarklet-button" title="Arraste-me para a sua barra de favoritos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
+                        <span>Table Copy</span>
+                    </a>
+                <p><strong>Passo Crucial:</strong> Arraste o botão para a 'Barra de Favoritos' do seu navegador e, em seguida, solte o rato.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Concluído!</h3>
+                <p>Agora, em qualquer página com uma tabela, basta clicar neste favorito para começar!</p>
+            </div>
+        </div>
+         <p class="mobile-note">Nota: Este bookmarklet deve ser instalado e usado num navegador de desktop.</p>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Uma Ferramenta para Todas as Suas Necessidades</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Deteção Inteligente de Estrutura</h3>
+                <p>Suporta não apenas elementos `&lt;table&gt;` tradicionais, mas também reconhece de forma inteligente tabelas modernas construídas com layouts `&lt;div&gt;` (baseado nos padrões ARIA).</p>
+            </div>
+            <div class="card">
+                <h3>Cópia Perfeita com Um Clique</h3>
+                <p>A nossa funcionalidade única de cópia de Rich Text (HTML) escreve a estrutura da tabela para a área de transferência, garantindo uma colagem perfeita e com formatação preservada no Excel, WPS ou Notion.</p>
+            </div>
+            <div class="card">
+                <h3>Opções de Exportação Flexíveis</h3>
+                <p>Copie como Rich Text, TSV, CSV ou JSON. Exporte diretamente para um ficheiro CSV (perfeito para Excel) ou até mesmo copie o código-fonte HTML da tabela para atender a todas as suas necessidades.</p>
+            </div>
+            <div class="card">
+                <h3>Leve e Seguro</h3>
+                <p>É apenas um bookmarklet. Sem instalação, sem processos em segundo plano, pronto quando você precisar. Todas as operações são realizadas localmente no seu navegador. Nunca vemos, enviamos ou armazenamos nenhum dos seus dados.</p>
+            </div>
+            <div class="card">
+                <h3>Exportar como Imagem</h3>
+                <p>Guarde a tabela como uma imagem PNG com um clique. Perfeito para partilhar em apresentações, relatórios ou nas redes sociais. O que vê é o que obtém.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">Perguntas Frequentes (FAQ)</h2>
+        <div class="faq-item">
+            <button class="faq-question">Esta ferramenta é segura? Irá carregar os meus dados?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Absolutamente segura. O Table Copy é uma ferramenta 100% do lado do cliente. Todo o reconhecimento e processamento de dados ocorre localmente no seu navegador. Nada é enviado ou armazenado em qualquer servidor.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Qual a diferença para uma extensão de navegador?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>É um &#39;bookmarklet&#39;, que é muito mais leve que uma extensão. Não requer instalação de uma loja de aplicações, nem consome recursos em segundo plano. Clique para usar e desaparece quando terminar. Claro, isto também significa que não pode realizar tarefas complexas em segundo plano, como scraping agendado, que as extensões podem fazer.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Funciona em todos os sites?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Suporta a grande maioria das tabelas que usam tags `&lt;table&gt;` padrão ou estruturas `&lt;div&gt;` compatíveis com ARIA. Para páginas construídas com frameworks de frontend extremamente complexos ou não padronizados, pode não funcionar perfeitamente. Estamos a melhorar continuamente o algoritmo.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Esta ferramenta é gratuita? Terá custos no futuro?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Sim, o bookmarklet atual será sempre gratuito. Acreditamos que boas ferramentas devem ser amplamente acessíveis. No futuro, poderemos lançar uma extensão de navegador paga mais poderosa (por exemplo, com scraping de várias páginas, tarefas agendadas), mas a funcionalidade principal que vê hoje será sempre gratuita.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="other-tools" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title"></h2>
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="card">
+                <h3><a href="/pt/web-to-pdf.html">Web Converter</a></h3>
+                <p>Web para PDF é um bookmarklet leve e gratuito que permite guardar a página web atual como um documento PDF de alta qualidade, usando a função de impressão do seu navegador com um único clique.</p>
+            </div>
+            <div class="card">
+                <h3><a href="/pt/web-to-image.html">Web Converter</a></h3>
+                <p>Web para Imagem: bookmarklet gratuito para capturar qualquer página web como um PNG de alta resolução localmente no navegador.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <p>© 2025 Table Copy. Desenvolvido com Gemini AI.</p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    
+<script>
+    // 阻止书签按钮的默认点击行为，并显示提示
+    const bookmarkletLink = document.querySelector('.bookmarklet-button');
+    if (bookmarkletLink) {
+        bookmarkletLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("Por favor, não clique neste botão. Em vez disso, arraste-o para a sua barra de favoritos!");
+        });
+    }
+</script>
+
+</body>
+</html>
