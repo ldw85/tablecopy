@@ -108,7 +108,7 @@
         "meta_title": "Web to PDF - One-Click Save Any Webpage as PDF | TableCopy",
         "meta_description": "Web to PDF is a lightweight, free bookmarklet that lets you save the current webpage as a high-quality PDF document using your browser's print function with a single click.",
         "meta_keywords": "web to pdf, save webpage as pdf, html to pdf, print webpage, bookmarklet, free tool",
-        "logo": "Web Converter",
+        "logo": "Web to PDF",
         "hero_h1": "One-Click Save Webpage as PDF",
         "hero_slogan": "No complex software needed. Save any webpage as a high-quality, searchable PDF file.",
         "install_cta": "Use Now",
@@ -139,9 +139,9 @@
         "install_step1_p": "Click and hold the red 'Web Converter' button.",
         "install_step2_h3": "Drag to Bookmarks Bar",
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
-        "bookmarklet_button_text": "Web Converter",
+        "bookmarklet_button_text": "Web to PDF",
         "install_step3_h3": "Done!",
         "install_step3_p": "On any page you want to save, click this bookmark to start!",
-        "footer_p": "© 2025 Web Converter. Powered by Gemini AI."
+        "footer_p": "© 2025 Web to PDF. Powered by Gemini AI."
     }
 }
