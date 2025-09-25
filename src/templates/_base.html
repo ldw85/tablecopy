@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ T.lang_code }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ T[page.name].meta_title }}</title>
+    <meta name="description" content="{{ T[page.name].meta_description }}">
+    <meta name="keywords" content="{{ T[page.name].meta_keywords }}">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="{{ page.canonicalUrl }}">
+    {% for alt in alternates %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ defaultLangUrl }}">
+
+    <link rel="icon" type="image/png" href="/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    {% block head_extra %}{% endblock %}
+
+</head>
+<body>
+    {% include "templates/_header.html" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "templates/_footer.html" %}
+
+    <script src="/assets/js/main.js"></script>
+    {% block scripts_extra %}{% endblock %}
+</body>
+</html>
