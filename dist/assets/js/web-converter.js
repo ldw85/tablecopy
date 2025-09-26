@@ -99,18 +99,23 @@
             position: absolute;
             top: 8px;
             right: 8px;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             background: none;
             border: none;
             color: #888;
-            font-size: 24px;
-            line-height: 1;
+            font-size: 20px;
             cursor: pointer;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s, color 0.2s;
         }
         #${CSS_PREFIX}close:hover {
             color: #333;
+            background-color: #f0f2f5;
         }
         #${CSS_PREFIX}footer {
             margin-top: 20px;

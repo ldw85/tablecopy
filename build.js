@@ -9,7 +9,7 @@ const config = {
     srcDir: path.join(rootDir, 'src'), // 源文件目录: .../tablecopy/src
     distDir: path.join(rootDir, 'dist'), // 输出目录: .../tablecopy/dist
     baseUrl: 'https://tablecopy.pro', // 你的网站域名
-    languages: ['zh', 'en', 'es', 'pt'],
+    languages: ['zh', 'en', 'es', 'pt', 'de', 'fr', 'ja', 'ko', 'ru'],
     defaultLang: 'zh',
 };
 
@@ -49,6 +49,12 @@ async function build() {
         await fs.copy(assetsSrc, assetsDist);
     }
     console.log('✅ Copied static assets.');
+
+    // 2.1 复制 sitemap.xml 到根目录
+    const sitemapSrc = path.join(config.srcDir, 'assets', 'sitemap.xml');
+    const sitemapDist = path.join(config.distDir, 'sitemap.xml');
+    await fs.copy(sitemapSrc, sitemapDist);
+    console.log('✅ Copied sitemap.xml to dist root.');
 
     // 3. 加载所有翻译文件
     const allTranslations = {};

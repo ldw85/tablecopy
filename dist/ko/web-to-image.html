@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>웹을 이미지로 - 웹페이지를 이미지로 변환 | TableCopy</title>
+    <meta name="description" content="웹을 이미지로: 브라우저에서 로컬로 모든 웹페이지를 고해상도 PNG로 캡처하는 무료 북마크릿입니다.">
+    <meta name="keywords" content="웹을 이미지로, 웹페이지를 이미지로 저장, html을 이미지로, 북마크릿, 로컬 캡처">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/ko/web-to-image.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/web-to-image.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/web-to-image.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/web-to-image.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/web-to-image.html">
+    
+    <link rel="alternate" hreflang="de" href="https://tablecopy.pro/de/web-to-image.html">
+    
+    <link rel="alternate" hreflang="fr" href="https://tablecopy.pro/fr/web-to-image.html">
+    
+    <link rel="alternate" hreflang="ja" href="https://tablecopy.pro/ja/web-to-image.html">
+    
+    <link rel="alternate" hreflang="ko" href="https://tablecopy.pro/ko/web-to-image.html">
+    
+    <link rel="alternate" hreflang="ru" href="https://tablecopy.pro/ru/web-to-image.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/web-to-image.html">
+
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/page.css">
+
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/ko/" class="logo">Web to Image</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    
+                    <li><a href="/ko/">홈</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="web-to-image" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" >中文</option>
+                <option value="en" >English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+                <option value="de" >Deutsch</option>
+                <option value="fr" >Français</option>
+                <option value="ja" >日本語</option>
+                <option value="ko" selected>한국어</option>
+                <option value="ru" >Русский</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h1>클릭 한 번으로 웹페이지를 PNG로 캡처 — 웹을 이미지로 (전체 페이지, 고해상도)</h1>
+        <h2 class="slogan">모든 웹페이지를 고해상도 PNG(시각적 충실도 및 긴 페이지 스티칭)로 캡처합니다. 공유 및 보관에 이상적입니다.</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">지금 사용</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">기능 — 웹을 이미지로 / PNG로 저장</h2>
+        <ul>
+            
+                <li><strong>전체 페이지 캡처:</strong> `html2canvas`를 사용하여 전체 HTML 문서를 캡처하고 모달 및 오버레이를 처리하여 깔끔한 출력을 제공합니다.</li>
+            
+                <li><strong>고해상도 내보내기:</strong> `scale: window.devicePixelRatio` 이상을 설정하여 인쇄 및 표시에 적합한 고해상도 이미지를 생성합니다.</li>
+            
+                <li><strong>개인 정보 보호 및 로컬 처리:</strong> 모든 캡처 및 이미지 생성은 브라우저에서 로컬로 이루어집니다. 외부 서비스에 데이터가 업로드되지 않습니다.</li>
+            
+        </ul>
+        <p>검색 및 선택 가능한 텍스트가 필요하십니까? <a href="/ko/web-to-pdf.html">웹을 PDF로 변환기</a>를 사용하세요.</p>
+    </div>
+</section>
+
+<section id="about" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">이 도구에 대하여 (작동 방식 및 EEAT)</h2>
+        <p><strong>구현 및 유지 관리:</strong> 이 도구는 TableCopy 팀에서 유지 관리합니다. 핵심 캡처 로직은 널리 사용되는 `html2canvas` 라이브러리를 사용하며, 실패 프롬프트 및 대체 메커니즘을 통해 견고성을 더했습니다.</p>
+        <p><strong>기술적 세부 정보:</strong> 스크립트는 자체 캡처를 피하기 위해 자체 모달을 일시적으로 숨기고, 교차 출처 이미지 리소스의 렌더링 성공률을 높이기 위해 `useCORS`를 사용합니다. 이미지는 브라우저 다운로드를 트리거하기 위해 dataURL을 통해 내보내집니다.</p>
+        <p><strong>신뢰성 및 감사 가능성:</strong> 이 프로젝트는 정적 코드 저장소입니다. 모든 로직은 `tools/tablecopy/`에서 검토할 수 있습니다. 타사 종속성은 CDN에서 로드됩니다. 오프라인 배포의 경우 스크립트를 번들로 묶어 신뢰할 수 있는 소스에서 호스팅할 수 있습니다.</p>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">자주 묻는 질문(FAQ)</h2>
+        <div class="faq-item">
+            <h3>캡처에 원치 않는 팝업이나 도구 모음이 포함된 경우 어떻게 합니까?</h3>
+            <p>스크립트는 자체 UI를 숨기려고 시도합니다. 채팅 위젯이나 쿠키 배너와 같은 타사 요소의 경우 캡처하기 전에 수동으로 닫거나 브라우저 개발자 도구를 사용하여 숨기십시오.</p>
+        </div>
+        <div class="faq-item">
+            <h3>내보낸 이미지에 일부 이미지나 리소스가 누락된 이유는 무엇입니까?</h3>
+            <p>리소스가 타사 도메인에서 온 것이고 적절한 CORS 헤더가 없는 경우 브라우저는 캔버스에 그리는 것을 차단하여 내보낸 이미지에서 누락되게 합니다. 해결책으로는 리소스를 로드할 수 있도록 시크릿/새 탭에서 페이지를 열거나, 주요 이미지를 먼저 로컬에 저장한 다음 스크린샷을 합성하는 것이 있습니다.</p>
+        </div>
+        <div class="faq-item">
+            <h3>더 높은 해상도나 더 작은 파일 크기를 얻으려면 어떻게 해야 합니까?</h3>
+            <p>해상도를 높이려면 `scale` 매개변수를 조정하십시오(예: `window.devicePixelRatio * 2`). 이렇게 하면 픽셀 밀도가 높아지지만 메모리 사용량과 처리 시간도 크게 증가합니다. 파일 크기를 줄이려면 내보낸 후 이미지 압축 도구(예: TinyPNG)를 사용하거나 캔버스에서 내보내기 전에 품질 매개변수를 낮추십시오(JPEG의 경우).</p>
+        </div>
+        <div class="faq-item">
+            <h3>긴 페이지를 처리할 때 메모리 충돌을 피하는 방법은 무엇입니까?</h3>
+            <p>큰 페이지를 캡처하면 많은 메모리를 소비할 수 있습니다. 섹션별로 캡처하거나(여러 이미지로 분할) `scale`을 줄인 다음 이미지를 로컬에서 병합하는 것이 좋습니다. 또 다른 전략은 서버 측 렌더링/캡처이지만 개인 정보 보호 위험이 따릅니다.</p>
+        </div>
+        <div class="faq-item">
+            <h3>피드백을 제공하거나 개선에 기여하려면 어떻게 해야 합니까?</h3>
+            <p>GitHub 저장소(경로: `tools/tablecopy/`)에 이슈 또는 PR을 제출해 주시기 바랍니다. 문제를 찾고 회귀 테스트를 수행하는 데 도움이 되도록 재현 가능한 예제 페이지 또는 화면 녹화를 제공해 주십시오.</p>
+        </div>
+        <p style="margin-top:18px;">검색 가능한 텍스트나 더 나은 인쇄 품질이 필요하십니까? <a href="/ko/web-to-pdf.html">웹을 PDF로</a>로 이동하거나 <a href="/ko/">홈페이지</a>로 돌아가십시오.</p>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">3초 설치, 영원히 사용</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>버튼을 길게 누르세요</h3>
+                <p>녹색 &#39;Web Converter&#39; 버튼을 길게 클릭하세요.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>북마크 바로 드래그하세요</h3>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">Web Converter</a>
+                <p><strong>중요한 단계:</strong> 버튼을 브라우저의 '북마크 바' 또는 '즐겨찾기 모음'으로 드래그한 다음 마우스를 놓으세요.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>완료! 클릭하여 사용</h3>
+                <p>캡처하려는 모든 페이지에서 이 북마크를 클릭하여 시작하세요!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        
+        <p></p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/web-converter.js', "이 버튼을 클릭하지 마세요. 대신 북마크 바로 드래그하세요!");
+    });
+</script>
+
+</body>
+</html>

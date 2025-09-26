@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>Table Copy - Copiez les tableaux Web vers Excel en un clic, sans mise en forme désordonnée</title>
+    <meta name="description" content="Dites adieu à la mise en forme désordonnée ! Table Copy est un bookmarklet léger qui vous permet de copier n&#39;importe quel tableau Web (y compris ceux créés avec des divs) vers Excel, CSV ou JSON en un clic. Aucune installation nécessaire, formatage parfait.">
+    <meta name="keywords" content="copier un tableau depuis un site web, html vers excel, scraper de tableau, extraction de données web, copier un tableau html, tableau vers csv, tableau vers json, réparer le copier-coller de tableau">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/fr/index.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/index.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/index.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/index.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/index.html">
+    
+    <link rel="alternate" hreflang="de" href="https://tablecopy.pro/de/index.html">
+    
+    <link rel="alternate" hreflang="fr" href="https://tablecopy.pro/fr/index.html">
+    
+    <link rel="alternate" hreflang="ja" href="https://tablecopy.pro/ja/index.html">
+    
+    <link rel="alternate" hreflang="ko" href="https://tablecopy.pro/ko/index.html">
+    
+    <link rel="alternate" hreflang="ru" href="https://tablecopy.pro/ru/index.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/index.html">
+
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/fr/" class="logo">Table Copy</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#use-cases">Cas d&#39;utilisation</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;">Installer maintenant</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="index" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" >中文</option>
+                <option value="en" >English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+                <option value="de" >Deutsch</option>
+                <option value="fr" selected>Français</option>
+                <option value="ja" >日本語</option>
+                <option value="ko" >한국어</option>
+                <option value="ru" >Русский</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero" id="hero">
+    <div class="container">
+        <h1>Copiez n'importe quel tableau Web,<br>aussi facilement que de copier du texte.</h1>
+        <p class="slogan">Abandonnez les captures d&#39;écran fastidieuses et la saisie manuelle. Un clic pour récupérer les données dans votre presse-papiers pour un collage parfait.</p>
+        <a href="#install" class="cta-button">Installer gratuitement maintenant</a>
+        <div class="demo-gif-container">
+           <video src="/assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
+               Your browser does not support the video tag.
+           </video>
+        </div>
+    </div>
+</section>
+
+<section id="why">
+    <div class="container">
+        <h2 class="section-title">Comme vous, nous en avions assez de la corvée</h2>
+        <p>Nous sommes des passionnés de données et de grands utilisateurs d&#39;outils de productivité. Pendant d&#39;innombrables jours et nuits, ayant besoin de transférer des données de pages Web vers Excel, nous avons été tourmentés par des formatages cassés, des tableaux `&lt;div&gt;` cachés et des extensions lentes. Nous étions convaincus qu&#39;il devait y avoir une meilleure façon de faire. C&#39;est ainsi qu&#39;est né &#39;Table Copy&#39;. Ce n&#39;est pas un logiciel lourd, juste un outil pur, rapide et ciblé, conçu pour résoudre un problème : copier élégamment les tableaux Web.</p>
+    </div>
+</section>
+
+<section id="install" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">Installation en 3 secondes, utilisation à vie</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Appuyez et maintenez le bouton</h3>
+                <p>Cliquez et maintenez le bouton vert &#39;Table Copy&#39; avec le bouton gauche de votre souris.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Faites glisser vers votre barre de favoris</h3>
+                    <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Faites-moi glisser dans votre barre de favoris">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
+                        <span>Table Copy</span>
+                    </a>
+                <p><strong>Étape cruciale :</strong> Faites glisser le bouton vers la 'Barre de favoris' de votre navigateur, puis relâchez la souris.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Terminé !</h3>
+                <p>Maintenant, sur n&#39;importe quelle page avec un tableau, cliquez simplement sur ce favori pour commencer !</p>
+            </div>
+        </div>
+         <p class="mobile-note">Remarque : Ce bookmarklet doit être installé et utilisé sur un navigateur de bureau.</p>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Un outil pour tous vos besoins</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Détection intelligente de la structure</h3>
+                <p>Prend en charge non seulement les éléments `&lt;table&gt;` traditionnels, mais reconnaît également intelligemment les tableaux modernes construits avec des mises en page `&lt;div&gt;` (basées sur les normes ARIA).</p>
+            </div>
+            <div class="card">
+                <h3>Copie parfaite en un clic</h3>
+                <p>Notre fonction unique de copie de texte enrichi (HTML) écrit la structure du tableau dans le presse-papiers, garantissant un collage parfait et préservant le format dans Excel, WPS ou Notion.</p>
+            </div>
+            <div class="card">
+                <h3>Options d&#39;exportation flexibles</h3>
+                <p>Copiez en tant que texte enrichi, TSV, CSV ou JSON. Exportez directement vers un fichier CSV (parfait pour Excel) ou copiez même le code source HTML brut du tableau pour répondre à tous vos besoins.</p>
+            </div>
+            <div class="card">
+                <h3>Léger et sécurisé</h3>
+                <p>C&#39;est juste un bookmarklet. Pas d&#39;installation, pas de processus en arrière-plan, prêt quand vous en avez besoin. Toutes les opérations sont effectuées localement dans votre navigateur. Nous ne voyons, n&#39;envoyons ni ne stockons jamais aucune de vos données.</p>
+            </div>
+            <div class="card">
+                <h3>Exporter en tant qu&#39;image</h3>
+                <p>Enregistrez le tableau en tant qu&#39;image PNG en un clic. Parfait pour le partage dans des présentations, des rapports ou sur les réseaux sociaux. Ce que vous voyez est ce que vous obtenez.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <div class="container">
+        <h2 class="section-title">De notre blog</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3><a href="/blog/how-to-copy-a-column-from-a-website.html">How to Copy a Column from a Website: All The Best Methods</a></h3>
+                <p>Stop wrestling with jumbled data. This guide reveals 3 proven methods to perfectly copy a single column from any web page table into Excel or Sheets.</p>
+                <a href="/blog/how-to-copy-a-column-from-a-website.html" class="read-more">Lire la suite →</a>
+            </div>
+            <div class="card">
+                <h3><a href="/blog/how-to-copy-a-table-from-perplexity-ai.html">How to Copy a Table from Perplexity AI (Without Losing Your Mind)</a></h3>
+                <p>A step-by-step guide on how to copy tables from Perplexity AI. Learn simple copy-paste, format requests, and browser extensions to easily extract web data into Excel.</p>
+                <a href="/blog/how-to-copy-a-table-from-perplexity-ai.html" class="read-more">Lire la suite →</a>
+            </div>
+            <div class="card">
+                <h3><a href="/blog/how-to-copy-web-tables-to-excel-in-one-click.html">How to Copy Web Tables to Excel in One Click: A Beginner’s Guide</a></h3>
+                <p>Frustrated with messy pastes? Learn how to copy any web table to Excel perfectly in one click with a simple, installation-free tool.</p>
+                <a href="/blog/how-to-copy-web-tables-to-excel-in-one-click.html" class="read-more">Lire la suite →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">Foire aux questions (FAQ)</h2>
+        <div class="faq-item">
+            <button class="faq-question">Cet outil est-il sûr ? Va-t-il télécharger mes données ?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Absolument sûr. Table Copy est un outil 100% côté client. Toute la reconnaissance et le traitement des données se font localement dans votre navigateur. Rien n&#39;est jamais envoyé ou stocké sur un serveur.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">En quoi est-il différent d&#39;une extension de navigateur ?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>C&#39;est un &#39;bookmarklet&#39;, qui est beaucoup plus léger qu&#39;une extension. Pas d&#39;installation depuis une boutique d&#39;applications, pas d&#39;utilisation des ressources en arrière-plan. Cliquez pour l&#39;utiliser, et il disparaît lorsque vous avez terminé. Bien sûr, cela signifie également qu&#39;il ne peut pas effectuer de tâches complexes en arrière-plan comme le scraping programmé, ce que les extensions peuvent faire.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Fonctionne-t-il sur tous les sites Web ?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Il prend en charge la grande majorité des tableaux utilisant des balises `&lt;table&gt;` standard ou des structures `&lt;div&gt;` conformes à ARIA. Pour les pages construites avec des frameworks frontend extrêmement complexes ou non standard, il pourrait ne pas fonctionner parfaitement. Nous améliorons continuellement l&#39;algorithme.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Cet outil est-il gratuit ? Deviendra-t-il payant à l&#39;avenir ?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Oui, le bookmarklet actuel sera toujours gratuit. Nous pensons que les bons outils doivent être largement accessibles. À l&#39;avenir, nous pourrions publier une extension de navigateur payante plus puissante (par exemple, avec du scraping multi-pages, des tâches planifiées), mais les fonctionnalités de base que vous voyez aujourd&#39;hui resteront toujours gratuites.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="other-tools" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">Autres outils</h2>
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="card">
+                <h3><a href="/fr/web-to-pdf.html">Web to PDF</a></h3>
+                <p>Web to PDF est un bookmarklet léger et gratuit qui vous permet d&#39;enregistrer la page Web actuelle en tant que document PDF de haute qualité en utilisant la fonction d&#39;impression de votre navigateur en un seul clic.</p>
+            </div>
+            <div class="card">
+                <h3><a href="/fr/web-to-image.html">Web to Image</a></h3>
+                <p>Web vers Image : bookmarklet gratuit pour capturer n&#39;importe quelle page Web en PNG haute résolution localement dans le navigateur.</p>
+            </div>
+            <div class="card">
+                <h3><a href="/fr/web-to-word.html">Web to Word</a></h3>
+                <p>Web to Word est un bookmarklet gratuit qui convertit n&#39;importe quelle page Web en un fichier Microsoft Word (.docx) modifiable. Parfait pour les rapports, l&#39;édition et la réutilisation de contenu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        
+        <p>© 2025 Table Copy. Propulsé par Gemini AI.</p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/tablecopy_v5.0.js', "Veuillez ne pas cliquer sur ce bouton. Au lieu de cela, faites-le glisser dans votre barre de favoris !");
+    });
+</script>
+
+</body>
+</html>
