@@ -23,11 +23,12 @@
         #${CSS_PREFIX}modal-overlay {
             position: fixed;
             top: 0;
-            left: 0;
+            left: 0; 
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 2147483646; /* Max z-index - 1 */
+            backdrop-filter: blur(4px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,59 +36,95 @@
         }
         #${CSS_PREFIX}modal {
             background: #fff;
-            padding: 25px;
+            position: relative;
+            padding: 20px 28px 15px 28px;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             text-align: center;
-            max-width: 400px;
+            max-width: 420px;
             width: 90%;
         }
         #${CSS_PREFIX}modal h3 {
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             color: #333;
-            font-size: 22px;
+            font-size: 20px;
+            font-weight: 600;
         }
         #${CSS_PREFIX}modal .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
         }
         #${CSS_PREFIX}modal button {
-            padding: 12px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.2s, transform 0.2s;
             color: #fff;
+            background-color: #f0f2f5;
+            color: #333;
+            border: 1px solid #e0e2e5;
+        }
+        #${CSS_PREFIX}modal button:not([disabled]):hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #d0d2d5;
+        }
+        #${CSS_PREFIX}modal button svg {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 8px;
         }
         #${CSS_PREFIX}save-pdf {
-            background-color: #D9534F; /* Red for PDF */
-        }
-        #${CSS_PREFIX}save-pdf:hover {
-            background-color: #C9302C;
-            transform: scale(1.02);
+            /* PDF Red */
+            color: #D9534F;
         }
         #${CSS_PREFIX}save-image {
-            background-color: #5CB85C; /* Green for Image */
+            /* Image Green */
+            color: #5CB85C;
         }
-        #${CSS_PREFIX}save-image:hover {
-            background-color: #4CAE4C;
-            transform: scale(1.02);
+        #${CSS_PREFIX}save-word {
+            /* Word Blue */
+            color: #2B579A;
         }
         #${CSS_PREFIX}close {
-            margin-top: 10px;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
             background: none;
+            border: none;
             color: #888;
-            font-size: 14px;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0;
         }
         #${CSS_PREFIX}close:hover {
             color: #333;
         }
+        #${CSS_PREFIX}footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #${CSS_PREFIX}logo {
+            font-size: 14px;
+            font-weight: bold;
+            color: #aaa;
+            text-decoration: none;
+        }
         #${CSS_PREFIX}status {
-            margin-top: 15px;
             font-size: 14px;
             color: #555;
             min-height: 20px;
@@ -96,13 +133,30 @@
 
     const MODAL_HTML = `
         <div id="${CSS_PREFIX}modal">
-            <h3>保存当前网页</h3>
+            <button id="${CSS_PREFIX}close" title="Close">×</button>
+            <h3>Web Page Converter</h3>
             <div class="button-container">
-                <button id="${CSS_PREFIX}save-pdf">保存为 PDF</button>
-                <button id="${CSS_PREFIX}save-image">保存为图片 (PNG)</button>
+                <button id="${CSS_PREFIX}save-pdf">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9.5 11.5c0 .83-.67 1.5-1.5 1.5H7v2H5.5V9H8c.83 0 1.5.67 1.5 1.5v1zm-1.5-1H7v1h1v-1zm7 3.5H15v-1h-1.5v-1H15v-1h-2.5V9h4v6h-1.5zm-5-3.5c0-.83.67-1.5 1.5-1.5h2.5v6H13V9h-1.5c-.83 0-1.5.67-1.5 1.5v4h-1.5V9h1.5v2.5zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"></path></svg>
+                    <span>Save as PDF</span>
+                </button>
+                <button id="${CSS_PREFIX}save-image">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"></path></svg>
+                    <span>Save as Image</span>
+                </button>
+                <button id="${CSS_PREFIX}save-word">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm8 7h-2v8h2v-8zm-4 0H8v8h2v-8zm8-6.17L19.17 8H18V2.83z"></path></svg>
+                    <span>Save as Word</span>
+                </button>
+                <button class="placeholder" disabled style="cursor: not-allowed; color: #ccc;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+                    <span>More Tools...</span>
+                </button>
             </div>
-            <div id="${CSS_PREFIX}status"></div>
-            <button id="${CSS_PREFIX}close">关闭</button>
+            <div id="${CSS_PREFIX}footer">
+                <div id="${CSS_PREFIX}status"></div>
+                <a href="https://tablecopy.pro" target="_blank" id="${CSS_PREFIX}logo">TableCopy.pro</a>
+            </div>
         </div>
     `;
 
@@ -117,6 +171,10 @@
         overlay.id = `${CSS_PREFIX}modal-overlay`;
         overlay.innerHTML = MODAL_HTML;
         document.body.appendChild(overlay);
+        
+        // Localize texts
+        overlay.querySelector('h3').textContent = 'Save Current Page';
+        overlay.querySelector(`#${CSS_PREFIX}close`).title = 'Close';
 
         return overlay;
     }
@@ -140,12 +198,12 @@
         const statusDiv = document.getElementById(`${CSS_PREFIX}status`);
         statusDiv.textContent = '正在准备截图...';
 
-        const libUrl = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+        const libUrl = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
 
         // 核心截图逻辑
         const executeCapture = () => {
             const overlay = document.getElementById(`${CSS_PREFIX}modal-overlay`);
-            overlay.style.display = 'none'; // 截图前隐藏UI
+            if (overlay) overlay.style.display = 'none'; // 截图前隐藏UI
 
             const body = document.documentElement;
             const totalHeight = body.scrollHeight;
@@ -224,9 +282,78 @@
             statusDiv.textContent = '首次使用，正在加载截图组件...';
             const script = document.createElement('script');
             script.src = libUrl;
-            script.onload = executeCapture; // 加载成功后执行截图
+            // [FIX] 将 executeCapture 的逻辑直接放入 onload 回调，确保作用域正确
+            script.onload = function() {
+                executeCapture();
+            };
             script.onerror = () => {
                 statusDiv.textContent = '无法加载截图组件，请检查网络或广告拦截器。';
+            };
+            document.head.appendChild(script);
+        }
+    }
+
+    /**
+     * 保存为 Word (.docx) 功能
+     * - 动态加载 html-to-docx-js 库。
+     * - 将当前页面的 <body> 内容转换为 .docx 文件。
+     * - 注意：样式和布局的保真度有限。
+     */
+    function saveAsWord() {
+        const statusDiv = document.getElementById(`${CSS_PREFIX}status`);
+        statusDiv.textContent = '正在准备转换为 Word...';
+
+        // 使用为浏览器打包的 `html-docx-js` 版本
+        const libUrl = 'https://unpkg.com/html-docx-js/dist/html-docx.js';
+
+        const executeConversion = () => {
+            try {
+                statusDiv.textContent = '正在转换，请稍候...';
+                // 复制一份DOM，避免直接修改原页面，并移除脚本自身的UI
+                const content = document.documentElement.cloneNode(true);
+                const overlay = content.querySelector(`#${CSS_PREFIX}modal-overlay`);
+                if (overlay) overlay.remove();
+                
+                // [FIX] 移除所有 <style> 和 <script> 标签，避免它们的内容被当成文字渲染
+                content.querySelectorAll('style, script').forEach(el => el.remove());
+                
+                // html-to-docx-js 接受HTML字符串作为输入
+                const contentHtml = content.outerHTML;
+
+                // 使用库生成DOCX文件
+                // [FIX] 浏览器版本导出的全局变量是 `htmlDocx` (驼峰式)
+                if (window.htmlDocx) {
+                    const fileBlob = window.htmlDocx.asBlob(contentHtml);
+
+                    // 创建下载链接并触发
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(fileBlob);
+                    link.download = (document.title || 'web-page') + '.docx';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    cleanup(); // 成功后关闭
+                } else {
+                    throw new Error('htmlDocx global object not found after script load.');
+                }
+            } catch (err) {
+                console.error('Web Converter to Word Error:', err);
+                statusDiv.textContent = '抱歉，转换为Word失败。请查看控制台获取详情。';
+            }
+        };
+
+        // 检查正确的全局变量 `htmlDocx`
+        if (typeof window.htmlDocx !== 'undefined') {
+            executeConversion();
+        } else {
+            statusDiv.textContent = '首次使用，正在加载Word转换组件...';
+            const script = document.createElement('script');
+            script.src = libUrl;
+            
+            script.onload = executeConversion;
+            script.onerror = (err) => {
+                console.error(`[Web Converter] Failed to load script from: ${libUrl}`, err);
+                statusDiv.textContent = '无法加载Word转换组件，请检查网络或广告拦截器。';
             };
             document.head.appendChild(script);
         }
@@ -245,6 +372,7 @@
 
         document.getElementById(`${CSS_PREFIX}save-pdf`).addEventListener('click', saveAsPdf);
         document.getElementById(`${CSS_PREFIX}save-image`).addEventListener('click', saveAsImage); // 绑定新的 saveAsImage 函数
+        document.getElementById(`${CSS_PREFIX}save-word`).addEventListener('click', saveAsWord);
         document.getElementById(`${CSS_PREFIX}close`).addEventListener('click', cleanup);
         overlay.addEventListener('click', (e) => {
             if (e.target.id === `${CSS_PREFIX}modal-overlay`) {

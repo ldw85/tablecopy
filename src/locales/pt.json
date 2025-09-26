@@ -141,5 +141,44 @@
         "install_step3_h3": "Concluído!",
         "install_step3_p": "Em qualquer página que queira guardar, clique neste favorito para começar!",
         "footer_p": "© 2025 Web Converter. Desenvolvido com Gemini AI."
+    },
+    "web-to-word": {
+        "meta_title": "Web para Word - Converta Qualquer Página Web para um Documento Word (DOCX) Editável | TableCopy",
+        "meta_description": "Web para Word é um bookmarklet gratuito que converte qualquer página web num ficheiro editável do Microsoft Word (.docx). Perfeito para relatórios, edição e reutilização de conteúdo.",
+        "meta_keywords": "web para word, guardar página como docx, html para word, html para docx, bookmarklet, ferramenta gratuita",
+        "logo": "Web para Word",
+        "hero_h1": "Converta Páginas Web para Word Editável com Um Clique",
+        "hero_slogan": "Transforme instantaneamente conteúdo da web num ficheiro .docx, pronto para edição e integração nos seus documentos.",
+        "install_cta": "Usar Agora",
+        "features_title": "Funcionalidades — Web para Word (DOCX)",
+        "feature_list": [
+            "<strong>Conteúdo Editável:</strong> Ao contrário de PDF ou imagens, o resultado é um documento Word totalmente editável. Modifique facilmente texto, tabelas e imagens.",
+            "<strong>Conversão Focada no Conteúdo:</strong> Excelente a preservar a estrutura central do conteúdo, como títulos, parágrafos, listas e imagens para fácil reutilização.",
+            "<strong>Leve e Seguro:</strong> Um bookmarklet de JavaScript puro. Toda a conversão acontece localmente no seu navegador, garantindo a privacidade dos seus dados."
+        ],
+        "other_promo": "Precisa de uma versão de alta fidelidade e não editável? Use o nosso: <a href=\"/pt/web-to-pdf.html\">Conversor de Web para PDF</a> ou <a href=\"/pt/web-to-image.html\">Web para Imagem</a>.",
+        "use_cases_title": "Casos de Uso - Reutilização de Conteúdo e Elaboração de Relatórios",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Elaboração de Relatórios e Artigos",
+                "p": "Recolha rapidamente informações de várias fontes da web e consolide-as num único documento Word para redigir relatórios, ensaios ou trabalhos de investigação. Chega de copiar e colar tediosamente."
+            },
+            {
+                "h3": "📝 Criação de Documentação Interna",
+                "p": "Converta tutoriais online, artigos de bases de conhecimento ou documentação de produtos em ficheiros Word para materiais de formação interna, que podem ser facilmente personalizados."
+            },
+            {
+                "h3": "🔄 Reutilização de Conteúdo Web",
+                "p": "Extraia conteúdo do seu site antigo ou publicações de blog para o formato Word para fácil edição, arquivo ou migração para uma nova plataforma."
+            }
+        ],
+        "install_title": "Instale em 3 Segundos, Use Para Sempre",
+        "install_step1_h3": "Pressione e Segure o Botão",
+        "install_step1_p": "Clique e segure o botão azul 'Web Converter'.",
+        "install_step2_h3": "Arraste para a Barra de Favoritos",
+        "install_step2_p": "<strong>Passo Crucial:</strong> Arraste o botão para a 'Barra de Favoritos' do seu navegador e, em seguida, solte o rato.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Concluído! Clique para Usar",
+        "install_step3_p": "Em qualquer página que queira converter, clique neste favorito para começar!"
     }
 }

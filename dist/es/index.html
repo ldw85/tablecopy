@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
+
     <title>Table Copy - Copia Tablas Web a Excel con Un Clic, Sin Formatos Desordenados</title>
     <meta name="description" content="¡Adiós a los formatos desordenados! Table Copy es un bookmarklet ligero que te permite copiar cualquier tabla web (incluidas las hechas con divs) a Excel, CSV o JSON con un solo clic. Sin necesidad de instalación, formato perfecto.">
     <meta name="keywords" content="copiar tabla de sitio web, html a excel, scraper de tablas, extracción de datos web, copiar tabla html, tabla a csv, tabla a json, arreglar copiar y pegar tabla">
@@ -21,7 +23,7 @@
     
     <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/index.html">
 
-    <link rel="icon" type="image/png" href="assets/tc_icon.png">
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -64,7 +66,7 @@
         <p class="slogan">Olvida las tediosas capturas de pantalla y la entrada manual. Un clic para llevar los datos a tu portapapeles para un pegado perfecto.</p>
         <a href="#install" class="cta-button">Instálalo Gratis Ahora</a>
         <div class="demo-gif-container">
-           <video src="assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
+           <video src="/assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
                Your browser does not support the video tag.
            </video>
         </div>
@@ -191,6 +193,10 @@
                 <h3><a href="/es/web-to-image.html">Web to Image</a></h3>
                 <p>Web a Imagen: bookmarklet gratuito para capturar cualquier página web como un PNG de alta resolución localmente en el navegador.</p>
             </div>
+            <div class="card">
+                <h3><a href="/es/web-to-word.html">Web a Word</a></h3>
+                <p>Web a Word es un bookmarklet gratuito que convierte cualquier página web en un archivo editable de Microsoft Word (.docx). Perfecto para informes, edición y reutilización de contenido.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -199,37 +205,18 @@
 
     <footer class="footer">
     <div class="container">
+        
         <p>© 2025 Table Copy. Impulsado por Gemini AI.</p>
     </div>
 </footer>
 
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
     
 <script>
-    // 动态加载并设置书签脚本
-    fetch('assets/js/tablecopy_v4.0.js')
-        .then(response => response.text())
-        .then(scriptContent => {
-            // 对脚本内容进行最小化和编码，以创建 javascript: URL
-            const minifiedScript = scriptContent
-                .replace(/(\r\n|\n|\r)/gm, "") // 移除换行符
-                .replace(/\s+/g, " ")          // 将多个空格压缩为一个
-                .replace(/;\s/g, ";");         // 移除分号后的空格
-
-            const bookmarkletHref = `javascript:!function(){${encodeURIComponent(minifiedScript)}}();`;
-            
-            const bookmarkletLink = document.getElementById('bookmarklet-link');
-            if (bookmarkletLink) {
-                bookmarkletLink.setAttribute('href', bookmarkletHref);
-
-                // 为桌面用户添加提示，阻止默认点击行为
-                bookmarkletLink.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    alert("Por favor, no hagas clic en este botón. ¡En su lugar, arrástralo a tu barra de marcadores!");
-                });
-            }
-        })
-        .catch(error => console.error('Error loading bookmarklet script:', error));
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/tablecopy_v5.0.js', "Por favor, no hagas clic en este botón. ¡En su lugar, arrástralo a tu barra de marcadores!");
+    });
 </script>
 
 </body>

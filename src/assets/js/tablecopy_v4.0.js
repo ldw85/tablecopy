@@ -26,12 +26,6 @@
             copy_dropdown_html_source: 'Copy as HTML Source',
             export_csv_button: 'Export as CSV',
             export_picture_button: 'Export as Picture',
-            share_button: 'Share Tool ▼',
-            share_on_twitter: 'Share on X (Twitter)',
-            share_on_facebook: 'Share on Facebook',
-            share_on_linkedin: 'Share on LinkedIn',
-            share_on_reddit: 'Share on Reddit',
-            share_text: 'Check out TableCopy.pro! A super handy tool to copy web tables without messing up the format. #DataExtraction #Productivity',
             footer_tip: 'Tip: Click a header to copy the column',
             message_csv_downloading: 'CSV file download has started!',
             message_picture_downloading: 'Picture download has started!',
@@ -54,12 +48,6 @@
             copy_dropdown_html_source: '复制为 HTML 源码',
             export_csv_button: '导出为 CSV',
             export_picture_button: '导出为图片',
-            share_button: '分享工具 ▼',
-            share_on_twitter: '分享到 X (Twitter)',
-            share_on_facebook: '分享到 Facebook',
-            share_on_linkedin: '分享到 领英 (LinkedIn)',
-            share_on_reddit: '分享到 Reddit',
-            share_text: '发现一个超棒的网页表格复制工具 TableCopy.pro！再也不用担心格式错乱了。#数据分析 #效率工具',
             footer_tip: '提示：点击表头可复制整列',
             message_csv_downloading: 'CSV 文件已开始下载！',
             message_picture_downloading: '图片已开始下载！',
@@ -182,6 +170,17 @@
                     }
                 }
             }
+
+            // [NEW] Heuristic for simple UL/OL lists. This is checked *after* the HEURISTIC_DIV check.
+            if (['UL', 'OL'].includes(element.tagName) && element.children.length > 1) {
+                const listItems = Array.from(element.children).filter(child => child.tagName === 'LI');
+                // If it's mostly LIs, we can treat it as a list. The more complex list-based tables
+                // would have been caught by the HEURISTIC_DIV check above.
+                if (listItems.length / element.children.length > 0.8) {
+                    return { element, type: 'LIST' };
+                }
+            }
+
             element = element.parentElement;
         }
         return null;
@@ -262,6 +261,34 @@
         return table;
     }
 
+    function parseListToTable(listElement) {
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
+        
+        // Create header
+        const trHead = document.createElement('tr');
+        const th = document.createElement('th');
+        th.innerText = 'Item'; // A generic header for the single column
+        trHead.appendChild(th);
+        thead.appendChild(trHead);
+        table.appendChild(thead);
+
+        // Create body from LI elements
+        Array.from(listElement.children).forEach(child => {
+            if (child.tagName === 'LI') {
+                const tr = document.createElement('tr');
+                const td = document.createElement('td');
+                td.innerText = child.innerText.trim();
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+            }
+        });
+        
+        table.appendChild(tbody);
+        return table;
+    }
+
     function findAndParseStructure(selection) {
         const structure = findParentStructure(selection);
         if (!structure) return null;
@@ -273,6 +300,9 @@
         }
         if (structure.type === 'HEURISTIC_DIV') {
             return parseHeuristicDivToTable(structure.element);
+        }
+        if (structure.type === 'LIST') {
+            return parseListToTable(structure.element);
         }
         return null;
     }
@@ -372,37 +402,6 @@
         footer.appendChild(dropdown);
         footer.appendChild(exportCsvBtn);
         footer.appendChild(exportPicBtn);
-
-        // Share Dropdown (pushed to the right)
-        const shareDropdown = document.createElement('div');
-        shareDropdown.className = `${CSS_PREFIX}dropdown`;
-        shareDropdown.style.marginLeft = 'auto';
-
-        const shareBtn = document.createElement('button');
-        shareBtn.className = `${CSS_PREFIX}button`;
-        shareBtn.id = `${CSS_PREFIX}share-btn`;
-        shareBtn.innerText = t('share_button');
-
-        const shareDropdownContent = document.createElement('div');
-        shareDropdownContent.className = `${CSS_PREFIX}dropdown-content`;
-        shareDropdownContent.id = `${CSS_PREFIX}share-dropdown`;
-        shareDropdownContent.style.right = '0';
-        shareDropdownContent.style.left = 'auto';
-
-        const socialPlatforms = [
-            { platform: 'twitter', textKey: 'share_on_twitter' }, { platform: 'facebook', textKey: 'share_on_facebook' },
-            { platform: 'linkedin', textKey: 'share_on_linkedin' }, { platform: 'reddit', textKey: 'share_on_reddit' }
-        ];
-        socialPlatforms.forEach(item => {
-            const btn = document.createElement('button');
-            btn.setAttribute('data-platform', item.platform);
-            btn.innerText = t(item.textKey);
-            shareDropdownContent.appendChild(btn);
-        });
-        shareDropdown.appendChild(shareBtn);
-        shareDropdown.appendChild(shareDropdownContent);
-        footer.appendChild(shareDropdown);
-
         modal.append(header, tipContainer, tableContainer, footer);
         overlay.appendChild(modal);
         document.body.appendChild(overlay);
@@ -413,20 +412,16 @@
 
     function addEventListeners(overlay, table) {
         const tableDropdown = document.getElementById(`${CSS_PREFIX}table-dropdown`);
-        const shareDropdownContent = document.getElementById(`${CSS_PREFIX}share-dropdown`);
         overlay.querySelector(`.${CSS_PREFIX}close-btn`).addEventListener('click', () => overlay.remove());
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) document.body.removeChild(overlay);
             if (!e.target.closest(`.${CSS_PREFIX}dropdown`)) {
                 tableDropdown.style.display = 'none';
-                shareDropdownContent.style.display = 'none';
             }
         });
         document.getElementById(`${CSS_PREFIX}copy-table-btn`).addEventListener('click', (e) => {
             e.stopPropagation();
-            const isVisible = tableDropdown.style.display === 'block';
-            shareDropdownContent.style.display = 'none';
-            tableDropdown.style.display = isVisible ? 'none' : 'block';
+            tableDropdown.style.display = tableDropdown.style.display === 'block' ? 'none' : 'block';
         });
         tableDropdown.addEventListener('click', (e) => {
             if (e.target.tagName === 'BUTTON') {
@@ -451,40 +446,6 @@
 
         document.getElementById(`${CSS_PREFIX}export-pic-btn`).addEventListener('click', () => {
             exportTableAsPicture(table, overlay);
-        });
-
-        document.getElementById(`${CSS_PREFIX}share-btn`).addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isVisible = shareDropdownContent.style.display === 'block';
-            tableDropdown.style.display = 'none';
-            shareDropdownContent.style.display = isVisible ? 'none' : 'block';
-        });
-
-        shareDropdownContent.addEventListener('click', (e) => {
-            if (e.target.tagName === 'BUTTON') {
-                const platform = e.target.getAttribute('data-platform');
-                const toolUrl = 'https://tablecopy.pro';
-                const shareText = t('share_text');
-                const title = t('modal_title');
-                let shareUrl;
-
-                switch (platform) {
-                    case 'twitter':
-                        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(toolUrl)}&text=${encodeURIComponent(shareText)}`;
-                        break;
-                    case 'facebook':
-                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(toolUrl)}`;
-                        break;
-                    case 'linkedin':
-                        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(toolUrl)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(shareText)}`;
-                        break;
-                    case 'reddit':
-                        shareUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(toolUrl)}&title=${encodeURIComponent(title)}`;
-                        break;
-                }
-                if (shareUrl) window.open(shareUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
-                shareDropdownContent.style.display = 'none';
-            }
         });
 
         // [MODIFIED] Attach column-related events to the entire table for better flexibility.

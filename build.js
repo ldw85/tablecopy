@@ -11,7 +11,6 @@ const config = {
     baseUrl: 'https://tablecopy.pro', // 你的网站域名
     languages: ['zh', 'en', 'es', 'pt'],
     defaultLang: 'zh',
-    pages: ['index', 'web-to-image', 'web-to-pdf'], // 需要构建的页面列表
 };
 
 // --- Nunjucks Setup ---
@@ -31,6 +30,13 @@ env.addFilter('path', function(filename, lang) {
 // --- Main Build Function ---
 async function build() {
     console.log('🚀 Starting build...');
+
+    // 0. 动态扫描 pages 目录以获取所有页面
+    const pagesDir = path.join(config.srcDir, 'pages');
+    const pages = (await fs.readdir(pagesDir))
+        .filter(file => file.endsWith('.html'))
+        .map(file => path.basename(file, '.html'));
+    console.log(`📄 Found ${pages.length} pages to build: ${pages.join(', ')}`);
 
     // 1. 清理并准备 dist 目录
     await fs.emptyDir(config.distDir);
@@ -53,7 +59,7 @@ async function build() {
 
     // 4. 为每种语言渲染页面
     for (const lang of config.languages) {
-        for (const page of config.pages) {
+        for (const page of pages) {
             const context = {
                 // 页面变量
                 page: {

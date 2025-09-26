@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>Web to Word - Convert Any Webpage to an Editable Word (DOCX) Document | TableCopy</title>
+    <meta name="description" content="Web to Word is a free bookmarklet that converts any webpage into an editable Microsoft Word (.docx) file. Perfect for reports, editing, and content reuse.">
+    <meta name="keywords" content="web to word, save webpage as docx, html to word, html to docx, bookmarklet, free tool">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/en/web-to-word.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/web-to-word.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/web-to-word.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/web-to-word.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/web-to-word.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/web-to-word.html">
+
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/page.css">
+    <style>
+        :root { --primary-color: #2B579A; } /* Word-like blue */
+        .bookmarklet-button {
+            border-color: #254A80;
+            animation-name: pulse-word;
+        }
+        @keyframes pulse-word {
+            0% { box-shadow: 0 0 0 0 rgba(43, 87, 154, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(43, 87, 154, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(43, 87, 154, 0); }
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/en/" class="logo">Web to Word</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    
+                    <li><a href="/en/">Home</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="web-to-word" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" >中文</option>
+                <option value="en" selected>English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h1>One-Click Convert Webpage to Editable Word</h1>
+        <h2 class="slogan">Instantly turn web content into a .docx file, ready for editing and integration into your documents.</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">Use Now</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Features — Web to Word (DOCX)</h2>
+        <ul>
+            
+                <li><strong>Editable Content:</strong> Unlike PDF or images, the output is a fully editable Word document. Easily modify text, tables, and images.</li>
+            
+                <li><strong>Content-Focused Conversion:</strong> Excels at preserving the core content structure like headings, paragraphs, lists, and images for easy reuse.</li>
+            
+                <li><strong>Lightweight & Secure:</strong> A pure JavaScript bookmarklet. All conversion happens locally in your browser, ensuring your data's privacy.</li>
+            
+        </ul>
+        <p>Need a high-fidelity, non-editable version? Use our: <a href="/en/web-to-pdf.html">Web to PDF</a> or <a href="/en/web-to-image.html">Web to Image</a> converter.</p>
+    </div>
+</section>
+
+<section id="use-cases" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">Use Cases - Content Reuse &amp; Report Writing</h2>
+        <div class="grid-layout">
+            
+            <div class="card">
+                <h3>✍️ Writing Reports &amp; Papers</h3>
+                <p>Quickly gather information from various web sources and consolidate it into a single Word document for drafting reports, essays, or research papers. No more tedious copy-pasting.</p>
+            </div>
+            
+            <div class="card">
+                <h3>📝 Creating Internal Documentation</h3>
+                <p>Convert online tutorials, knowledge base articles, or product documentation into Word files for internal training materials, which can be easily customized and branded.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🔄 Re-purposing Web Content</h3>
+                <p>Extract content from your old website or blog posts into Word format for easy editing, archiving, or migrating to a new platform.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">3-Second Install, Use Forever</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Press and Hold Button</h3>
+                <p>Click and hold the blue &#39;Web Converter&#39; button.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Drag to Bookmarks Bar</h3>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">Web Converter</a>
+                <p><strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Done! Click to Use</h3>
+                <p>On any page you want to convert, click this bookmark to start!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        
+        <p></p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/web-converter.js', "Please don&#39;t click this button. Instead, drag it to your bookmarks bar!");
+    });
+</script>
+
+</body>
+</html>

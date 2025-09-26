@@ -1,5 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <p>{{ T[page.name].footer_p | safe }}</p>
+        {% set page_key = page.name | replace("blog/", "blog-") %}
+        <p>{{ T[page_key].footer_p | safe }}</p>
     </div>
 </footer>

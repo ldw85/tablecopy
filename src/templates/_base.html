@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ T[page.name].meta_title }}</title>
-    <meta name="description" content="{{ T[page.name].meta_description }}">
-    <meta name="keywords" content="{{ T[page.name].meta_keywords }}">
+    {% set page_key = page.name | replace("blog/", "blog-") %}
+
+    <title>{{ T[page_key].meta_title }}</title>
+    <meta name="description" content="{{ T[page_key].meta_description }}">
+    <meta name="keywords" content="{{ T[page_key].meta_keywords }}">
 
     <!-- SEO: Canonical and Hreflang links -->
     <link rel="canonical" href="{{ page.canonicalUrl }}">
@@ -15,7 +17,7 @@
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ defaultLangUrl }}">
 
-    <link rel="icon" type="image/png" href="assets/tc_icon.png">
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -32,6 +34,7 @@
     {% include "templates/_footer.html" %}
 
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
     {% block scripts_extra %}{% endblock %}
 </body>
 </html>

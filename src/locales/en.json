@@ -101,7 +101,7 @@
         "install_step2_h3": "Drag to Bookmarks Bar",
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
         "bookmarklet_button_text": "Web Converter",
-        "install_step3_h3": "Done!",
+        "install_step3_h3": "Done! Click to Use",
         "install_step3_p": "On any page you want to capture, click this bookmark to start!"
     },
     "web-to-pdf": {
@@ -139,9 +139,48 @@
         "install_step1_p": "Click and hold the red 'Web Converter' button.",
         "install_step2_h3": "Drag to Bookmarks Bar",
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
-        "bookmarklet_button_text": "Web to PDF",
-        "install_step3_h3": "Done!",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Done! Click to Use",
         "install_step3_p": "On any page you want to save, click this bookmark to start!",
         "footer_p": "© 2025 Web to PDF. Powered by Gemini AI."
+    },
+    "web-to-word": {
+        "meta_title": "Web to Word - Convert Any Webpage to an Editable Word (DOCX) Document | TableCopy",
+        "meta_description": "Web to Word is a free bookmarklet that converts any webpage into an editable Microsoft Word (.docx) file. Perfect for reports, editing, and content reuse.",
+        "meta_keywords": "web to word, save webpage as docx, html to word, html to docx, bookmarklet, free tool",
+        "logo": "Web to Word",
+        "hero_h1": "One-Click Convert Webpage to Editable Word",
+        "hero_slogan": "Instantly turn web content into a .docx file, ready for editing and integration into your documents.",
+        "install_cta": "Use Now",
+        "features_title": "Features — Web to Word (DOCX)",
+        "feature_list": [
+            "<strong>Editable Content:</strong> Unlike PDF or images, the output is a fully editable Word document. Easily modify text, tables, and images.",
+            "<strong>Content-Focused Conversion:</strong> Excels at preserving the core content structure like headings, paragraphs, lists, and images for easy reuse.",
+            "<strong>Lightweight & Secure:</strong> A pure JavaScript bookmarklet. All conversion happens locally in your browser, ensuring your data's privacy."
+        ],
+        "other_promo": "Need a high-fidelity, non-editable version? Use our: <a href=\"/en/web-to-pdf.html\">Web to PDF</a> or <a href=\"/en/web-to-image.html\">Web to Image</a> converter.",
+        "use_cases_title": "Use Cases - Content Reuse & Report Writing",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Writing Reports & Papers",
+                "p": "Quickly gather information from various web sources and consolidate it into a single Word document for drafting reports, essays, or research papers. No more tedious copy-pasting."
+            },
+            {
+                "h3": "📝 Creating Internal Documentation",
+                "p": "Convert online tutorials, knowledge base articles, or product documentation into Word files for internal training materials, which can be easily customized and branded."
+            },
+            {
+                "h3": "🔄 Re-purposing Web Content",
+                "p": "Extract content from your old website or blog posts into Word format for easy editing, archiving, or migrating to a new platform."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the blue 'Web Converter' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Done! Click to Use",
+        "install_step3_p": "On any page you want to convert, click this bookmark to start!"
     }
 }

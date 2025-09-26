@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
+
     <title>表格助手 (Table Copy) - 一键复制网页表格到Excel，解决格式错乱</title>
     <meta name="description" content="告别格式错乱！表格助手是一款极致轻便的书签工具，能一键复制任何网页表格(包括table和div布局)到Excel、CSV或JSON。无需安装，完美保留格式。">
     <meta name="keywords" content="网页表格复制, 表格转Excel, HTML表格提取, table scraper, copy table from website, html to excel, 数据抓取, 格式错乱">
@@ -21,7 +23,7 @@
     
     <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/index.html">
 
-    <link rel="icon" type="image/png" href="assets/tc_icon.png">
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -64,7 +66,7 @@
         <p class="slogan">告别繁琐的截图和手动录入，一键将数据抓取到剪贴板，完美粘贴。</p>
         <a href="#install" class="cta-button">立即免费安装</a>
         <div class="demo-gif-container">
-           <video src="assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
+           <video src="/assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
                Your browser does not support the video tag.
            </video>
         </div>
@@ -191,6 +193,10 @@
                 <h3><a href="/web-to-image.html">网页转图片</a></h3>
                 <p>Web to Image：免费书签工具，一键将任何网页截取为高分辨率 PNG（整页长图、保留视觉效果），所有处理在浏览器本地完成。</p>
             </div>
+            <div class="card">
+                <h3><a href="/web-to-word.html">网页转Word</a></h3>
+                <p>网页转Word是一款免费的书签工具，可将任何网页转换为可编辑的Microsoft Word(.docx)文件。非常适合用于报告、编辑和内容再利用。</p>
+            </div>
         </div>
     </div>
 </section>
@@ -199,37 +205,18 @@
 
     <footer class="footer">
     <div class="container">
+        
         <p>© 2025 表格助手. 由 Gemini AI 强力驱动.</p>
     </div>
 </footer>
 
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
     
 <script>
-    // 动态加载并设置书签脚本
-    fetch('assets/js/tablecopy_v4.0.js')
-        .then(response => response.text())
-        .then(scriptContent => {
-            // 对脚本内容进行最小化和编码，以创建 javascript: URL
-            const minifiedScript = scriptContent
-                .replace(/(\r\n|\n|\r)/gm, "") // 移除换行符
-                .replace(/\s+/g, " ")          // 将多个空格压缩为一个
-                .replace(/;\s/g, ";");         // 移除分号后的空格
-
-            const bookmarkletHref = `javascript:!function(){${encodeURIComponent(minifiedScript)}}();`;
-            
-            const bookmarkletLink = document.getElementById('bookmarklet-link');
-            if (bookmarkletLink) {
-                bookmarkletLink.setAttribute('href', bookmarkletHref);
-
-                // 为桌面用户添加提示，阻止默认点击行为
-                bookmarkletLink.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    alert("请不要点击此按钮，而是将它拖拽到您的书签栏！");
-                });
-            }
-        })
-        .catch(error => console.error('Error loading bookmarklet script:', error));
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/tablecopy_v5.0.js', "请不要点击此按钮，而是将它拖拽到您的书签栏！");
+    });
 </script>
 
 </body>
