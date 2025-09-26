@@ -8,7 +8,9 @@
         "nav_faq": "常见问题",
         "nav_install": "立即安装",
         "nav_tools": "其他工具",
-        "nav_web_to_pdf": "网页转PDF"
+        "nav_web_to_pdf": "网页转PDF",
+        "nav_web_to_markdown": "网页转Markdown",
+        "nav_web_to_text": "网页转文本"
     },
     "index": {
         "meta_title": "表格助手 (Table Copy) - 一键复制网页表格到Excel，解决格式错乱",
@@ -181,6 +183,85 @@
         "install_step2_p": "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
         "bookmarklet_button_text": "网页转换器",
         "install_step3_h3": "完成！点击使用",
-        "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！"
+         "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！"
+     },
+     "web-to-markdown": {
+         "meta_title": "网页转Markdown - 将任何网页转换为干净的Markdown | TableCopy",
+         "meta_description": "网页转Markdown是一款免费的书签工具，可将任何网页文章转换为干净、可读的Markdown (.md) 格式。非常适合开发者、博主和笔记用户。",
+         "meta_keywords": "网页转markdown, 保存网页为markdown, html转markdown, 文章转markdown, 书签工具, 免费工具",
+         "logo": "网页转Markdown",
+         "hero_h1": "一键将网页转换为干净的Markdown",
+         "hero_slogan": "立即将任何网页文章变成干净的.md文件，随时可用在您的笔记、博客或文档中。",
+         "install_cta": "立即使用",
+         "features_title": "功能亮点 — 网页转Markdown",
+         "feature_list": [
+             "<strong>干净且可读的输出：</strong>使用强大的`turndown`库将HTML转换为结构良好、可读性强的Markdown。",
+             "<strong>智能内容提取：</strong>自动聚焦于页面的主要内容（如`<article>`或`<main>`），以避免广告和侧边栏等杂乱内容。",
+             "<strong>轻量与安全：</strong>纯粹的JavaScript书签工具。所有转换都在您的浏览器本地进行，确保您的数据隐私安全。"
+         ],
+         "other_promo": "需要其他格式？试试我们的：<a href=\"/zh/web-to-pdf.html\">网页转PDF</a>、<a href=\"/zh/web-to-image.html\">网页转图片</a>或<a href=\"/zh/web-to-word.html\">网页转Word</a>转换器。",
+         "use_cases_title": "使用场景 - 内容归档与再利用",
+         "use_cases_list": [
+             {
+                 "h3": "✍️ 开发者与博主",
+                 "p": "从网上快速抓取代码片段、教程和文章，并将其转换为Markdown，用于您的博客文章或技术文档。保留代码块和格式。"
+             },
+             {
+                 "h3": "📚 笔记用户与学生",
+                 "p": "将有趣的文章和研究资料以干净、可编辑的格式保存到您最喜欢的笔记应用（如Obsidian、Joplin或Notion）中。非常适合建立个人知识库。"
+             },
+             {
+                 "h3": "🔄 内容创作者",
+                 "p": "轻松归档网页内容以供离线阅读，或将其再利用于新闻通讯和社交媒体。Markdown是一种易于编辑和管理的通用格式。"
+             }
+         ],
+         "install_title": "三秒安装，永久使用",
+         "install_step1_h3": "按住下方按钮",
+         "install_step1_p": "请用鼠标左键点住黑色的“网页转换器”按钮。",
+         "install_step2_h3": "拖到书签栏",
+         "install_step2_p": "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
+         "bookmarklet_button_text": "网页转换器",
+         "install_step3_h3": "完成！点击使用",
+         "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！",
+         "footer_p": "© 2025 网页转Markdown. 由 Gemini AI 强力驱动。"
+    },
+    "web-to-text": {
+        "meta_title": "网页转文本 - 从任何网页提取纯净文本 | TableCopy",
+        "meta_description": "网页转文本是一款免费的书签工具，它能提取任何网页的核心内容，并将其呈现为干净、无干扰的纯文本版本。非常适合阅读、存档和内容再利用。",
+        "meta_keywords": "网页转文本, 提取网页文本, html转text, 文章转文本, 书签工具, 免费工具",
+        "logo": "网页转文本",
+        "hero_h1": "一键将网页转换为纯净文本",
+        "hero_slogan": "获取任何文章的干净、可读版本，去除广告、侧边栏和其他干扰信息。",
+        "install_cta": "立即使用",
+        "features_title": "功能亮点 — 网页转文本",
+        "feature_list": [
+            "<strong>智能内容提取：</strong>自动聚焦于页面的主要内容（文章），去除周围的杂乱元素。",
+            "<strong>即时阅读模式：</strong>以干净、易于阅读的格式呈现文本，提升您的阅读体验。",
+            "<strong>轻量与安全：</strong>纯粹的JavaScript书签工具，在您的浏览器本地运行，确保您的数据隐私安全。"
+        ],
+        "other_promo": "需要其他格式？试试我们的转换器：<a href=\"/zh/web-to-pdf.html\">网页转PDF</a>、<a href=\"/zh/web-to-image.html\">网页转图片</a>或<a href=\"/zh/web-to-markdown.html\">网页转Markdown</a>。",
+        "use_cases_title": "使用场景 - 专注阅读与内容存档",
+        "use_cases_list": [
+            {
+                "h3": "📖 无干扰阅读",
+                "p": "阅读新闻文章、博客文章和其他网页内容，不受广告、弹窗和导航菜单的干扰。纯粹享受文本。"
+            },
+            {
+                "h3": "✍️ 快速复制粘贴",
+                "p": "快速提取文章文本，用于您的研究引用、邮件分享或笔记保存。告别手动选择和清理的麻烦。"
+            },
+            {
+                "h3": "📚 内容存档",
+                "p": "将重要文章的纯文本版本保存下来以备将来参考。这是一种轻量级、通用的格式，适合您的个人知识库。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "请用鼠标左键点住灰色的“网页转换器”按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
+        "bookmarklet_button_text": "网页转换器",
+        "install_step3_h3": "完成！点击使用",
+        "install_step3_p": "在任何想阅读的页面，点击这个书签即可开始！"
     }
 }

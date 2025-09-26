@@ -182,5 +182,84 @@
          "bookmarklet_button_text": "Web Converter",
          "install_step3_h3": "Terminé ! Cliquez pour utiliser",
          "install_step3_p": "Sur n'importe quelle page que vous souhaitez convertir, cliquez sur ce favori pour commencer !"
-     }
+     },
+     "web-to-markdown": {
+         "meta_title": "Web vers Markdown - Convertissez n'importe quelle page Web en Markdown propre | TableCopy",
+         "meta_description": "Web to Markdown est un bookmarklet gratuit qui convertit n'importe quel article Web en un format Markdown (.md) propre et lisible. Parfait pour les développeurs, les blogueurs et les preneurs de notes.",
+         "meta_keywords": "web vers markdown, enregistrer une page web en markdown, html vers markdown, article vers markdown, bookmarklet, outil gratuit",
+         "logo": "Web vers Markdown",
+         "hero_h1": "Convertissez une page Web en Markdown propre en un clic",
+         "hero_slogan": "Transformez instantanément n'importe quel article Web en un fichier .md propre, prêt pour vos notes, votre blog ou votre documentation.",
+         "install_cta": "Utiliser maintenant",
+         "features_title": "Fonctionnalités — Web vers Markdown",
+         "feature_list": [
+             "<strong>Sortie propre et lisible :</strong> Utilise la puissante bibliothèque `turndown` pour convertir le HTML en Markdown bien structuré et lisible.",
+             "<strong>Extraction de contenu intelligente :</strong> Se concentre automatiquement sur le contenu principal d'une page (comme `<article>` ou `<main>`) pour éviter le désordre comme les publicités et les barres latérales.",
+             "<strong>Léger et sécurisé :</strong> Un bookmarklet JavaScript pur. Toute la conversion se fait localement dans votre navigateur, garantissant la confidentialité de vos données."
+         ],
+         "other_promo": "Besoin d'un format différent ? Essayez nos convertisseurs : <a href=\"/fr/web-to-pdf.html\">Web vers PDF</a>, <a href=\"/fr/web-to-image.html\">Web vers Image</a>, ou <a href=\"/fr/web-to-word.html\">Web vers Word</a>.",
+         "use_cases_title": "Cas d'utilisation - Archivage et réutilisation de contenu",
+         "use_cases_list": [
+             {
+                 "h3": "✍️ Développeurs & Blogueurs",
+                 "p": "Récupérez rapidement des extraits de code, des tutoriels et des articles du Web et convertissez-les en Markdown pour vos articles de blog ou votre documentation technique. Préserve les blocs de code et le formatage."
+             },
+             {
+                 "h3": "📚 Preneurs de notes & Étudiants",
+                 "p": "Enregistrez des articles intéressants et des recherches dans votre application de prise de notes préférée (comme Obsidian, Joplin ou Notion) dans un format propre et modifiable. Parfait pour créer une base de connaissances personnelle."
+             },
+             {
+                 "h3": "🔄 Curateurs de contenu",
+                 "p": "Archivez facilement du contenu Web pour une lecture hors ligne ou réutilisez-le pour des newsletters et des médias sociaux. Le Markdown est un format universel facile à modifier et à gérer."
+             }
+         ],
+         "install_title": "Installation en 3 secondes, utilisation à vie",
+         "install_step1_h3": "Appuyez et maintenez le bouton",
+         "install_step1_p": "Cliquez et maintenez le bouton noir 'Web Converter'.",
+         "install_step2_h3": "Faites glisser vers la barre de favoris",
+         "install_step2_p": "<strong>Étape cruciale :</strong> Faites glisser le bouton vers la 'Barre de favoris' de votre navigateur, puis relâchez la souris.",
+         "bookmarklet_button_text": "Web Converter",
+         "install_step3_h3": "Terminé ! Cliquez pour utiliser",
+         "install_step3_p": "Sur n'importe quelle page que vous souhaitez convertir, cliquez sur ce favori pour commencer !",
+         "footer_p": "© 2025 Web vers Markdown. Propulsé par Gemini AI."
+     },
+    "web-to-text": {
+        "meta_title": "Web vers Texte - Extrayez le texte propre de n'importe quelle page Web | TableCopy",
+        "meta_description": "Web to Text est un bookmarklet gratuit qui extrait le contenu principal de n'importe quelle page web et le présente sous forme de texte propre et sans encombrement. Idéal pour la lecture, l'archivage et la réutilisation.",
+        "meta_keywords": "web vers texte, extraire le texte d'une page web, html vers texte, article vers texte, bookmarklet, outil gratuit",
+        "logo": "Web vers Texte",
+        "hero_h1": "Convertissez les pages Web en texte propre en un clic",
+        "hero_slogan": "Obtenez une version propre et lisible de n'importe quel article, en supprimant les publicités, les barres latérales et autres distractions.",
+        "install_cta": "Utiliser maintenant",
+        "features_title": "Fonctionnalités — Web vers Texte",
+        "feature_list": [
+            "<strong>Extraction de contenu intelligente :</strong> Se concentre automatiquement sur le contenu principal (article) d'une page, en supprimant le désordre environnant.",
+            "<strong>Mode lecteur instantané :</strong> Présente le texte dans un format propre et facile à lire, améliorant votre expérience de lecture.",
+            "<strong>Léger et sécurisé :</strong> Un bookmarklet JavaScript pur qui s'exécute localement dans votre navigateur, garantissant la confidentialité de vos données."
+        ],
+        "other_promo": "Besoin d'un format différent ? Essayez nos convertisseurs : <a href=\"/fr/web-to-pdf.html\">Web vers PDF</a>, <a href=\"/fr/web-to-image.html\">Web vers Image</a>, ou <a href=\"/fr/web-to-markdown.html\">Web vers Markdown</a>.",
+        "use_cases_title": "Cas d'utilisation - Lecture ciblée et archivage",
+        "use_cases_list": [
+            {
+                "h3": "📖 Lecture sans distraction",
+                "p": "Lisez des articles d'actualité, des blogs et d'autres contenus Web sans l'encombrement des publicités, des pop-ups et des menus de navigation. Profitez simplement du texte."
+            },
+            {
+                "h3": "✍️ Copier-coller rapide",
+                "p": "Extrayez rapidement le texte d'un article pour le citer dans vos recherches, le partager dans un e-mail ou l'enregistrer dans vos notes. Fini la sélection et le nettoyage manuels."
+            },
+            {
+                "h3": "📚 Archivage de contenu",
+                "p": "Enregistrez une version texte uniquement des articles importants pour référence future. C'est un format léger et universel pour votre base de connaissances personnelle."
+            }
+        ],
+        "install_title": "Installation en 3 secondes, utilisation à vie",
+        "install_step1_h3": "Appuyez et maintenez le bouton",
+        "install_step1_p": "Cliquez et maintenez le bouton gris 'Web Converter'.",
+        "install_step2_h3": "Faites glisser vers la barre de favoris",
+        "install_step2_p": "<strong>Étape cruciale :</strong> Faites glisser le bouton vers la 'Barre de favoris' de votre navigateur, puis relâchez la souris.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Terminé ! Cliquez pour utiliser",
+        "install_step3_p": "Sur n'importe quelle page que vous souhaitez lire, cliquez sur ce favori pour commencer !"
+    }
  }

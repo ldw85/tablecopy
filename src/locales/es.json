@@ -180,5 +180,85 @@
         "bookmarklet_button_text": "Web Converter",
         "install_step3_h3": "¡Listo! Haz Clic para Usar",
         "install_step3_p": "En cualquier página que quieras convertir, ¡haz clic en este marcador para empezar!"
+    },
+    "web-to-markdown": {
+        "meta_title": "Web a Markdown - Convierte Cualquier Página Web a Markdown Limpio | TableCopy",
+        "meta_description": "Web a Markdown es un bookmarklet gratuito que convierte cualquier artículo web en un formato Markdown (.md) limpio y legible. Perfecto para desarrolladores, blogueros y para tomar notas.",
+        "meta_keywords": "web a markdown, guardar página web como markdown, html a markdown, artículo a markdown, bookmarklet, herramienta gratuita",
+        "logo": "Web a Markdown",
+        "hero_h1": "Convierte Páginas Web a Markdown Limpio con Un Clic",
+        "hero_slogan": "Transforma instantáneamente cualquier artículo web en un archivo .md limpio, listo para tus notas, blog o documentación.",
+        "install_cta": "Usar Ahora",
+        "features_title": "Características — Web a Markdown",
+        "feature_list": [
+            "<strong>Salida Limpia y Legible:</strong> Utiliza la potente biblioteca `turndown` para convertir HTML en un Markdown bien estructurado y legible.",
+            "<strong>Extracción Inteligente de Contenido:</strong> Se enfoca automáticamente en el contenido principal de una página (como `<article>` o `<main>`) para evitar desorden como anuncios y barras laterales.",
+            "<strong>Ligero y Seguro:</strong> Un bookmarklet de JavaScript puro. Toda la conversión ocurre localmente en tu navegador, garantizando la privacidad de tus datos."
+        ],
+        "other_promo": "¿Necesitas un formato diferente? Prueba nuestros convertidores: <a href=\"/es/web-to-pdf.html\">Web a PDF</a>, <a href=\"/es/web-to-image.html\">Web a Imagen</a>, o <a href=\"/es/web-to-word.html\">Web a Word</a>.",
+        "use_cases_title": "Casos de Uso - Archivo y Reutilización de Contenido",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Desarrolladores y Blogueros",
+                "p": "Obtén rápidamente fragmentos de código, tutoriales y artículos de la web y conviértelos a Markdown para tus publicaciones de blog o documentación técnica. Conserva los bloques de código y el formato."
+            },
+            {
+                "h3": "📚 Tomadores de Notas y Estudiantes",
+                "p": "Guarda artículos interesantes e investigaciones en tu aplicación de notas favorita (como Obsidian, Joplin o Notion) en un formato limpio y editable. Perfecto para construir una base de conocimientos personal."
+            },
+            {
+                "h3": "🔄 Curadores de Contenido",
+                "p": "Archiva fácilmente contenido web para leer sin conexión o reutilízalo para boletines y redes sociales. Markdown es un formato universal fácil de editar y gestionar."
+            }
+        ],
+        "install_title": "Instálalo en 3 Segundos, Úsalo Siempre",
+        "install_step1_h3": "Mantén Pulsado el Botón",
+        "install_step1_p": "Haz clic y mantén pulsado el botón negro 'Web Converter'.",
+        "install_step2_h3": "Arrastra a la Barra de Marcadores",
+        "install_step2_p": "<strong>Paso Crucial:</strong> Arrastra el botón a la 'Barra de Marcadores' o 'Barra de Favoritos' de tu navegador y luego suelta el ratón.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "¡Listo! Haz Clic para Usar",
+        "install_step3_p": "En cualquier página que quieras convertir, ¡haz clic en este marcador para empezar!",
+        "footer_p": "© 2025 Web a Markdown. Impulsado por Gemini AI."
+    }
+    ,
+    "web-to-text": {
+        "meta_title": "Web a Texto - Extrae Texto Limpio de Cualquier Página Web | TableCopy",
+        "meta_description": "Web a Texto es un bookmarklet gratuito que extrae el contenido principal de cualquier página web y lo presenta como una versión de texto limpio, sin desorden. Ideal para leer, archivar y reutilizar.",
+        "meta_keywords": "web a texto, extraer texto de página web, html a texto, artículo a texto, bookmarklet, herramienta gratuita",
+        "logo": "Web a Texto",
+        "hero_h1": "Convierte Páginas Web a Texto Limpio con Un Clic",
+        "hero_slogan": "Obtén una versión limpia y legible de cualquier artículo, eliminando anuncios, barras laterales y otras distracciones.",
+        "install_cta": "Usar Ahora",
+        "features_title": "Características — Web a Texto",
+        "feature_list": [
+            "<strong>Extracción de Contenido Inteligente:</strong> Se enfoca automáticamente en el contenido principal (artículo) de una página, eliminando el desorden circundante.",
+            "<strong>Modo Lector Instantáneo:</strong> Presenta el texto en un formato limpio y fácil de leer, mejorando tu experiencia de lectura.",
+            "<strong>Ligero y Seguro:</strong> Un bookmarklet de JavaScript puro que se ejecuta localmente en tu navegador, garantizando la privacidad de tus datos."
+        ],
+        "other_promo": "¿Necesitas un formato diferente? Prueba nuestros convertidores: <a href=\"/es/web-to-pdf.html\">Web a PDF</a>, <a href=\"/es/web-to-image.html\">Web a Imagen</a>, o <a href=\"/es/web-to-markdown.html\">Web a Markdown</a>.",
+        "use_cases_title": "Casos de Uso - Lectura Enfocada y Archivo",
+        "use_cases_list": [
+            {
+                "h3": "📖 Lectura sin Distracciones",
+                "p": "Lee artículos de noticias, blogs y otros contenidos web sin el desorden de anuncios, pop-ups y menús de navegación. Simplemente disfruta del texto."
+            },
+            {
+                "h3": "✍️ Copia y Pega Rápido",
+                "p": "Extrae rápidamente el texto de un artículo para citarlo en tu investigación, compartirlo en un correo electrónico o guardarlo en tus notas. Se acabó la selección manual y la limpieza."
+            },
+            {
+                "h3": "📚 Archivo de Contenido",
+                "p": "Guarda una versión de solo texto de artículos importantes para referencia futura. Es un formato ligero y universal para tu base de conocimientos personal."
+            }
+        ],
+        "install_title": "Instálalo en 3 Segundos, Úsalo Siempre",
+        "install_step1_h3": "Mantén Pulsado el Botón",
+        "install_step1_p": "Haz clic y mantén pulsado el botón gris 'Web Converter'.",
+        "install_step2_h3": "Arrastra a la Barra de Marcadores",
+        "install_step2_p": "<strong>Paso Crucial:</strong> Arrastra el botón a la 'Barra de Marcadores' o 'Barra de Favoritos' de tu navegador y luego suelta el ratón.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "¡Listo! Haz Clic para Usar",
+        "install_step3_p": "En cualquier página que quieras leer, ¡haz clic en este marcador para empezar!"
     }
 }

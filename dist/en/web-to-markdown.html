@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>Web to Markdown - Convert Any Webpage to Clean Markdown | TableCopy</title>
+    <meta name="description" content="Web to Markdown is a free bookmarklet that converts any web article into clean, readable Markdown (.md) format. Perfect for developers, bloggers, and note-takers.">
+    <meta name="keywords" content="web to markdown, save webpage as markdown, html to markdown, article to markdown, bookmarklet, free tool">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/en/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/en/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="de" href="https://tablecopy.pro/de/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="fr" href="https://tablecopy.pro/fr/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="ja" href="https://tablecopy.pro/ja/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="ko" href="https://tablecopy.pro/ko/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="ru" href="https://tablecopy.pro/ru/web-to-markdown.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/web-to-markdown.html">
+
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/page.css">
+    <style>
+        :root { --primary-color: #333333; } /* Markdown-like neutral color */
+        .bookmarklet-button {
+            border-color: #1a1a1a;
+            animation-name: pulse-markdown;
+        }
+        @keyframes pulse-markdown {
+            0% { box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(51, 51, 51, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(51, 51, 51, 0); }
+        }
+    </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/web-converter.js', "Please don&#39;t click this button. Instead, drag it to your bookmarks bar!");
+    });
+</script>
+
+
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/en/" class="logo">Web to Markdown</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    
+                    <li><a href="/en/">Home</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="web-to-markdown" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" >中文</option>
+                <option value="en" selected>English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+                <option value="de" >Deutsch</option>
+                <option value="fr" >Français</option>
+                <option value="ja" >日本語</option>
+                <option value="ko" >한국어</option>
+                <option value="ru" >Русский</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h1>One-Click Convert Webpage to Clean Markdown</h1>
+        <h2 class="slogan">Instantly turn any web article into a clean .md file, ready for your notes, blog, or documentation.</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">Use Now</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Features — Web to Markdown</h2>
+        <ul>
+            
+                <li><strong>Clean & Readable Output:</strong> Uses the powerful `turndown` library to convert HTML into well-structured, readable Markdown.</li>
+            
+                <li><strong>Intelligent Content Extraction:</strong> Automatically focuses on the main content of a page (like `<article>` or `<main>`) to avoid clutter like ads and sidebars.</li>
+            
+                <li><strong>Lightweight & Secure:</strong> A pure JavaScript bookmarklet. All conversion happens locally in your browser, ensuring your data's privacy.</li>
+            
+        </ul>
+        <p>Need a different format? Try our: <a href="/en/web-to-pdf.html">Web to PDF</a>, <a href="/en/web-to-image.html">Web to Image</a>, or <a href="/en/web-to-word.html">Web to Word</a> converters.</p>
+    </div>
+</section>
+
+<section id="use-cases" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">Use Cases - Content Archiving &amp; Repurposing</h2>
+        <div class="grid-layout">
+            
+            <div class="card">
+                <h3>✍️ Developers &amp; Bloggers</h3>
+                <p>Quickly grab code snippets, tutorials, and articles from the web and convert them to Markdown for your blog posts or technical documentation. Preserves code blocks and formatting.</p>
+            </div>
+            
+            <div class="card">
+                <h3>📚 Note-Takers &amp; Students</h3>
+                <p>Save interesting articles and research into your favorite note-taking app (like Obsidian, Joplin, or Notion) in a clean, editable format. Perfect for building a personal knowledge base.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🔄 Content Curators</h3>
+                <p>Easily archive web content for offline reading or repurpose it for newsletters and social media. Markdown is a universal format that&#39;s easy to edit and manage.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">3-Second Install, Use Forever</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Press and Hold Button</h3>
+                <p>Click and hold the black &#39;Web Converter&#39; button.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Drag to Bookmarks Bar</h3>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">Web Converter</a>
+                <p><strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Done! Click to Use</h3>
+                <p>On any page you want to convert, click this bookmark to start!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        
+        <p>© 2025 Web to Markdown. Powered by Gemini AI.</p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
+    
+</body>
+</html>

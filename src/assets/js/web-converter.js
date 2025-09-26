@@ -53,7 +53,7 @@
         }
         #${CSS_PREFIX}modal .button-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 16px;
         }
         #${CSS_PREFIX}modal button {
@@ -95,13 +95,19 @@
             /* Word Blue */
             color: #2B579A;
         }
+        #${CSS_PREFIX}save-markdown {
+            /* Markdown Neutral */
+            color: #333;
+        }
+        #${CSS_PREFIX}save-text {
+            /* Text/Reader mode - a calm blue */
+            color: #17A2B8;
+        }
         #${CSS_PREFIX}close {
             position: absolute;
-            top: 8px;
-            right: 8px;
-            width: 26px;
-            height: 26px;
-            background: none;
+            top: 8px; right: 8px;
+            width: 26px; height: 26px;
+            background: none; border: none;
             border: none;
             color: #888;
             font-size: 20px;
@@ -153,9 +159,13 @@
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm8 7h-2v8h2v-8zm-4 0H8v8h2v-8zm8-6.17L19.17 8H18V2.83z"></path></svg>
                     <span>Save as Word</span>
                 </button>
-                <button class="placeholder" disabled style="cursor: not-allowed; color: #ccc;">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
-                    <span>More Tools...</span>
+                <button id="${CSS_PREFIX}save-markdown">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.56 15.2c.29-.29.44-.68.44-1.07v-4.26c0-.39-.15-.78-.44-1.07l-2.13-2.13c-.29-.29-.68-.44-1.07-.44H6.63c-.79 0-1.44.65-1.44 1.44v8.58c0 .79.65 1.44 1.44 1.44h12.86c.39 0 .78-.15 1.07-.44l.01-.01zm-3.5-4.52H15.5v3.5h-1.5v-3.5h-1.56L15 8.1l2.56 2.58zM9.5 14H8v-4h1.5v4zm3.5 0h-1.5V8.5H13v5.5z"></path></svg>
+                    <span>Save as Markdown</span>
+                </button>
+                <button id="${CSS_PREFIX}save-text">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+                    <span>Save as Text</span>
                 </button>
             </div>
             <div id="${CSS_PREFIX}footer">
@@ -364,6 +374,110 @@
         }
     }
 
+    /**
+     * 保存为 Markdown (.md) 功能
+     * - 动态加载 turndown 库。
+     * - 提取页面主要内容（尝试寻找 <article> 或 <main>）。
+     * - 将 HTML 转换为 Markdown 并触发下载。
+     */
+    function saveAsMarkdown() {
+        const statusDiv = document.getElementById(`${CSS_PREFIX}status`);
+        statusDiv.textContent = '正在准备转换为 Markdown...';
+
+        const libUrl = 'https://unpkg.com/turndown/dist/turndown.js';
+
+        const executeConversion = () => {
+            try {
+                if (typeof TurndownService === 'undefined') {
+                    throw new Error('TurndownService is not defined after script load.');
+                }
+                statusDiv.textContent = '正在转换，请稍候...';
+
+                const turndownService = new TurndownService({
+                    headingStyle: 'atx',
+                    codeBlockStyle: 'fenced'
+                });
+
+                // 优先转换 <article> 或 <main> 标签，如果找不到则转换整个 <body>
+                const mainContent = document.querySelector('article, main') || document.body;
+                const markdown = turndownService.turndown(mainContent);
+
+                // 创建下载链接并触发
+                const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = (document.title || 'web-page') + '.md';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                cleanup(); // 成功后关闭
+            } catch (err) {
+                console.error('Web Converter to Markdown Error:', err);
+                statusDiv.textContent = '抱歉，转换为Markdown失败。请查看控制台。';
+            }
+        };
+
+        if (typeof TurndownService !== 'undefined') {
+            executeConversion();
+        } else {
+            statusDiv.textContent = '首次使用，正在加载Markdown转换组件...';
+            const script = document.createElement('script');
+            script.src = libUrl;
+            script.onload = executeConversion;
+            script.onerror = () => {
+                statusDiv.textContent = '无法加载Markdown转换组件，请检查网络或广告拦截器。';
+            };
+            document.head.appendChild(script);
+        }
+    }
+
+    /**
+     * 保存为纯文本 (阅读模式)
+     * - 动态加载 Mozilla 的 Readability.js 库。
+     * - 提取页面主要内容，生成干净的纯文本版本。
+     * - 触发 .txt 文件下载。
+     */
+    function saveAsText() {
+        const statusDiv = document.getElementById(`${CSS_PREFIX}status`);
+        statusDiv.textContent = '正在准备阅读模式...';
+
+        const libUrl = 'https://cdn.jsdelivr.net/npm/@mozilla/readability@0.5.0/Readability.js';
+
+        const executeExtraction = () => {
+            try {
+                if (typeof Readability === 'undefined') {
+                    throw new Error('Readability is not defined after script load.');
+                }
+                statusDiv.textContent = '正在提取正文...';
+
+                // 使用 Readability 提取文章
+                const reader = new Readability(document.cloneNode(true));
+                const article = reader.parse();
+
+                if (!article || !article.textContent) {
+                    throw new Error('Failed to extract article content.');
+                }
+
+                // 创建下载链接并触发
+                const blob = new Blob([article.textContent], { type: 'text/plain;charset=utf-8' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = (article.title || document.title || 'web-page') + '.txt';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                cleanup(); // 成功后关闭
+            } catch (err) {
+                console.error('Web Converter to Text Error:', err);
+                statusDiv.textContent = '抱歉，提取正文失败。此页面可能不适用。';
+            }
+        };
+
+        // 动态加载 Readability.js
+        loadScript(libUrl, 'Readability', executeExtraction, '阅读模式组件');
+    }
+
+
     function cleanup() {
         const overlay = document.getElementById(`${CSS_PREFIX}modal-overlay`);
         const style = document.getElementById('wc-modal-style');
@@ -371,19 +485,44 @@
         if (style) document.head.removeChild(style);
     }
 
+    /**
+     * 通用的脚本加载函数
+     * @param {string} url - 脚本的URL
+     * @param {string} globalVar - 脚本加载后暴露的全局变量名
+     * @param {function} callback - 脚本加载成功后执行的回调
+     * @param {string} componentName - 用于在状态消息中显示的组件名称
+     */
+    function loadScript(url, globalVar, callback, componentName = '组件') {
+        if (typeof window[globalVar] !== 'undefined') {
+            callback();
+        } else {
+            const statusDiv = document.getElementById(`${CSS_PREFIX}status`);
+            statusDiv.textContent = `首次使用，正在加载${componentName}...`;
+            const script = document.createElement('script');
+            script.src = url;
+            script.onload = callback;
+            script.onerror = () => {
+                statusDiv.textContent = `无法加载${componentName}，请检查网络或广告拦截器。`;
+            };
+            document.head.appendChild(script);
+        }
+    }
+
     // 4. 启动并绑定事件
     function init() {
         const overlay = injectUI();
 
         document.getElementById(`${CSS_PREFIX}save-pdf`).addEventListener('click', saveAsPdf);
-        document.getElementById(`${CSS_PREFIX}save-image`).addEventListener('click', saveAsImage); // 绑定新的 saveAsImage 函数
+        document.getElementById(`${CSS_PREFIX}save-image`).addEventListener('click', saveAsImage);
         document.getElementById(`${CSS_PREFIX}save-word`).addEventListener('click', saveAsWord);
+        document.getElementById(`${CSS_PREFIX}save-markdown`).addEventListener('click', saveAsMarkdown);
         document.getElementById(`${CSS_PREFIX}close`).addEventListener('click', cleanup);
         overlay.addEventListener('click', (e) => {
             if (e.target.id === `${CSS_PREFIX}modal-overlay`) {
                 cleanup();
             }
         });
+        document.getElementById(`${CSS_PREFIX}save-text`).addEventListener('click', saveAsText);
     }
 
     // 启动主程序

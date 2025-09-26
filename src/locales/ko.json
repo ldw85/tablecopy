@@ -7,8 +7,10 @@
          "nav_blog": "블로그",
          "nav_faq": "자주 묻는 질문",
          "nav_install": "지금 설치",
-         "nav_tools": "기타 도구",
-         "nav_web_to_pdf": "웹을 PDF로"
+        "nav_tools": "기타 도구",
+        "nav_web_to_pdf": "웹을 PDF로",
+        "nav_web_to_markdown": "웹을 마크다운으로",
+        "nav_web_to_text": "웹을 텍스트로"
      },
      "index": {
          "meta_title": "Table Copy - 클릭 한 번으로 웹 표를 Excel로 복사, 더 이상 지저분한 서식 없음",
@@ -182,5 +184,84 @@
          "bookmarklet_button_text": "Web Converter",
          "install_step3_h3": "완료! 클릭하여 사용",
          "install_step3_p": "변환하려는 모든 페이지에서 이 북마크를 클릭하여 시작하세요!"
-     }
+     },
+     "web-to-markdown": {
+         "meta_title": "웹을 마크다운으로 - 모든 웹페이지를 깔끔한 마크다운으로 변환 | TableCopy",
+         "meta_description": "웹을 마크다운으로는 모든 웹 기사를 깔끔하고 읽기 쉬운 마크다운(.md) 형식으로 변환하는 무료 북마크릿입니다. 개발자, 블로거 및 노트 필기 사용자에게 적합합니다.",
+         "meta_keywords": "웹을 마크다운으로, 웹페이지를 마크다운으로 저장, html을 마크다운으로, 기사를 마크다운으로, 북마크릿, 무료 도구",
+         "logo": "웹을 마크다운으로",
+         "hero_h1": "클릭 한 번으로 웹페이지를 깔끔한 마크다운으로 변환",
+         "hero_slogan": "모든 웹 기사를 즉시 깔끔한 .md 파일로 변환하여 노트, 블로그 또는 문서에 바로 사용할 수 있습니다.",
+         "install_cta": "지금 사용",
+         "features_title": "기능 — 웹을 마크다운으로",
+         "feature_list": [
+             "<strong>깔끔하고 읽기 쉬운 출력:</strong> 강력한 `turndown` 라이브러리를 사용하여 HTML을 잘 구조화되고 읽기 쉬운 마크다운으로 변환합니다.",
+             "<strong>지능적인 콘텐츠 추출:</strong> 광고 및 사이드바와 같은 혼란을 피하기 위해 페이지의 주요 콘텐츠(예: `<article>` 또는 `<main>`)에 자동으로 초점을 맞춥니다.",
+             "<strong>가볍고 안전함:</strong> 순수 JavaScript 북마크릿입니다. 모든 변환은 브라우저에서 로컬로 이루어지므로 데이터의 개인 정보가 보장됩니다."
+         ],
+         "other_promo": "다른 형식이 필요하십니까? <a href=\"/ko/web-to-pdf.html\">웹을 PDF로</a>, <a href=\"/ko/web-to-image.html\">웹을 이미지로</a> 또는 <a href=\"/ko/web-to-word.html\">웹을 Word로</a> 변환기를 사용해 보세요.",
+         "use_cases_title": "사용 사례 - 콘텐츠 보관 및 용도 변경",
+         "use_cases_list": [
+             {
+                 "h3": "✍️ 개발자 및 블로거",
+                 "p": "웹에서 코드 스니펫, 튜토리얼 및 기사를 빠르게 가져와 블로그 게시물이나 기술 문서용 마크다운으로 변환합니다. 코드 블록과 서식을 보존합니다."
+             },
+             {
+                 "h3": "📚 노트 필기 사용자 및 학생",
+                 "p": "흥미로운 기사와 연구 자료를 즐겨 사용하는 노트 필기 앱(예: Obsidian, Joplin 또는 Notion)에 깔끔하고 편집 가능한 형식으로 저장하세요. 개인 지식 기반을 구축하는 데 적합합니다."
+             },
+             {
+                 "h3": "🔄 콘텐츠 큐레이터",
+                 "p": "오프라인 읽기를 위해 웹 콘텐츠를 쉽게 보관하거나 뉴스레터 및 소셜 미디어에 용도를 변경하세요. 마크다운은 편집 및 관리가 쉬운 범용 형식입니다."
+             }
+         ],
+         "install_title": "3초 설치, 영원히 사용",
+         "install_step1_h3": "버튼을 길게 누르세요",
+         "install_step1_p": "검은색 'Web Converter' 버튼을 길게 클릭하세요.",
+         "install_step2_h3": "북마크 바로 드래그하세요",
+         "install_step2_p": "<strong>중요한 단계:</strong> 버튼을 브라우저의 '북마크 바' 또는 '즐겨찾기 모음'으로 드래그한 다음 마우스를 놓으세요.",
+         "bookmarklet_button_text": "Web Converter",
+         "install_step3_h3": "완료! 클릭하여 사용",
+         "install_step3_p": "변환하려는 모든 페이지에서 이 북마크를 클릭하여 시작하세요!",
+         "footer_p": "© 2025 웹을 마크다운으로. Gemini AI 제공."
+     },
+    "web-to-text": {
+        "meta_title": "웹을 텍스트로 - 모든 웹페이지에서 깔끔한 텍스트 추출 | TableCopy",
+        "meta_description": "웹을 텍스트로는 모든 웹페이지의 주요 콘텐츠를 추출하여 깔끔하고 정돈된 텍스트 버전으로 제공하는 무료 북마크릿입니다. 읽기, 보관 및 재사용에 이상적입니다.",
+        "meta_keywords": "웹을 텍스트로, 웹페이지에서 텍스트 추출, html을 텍스트로, 기사를 텍스트로, 북마크릿, 무료 도구",
+        "logo": "웹을 텍스트로",
+        "hero_h1": "클릭 한 번으로 웹페이지를 깔끔한 텍스트로 변환",
+        "hero_slogan": "광고, 사이드바 및 기타 방해 요소를 제거하여 모든 기사의 깔끔하고 읽기 쉬운 버전을 얻으세요.",
+        "install_cta": "지금 사용",
+        "features_title": "기능 — 웹을 텍스트로",
+        "feature_list": [
+            "<strong>지능적인 콘텐츠 추출:</strong> 페이지의 주요 콘텐츠(기사)에 자동으로 초점을 맞춰 주변의 혼란을 제거합니다.",
+            "<strong>즉시 리더 모드:</strong> 텍스트를 깔끔하고 읽기 쉬운 형식으로 제공하여 독서 경험을 향상시킵니다.",
+            "<strong>가볍고 안전함:</strong> 브라우저에서 로컬로 실행되는 순수 JavaScript 북마크릿으로 데이터의 개인 정보를 보장합니다."
+        ],
+        "other_promo": "다른 형식이 필요하십니까? <a href=\"/ko/web-to-pdf.html\">웹을 PDF로</a>, <a href=\"/ko/web-to-image.html\">웹을 이미지로</a> 또는 <a href=\"/ko/web-to-markdown.html\">웹을 마크다운으로</a> 변환기를 사용해 보세요.",
+        "use_cases_title": "사용 사례 - 집중적인 읽기 및 보관",
+        "use_cases_list": [
+            {
+                "h3": "📖 방해 없는 읽기",
+                "p": "광고, 팝업 및 탐색 메뉴의 혼란 없이 뉴스 기사, 블로그 게시물 및 기타 웹 콘텐츠를 읽으세요. 그냥 텍스트를 즐기세요."
+            },
+            {
+                "h3": "✍️ 빠른 복사 및 붙여넣기",
+                "p": "연구에 인용하거나, 이메일로 공유하거나, 노트에 저장하기 위해 기사의 텍스트를 빠르게 추출하세요. 더 이상 수동으로 선택하고 정리할 필요가 없습니다."
+            },
+            {
+                "h3": "📚 콘텐츠 보관",
+                "p": "나중에 참조할 수 있도록 중요한 기사의 텍스트 전용 버전을 저장하세요. 개인 지식 기반을 위한 가볍고 보편적인 형식입니다."
+            }
+        ],
+        "install_title": "3초 설치, 영원히 사용",
+        "install_step1_h3": "버튼을 길게 누르세요",
+        "install_step1_p": "회색 'Web Converter' 버튼을 길게 클릭하세요.",
+        "install_step2_h3": "북마크 바로 드래그하세요",
+        "install_step2_p": "<strong>중요한 단계:</strong> 버튼을 브라우저의 '북마크 바' 또는 '즐겨찾기 모음'으로 드래그한 다음 마우스를 놓으세요.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "완료! 클릭하여 사용",
+        "install_step3_p": "읽고 싶은 모든 페이지에서 이 북마크를 클릭하여 시작하세요!"
+    }
  }

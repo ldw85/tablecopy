@@ -8,7 +8,9 @@
         "nav_faq": "FAQ",
         "nav_install": "Install Now",
         "nav_tools": "Other Tools",
-        "nav_web_to_pdf": "Web to PDF"
+        "nav_web_to_pdf": "Web to PDF",
+        "nav_web_to_markdown": "Web to Markdown",
+        "nav_web_to_text": "Web to Text"
     },
     "index": {
         "meta_title": "Table Copy - One-Click Copy Web Tables to Excel, No More Messy Formatting",
@@ -181,6 +183,86 @@
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
         "bookmarklet_button_text": "Web Converter",
         "install_step3_h3": "Done! Click to Use",
-        "install_step3_p": "On any page you want to convert, click this bookmark to start!"
+        "install_step3_p": "On any page you want to convert, click this bookmark to start!",
+        "footer_p": "© 2025 Web to Word. Powered by Gemini AI."
+    },
+    "web-to-markdown": {
+        "meta_title": "Web to Markdown - Convert Any Webpage to Clean Markdown | TableCopy",
+        "meta_description": "Web to Markdown is a free bookmarklet that converts any web article into clean, readable Markdown (.md) format. Perfect for developers, bloggers, and note-takers.",
+        "meta_keywords": "web to markdown, save webpage as markdown, html to markdown, article to markdown, bookmarklet, free tool",
+        "logo": "Web to Markdown",
+        "hero_h1": "One-Click Convert Webpage to Clean Markdown",
+        "hero_slogan": "Instantly turn any web article into a clean .md file, ready for your notes, blog, or documentation.",
+        "install_cta": "Use Now",
+        "features_title": "Features — Web to Markdown",
+        "feature_list": [
+            "<strong>Clean & Readable Output:</strong> Uses the powerful `turndown` library to convert HTML into well-structured, readable Markdown.",
+            "<strong>Intelligent Content Extraction:</strong> Automatically focuses on the main content of a page (like `<article>` or `<main>`) to avoid clutter like ads and sidebars.",
+            "<strong>Lightweight & Secure:</strong> A pure JavaScript bookmarklet. All conversion happens locally in your browser, ensuring your data's privacy."
+        ],
+        "other_promo": "Need a different format? Try our: <a href=\"/en/web-to-pdf.html\">Web to PDF</a>, <a href=\"/en/web-to-image.html\">Web to Image</a>, or <a href=\"/en/web-to-word.html\">Web to Word</a> converters.",
+        "use_cases_title": "Use Cases - Content Archiving & Repurposing",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Developers & Bloggers",
+                "p": "Quickly grab code snippets, tutorials, and articles from the web and convert them to Markdown for your blog posts or technical documentation. Preserves code blocks and formatting."
+            },
+            {
+                "h3": "📚 Note-Takers & Students",
+                "p": "Save interesting articles and research into your favorite note-taking app (like Obsidian, Joplin, or Notion) in a clean, editable format. Perfect for building a personal knowledge base."
+            },
+            {
+                "h3": "🔄 Content Curators",
+                "p": "Easily archive web content for offline reading or repurpose it for newsletters and social media. Markdown is a universal format that's easy to edit and manage."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the black 'Web Converter' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Done! Click to Use",
+        "install_step3_p": "On any page you want to convert, click this bookmark to start!",
+        "footer_p": "© 2025 Web to Markdown. Powered by Gemini AI."
+    },
+    "web-to-text": {
+        "meta_title": "Web to Text - Extract Clean Text from Any Webpage | TableCopy",
+        "meta_description": "Web to Text is a free bookmarklet that extracts the main content from any webpage and presents it as a clean, clutter-free text version. Ideal for reading, archiving, and repurposing.",
+        "meta_keywords": "web to text, extract text from webpage, html to text, article to text, bookmarklet, free tool",
+        "logo": "Web to Text",
+        "hero_h1": "One-Click Convert Webpages to Clean Text",
+        "hero_slogan": "Get a clean, readable version of any article, stripping away ads, sidebars, and other distractions.",
+        "install_cta": "Use Now",
+        "features_title": "Features — Web to Text",
+        "feature_list": [
+            "<strong>Intelligent Content Extraction:</strong> Automatically focuses on the main content (article) of a page, removing surrounding clutter.",
+            "<strong>Instant Reader Mode:</strong> Presents the text in a clean, easy-to-read format, enhancing your reading experience.",
+            "<strong>Lightweight & Secure:</strong> A pure JavaScript bookmarklet that runs locally in your browser, ensuring your data's privacy."
+        ],
+        "other_promo": "Need a different format? Try our converters: <a href=\"/en/web-to-pdf.html\">Web to PDF</a>, <a href=\"/en/web-to-image.html\">Web to Image</a>, or <a href=\"/en/web-to-markdown.html\">Web to Markdown</a>.",
+        "use_cases_title": "Use Cases - Focused Reading & Archiving",
+        "use_cases_list": [
+            {
+                "h3": "📖 Distraction-Free Reading",
+                "p": "Read news articles, blog posts, and other web content without the clutter of ads, pop-ups, and navigation menus. Just enjoy the text."
+            },
+            {
+                "h3": "✍️ Quick Copy & Paste",
+                "p": "Quickly extract the text of an article to quote in your research, share in an email, or save to your notes. No more manual selecting and cleaning."
+            },
+            {
+                "h3": "📚 Content Archiving",
+                "p": "Save a text-only version of important articles for future reference. It's a lightweight, universal format for your personal knowledge base."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the gray 'Web Converter' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Done! Click to Use",
+        "install_step3_p": "On any page you want to read, click this bookmark to start!"
     }
 }

@@ -7,8 +7,10 @@
          "nav_blog": "ブログ",
          "nav_faq": "よくある質問",
          "nav_install": "今すぐインストール",
-         "nav_tools": "その他のツール",
-         "nav_web_to_pdf": "WebからPDFへ"
+        "nav_tools": "その他のツール",
+        "nav_web_to_pdf": "WebからPDFへ",
+        "nav_web_to_markdown": "WebからMarkdownへ",
+        "nav_web_to_text": "Webからテキストへ"
      },
      "index": {
          "meta_title": "Table Copy - ワンクリックでWebテーブルをExcelにコピー、もう面倒な書式設定は不要",
@@ -182,5 +184,84 @@
          "bookmarklet_button_text": "Web Converter",
          "install_step3_h3": "完了！クリックして使用",
          "install_step3_p": "変換したいページで、このブックマークをクリックして開始します！"
-     }
+     },
+     "web-to-markdown": {
+         "meta_title": "WebからMarkdownへ - 任意のWebページをクリーンなMarkdownに変換 | TableCopy",
+         "meta_description": "Web to Markdownは、Web記事をクリーンで読みやすいMarkdown（.md）形式に変換する無料のブックマークレットです。開発者、ブロガー、ノートテイカーに最適です。",
+         "meta_keywords": "webからmarkdown, webページをmarkdownとして保存, htmlからmarkdown, 記事をmarkdownへ, ブックマークレット, 無料ツール",
+         "logo": "WebからMarkdownへ",
+         "hero_h1": "ワンクリックでWebページをクリーンなMarkdownに変換",
+         "hero_slogan": "Web記事を即座にクリーンな.mdファイルに変換し、メモ、ブログ、ドキュメントにすぐ利用できます。",
+         "install_cta": "今すぐ使用",
+         "features_title": "機能 — WebからMarkdownへ",
+         "feature_list": [
+             "<strong>クリーンで読みやすい出力：</strong>強力な`turndown`ライブラリを使用して、HTMLを整然とした読みやすいMarkdownに変換します。",
+             "<strong>インテリジェントなコンテンツ抽出：</strong>ページの主要コンテンツ（`<article>`や`<main>`など）に自動的に焦点を当て、広告やサイドバーなどの不要な要素を回避します。",
+             "<strong>軽量＆安全：</strong>純粋なJavaScriptブックマークレット。すべての変換はブラウザ内でローカルに実行され、データのプライバシーを保証します。"
+         ],
+         "other_promo": "別の形式が必要ですか？当社の<a href=\"/ja/web-to-pdf.html\">WebからPDFへ</a>、<a href=\"/ja/web-to-image.html\">Webから画像へ</a>、または<a href=\"/ja/web-to-word.html\">WebからWordへ</a>のコンバーターをお試しください。",
+         "use_cases_title": "使用例 - コンテンツのアーカイブと再利用",
+         "use_cases_list": [
+             {
+                 "h3": "✍️ 開発者＆ブロガー",
+                 "p": "Webからコードスニペット、チュートリアル、記事をすばやく取得し、ブログ投稿や技術文書用にMarkdownに変換します。コードブロックと書式を保持します。"
+             },
+             {
+                 "h3": "📚 ノートテイ커＆学生",
+                 "p": "興味深い記事や研究を、お気に入りのノートアプリ（Obsidian、Joplin、Notionなど）にクリーンで編集可能な形式で保存します。個人の知識ベースを構築するのに最適です。"
+             },
+             {
+                 "h3": "🔄 コンテンツキュレーター",
+                 "p": "Webコンテンツをオフラインで読んだり、ニュースレターやソーシャルメディア用に再利用したりするために簡単にアーカイブします。Markdownは編集と管理が簡単なユニバーサル形式です。"
+             }
+         ],
+         "install_title": "3秒でインストール、永久に使用",
+         "install_step1_h3": "ボタンを長押し",
+         "install_step1_p": "黒い「Web Converter」ボタンをクリックして長押しします。",
+         "install_step2_h3": "ブックマークバーにドラッグ",
+         "install_step2_p": "<strong>重要なステップ：</strong>ボタンをブラウザの「ブックマークバー」または「お気に入りバー」にドラッグしてから、マウスを離します。",
+         "bookmarklet_button_text": "Web Converter",
+         "install_step3_h3": "完了！クリックして使用",
+         "install_step3_p": "変換したいページで、このブックマークをクリックして開始します！",
+         "footer_p": "© 2025 Web to Markdown. Gemini AI搭載。"
+     },
+    "web-to-text": {
+        "meta_title": "Webからテキストへ - 任意のWebページからクリーンなテキストを抽出 | TableCopy",
+        "meta_description": "Web to Textは、任意のWebページのメインコンテンツを抽出し、クリーンで整理されたテキスト版として表示する無料のブックマークレットです。読書、アーカイブ、再利用に最適です。",
+        "meta_keywords": "webからテキストへ, webページからテキストを抽出, htmlからテキストへ, 記事をテキストへ, ブックマークレット, 無料ツール",
+        "logo": "Webからテキストへ",
+        "hero_h1": "ワンクリックでWebページをクリーンなテキストに変換",
+        "hero_slogan": "広告、サイドバー、その他の邪魔なものを排除し、任何の記事のクリーンで読みやすいバージョンを取得します。",
+        "install_cta": "今すぐ使用",
+        "features_title": "機能 — Webからテキストへ",
+        "feature_list": [
+            "<strong>インテリジェントなコンテンツ抽出：</strong>ページの主要コンテンツ（記事）に自動的に焦点を当て、周囲の不要な要素を削除します。",
+            "<strong>インスタントリーダーモード：</strong>テキストをクリーンで読みやすい形式で表示し、読書体験を向上させます。",
+            "<strong>軽量＆安全：</strong>ブラウザでローカルに実行される純粋なJavaScriptブックマークレットで、データのプライバシーを保証します。"
+        ],
+        "other_promo": "別の形式が必要ですか？当社のコンバーターをお試しください：<a href=\"/ja/web-to-pdf.html\">WebからPDFへ</a>、<a href=\"/ja/web-to-image.html\">Webから画像へ</a>、または<a href=\"/ja/web-to-markdown.html\">WebからMarkdownへ</a>。",
+        "use_cases_title": "使用例 - 集中読書とアーカイブ",
+        "use_cases_list": [
+            {
+                "h3": "📖 邪魔されない読書",
+                "p": "広告、ポップアップ、ナビゲーションメニューなどの邪魔なしに、ニュース記事、ブログ投稿、その他のWebコンテンツを読みます。ただテキストを楽しんでください。"
+            },
+            {
+                "h3": "✍️ 素早いコピー＆ペースト",
+                "p": "研究での引用、メールでの共有、またはメモへの保存のために、記事のテキストをすばやく抽出します。手動での選択やクリーニングはもう不要です。"
+            },
+            {
+                "h3": "📚 コンテンツのアーカイブ",
+                "p": "将来の参照のために重要な記事のテキストのみのバージョンを保存します。これは、個人の知識ベースのための軽量で普遍的な形式です。"
+            }
+        ],
+        "install_title": "3秒でインストール、永久に使用",
+        "install_step1_h3": "ボタンを長押し",
+        "install_step1_p": "灰色の「Web Converter」ボタンをクリックして長押しします。",
+        "install_step2_h3": "ブックマークバーにドラッグ",
+        "install_step2_p": "<strong>重要なステップ：</strong>ボタンをブラウザの「ブックマークバー」または「お気に入りバー」にドラッグしてから、マウスを離します。",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "完了！クリックして使用",
+        "install_step3_p": "読みたいページで、このブックマークをクリックして開始します！"
+    }
  }
