@@ -69,6 +69,9 @@ function setupBookmarklet(scriptPath, alertText) {
                 // 为桌面用户添加提示，阻止默认点击行为
                 bookmarkletLink.addEventListener('click', (e) => {
                     e.preventDefault();
+                    if (typeof gtag_report_conversion === 'function') {
+                        gtag_report_conversion();
+                    }
                     alert(alertText);
                 });
             }
