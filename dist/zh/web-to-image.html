@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>网页转 图片 - Web to Image | TableCopy</title>
+    <meta name="description" content="Web to Image：免费书签工具，一键将任何网页截取为高分辨率 PNG（整页长图、保留视觉效果），所有处理在浏览器本地完成。">
+    <meta name="keywords" content="web to image, 网页转图片, 保存网页为图片, html to image, bookmarklet, 本地截取">
+
+    <!-- SEO: Canonical and Hreflang links -->
+    <link rel="canonical" href="https://tablecopy.pro/zh/web-to-image.html">
+    
+    <link rel="alternate" hreflang="zh" href="https://tablecopy.pro/zh/web-to-image.html">
+    
+    <link rel="alternate" hreflang="en" href="https://tablecopy.pro/web-to-image.html">
+    
+    <link rel="alternate" hreflang="es" href="https://tablecopy.pro/es/web-to-image.html">
+    
+    <link rel="alternate" hreflang="pt" href="https://tablecopy.pro/pt/web-to-image.html">
+    
+    <link rel="alternate" hreflang="de" href="https://tablecopy.pro/de/web-to-image.html">
+    
+    <link rel="alternate" hreflang="fr" href="https://tablecopy.pro/fr/web-to-image.html">
+    
+    <link rel="alternate" hreflang="ja" href="https://tablecopy.pro/ja/web-to-image.html">
+    
+    <link rel="alternate" hreflang="ko" href="https://tablecopy.pro/ko/web-to-image.html">
+    
+    <link rel="alternate" hreflang="ru" href="https://tablecopy.pro/ru/web-to-image.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://tablecopy.pro/web-to-image.html">
+
+    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/page.css">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17402862141"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17402862141');
+    </script>
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+      // Helper function to delay opening a URL until a gtag event is sent.
+      // Call it in response to an action that should navigate to a URL.
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'manual_event_PAGE_VIEW', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+          // <event_parameters>
+        });
+        return false;
+      }
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="main-nav">
+    <div class="container">
+        <a href="/" class="logo">网页转图片</a>
+        
+        <div style="display:flex; align-items:center; gap: 20px;">
+            <ul class="nav-links">
+                
+                
+                    
+                    <li><a href="/">首页</a></li>
+                
+            </ul>
+
+            <!-- 语言切换器 -->
+            <select id="lang-switcher" data-current-page="web-to-image" style="font-weight: 500; background: transparent; border: 1px solid #ddd; border-radius: 6px; padding: 6px; color: var(--dark-color); font-size: 15px;">
+                <option value="zh" selected>中文</option>
+                <option value="en" >English</option>
+                <option value="es" >Español</option>
+                <option value="pt" >Português</option>
+                <option value="de" >Deutsch</option>
+                <option value="fr" >Français</option>
+                <option value="ja" >日本語</option>
+                <option value="ko" >한국어</option>
+                <option value="ru" >Русский</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<section class="hero">
+    <div class="container">
+        <h1>一键截取网页为 PNG 图片 — Web to Image / Save Webpage as PNG（全页截屏、高分辨率）</h1>
+        <h2 class="slogan">将任意网页完整截取为高分辨率 PNG（保留视觉效果与长页拼接），适合分享与归档。</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">立即使用</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">功能亮点 — 网页转图片（Web to Image / Save as PNG）</h2>
+        <ul>
+            
+                <li><strong>整页截取：</strong>使用 <code>html2canvas</code> 截取整个 HTML 文档，并处理模态或浮层元素以获得干净的输出。</li>
+            
+                <li><strong>高分辨率导出：</strong>通过设置 `scale: window.devicePixelRatio` 或更高 scale 值，生成适合打印及展示的高分辨率图片。</li>
+            
+                <li><strong>隐私与本地处理：</strong>所有截取与图像生成在本地完成，不会向任何外部服务上传页面内容。</li>
+            
+        </ul>
+        <p>想要保留文本可搜索与复制？请使用：<a href="/web-to-pdf.html">网页转 PDF</a>。</p>
+    </div>
+</section>
+
+<section id="about" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">关于本工具（How it works &amp; EEAT）</h2>
+        <p><strong>实现与维护：</strong>该工具页面由 TableCopy 团队维护。核心截取逻辑使用社区主流库 <code>html2canvas</code>，并在脚本中实现了加载失败提示与回退机制以提高健壮性。</p>
+        <p><strong>技术细节：</strong>脚本在注入时会临时隐藏自身生成的模态（避免被截图），并通过 `useCORS` 提升跨域图片资源的渲染成功率。图片导出采用 dataURL 的方式触发浏览器下载。</p>
+        <p><strong>可信性与可审计性：</strong>项目为静态代码库，所有逻辑在 <code>tools/tablecopy/</code> 可查看；第三方依赖从 CDN 加载，若需离线部署可将脚本打包托管于可信源。</p>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">常见问题（FAQ）</h2>
+        <div class="faq-item">
+            <h3>截取结果包含不需要的浮层或工具条怎么办？</h3>
+            <p>脚本会尝试隐藏自身生成的模态与控制 UI（避免自截）。如果页面上有第三方浮层（如聊天窗口、cookie 提示或广告条），请在截图前手动关闭它们或使用浏览器开发者工具将其隐藏，再进行截取。</p>
+        </div>
+        <div class="faq-item">
+            <h3>为何某些图片或资源无法出现在导出图片中？</h3>
+            <p>如果资源来自第三方域且缺少 CORS 允许头，则浏览器会阻止其绘制到 canvas，从而导致导出的图片中缺失这些元素。解决方法包括：在无痕/新标签页打开页面，允许资源加载；或先将关键图像另存为本地文件后再合成截图。</p>
+        </div>
+        <div class="faq-item">
+            <h3>如何得到更高分辨率或更小体积的图片？</h3>
+            <p>提高分辨率：调整 `scale` 参数（例如 `window.devicePixelRatio * 2`），会增加像素密度但也显著增加内存消耗与处理时间。减小文件体积：在导出后使用图像压缩工具（例如 TinyPNG、imagemin）或在 canvas 导出前将质量参数降低（对于 JPEG）。</p>
+        </div>
+        <div class="faq-item">
+            <h3>处理长页面（数千像素）时如何避免内存崩溃？</h3>
+            <p>大页面截图可能占用大量内存。建议分段截取（分割为多个区域）或降低 `scale`，然后在本地合并图像。另一个策略是使用服务器端渲染/截图（若允许上传），但该方法会有隐私风险。</p>
+        </div>
+        <div class="faq-item">
+            <h3>我如何反馈或贡献改进？</h3>
+            <p>欢迎在 GitHub 仓库中提交 issue 或 PR（路径：&lt;code&gt;tools/tablecopy/&lt;/code&gt;）。建议提交可复现的示例页面或屏幕录像，便于我们定位问题和回归测试。</p>
+        </div>
+        <p style="margin-top:18px;">需要可搜索文本或更好的打印效果？请跳转到：<a href="/web-to-pdf.html">网页转 PDF</a> 或返回 <a href="/">首页</a>。</p>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">三秒安装，永久使用</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>按住下方按钮</h3>
+                <p>请用鼠标左键点住绿色的“网页转换器”按钮。</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>拖到书签栏</h3>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
+                <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>完成！</h3>
+                <p>在任何想截图的页面，点击这个书签即可开始转换！</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        
+        <p></p>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/bookmarklet-loader.js"></script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('/assets/js/web-converter.js', "请不要点击此按钮，而是将它拖拽到您的书签栏！");
+    });
+</script>
+
+</body>
+</html>

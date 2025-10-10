@@ -10,7 +10,7 @@ const config = {
     distDir: path.join(rootDir, 'dist'), // 输出目录: .../tablecopy/dist
     baseUrl: 'https://tablecopy.pro', // 你的网站域名
     languages: ['zh', 'en', 'es', 'pt', 'de', 'fr', 'ja', 'ko', 'ru'],
-    defaultLang: 'zh',
+    defaultLang: 'en',
 };
 
 // --- Nunjucks Setup ---
