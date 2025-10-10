@@ -5,7 +5,7 @@
     <div class="container">
         <h1>{{ T.index.hero_h1 | safe }}</h1>
         <p class="slogan">{{ T.index.hero_slogan }}</p>
-        <a href="#install" class="cta-button">{{ T.index.hero_cta }}</a>
+        <a href="#install" class="cta-button" onclick="gtag_report_conversion()">{{ T.index.hero_cta }}</a>
         <div class="demo-gif-container">
            <video src="/assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
                Your browser does not support the video tag.
@@ -33,7 +33,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>{{ T.index.install_step2_h3 }}</h3>
-                    <a href="" id="bookmarklet-link" class="bookmarklet-button" title="{{ T.index.bookmarklet_title }}">
+                    <a href="" id="bookmarklet-link" class="bookmarklet-button" title="{{ T.index.bookmarklet_title }}" onkeydown="gtag_report_conversion()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
                         <span>{{ T.index.bookmarklet_button_text }}</span>
                     </a>

@@ -63,23 +63,23 @@
       gtag('config', 'AW-17402862141');
     </script>
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'manual_event_PAGE_VIEW', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-          // <event_parameters>
-        });
-        return false;
-      }
-    </script>
+    <!-- Event snippet for 提交潜在客户表单 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17402862141/EyvdCMD8v6obEL20qupA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
     <nav class="navbar" id="main-nav">
@@ -117,7 +117,7 @@
     <div class="container">
         <h1>클릭 한 번으로 웹페이지를 PDF로 저장</h1>
         <h2 class="slogan">복잡한 소프트웨어가 필요 없습니다. 모든 웹페이지를 고품질의 검색 가능한 PDF 파일로 저장하세요.</h2>
-        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">지금 사용</a>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;" onclick="gtag_report_conversion()">지금 사용</a>
     </div>
 </section>
 
@@ -173,7 +173,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>북마크 바로 드래그하세요</h3>
-                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">Web Converter</a>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏" onkeydown="gtag_report_conversion()">Web Converter</a>
                 <p><strong>중요한 단계:</strong> 버튼을 브라우저의 '북마크 바' 또는 '즐겨찾기 모음'으로 드래그한 다음 마우스를 놓으세요.</p>
             </div>
             <div class="step">

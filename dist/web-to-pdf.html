@@ -63,23 +63,23 @@
       gtag('config', 'AW-17402862141');
     </script>
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'manual_event_PAGE_VIEW', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-          // <event_parameters>
-        });
-        return false;
-      }
-    </script>
+    <!-- Event snippet for 提交潜在客户表单 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17402862141/EyvdCMD8v6obEL20qupA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
     <nav class="navbar" id="main-nav">
@@ -117,7 +117,7 @@
     <div class="container">
         <h1>One-Click Save Webpage as PDF</h1>
         <h2 class="slogan">No complex software needed. Save any webpage as a high-quality, searchable PDF file.</h2>
-        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">Use Now</a>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;" onclick="gtag_report_conversion()">Use Now</a>
     </div>
 </section>
 
@@ -173,7 +173,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>Drag to Bookmarks Bar</h3>
-                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">Web Converter</a>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏" onkeydown="gtag_report_conversion()">Web Converter</a>
                 <p><strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.</p>
             </div>
             <div class="step">

@@ -49,23 +49,23 @@
       gtag('config', 'AW-17402862141');
     </script>
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'manual_event_PAGE_VIEW', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-          // <event_parameters>
-        });
-        return false;
-      }
-    </script>
+    <!-- Event snippet for 提交潜在客户表单 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17402862141/EyvdCMD8v6obEL20qupA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
     <nav class="navbar" id="main-nav">
@@ -106,7 +106,7 @@
     <div class="container">
         <h1>Копируйте любую веб-таблицу,<br>так же легко, как копировать текст.</h1>
         <p class="slogan">Откажитесь от утомительных скриншотов и ручного ввода. Один клик, чтобы скопировать данные в буфер обмена для идеальной вставки.</p>
-        <a href="#install" class="cta-button">Установить бесплатно сейчас</a>
+        <a href="#install" class="cta-button" onclick="gtag_report_conversion()">Установить бесплатно сейчас</a>
         <div class="demo-gif-container">
            <video src="/assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
                Your browser does not support the video tag.
@@ -134,7 +134,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>Перетащите на панель закладок</h3>
-                    <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Перетащите меня на панель закладок">
+                    <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Перетащите меня на панель закладок" onkeydown="gtag_report_conversion()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M11.793 6.793a.5.5 0 0 1 0 .707l-1.5 1.5.5.5a.5.5 0 0 1-.707.707l-1.5-1.5-1.5 1.5a.5.5 0 1 1-.707-.707l.5-.5-1.5-1.5a.5.5 0 1 1 .707-.707l1.5 1.5 1.5-1.5a.5.5 0 0 1 .707 0zM13.5 4a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5h-1.5a.5.5 0 0 1 0-1H13.5zm-11 0a.5.5 0 0 1 0 1H1v1.5a.5.5 0 0 1-1 0V4.5a.5.5 0 0 1 .5-.5H2.5zM5 13.5a.5.5 0 0 1 0 1H3.5v1.5a.5.5 0 0 1-1 0V14a.5.5 0 0 1 .5-.5H5zm6.5 0a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V14h-1.5a.5.5 0 0 1 0-1H11.5z"/></svg>
                         <span>Table Copy</span>
                     </a>

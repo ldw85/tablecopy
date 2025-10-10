@@ -49,23 +49,23 @@
       gtag('config', 'AW-17402862141');
     </script>
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'manual_event_PAGE_VIEW', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-          // <event_parameters>
-        });
-        return false;
-      }
-    </script>
+    <!-- Event snippet for 提交潜在客户表单 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17402862141/EyvdCMD8v6obEL20qupA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
     <nav class="navbar" id="main-nav">
@@ -103,7 +103,7 @@
     <div class="container">
         <h1>Convierte Páginas Web a Texto Limpio con Un Clic</h1>
         <p class="slogan">Obtén una versión limpia y legible de cualquier artículo, eliminando anuncios, barras laterales y otras distracciones.</p>
-        <a href="#install" class="cta-button">Usar Ahora</a>
+        <a href="#install" class="cta-button" onclick="gtag_report_conversion()">Usar Ahora</a>
     </div>
 </section>
 
@@ -165,7 +165,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>Arrastra a la Barra de Marcadores</h3>
-                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Arrastrame a tu barra de marcadores" style="background-color: #6c757d;">
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Arrastrame a tu barra de marcadores" style="background-color: #6c757d;" onkeydown="gtag_report_conversion()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16" style="margin-right: 8px; vertical-align: -2px;">
                         <path d="M5 4.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM5 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM5 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>

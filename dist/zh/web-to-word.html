@@ -63,23 +63,23 @@
       gtag('config', 'AW-17402862141');
     </script>
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'manual_event_PAGE_VIEW', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-          // <event_parameters>
-        });
-        return false;
-      }
-    </script>
+    <!-- Event snippet for 提交潜在客户表单 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17402862141/EyvdCMD8v6obEL20qupA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
     <nav class="navbar" id="main-nav">
@@ -117,7 +117,7 @@
     <div class="container">
         <h1>一键将网页转换为可编辑的Word文档</h1>
         <h2 class="slogan">立即将网页内容转换为.docx文件，方便您随时编辑和整合到您的文档中。</h2>
-        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;">立即使用</a>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: var(--light-color); padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;" onclick="gtag_report_conversion()">立即使用</a>
     </div>
 </section>
 
@@ -173,7 +173,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>拖到书签栏</h3>
-                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏">网页转换器</a>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="按住我拖动到书签栏" onkeydown="gtag_report_conversion()">网页转换器</a>
                 <p><strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。</p>
             </div>
             <div class="step">
