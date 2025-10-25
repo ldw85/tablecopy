@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetLang = this.value;
             const pageName = this.dataset.currentPage;
             
-            // 默认语言 'zh' 在根目录
-            const langPath = targetLang === 'zh' ? '' : `/${targetLang}`;
-            
+            // 默认语言 'en' 在根目录
+            const langPath = targetLang === 'en' ? '' : `/${targetLang}`;
+
             // 构造新 URL
             // index 页面跳转到语言目录的根
             // 其他页面跳转到对应的 html 文件
             const pageFile = pageName === 'index' ? '' : `${pageName}.html`;
-            
+
             // 如果是 index 页面且是默认语言，直接跳转到根
             let finalUrl = `${langPath}/${pageFile}`;
-            if (pageName === 'index' && targetLang === 'zh') {
+            if (pageName === 'index' && targetLang === 'en') {
                 finalUrl = '/';
             }
 

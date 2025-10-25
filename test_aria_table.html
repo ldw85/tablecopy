@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA表格测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 模拟Google关键词规划师表格样式 */
+        .ess-table {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .particle-table-header {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            border-bottom: 2px solid #4285f4;
+        }
+
+        .particle-table-row {
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.2s;
+        }
+
+        .particle-table-row:hover {
+            background-color: #f5f5f5;
+        }
+
+        .ess-cell {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .data-numeric {
+            text-align: right;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* 标准HTML表格样式 */
+        .standard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .standard-table th,
+        .standard-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .standard-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* 分页按钮样式 */
+        .pagination {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        material-button {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        material-button:hover {
+            background: #3367d6;
+        }
+
+        material-button[disabled] {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .material-icons {
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>表格识别测试页面</h1>
+    <p>这个页面包含不同类型的表格，用于测试扩展的表格识别功能。</p>
+
+    <!-- 测试部分1: ARIA角色表格（模拟Google关键词规划师） -->
+    <div class="test-section">
+        <h2>1. ARIA角色表格（Google关键词规划师风格）</h2>
+        <ess-table class="transition sort-indicators" debugid="main-ess-table" minerva-id="table-view">
+            <ess-particle-table class="ess-container">
+                <div class="ess-table-constraint">
+                    <div class="ess-table-wrapper" style="width: 100%;">
+                        <div class="ess-table-canvas mouse-active density-cozy-legacy"
+                             tabindex="0"
+                             aria-label="关键词历史指标"
+                             aria-rowcount="5"
+                             aria-colcount="4"
+                             role="grid">
+
+                            <!-- 表头 -->
+                            <div role="row" class="particle-table-header particle-table-last-header particle-table-first-header">
+                                <div role="columnheader"
+                                     class="particle-table-header-cell with-label-wrapper sort-asc"
+                                     aria-sort="ascending"
+                                     style="padding: 12px; width: 200px;">
+                                    <span class="mt-header-label-wrapper">关键字</span>
+                                </div>
+                                <div role="columnheader"
+                                     class="particle-table-header-cell data-numeric"
+                                     aria-sort="none"
+                                     style="padding: 12px; width: 150px;">
+                                    <span class="mt-header-label-wrapper">平均每月搜索量</span>
+                                </div>
+                                <div role="columnheader"
+                                     class="particle-table-header-cell data-numeric"
+                                     style="padding: 12px; width: 120px;">
+                                    <span class="mt-header-label-wrapper">竞争程度</span>
+                                </div>
+                                <div role="columnheader"
+                                     class="particle-table-header-cell data-numeric"
+                                     style="padding: 12px; width: 120px;">
+                                    <span class="mt-header-label-wrapper">页首出价</span>
+                                </div>
+                            </div>
+
+                            <!-- 数据行 -->
+                            <div role="row" class="particle-table-row">
+                                <ess-cell role="gridcell" class="ess-cell resizable">
+                                    <keyword-text>
+                                        <span class="keyword">resume examples</span>
+                                    </keyword-text>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <span class="value-text">1000 – 1万</span>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <text-field>中</text-field>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <text-field>¥1.50-15.20</text-field>
+                                </ess-cell>
+                            </div>
+
+                            <div role="row" class="particle-table-row">
+                                <ess-cell role="gridcell" class="ess-cell resizable">
+                                    <keyword-text>
+                                        <span class="keyword">job resume</span>
+                                    </keyword-text>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <span class="value-text">100 – 1000</span>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <text-field>低</text-field>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <text-field>¥0.80-8.50</text-field>
+                                </ess-cell>
+                            </div>
+
+                            <div role="row" class="particle-table-row">
+                                <ess-cell role="gridcell" class="ess-cell resizable">
+                                    <keyword-text>
+                                        <span class="keyword">cv template</span>
+                                    </keyword-text>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <span class="value-text">100 – 1000</span>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <text-field>中</text-field>
+                                </ess-cell>
+                                <ess-cell role="gridcell" class="ess-cell data-numeric resizable">
+                                    <text-field>¥2.10-18.90</text-field>
+                                </ess-cell>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ess-particle-table>
+        </ess-table>
+
+        <!-- 分页按钮 -->
+        <div class="pagination">
+            <material-button animated="true" class="prev" aria-label="转到上一页" role="button" tabindex="0">
+                <div class="content">
+                    <i class="material-icons" style="margin-right: 4px; margin-left: 0;">chevron_left</i>
+                    上一页
+                </div>
+            </material-button>
+
+            <material-button animated="true" class="next" aria-label="转到下一页" role="button" tabindex="0">
+                <div class="content">
+                    下一页
+                    <i class="material-icons">chevron_right</i>
+                </div>
+            </material-button>
+        </div>
+    </div>
+
+    <!-- 测试部分2: 标准HTML表格 -->
+    <div class="test-section">
+        <h2>2. 标准HTML表格</h2>
+        <table class="standard-table">
+            <thead>
+                <tr>
+                    <th>产品名称</th>
+                    <th>价格</th>
+                    <th>库存</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>iPhone 15</td>
+                    <td>¥6999</td>
+                    <td>156</td>
+                    <td>有货</td>
+                </tr>
+                <tr>
+                    <td>MacBook Pro</td>
+                    <td>¥12999</td>
+                    <td>89</td>
+                    <td>有货</td>
+                </tr>
+                <tr>
+                    <td>AirPods Pro</td>
+                    <td>¥1999</td>
+                    <td>0</td>
+                    <td>缺货</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 测试部分3: Div类表格 -->
+    <div class="test-section">
+        <h2>3. Div类表格</h2>
+        <div class="table" style="width: 100%; border: 1px solid #ddd;">
+            <div class="header" style="background: #f5f5f5; font-weight: bold;">
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">姓名</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">年龄</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">城市</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">职业</div>
+            </div>
+            <div class="row">
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">张三</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">28</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">北京</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">工程师</div>
+            </div>
+            <div class="row">
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">李四</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">32</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">上海</div>
+                <div class="cell" style="padding: 10px; display: inline-block; width: 25%;">设计师</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 模拟分页功能
+        document.querySelector('.next').addEventListener('click', function() {
+            alert('下一页按钮被点击！在实际应用中，这里会加载下一页数据。');
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            alert('上一页按钮被点击！');
+        });
+    </script>
+</body>
+</html>

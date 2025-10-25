@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=380, initial-scale=1.0">
+    <title>Table Export Pro</title>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        /* 额外的宽度保护 */
+        html {
+            min-width: 380px;
+            width: 380px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Table Export Pro</h1>
+            <div class="version">v1.0.0</div>
+        </header>
+
+        <!-- 表格检测状态 -->
+        <div class="status-section">
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span class="status-text">检测中...</span>
+            </div>
+            <div class="connection-test" id="connectionTest" style="display: none;">
+                <button class="btn btn-small btn-secondary" id="testConnection">测试连接</button>
+                <button class="btn btn-small btn-primary" id="retryConnection" style="display: none;">重试连接</button>
+            </div>
+        </div>
+
+        <!-- 表格列表 -->
+        <div class="tables-section" id="tablesSection">
+            <h3>检测到的表格 (<span id="tableCount">0</span>)</h3>
+            <div class="table-list" id="tableList">
+                <!-- 表格项目将动态插入这里 -->
+            </div>
+        </div>
+
+        <!-- 分页检测 -->
+        <div class="pagination-section" id="paginationSection" style="display: none;">
+            <h3>分页检测</h3>
+            <div class="pagination-info">
+                <span id="paginationStatus">未检测到分页</span>
+                <button id="paginationConfigBtn" class="btn btn-small" style="display: none;">配置</button>
+            </div>
+        </div>
+
+        <!-- 自动提取配置 -->
+        <div class="auto-extract-section" id="autoExtractSection" style="display: none;">
+            <h3>自动提取设置</h3>
+            <div class="form-group">
+                <label for="maxPages">最大页数:</label>
+                <input type="number" id="maxPages" min="1" max="100" value="10">
+            </div>
+            <div class="form-group">
+                <label for="extractDelay">提取延迟 (秒):</label>
+                <input type="number" id="extractDelay" min="1" max="60" value="2">
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="includeHeaders" checked>
+                    包含表头
+                </label>
+            </div>
+            <button id="startAutoExtract" class="btn btn-primary">开始自动提取</button>
+        </div>
+
+        <!-- 导出选项 -->
+        <div class="export-section" id="exportSection" style="display: none;">
+            <h3>导出选项</h3>
+            <div class="export-options">
+                <label>
+                    <input type="checkbox" id="exportHeaders" checked>
+                    包含表头
+                </label>
+                <label>
+                    <input type="checkbox" id="exportSelectedOnly">
+                    仅导出选中表格
+                </label>
+            </div>
+            <div class="export-actions">
+                <button id="exportCSV" class="btn btn-primary">导出 CSV</button>
+                <button id="exportJSON" class="btn btn-secondary">导出 JSON</button>
+            </div>
+        </div>
+
+        <!-- 进度显示 -->
+        <div class="progress-section" id="progressSection" style="display: none;">
+            <div class="progress-info">
+                <span id="progressText">准备中...</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <button id="cancelExtract" class="btn btn-danger">取消</button>
+        </div>
+
+        <!-- 结果显示 -->
+        <div class="result-section" id="resultSection" style="display: none;">
+            <h3>提取结果</h3>
+            <div class="result-info">
+                <p>成功提取 <span id="extractedPages">0</span> 页数据</p>
+                <p>总计 <span id="extractedRows">0</span> 行数据</p>
+            </div>
+            <div class="result-actions">
+                <button id="downloadResult" class="btn btn-primary">下载结果</button>
+                <button id="viewResult" class="btn btn-secondary">查看数据</button>
+            </div>
+        </div>
+
+        <!-- 设置 -->
+        <div class="settings-section">
+            <button id="settingsBtn" class="btn btn-link">⚙️ 设置</button>
+            <button id="helpBtn" class="btn btn-link">❓ 帮助</button>
+        </div>
+    </div>
+
+    <!-- 设置模态框 -->
+    <div class="modal" id="settingsModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>设置</h3>
+                <button class="modal-close" id="closeSettings">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="defaultDelay">默认延迟 (毫秒):</label>
+                    <input type="number" id="defaultDelay" min="500" max="10000" value="2000">
+                </div>
+                <div class="form-group">
+                    <label for="defaultMaxPages">默认最大页数:</label>
+                    <input type="number" id="defaultMaxPages" min="1" max="100" value="10">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="autoDetectPagination">
+                        自动检测分页
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="highlightTables">
+                        高亮显示表格
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettings" class="btn btn-primary">保存</button>
+                <button id="cancelSettings" class="btn btn-secondary">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分页配置模态框 -->
+    <div class="modal" id="paginationConfigModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>分页配置</h3>
+                <button class="modal-close" id="closePaginationConfig">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="config-section">
+                    <h4>分页信息</h4>
+                    <div id="paginationInfo" class="info-box">
+                        <!-- 分页信息将动态显示 -->
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h4>下一页按钮配置</h4>
+                    <div class="form-group">
+                        <label for="nextButtonSelector">选择器:</label>
+                        <input type="text" id="nextButtonSelector" class="form-control" placeholder="自动检测">
+                        <small class="form-text">CSS选择器，用于定位下一页按钮</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="nextButtonText">按钮文本:</label>
+                        <input type="text" id="nextButtonText" class="form-control" placeholder="自动检测">
+                        <small class="form-text">按钮的文本内容，用于验证</small>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h4>页面加载配置</h4>
+                    <div class="form-group">
+                        <label for="pageLoadDelay">页面加载延迟 (秒):</label>
+                        <input type="number" id="pageLoadDelay" class="form-control" min="1" max="30" value="2">
+                        <small class="form-text">翻页后等待页面加载的时间</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pageLoadTimeout">加载超时时间 (秒):</label>
+                        <input type="number" id="pageLoadTimeout" class="form-control" min="5" max="60" value="10">
+                        <small class="form-text">页面加载的最大等待时间</small>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h4>高级选项</h4>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="waitForUrlChange">
+                            等待URL变化
+                        </label>
+                        <small class="form-text">翻页后等待URL发生变化再继续</small>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="waitForLoadingComplete">
+                            等待加载完成
+                        </label>
+                        <small class="form-text">等待页面加载指示器消失</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="customWaitSelector">自定义等待元素:</label>
+                        <input type="text" id="customWaitSelector" class="form-control" placeholder="可选">
+                        <small class="form-text">等待特定元素出现后再继续</small>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h4>错误处理</h4>
+                    <div class="form-group">
+                        <label for="maxRetries">最大重试次数:</label>
+                        <input type="number" id="maxRetries" class="form-control" min="1" max="10" value="3">
+                        <small class="form-text">连续失败后重试的最大次数</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="retryDelay">重试延迟 (秒):</label>
+                        <input type="number" id="retryDelay" class="form-control" min="1" max="30" value="2">
+                        <small class="form-text">重试前的等待时间</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="testPaginationConfig" class="btn btn-secondary">测试配置</button>
+                <button id="savePaginationConfig" class="btn btn-primary">保存配置</button>
+                <button id="cancelPaginationConfig" class="btn btn-secondary">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 数据预览模态框 -->
+    <div class="modal" id="dataModal" style="display: none;">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3>数据预览</h3>
+                <button class="modal-close" id="closeDataModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="data-preview" id="dataPreview">
+                    <!-- 数据预览内容 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="copyData" class="btn btn-secondary">复制数据</button>
+                <button id="closePreview" class="btn btn-primary">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

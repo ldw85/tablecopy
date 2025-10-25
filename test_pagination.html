@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页表格测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 表格样式 */
+        .ess-table {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .ess-table-canvas {
+            position: relative;
+            background: white;
+        }
+
+        .particle-table-header {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            border-bottom: 2px solid #4285f4;
+            display: flex;
+        }
+
+        .particle-table-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.2s;
+        }
+
+        .particle-table-row:hover {
+            background-color: #f5f5f5;
+        }
+
+        .particle-table-header-cell,
+        .ess-cell {
+            padding: 12px 16px;
+            text-align: left;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .data-numeric {
+            text-align: right;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* 分页样式 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            gap: 10px;
+        }
+
+        material-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        material-button:hover:not([disabled]) {
+            background: #3367d6;
+        }
+
+        material-button[disabled] {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .material-icons {
+            font-size: 18px;
+            margin: 0 4px;
+        }
+
+        .page-info {
+            color: #666;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .page-numbers {
+            display: flex;
+            gap: 5px;
+        }
+
+        .page-number {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .page-number:hover {
+            background: #f0f0f0;
+        }
+
+        .page-number.active {
+            background: #4285f4;
+            color: white;
+            border-color: #4285f4;
+        }
+
+        /* 加载状态 */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4285f4;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .control-button {
+            margin: 0 5px;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .control-button:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>分页表格测试页面</h1>
+
+        <div class="control-panel">
+            <button class="control-button" onclick="generateData(1)">生成第1页数据</button>
+            <button class="control-button" onclick="generateData(2)">生成第2页数据</button>
+            <button class="control-button" onclick="generateData(3)">生成第3页数据</button>
+            <button class="control-button" onclick="generateData(4)">生成第4页数据</button>
+            <button class="control-button" onclick="generateData(5)">生成第5页数据</button>
+            <button class="control-button" onclick="resetData()">重置数据</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>正在加载数据...</p>
+        </div>
+
+        <!-- ARIA角色表格（模拟Google关键词规划师） -->
+        <ess-table class="transition sort-indicators" debugid="main-ess-table" minerva-id="table-view">
+            <ess-particle-table class="ess-container">
+                <div class="ess-table-constraint">
+                    <div class="ess-table-wrapper" style="width: 100%;">
+                        <div class="ess-table-canvas mouse-active density-cozy-legacy"
+                             tabindex="0"
+                             aria-label="关键词历史指标"
+                             aria-rowcount="10"
+                             aria-colcount="5"
+                             role="grid">
+
+                            <!-- 表头 -->
+                            <div role="row" class="particle-table-header">
+                                <div role="columnheader" class="particle-table-header-cell" style="flex: 2;">
+                                    <span class="mt-header-label-wrapper">关键字</span>
+                                </div>
+                                <div role="columnheader" class="particle-table-header-cell data-numeric" style="flex: 1;">
+                                    <span class="mt-header-label-wrapper">搜索量</span>
+                                </div>
+                                <div role="columnheader" class="particle-table-header-cell data-numeric" style="flex: 1;">
+                                    <span class="mt-header-label-wrapper">竞争程度</span>
+                                </div>
+                                <div role="columnheader" class="particle-table-header-cell data-numeric" style="flex: 1;">
+                                    <span class="mt-header-label-wrapper">页首出价</span>
+                                </div>
+                                <div role="columnheader" class="particle-table-header-cell data-numeric" style="flex: 1;">
+                                    <span class="mt-header-label-wrapper">趋势</span>
+                                </div>
+                            </div>
+
+                            <!-- 数据行将通过JavaScript动态生成 -->
+                            <tbody id="tableBody">
+                            </tbody>
+                        </div>
+                    </div>
+                </div>
+            </ess-particle-table>
+        </ess-table>
+
+        <!-- 分页控件 -->
+        <div class="pagination" id="pagination">
+            <material-button class="prev" aria-label="转到上一页" role="button" onclick="changePage('prev')">
+                <i class="material-icons">chevron_left</i>
+                上一页
+            </material-button>
+
+            <div class="page-info" id="pageInfo">
+                第 1 页，共 5 页
+            </div>
+
+            <div class="page-numbers" id="pageNumbers">
+                <!-- 页码按钮将动态生成 -->
+            </div>
+
+            <material-button class="next" aria-label="转到下一页" role="button" onclick="changePage('next')">
+                下一页
+                <i class="material-icons">chevron_right</i>
+            </material-button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 5;
+        const pageSize = 10;
+
+        // 模拟数据生成
+        const keywordsData = {
+            1: [
+                ['resume examples', '1000-10000', '中', '¥1.50-15.20', '↑'],
+                ['job resume', '100-1000', '低', '¥0.80-8.50', '→'],
+                ['cv template', '100-1000', '中', '¥2.10-18.90', '↓'],
+                ['resume builder', '1000-10000', '高', '¥3.50-25.00', '↑'],
+                ['professional resume', '100-1000', '中', '¥2.00-16.00', '→'],
+                ['resume format', '1000-10000', '中', '¥1.80-14.50', '↑'],
+                ['resume writing', '100-1000', '低', '¥1.20-12.00', '→'],
+                ['resume tips', '100-1000', '低', '¥0.90-9.50', '↓'],
+                ['modern resume', '100-1000', '中', '¥2.30-19.50', '↑'],
+                ['resume design', '1000-10000', '中', '¥1.70-15.80', '→']
+            ],
+            2: [
+                ['cover letter examples', '1000-10000', '中', '¥1.40-13.50', '↑'],
+                ['job application', '1000-10000', '高', '¥2.80-22.00', '→'],
+                ['interview tips', '100-1000', '低', '¥1.10-10.50', '↑'],
+                ['career advice', '100-1000', '低', '¥0.85-8.50', '→'],
+                ['job search', '10000-100000', '高', '¥4.20-35.00', '↑'],
+                ['employment', '1000-10000', '中', '¥2.50-20.00', '→'],
+                ['recruitment', '1000-10000', '中', '¥3.10-24.50', '↓'],
+                ['hiring', '1000-10000', '中', '¥2.90-23.00', '↑'],
+                ['career change', '100-1000', '低', '¥1.30-11.50', '→'],
+                ['job interview', '1000-10000', '中', '¥2.20-17.50', '↑']
+            ],
+            3: [
+                ['linkedin profile', '100-1000', '低', '¥1.60-13.50', '↑'],
+                ['networking', '1000-10000', '中', '¥1.90-15.50', '→'],
+                ['career development', '100-1000', '低', '¥1.40-12.00', '↑'],
+                ['skill development', '100-1000', '低', '¥1.20-10.50', '→'],
+                ['online courses', '1000-10000', '中', '¥2.70-21.00', '↑'],
+                ['certification', '1000-10000', '中', '¥3.20-25.50', '↓'],
+                ['training program', '100-1000', '低', '¥2.10-17.00', '→'],
+                ['professional development', '100-1000', '低', '¥1.80-14.50', '↑'],
+                ['career growth', '100-1000', '低', '¥1.50-12.50', '→'],
+                ['leadership skills', '100-1000', '低', '¥2.40-19.50', '↑']
+            ],
+            4: [
+                ['salary negotiation', '100-1000', '低', '¥1.70-14.00', '↑'],
+                ['job offer', '1000-10000', '中', '¥2.30-18.50', '→'],
+                ['career transition', '100-1000', '低', '¥1.35-11.50', '↑'],
+                ['work life balance', '1000-10000', '中', '¥1.85-15.00', '→'],
+                ['remote work', '10000-100000', '高', '¥3.80-30.00', '↑'],
+                ['freelancing', '1000-10000', '中', '¥2.60-21.00', '↑'],
+                ['side hustle', '1000-10000', '中', '¥2.10-17.50', '→'],
+                ['passive income', '1000-10000', '中', '¥3.50-28.00', '↑'],
+                ['financial freedom', '100-1000', '低', '¥2.20-18.00', '→'],
+                ['entrepreneurship', '1000-10000', '中', '¥4.10-32.50', '↑']
+            ],
+            5: [
+                ['business plan', '1000-10000', '中', '¥3.20-25.50', '↑'],
+                ['startup ideas', '1000-10000', '中', '¥2.80-22.50', '→'],
+                ['marketing strategy', '1000-10000', '中', '¥3.60-28.50', '↑'],
+                ['digital marketing', '10000-100000', '高', '¥4.50-35.00', '↑'],
+                ['social media marketing', '1000-10000', '中', '¥2.90-23.50', '→'],
+                ['content marketing', '1000-10000', '中', '¥3.10-24.50', '↑'],
+                ['email marketing', '1000-10000', '中', '¥2.70-21.50', '↓'],
+                ['seo optimization', '1000-10000', '中', '¥3.40-27.00', '↑'],
+                ['online business', '1000-10000', '中', '¥3.80-30.00', '→'],
+                ['ecommerce', '10000-100000', '高', '¥4.80-38.00', '↑']
+            ]
+        };
+
+        // 生成表格数据
+        function generateData(page) {
+            if (page < 1 || page > totalPages) return;
+
+            showLoading();
+
+            setTimeout(() => {
+                currentPage = page;
+                const data = keywordsData[page] || [];
+
+                const tableBody = document.getElementById('tableBody');
+                tableBody.innerHTML = '';
+
+                data.forEach((row, index) => {
+                    const rowElement = document.createElement('div');
+                    rowElement.className = 'particle-table-row';
+                    rowElement.setAttribute('role', 'row');
+
+                    rowElement.innerHTML = `
+                        <ess-cell role="gridcell" class="ess-cell resizable" style="flex: 2;">
+                            <keyword-text>
+                                <span class="keyword">${row[0]}</span>
+                            </keyword-text>
+                        </ess-cell>
+                        <ess-cell role="gridcell" class="ess-cell data-numeric resizable" style="flex: 1;">
+                            <span class="value-text">${row[1]}</span>
+                        </ess-cell>
+                        <ess-cell role="gridcell" class="ess-cell data-numeric resizable" style="flex: 1;">
+                            <text-field>${row[2]}</text-field>
+                        </ess-cell>
+                        <ess-cell role="gridcell" class="ess-cell data-numeric resizable" style="flex: 1;">
+                            <text-field>${row[3]}</text-field>
+                        </ess-cell>
+                        <ess-cell role="gridcell" class="ess-cell data-numeric resizable" style="flex: 1;">
+                            <text-field>${row[4]}</text-field>
+                        </ess-cell>
+                    `;
+
+                    tableBody.appendChild(rowElement);
+                });
+
+                updatePagination();
+                hideLoading();
+            }, 800); // 模拟网络延迟
+        }
+
+        function showLoading() {
+            document.getElementById('loading').classList.add('show');
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('show');
+        }
+
+        function updatePagination() {
+            // 更新页码信息
+            document.getElementById('pageInfo').textContent = `第 ${currentPage} 页，共 ${totalPages} 页`;
+
+            // 更新页码按钮
+            const pageNumbers = document.getElementById('pageNumbers');
+            pageNumbers.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('div');
+                pageBtn.className = `page-number ${i === currentPage ? 'active' : ''}`;
+                pageBtn.textContent = i;
+                pageBtn.onclick = () => generateData(i);
+                pageNumbers.appendChild(pageBtn);
+            }
+
+            // 更新上一页/下一页按钮状态
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+
+            if (prevBtn) {
+                if (currentPage === 1) {
+                    prevBtn.setAttribute('disabled', 'true');
+                    prevBtn.setAttribute('aria-disabled', 'true');
+                } else {
+                    prevBtn.removeAttribute('disabled');
+                    prevBtn.removeAttribute('aria-disabled');
+                }
+            }
+
+            if (nextBtn) {
+                if (currentPage === totalPages) {
+                    nextBtn.setAttribute('disabled', 'true');
+                    nextBtn.setAttribute('aria-disabled', 'true');
+                } else {
+                    nextBtn.removeAttribute('disabled');
+                    nextBtn.removeAttribute('aria-disabled');
+                }
+            }
+        }
+
+        function changePage(direction) {
+            if (direction === 'prev' && currentPage > 1) {
+                generateData(currentPage - 1);
+            } else if (direction === 'next' && currentPage < totalPages) {
+                generateData(currentPage + 1);
+            }
+        }
+
+        function resetData() {
+            currentPage = 1;
+            generateData(1);
+        }
+
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            generateData(1);
+        });
+
+        // 添加键盘导航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' && currentPage > 1) {
+                changePage('prev');
+            } else if (e.key === 'ArrowRight' && currentPage < totalPages) {
+                changePage('next');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页配置测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 表格样式 */
+        .custom-table {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .custom-table-header {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            border-bottom: 2px solid #4285f4;
+            display: flex;
+        }
+
+        .custom-table-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.2s;
+        }
+
+        .custom-table-row:hover {
+            background-color: #f5f5f5;
+        }
+
+        .custom-table-header-cell,
+        .custom-table-cell {
+            padding: 12px 16px;
+            text-align: left;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .data-numeric {
+            text-align: right;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* 分页样式 */
+        .custom-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            gap: 10px;
+        }
+
+        .custom-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .custom-button:hover:not([disabled]) {
+            background: #3367d6;
+        }
+
+        .custom-button[disabled] {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            color: #666;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .page-numbers {
+            display: flex;
+            gap: 5px;
+        }
+
+        .page-number {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .page-number:hover {
+            background: #f0f0f0;
+        }
+
+        .page-number.active {
+            background: #4285f4;
+            color: white;
+            border-color: #4285f4;
+        }
+
+        /* 加载状态 */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4285f4;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .control-button {
+            margin: 0 5px;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .control-button:hover {
+            background: #f0f0f0;
+        }
+
+        /* 特殊按钮样式 */
+        .special-next-button {
+            background: #ff6b35;
+            border-color: #ff6b35;
+            color: white;
+            font-weight: bold;
+        }
+
+        .special-next-button:hover {
+            background: #e55a2b;
+        }
+
+        .hidden-button {
+            display: none;
+        }
+
+        .loading-indicator {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #4285f4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>分页配置测试页面</h1>
+        <p style="text-align: center; color: #666;">这个页面用于测试不同的分页配置场景</p>
+
+        <div class="control-panel">
+            <button class="control-button" onclick="generateData(1)">生成第1页数据</button>
+            <button class="control-button" onclick="generateData(2)">生成第2页数据</button>
+            <button class="control-button" onclick="generateData(3)">生成第3页数据</button>
+            <button class="control-button" onclick="generateData(4)">生成第4页数据</button>
+            <button class="control-button" onclick="generateData(5)">生成第5页数据</button>
+            <button class="control-button" onclick="resetData()">重置数据</button>
+            <button class="control-button" onclick="toggleSpecialButton()">切换特殊按钮</button>
+            <button class="control-button" onclick="toggleLoading()">切换加载状态</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>正在加载数据...</p>
+        </div>
+
+        <!-- 自定义表格 -->
+        <div class="custom-table" id="customTable">
+            <div class="custom-table-header" role="row">
+                <div class="custom-table-header-cell" style="flex: 2;">产品名称</div>
+                <div class="custom-table-header-cell data-numeric" style="flex: 1;">价格</div>
+                <div class="custom-table-header-cell data-numeric" style="flex: 1;">库存</div>
+                <div class="custom-table-header-cell" style="flex: 1;">状态</div>
+            </div>
+            <tbody id="tableBody">
+            </tbody>
+        </div>
+
+        <!-- 标准分页控件 -->
+        <div class="custom-pagination" id="standardPagination">
+            <button class="custom-button prev" onclick="changePage('prev')">
+                <span>←</span> 上一页
+            </button>
+
+            <div class="page-info" id="pageInfo">
+                第 1 页，共 5 页
+            </div>
+
+            <div class="page-numbers" id="pageNumbers">
+                <!-- 页码按钮将动态生成 -->
+            </div>
+
+            <button class="custom-button next" onclick="changePage('next')">
+                下一页 <span>→</span>
+            </button>
+        </div>
+
+        <!-- 特殊分页控件（用于测试自定义选择器） -->
+        <div class="custom-pagination" id="specialPagination" style="display: none;">
+            <button class="custom-button" onclick="changePage('prev')">
+                <span>←</span> 上一页
+            </button>
+
+            <div class="page-info">
+                第 1 页，共 5 页
+            </div>
+
+            <button class="custom-button special-next-button" id="specialNextButton" onclick="changePage('next')">
+                <span class="loading-indicator" style="display: none;"></span>
+                特殊下一页 <span>→</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 5;
+        const pageSize = 10;
+        let useSpecialPagination = false;
+        let isLoadingState = false;
+
+        // 模拟数据生成
+        const productData = {
+            1: [
+                ['iPhone 15 Pro', '¥8999', '156', '有货'],
+                ['MacBook Pro M3', '¥15999', '89', '有货'],
+                ['AirPods Pro', '¥1999', '0', '缺货'],
+                ['iPad Air', '¥4599', '234', '有货'],
+                ['Apple Watch', '¥2999', '167', '有货'],
+                ['Mac Mini', '¥4999', '78', '有货'],
+                ['Magic Keyboard', '¥1299', '45', '有货'],
+                ['Magic Mouse', '¥699', '23', '有货'],
+                ['Studio Display', '¥11999', '12', '有货'],
+                ['Mac Studio', '¥19999', '8', '有货']
+            ],
+            2: [
+                ['Samsung Galaxy S24', '¥7999', '145', '有货'],
+                ['Google Pixel 8', '¥5999', '67', '有货'],
+                ['Surface Pro 9', '¥8999', '89', '有货'],
+                ['Dell XPS 13', '¥10999', '34', '有货'],
+                ['HP Spectre', '¥8999', '56', '有货'],
+                ['Lenovo ThinkPad', '¥7999', '78', '有货'],
+                ['Asus ZenBook', '¥6999', '91', '有货'],
+                ['Acer Swift', '¥4999', '123', '有货'],
+                ['MSI Gaming Laptop', '¥12999', '45', '有货'],
+                ['Razer Blade', '¥15999', '23', '有货']
+            ],
+            3: [
+                ['Sony WH-1000XM5', '¥2399', '234', '有货'],
+                ['Bose QuietComfort', '¥2299', '167', '有货'],
+                ['Sennheiser HD660S', '¥3299', '89', '有货'],
+                ['Audio-Technica ATH-M50x', '¥1299', '145', '有货'],
+                ['JBL Charge 5', '¥1299', '201', '有货'],
+                ['Sonos Roam', '¥1599', '78', '有货'],
+                ['Bowers \u0026 Wilkins PX7', '¥3299', '56', '有货'],
+                ['Focal Clear', '¥8999', '12', '有货'],
+                ['AKG K712 Pro', '¥2599', '34', '有货'],
+                ['Beyerdynamic DT990', '¥1599', '67', '有货']
+            ],
+            4: [
+                ['Nintendo Switch', '¥2299', '345', '有货'],
+                ['PlayStation 5', '¥3999', '0', '缺货'],
+                ['Xbox Series X', '¥3599', '12', '有货'],
+                ['Steam Deck', '¥3299', '8', '有货'],
+                ['Meta Quest 3', '¥4999', '45', '有货'],
+                ['HTC Vive Pro', '¥8999', '23', '有货'],
+                ['Logitech G Pro', '¥899', '167', '有货'],
+                ['Razer DeathAdder', '¥499', '234', '有货'],
+                ['Corsair K95', '¥1599', '89', '有货'],
+                ['SteelSeries Apex Pro', '¥1899', '56', '有货']
+            ],
+            5: [
+                ['Canon EOS R6', '¥18999', '23', '有货'],
+                ['Sony A7 IV', '¥16999', '34', '有货'],
+                ['Nikon Z6 II', '¥14999', '45', '有货'],
+                ['Fujifilm X-T5', '¥11999', '67', '有货'],
+                ['Panasonic S5', '¥12999', '89', '有货'],
+                ['DJI Mini 3', '¥3299', '145', '有货'],
+                ['GoPro Hero 12', '¥3999', '167', '有货'],
+                ['Insta360 X3', '¥4999', '78', '有货'],
+                ['DJI Pocket 2', '¥2499', '91', '有货'],
+                ['Sony ZV-1', '¥4299', '123', '有货']
+            ]
+        };
+
+        // 生成表格数据
+        function generateData(page) {
+            if (page < 1 || page > totalPages) return;
+
+            showLoading();
+
+            setTimeout(() => {
+                currentPage = page;
+                const data = productData[page] || [];
+
+                const tableBody = document.getElementById('tableBody');
+                tableBody.innerHTML = '';
+
+                data.forEach((row, index) => {
+                    const rowElement = document.createElement('div');
+                    rowElement.className = 'custom-table-row';
+                    rowElement.setAttribute('role', 'row');
+
+                    rowElement.innerHTML = `
+                        <div class="custom-table-cell" style="flex: 2;">${row[0]}</div>
+                        <div class="custom-table-cell data-numeric" style="flex: 1;">${row[1]}</div>
+                        <div class="custom-table-cell data-numeric" style="flex: 1;">${row[2]}</div>
+                        <div class="custom-table-cell" style="flex: 1;">${row[3]}</div>
+                    `;
+
+                    tableBody.appendChild(rowElement);
+                });
+
+                updatePagination();
+                hideLoading();
+            }, useSpecialPagination ? 1200 : 800); // 特殊分页更慢的加载
+        }
+
+        function showLoading() {
+            document.getElementById('loading').classList.add('show');
+            if (useSpecialPagination) {
+                const loadingIndicator = document.querySelector('#specialNextButton .loading-indicator');
+                if (loadingIndicator) {
+                    loadingIndicator.style.display = 'inline-block';
+                }
+            }
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('show');
+            if (useSpecialPagination) {
+                const loadingIndicator = document.querySelector('#specialNextButton .loading-indicator');
+                if (loadingIndicator) {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+        }
+
+        function updatePagination() {
+            // 更新页码信息
+            document.getElementById('pageInfo').textContent = `第 ${currentPage} 页，共 ${totalPages} 页`;
+
+            // 更新页码按钮
+            const pageNumbers = document.getElementById('pageNumbers');
+            pageNumbers.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('div');
+                pageBtn.className = `page-number ${i === currentPage ? 'active' : ''}`;
+                pageBtn.textContent = i;
+                pageBtn.onclick = () => generateData(i);
+                pageNumbers.appendChild(pageBtn);
+            }
+
+            // 更新上一页/下一页按钮状态
+            const prevBtns = document.querySelectorAll('.prev');
+            const nextBtns = document.querySelectorAll('.next');
+
+            prevBtns.forEach(btn => {
+                if (currentPage === 1) {
+                    btn.setAttribute('disabled', 'true');
+                    btn.setAttribute('aria-disabled', 'true');
+                } else {
+                    btn.removeAttribute('disabled');
+                    btn.removeAttribute('aria-disabled');
+                }
+            });
+
+            nextBtns.forEach(btn => {
+                if (currentPage === totalPages) {
+                    btn.setAttribute('disabled', 'true');
+                    btn.setAttribute('aria-disabled', 'true');
+                } else {
+                    btn.removeAttribute('disabled');
+                    btn.removeAttribute('aria-disabled');
+                }
+            });
+        }
+
+        function changePage(direction) {
+            if (isLoadingState) {
+                alert('页面正在加载中，请稍候...');
+                return;
+            }
+
+            if (direction === 'prev' && currentPage > 1) {
+                generateData(currentPage - 1);
+            } else if (direction === 'next' && currentPage < totalPages) {
+                generateData(currentPage + 1);
+            }
+        }
+
+        function resetData() {
+            currentPage = 1;
+            generateData(1);
+        }
+
+        function toggleSpecialButton() {
+            useSpecialPagination = !useSpecialPagination;
+
+            const standardPagination = document.getElementById('standardPagination');
+            const specialPagination = document.getElementById('specialPagination');
+
+            if (useSpecialPagination) {
+                standardPagination.style.display = 'none';
+                specialPagination.style.display = 'flex';
+            } else {
+                standardPagination.style.display = 'flex';
+                specialPagination.style.display = 'none';
+            }
+
+            generateData(currentPage);
+        }
+
+        function toggleLoading() {
+            isLoadingState = !isLoadingState;
+
+            if (isLoadingState) {
+                document.getElementById('loading').classList.add('show');
+            } else {
+                document.getElementById('loading').classList.remove('show');
+            }
+        }
+
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            generateData(1);
+        });
+
+        // 添加键盘导航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' && currentPage > 1) {
+                changePage('prev');
+            } else if (e.key === 'ArrowRight' && currentPage < totalPages) {
+                changePage('next');
+            }
+        });
+    </script>
+</body>
+</html>

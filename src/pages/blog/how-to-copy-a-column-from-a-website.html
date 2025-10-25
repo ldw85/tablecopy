@@ -1,0 +1,237 @@
+{% extends "templates/_base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <title>{{ T.blog_column_copy.meta_title }}</title>
+    <meta name="description" content="{{ T.blog_column_copy.meta_description }}">
+    <meta name="keywords" content="{{ T.blog_column_copy.meta_keywords }}">
+    <meta name="author" content="{{ T.blog_column_copy.author }}">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "{{ T.blog_column_copy.headline }}",
+            "datePublished": "2025-08-24",
+            "dateModified": "2025-08-24",
+            "author": {
+                "@type": "Person",
+                "name": "{{ T.blog_column_copy.author_name }}"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{ T.blog_column_copy.publisher_name }}",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://example.com/logo.png"
+                }
+            },
+            "image": "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg",
+            "description": "{{ T.blog_column_copy.description_ld }}",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://example.com/blog/copy-web-table-column"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "{{ T.blog_column_copy.faq1_q }}",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "{{ T.blog_column_copy.faq1_a }}"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "{{ T.blog_column_copy.faq2_q }}",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "{{ T.blog_column_copy.faq2_a }}"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "{{ T.blog_column_copy.faq3_q }}",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "{{ T.blog_column_copy.faq3_a }}"
+                    }
+                }
+            ]
+        }
+    ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <article>
+            <h1>{{ T.blog_column_copy.h1_title }}</h1>
+            <p class="article-meta">{{ T.blog_column_copy.article_meta }}</p>
+            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" alt="A person pointing at a computer screen with data" class="main-image">
+
+            <p>{{ T.blog_column_copy.p1 }}</p>
+            <p>{{ T.blog_column_copy.p2 }}</p>
+            <p>{{ T.blog_column_copy.p3 }}</p>
+            <p>{{ T.blog_column_copy.p4 }}</p>
+
+            <h2>{{ T.blog_column_copy.solution1_h2 }}</h2>
+            <p>{{ T.blog_column_copy.solution1_p1 }}</p>
+            <p>{{ T.blog_column_copy.solution1_p2 }}</p>
+
+            <h3>{{ T.blog_column_copy.pros_h3 }}</h3>
+            <ul>
+                <li>{{ T.blog_column_copy.pros_li1 }}</li>
+                <li>{{ T.blog_column_copy.pros_li2 }}</li>
+            </ul>
+
+            <h3>{{ T.blog_column_copy.cons_h3 }}</h3>
+            <ul>
+                <li>{{ T.blog_column_copy.cons_li1 }}</li>
+                <li>{{ T.blog_column_copy.cons_li2 }} <em><a href="#">{{ T.blog_column_copy.cons_li2_link_text }}</a></em></li>
+                <li>{{ T.blog_column_copy.cons_li3 }}</li>
+            </ul>
+
+            <h2>{{ T.blog_column_copy.solution2_h2 }}</h2>
+            <p>{{ T.blog_column_copy.solution2_p1 }}</p>
+            <p><strong>{{ T.blog_column_copy.solution2_example_h3 }}</strong><br>{{ T.blog_column_copy.solution2_example_p1 }}</p>
+            <p>{{ T.blog_column_copy.solution2_example_p2 }}</p>
+
+            <h3>{{ T.blog_column_copy.pros_h3 }}</h3>
+            <ul>
+                <li>{{ T.blog_column_copy.solution2_pros_li1 }}</li>
+                <li>{{ T.blog_column_copy.solution2_pros_li2 }}</li>
+                <li>{{ T.blog_column_copy.solution2_pros_li3 }}</li>
+            </ul>
+
+            <h3>{{ T.blog_column_copy.cons_h3 }}</h3>
+            <ul>
+                <li><strong>{{ T.blog_column_copy.solution2_cons_li1_strong }}</strong> {{ T.blog_column_copy.solution2_cons_li1_text }}</li>
+                <li><strong>{{ T.blog_column_copy.solution2_cons_li2_strong }}</strong> {{ T.blog_column_copy.solution2_cons_li2_text }} <em><a href="#">{{ T.blog_column_copy.solution2_cons_li2_link_text }}</a></em></li>
+                <li><strong>{{ T.blog_column_copy.solution2_cons_li3_strong }}</strong> {{ T.blog_column_copy.solution2_cons_li3_text }}</li>
+                <li><strong>{{ T.blog_column_copy.solution2_cons_li4_strong }}</strong> {{ T.blog_column_copy.solution2_cons_li4_text }}</li>
+            </ul>
+
+            <h2>{{ T.blog_column_copy.solution3_h2 }}</h2>
+            <p>{{ T.blog_column_copy.solution3_p1 }}</p>
+            <p><strong>{{ T.blog_column_copy.solution3_example_h3 }}</strong> <a href="https://tablecopy.pro">{{ T.blog_column_copy.solution3_example_link_text }}</a>.</p>
+            <p>{{ T.blog_column_copy.solution3_p2 }}</p>
+
+            <h3>{{ T.blog_column_copy.pros_h3 }}</h3>
+            <ul>
+                <li><strong>{{ T.blog_column_copy.solution3_pros_li1_strong }}</strong> {{ T.blog_column_copy.solution3_pros_li1_text }}</li>
+                <li><strong>{{ T.blog_column_copy.solution3_pros_li2_strong }}</strong> {{ T.blog_column_copy.solution3_pros_li2_text }}</li>
+                <li><strong>{{ T.blog_column_copy.solution3_pros_li3_strong }}</strong> {{ T.blog_column_copy.solution3_pros_li3_text }}</li>
+                <li><strong>{{ T.blog_column_copy.solution3_pros_li4_strong }}</strong> {{ T.blog_column_copy.solution3_pros_li4_text }}</li>
+            </ul>
+
+            <h3>{{ T.blog_column_copy.cons_h3 }}</h3>
+            <ul>
+                <li>{{ T.blog_column_copy.solution3_cons_li1 }}</li>
+                <li>{{ T.blog_column_copy.solution3_cons_li2 }}</li>
+            </ul>
+
+            <h2>{{ T.blog_column_copy.comparison_h2 }}</h2>
+            <p>{{ T.blog_column_copy.comparison_p }}</p>
+            <ul>
+                <li><strong>{{ T.blog_column_copy.comparison_li1_strong }}</strong> {{ T.blog_column_copy.comparison_li1_text }}</li>
+                <li><strong>{{ T.blog_column_copy.comparison_li2_strong }}</strong> {{ T.blog_column_copy.comparison_li2_text }} <em><a href="#">{{ T.blog_column_copy.comparison_li2_link_text }}</a></em></li>
+                <li><strong>{{ T.blog_column_copy.comparison_li3_strong }}</strong> {{ T.blog_column_copy.comparison_li3_text }}</li>
+            </ul>
+
+            <h2>{{ T.blog_column_copy.step_by_step_h2 }}</h2>
+            <p>{{ T.blog_column_copy.step_by_step_p }}</p>
+            <ol>
+                <li><strong>{{ T.blog_column_copy.step1_strong }}</strong> {{ T.blog_column_copy.step1_text }}</li>
+                <li><strong>{{ T.blog_column_copy.step2_strong }}</strong> {{ T.blog_column_copy.step2_text }}</li>
+                <li><strong>{{ T.blog_column_copy.step3_strong }}</strong> {{ T.blog_column_copy.step3_text }}</li>
+                <li><strong>{{ T.blog_column_copy.step4_strong }}</strong> {{ T.blog_column_copy.step4_text }}</li>
+                <li><strong>{{ T.blog_column_copy.step5_strong }}</strong> {{ T.blog_column_copy.step5_text }}</li>
+            </ol>
+
+            <h2>{{ T.blog_column_copy.work_smarter_h2 }}</h2>
+            <p>{{ T.blog_column_copy.work_smarter_p1 }}</p>
+            <p>{{ T.blog_column_copy.work_smarter_p2 }}</p>
+            <p><em>{{ T.blog_column_copy.author_bio }}</em></p>
+        </article>
+        <div style="margin-top:32px; text-align:center;">
+            <a href="https://tablecopy.pro" target="_blank" style="font-size:1.2em; color:#fff; background:#3498db; padding:12px 28px; border-radius:6px; display:inline-block; text-decoration:none;">
+                {{ T.blog_column_copy.cta_text }}
+            </a>
+        </div>
+    </div>
+{% endblock %}

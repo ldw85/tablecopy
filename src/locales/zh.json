@@ -1,5 +1,5 @@
 {
-    "lang_code": "zh-CN",
+    "lang_code": "zh",
     "common": {
         "nav_home": "首页",
         "nav_features": "核心功能",
@@ -31,6 +31,10 @@
         "bookmarklet_title": "按住我拖动到书签栏",
         "install_step3_h3": "完成！",
         "install_step3_p": "现在，在任何有表格的页面，点击这个书签即可开始使用！",
+        "ai_browser_title": "站长力荐：一个革命性的 AI 浏览器",
+        "ai_browser_description": "Perplexity Comet 彻底改变了我获取信息的方式。",
+        "ai_browser_download": "下载 Perplexity AI",
+        "ai_browser_cta": "查看我的评测与用法",
         "install_mobile_note": "注意：书签工具需要在桌面端浏览器完成安装和使用。",
         "alert_text": "请不要点击此按钮，而是将它拖拽到您的书签栏！",
         "features_title": "一个工具，满足所有需求",

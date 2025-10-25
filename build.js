@@ -22,8 +22,8 @@ const env = nunjucks.configure(config.srcDir, {
 // --- 自定义 Nunjucks 过滤器 ---
 // 添加 'path' 过滤器来处理多语言路径
 env.addFilter('path', function(filename, lang) {
-    // 如果是默认语言 'zh'，则路径在根目录
-    // 否则，路径在语言子目录中，例如 /en/page.html
+    // 如果是默认语言 'en'，则路径在根目录
+    // 否则，路径在语言子目录中，例如 /zh/page.html
     return lang === config.defaultLang ? `/${filename}` : `/${lang}/${filename}`;
 });
 

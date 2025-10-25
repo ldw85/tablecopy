@@ -1,0 +1,41 @@
+{
+  "name": "table-export-pro-extension",
+  "version": "1.0.0",
+  "description": "Premium browser extension for exporting web tables with auto-pagination support",
+  "main": "background.js",
+  "scripts": {
+    "build": "node build.js",
+    "package": "node package.js",
+    "dev": "node dev-server.js",
+    "lint": "eslint *.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "browser-extension",
+    "table-export",
+    "csv-export",
+    "web-scraping",
+    "chrome-extension",
+    "edge-extension"
+  ],
+  "author": "TableCopy Pro Team",
+  "license": "MIT",
+  "devDependencies": {
+    "archiver": "^5.3.1",
+    "chokidar": "^3.5.3",
+    "eslint": "^8.45.0",
+    "jest": "^29.6.1",
+    "web-ext": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tablecopy/table-export-pro-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tablecopy/table-export-pro-extension/issues"
+  },
+  "homepage": "https://tablecopy.pro/extension"
+}

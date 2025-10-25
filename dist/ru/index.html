@@ -102,6 +102,25 @@ function gtag_report_conversion(url) {
 
     <main>
         
+
+<!-- AI Browser Advertisement Slide-in -->
+<div id="ai-browser-ad" class="ai-browser-ad">
+    <div class="ad-content">
+        <button class="ad-close" aria-label="关闭广告">&times;</button>
+        <div class="ad-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSh8sLp-pPSKg5o-prCNuG0SQbM1Yrq9E_tw&s" alt="Perplexity Logo" class="ad-logo">
+        </div>
+        <h3 class="ad-title">Рекомендация вебмастера: Революционный AI-браузер</h3>
+        <p class="ad-description">Perplexity Comet полностью изменил мой способ получения информации. <a href="https://youtu.be/dSSxWElsrMc?si=swvgEgzKtXQQBeWz" class="ad-download" target="_blank" rel="noopener noreferrer" onclick="gtag_report_conversion()">
+            Посмотреть мой обзор и использование
+        </a></p>
+       
+        <a href="https://pplx.ai/ldwldw8570825" class="ad-cta" target="_blank" rel="noopener noreferrer" onclick="gtag_report_conversion()">
+            Скачать Perplexity AI
+        </a>
+    </div>
+</div>
+
 <section class="hero" id="hero">
     <div class="container">
         <h1>Копируйте любую веб-таблицу,<br>так же легко, как копировать текст.</h1>
@@ -257,6 +276,7 @@ function gtag_report_conversion(url) {
     <div class="container">
         
         <p>© 2025 Table Copy. Работает на Gemini AI.</p>
+        <p>Email: <a href="mailto:support@tablecopy.pro">support@tablecopy.pro</a></p>
     </div>
 </footer>
 
@@ -265,7 +285,88 @@ function gtag_report_conversion(url) {
     
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        setupBookmarklet('/assets/js/tablecopy_v5.0.js', "Пожалуйста, не нажимайте на эту кнопку. Вместо этого перетащите ее на панель закладок!");
+        // Safely setup bookmarklet with error handling
+        try {
+            if (typeof setupBookmarklet === 'function') {
+                setupBookmarklet('/assets/js/tablecopy_v5.0.js', "Пожалуйста, не нажимайте на эту кнопку. Вместо этого перетащите ее на панель закладок!");
+            } else {
+                console.warn('setupBookmarklet function not found - bookmarklet functionality may be limited');
+            }
+        } catch (error) {
+            console.error('Error setting up bookmarklet:', error);
+        }
+
+        // AI Browser Advertisement functionality with error handling
+        try {
+            const adElement = document.getElementById('ai-browser-ad');
+            const closeButton = document.querySelector('.ad-close');
+
+            if (!adElement || !closeButton) {
+                console.error('Ad elements not found - advertisement will not work');
+                return;
+            }
+
+            let hasShown = sessionStorage.getItem('aiBrowserAdShown');
+
+            // Function to show the ad
+            function showAd() {
+                if (adElement) {
+                    adElement.classList.add('show');
+                    sessionStorage.setItem('aiBrowserAdShown', 'true');
+                    console.log('AI Browser ad shown successfully');
+                }
+            }
+
+            // Function to hide the ad
+            function hideAd() {
+                if (adElement) {
+                    adElement.classList.remove('show');
+                    console.log('AI Browser ad hidden');
+                }
+            }
+
+            // Close button functionality
+            closeButton.addEventListener('click', hideAd);
+
+            // Show ad after 5 seconds
+            setTimeout(showAd, 1000);
+
+            // Alternative: Show ad when user scrolls 30% of the page
+            let scrollTriggered = false;
+            window.addEventListener('scroll', function() {
+                if (!scrollTriggered && !hasShown) {
+                    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                    if (scrollPercentage > 30) {
+                        showAd();
+                        scrollTriggered = true;
+                    }
+                }
+            });
+
+            // Track clicks on the CTA button with error handling
+            const ctaButton = document.querySelector('.ad-cta');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function() {
+                    try {
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'click', {
+                                'event_category': 'AI Browser Ad',
+                                'event_label': 'Perplexity CTA Click',
+                                'transport_type': 'beacon'
+                            });
+                        } else {
+                            console.warn('gtag function not available - analytics tracking disabled');
+                        }
+                    } catch (error) {
+                        console.error('Error tracking CTA click:', error);
+                    }
+                });
+            }
+
+            console.log('AI Browser advertisement setup completed successfully');
+        } catch (error) {
+            console.error('Error setting up AI Browser advertisement:', error);
+        }
     });
 </script>
 

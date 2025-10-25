@@ -1,70 +1,203 @@
-# TableCopy - The Smart Bookmarklet to Copy Any Web Table Perfectly
+# Table Export Pro
 
-Say goodbye to messy pastes. Copy any web table to Excel, Sheets, or Notion with one click, preserving the formatting perfectly.
+一个功能强大的浏览器插件，支持导出网页表格数据并自动翻页抓取。兼容 Chrome 和 Edge 浏览器。
 
-**[➡️ Get the Bookmarklet at tablecopy.pro](https://tablecopy.pro)**
+## 功能特性
 
-![TableCopy Demo](https://tablecopy.pro/tablecopy_show.gif)
-*Note: The demo GIF shows the core functionality. The actual UI may be updated.*
+### 🎯 核心功能
+- **智能表格检测**: 自动识别页面中的表格元素
+- **多种导出格式**: 支持 CSV 和 JSON 格式导出
+- **可视化选择**: 直观的表格选择和预览界面
+- **数据预览**: 导出前可预览表格数据
+
+### 🔄 自动翻页抓取
+- **智能分页检测**: 自动识别分页导航元素
+- **多页数据合并**: 自动合并多页表格数据
+- **可配置参数**: 自定义提取页数和延迟时间
+- **进度显示**: 实时显示提取进度
+
+### ⚙️ 高级功能
+- **右键菜单**: 通过右键菜单快速导出
+- **表格高亮**: 可视化显示选中的表格
+- **自定义设置**: 灵活的配置选项
+- **跨浏览器兼容**: 支持 Chrome 和 Edge
+
+## 安装方法
+
+### Chrome 浏览器
+1. 下载插件源码
+2. 打开 Chrome 浏览器，访问 `chrome://extensions/`
+3. 开启"开发者模式"
+4. 点击"加载已解压的扩展程序"
+5. 选择插件目录
+
+### Edge 浏览器
+1. 下载插件源码
+2. 打开 Edge 浏览器，访问 `edge://extensions/`
+3. 开启"开发者模式"
+4. 点击"加载已解压的扩展程序"
+5. 选择插件目录
+
+## 使用方法
+
+### 基本导出
+1. 打开包含表格的网页
+2. 点击浏览器工具栏的插件图标
+3. 在弹出的界面中选择要导出的表格
+4. 选择导出格式（CSV 或 JSON）
+5. 点击导出按钮
+
+### 自动翻页提取
+1. 选择要提取的表格
+2. 配置提取参数（页数、延迟等）
+3. 点击"开始自动提取"
+4. 等待提取完成
+5. 下载合并后的数据文件
+
+### 右键快速导出
+1. 在网页上右键点击
+2. 选择"导出表格数据"
+3. 按照提示完成导出
+
+## 文件结构
+
+```
+table-export-pro/
+├── manifest.json          # 插件配置文件
+├── background.js          # 后台脚本
+├── content.js             # 内容脚本
+├── popup.html             # 弹出界面
+├── popup.css              # 弹出界面样式
+├── popup.js               # 弹出界面逻辑
+├── injected.js            # 注入脚本
+├── icons/                 # 图标文件
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+└── README.md             # 说明文档
+```
+
+## 技术架构
+
+### 核心组件
+- **Background Script**: 处理跨页面数据存储和文件下载
+- **Content Script**: 与网页交互，提取表格数据
+- **Popup Interface**: 用户交互界面
+- **Injected Script**: 高级页面操作功能
+
+### 数据流程
+1. 内容脚本检测页面表格
+2. 用户通过弹出界面选择表格
+3. 内容脚本提取表格数据
+4. 后台脚本处理数据合并和文件下载
+5. 用户获得导出的数据文件
+
+### 自动翻页机制
+1. 智能检测分页导航元素
+2. 模拟点击下一页按钮
+3. 等待新页面内容加载
+4. 提取新页面的表格数据
+5. 合并所有页面的数据
+
+## 配置选项
+
+### 提取设置
+- **最大页数**: 限制自动提取的页面数量
+- **提取延迟**: 页面间的等待时间
+- **包含表头**: 是否包含表格标题行
+
+### 界面设置
+- **自动检测分页**: 是否自动识别分页功能
+- **高亮显示表格**: 是否高亮显示选中的表格
+- **默认延迟**: 默认的页面等待时间
+
+## 兼容性
+
+### 支持的浏览器
+- Chrome 88+
+- Edge 88+
+- 其他基于 Chromium 的浏览器
+
+### 支持的网页
+- 支持标准 HTML 表格
+- 支持动态加载的表格
+- 支持分页表格
+- 支持嵌套表格
+
+## 开发说明
+
+### 开发环境
+- Node.js 14+
+- Chrome 或 Edge 浏览器
+- 代码编辑器（推荐 VS Code）
+
+### 调试方法
+1. 打开浏览器开发者工具
+2. 查看控制台输出
+3. 检查网络请求
+4. 验证数据提取逻辑
+
+### 扩展开发
+- 修改 `manifest.json` 添加新权限
+- 扩展 `content.js` 添加新的表格检测逻辑
+- 增强 `popup.js` 的用户界面功能
+- 优化 `background.js` 的数据处理能力
+
+## 常见问题
+
+### Q: 插件无法检测到表格？
+A: 请确保：
+- 页面已完全加载
+- 表格是标准的 HTML table 元素
+- 尝试刷新页面后重试
+
+### Q: 自动翻页功能不工作？
+A: 可能的原因：
+- 分页按钮使用了非标准实现
+- 页面加载时间过长
+- 需要调整提取延迟参数
+
+### Q: 导出的数据格式不正确？
+A: 可以尝试：
+- 检查表格结构是否复杂
+- 调整导出设置
+- 使用 JSON 格式导出
+
+## 更新日志
+
+### v1.0.0
+- ✨ 初始版本发布
+- 🎯 基础表格检测和导出功能
+- 🔄 自动翻页提取功能
+- ⚙️ 完整的配置选项
+- 🎨 现代化的用户界面
+
+## 贡献指南
+
+欢迎提交 Issue 和 Pull Request 来改进这个插件。
+
+### 提交 Issue
+- 描述遇到的问题
+- 提供复现步骤
+- 附上相关截图
+
+### 提交代码
+1. Fork 项目仓库
+2. 创建功能分支
+3. 提交代码更改
+4. 创建 Pull Request
+
+## 许可证
+
+MIT License - 详见 LICENSE 文件
+
+## 联系方式
+
+如有问题或建议，请通过以下方式联系：
+- 提交 GitHub Issue
+- 发送邮件到开发者邮箱
 
 ---
 
-## The Frustration: Why Copying Web Tables is So Hard
-
-We’ve all been there. You find the perfect dataset online, but when you copy-paste it into Excel, you get a chaotic mess. Data is crammed into a single column, formatting is destroyed, and a 5-second task turns into a 15-minute cleanup project.
-
-This happens because of invisible HTML styling and modern websites using `<div>`s instead of `<table>` tags, making traditional copy-pasting fail.
-
-## The Solution: A Lightweight, Powerful Bookmarklet
-
-**TableCopy** is a powerful yet simple **bookmarklet**—not a browser extension—that solves this problem. It's a small piece of JavaScript you save to your bookmarks bar. When you're on a page with a table, just click the bookmarklet. It intelligently analyzes the page, captures the table's structure, and lets you copy it perfectly.
-
-## ✨ Key Features
-
-*   **🧠 Smart Structure Recognition**: Intelligently detects both traditional HTML `<table>` structures and modern `<div>`-based layouts that look like tables. It 'sees' the table the way you do.
-
-*   **📋 One-Click Perfect Copy**: Copies the table as rich text, so when you paste it into Excel, WPS Office, Notion, or Google Sheets, it appears exactly as it should—perfectly formatted.
-
-*   **🖱️ Effortless Column Copying**: Need just one column? After activating the tool, simply click any column's header to copy its entire contents, separated by newlines or commas.
-
-*   **📄 Flexible Export Options**: Go beyond a simple copy. Export your data as **CSV**, **TSV**, **JSON**, or even the table's raw **HTML source code**.
-
-*   **🖼️ Export as Picture**: Instantly save a clean PNG image of the table, perfect for presentations and reports.
-
-*   **⚡ Lightweight & Secure**: It's a bookmarklet, not an extension. That means **no installation**, no background processes, and no permissions to read your data. It only runs when you click it.
-
-## 🚀 3-Step Installation & Usage
-
-Getting started takes less than 30 seconds.
-
-1.  **Get the Bookmarklet**
-    Visit our official website: **tablecopy.pro**.
-
-2.  **Drag to Your Bookmarks Bar**
-    Click and drag the "表格助手" (TableCopy) button from the website up to your browser's bookmarks bar, then release.
-
-3.  **Copy Any Table**
-    Navigate to a page with a table you want to copy. Select any part of the table with your mouse, then click the `TableCopy` bookmark you just saved. A clean preview will pop up, ready for you to copy or export!
-
-## 🤔 Why a Bookmarklet (and Not a Browser Extension)?
-
-Browser extensions can be heavy, slow down your browser, and often require broad permissions that pose a privacy risk. TableCopy is a bookmarklet, which offers key advantages:
-
-*   **Zero Impact**: It doesn't run in the background or consume any resources until you click it.
-*   **Ultimate Security**: The code is transparent and only runs on the current page when you choose. It doesn't monitor your browsing.
-*   **Universal Compatibility**: Works on any modern desktop browser that has a bookmarks bar (Chrome, Firefox, Safari, Edge).
-
-## 🎯 Who Can Benefit? (Use Cases)
-
-*   **Data Analysts**: Grab financial data, market stats, or public data from sites like `data.gov` in seconds.
-*   **E-commerce Managers**: Capture competitor pricing and product specifications for analysis.
-*   **Students & Researchers**: Aggregate data from Wikipedia, academic journals, or reports for your papers.
-*   **SEOs & Marketers**: Quickly copy columns of keywords, URLs, or analytics data for your tools.
-
-## 🤝 Contributing & Feedback
-
-TableCopy is an actively developed tool. If you have suggestions, find a bug, or discover a website where it doesn't work, please open an issue in this repository!
-
-## 📄 License
-
-The TableCopy bookmarklet is free to use.
+**享受表格数据导出的便利吧！** 📊✨
