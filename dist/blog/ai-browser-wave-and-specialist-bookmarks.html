@@ -87,7 +87,7 @@ Comet — это больше, чем просто браузер; это «аг
 
 Прекратите просто просматривать веб-страницы — начните ими управлять. Испытайте будущее уже сегодня.
 
-Загрузите Perplexity Comet сейчас по адресу: <a href="https://www.perplexity.ai/browser/claim-invite/NTZiYjMxZTItNGNiZC00YzExLWI3MzEtNTQxZDY1YjJkOWFl?via=ldwldw8570825&dub_id=zZbv3BLLcnIivyHE" target="_blank">https://www.perplexity.ai/browser/claim-invite/NTZiYjMxZTItNGNiZC00YzExLWI3MzEtNTQxZDY1YjJkOWFl?via=ldwldw8570825&dub_id=zZbv3BLLcnIivyHE</a>
+Загрузите Perplexity Comet сейчас по адресу: <a href="https://www.perplexity.ai/browser/claim-invite/MzA1MzFiNzUtNjZhMS00NTdlLWJjOTAtM2ExNjhmYjJiOWI5?via=linxibuzai79592&dub_id=7kOkFgxWp4bwp6Ac" target="_blank">https://www.perplexity.ai/browser/claim-invite/MzA1MzFiNzUtNjZhMS00NTdlLWJjOTAtM2ExNjhmYjJiOWI5?via=linxibuzai79592&dub_id=7kOkFgxWp4bwp6Ac</a>
 
 В качестве дополнительного бонуса вы можете получить скидку в размере 5-20 долларов за продвижение браузера и его распространение среди других."
     }
@@ -250,7 +250,7 @@ Comet — это больше, чем просто браузер; это «аг
 
         <p>Stop just browsing the web—start commanding it. Experience the future today.</p>
 
-        <p>Download Perplexity Comet now at: <a href="https://www.perplexity.ai/browser/claim-invite/NTZiYjMxZTItNGNiZC00YzExLWI3MzEtNTQxZDY1YjJkOWFl?via=ldwldw8570825&dub_id=zZbv3BLLcnIivyHE" target="_blank">https://www.perplexity.ai/browser/claim-invite/NTZiYjMxZTItNGNiZC00YzExLWI3MzEtNTQxZDY1YjJkOWFl?via=ldwldw8570825&dub_id=zZbv3BLLcnIivyHE</a></p>
+        <p>Download Perplexity Comet now at: <a href="https://www.perplexity.ai/browser/claim-invite/MzA1MzFiNzUtNjZhMS00NTdlLWJjOTAtM2ExNjhmYjJiOWI5?via=linxibuzai79592&dub_id=7kOkFgxWp4bwp6Ac" target="_blank">https://www.perplexity.ai/browser/claim-invite/MzA1MzFiNzUtNjZhMS00NTdlLWJjOTAtM2ExNjhmYjJiOWI5?via=linxibuzai79592&dub_id=7kOkFgxWp4bwp6Ac</a></p>
 
         <p>As an additional bonus, you can receive a $5-20 discount for promoting the browser and sharing it with others.</p>
     </main>
@@ -262,89 +262,39 @@ Comet — это больше, чем просто браузер; это «аг
     <div id="aiBrowserPrompt" class="prompt-overlay">
         <div class="prompt-modal">
             <h2>🚀 Discover the Future of Browsers with Perplexity AI!</h2>
-            <p>You've just read about the revolutionary capabilities of AI browsers. Don't wait—experience the most advanced artificial intelligence technology right now!</p>
-            <div class="redirect-timer">
-                Auto-redirect in: <span id="countdown">2</span> seconds
-            </div>
-            <a href="https://www.perplexity.ai/browser/claim-invite/NTZiYjMxZTItNGNiZC00YzExLWI3MzEtNTQxZDY1YjJkOWFl?via=ldwldw8570825&dub_id=zZbv3BLLcnIivyHE" class="btn-primary">
+            <p>You've just read about the revolutionary capabilities of AI browsers. Experience the most advanced artificial intelligence technology now!</p>
+            <a href="https://www.perplexity.ai/browser/claim-invite/MzA1MzFiNzUtNjZhMS00NTdlLWJjOTAtM2ExNjhmYjJiOWI5?via=linxibuzai79592&dub_id=7kOkFgxWp4bwp6Ac" class="btn-primary" target="_blank">
                 Go to Perplexity AI
             </a>
-            <button class="btn-secondary" onclick="cancelRedirect()">
+            <button class="btn-secondary" onclick="hidePrompt()">
                 Stay on Page
             </button>
         </div>
     </div>
 
     <script>
-        let redirectTimer;
-        let countdownTimer;
-        let timeRemaining = 2;
-
         // Initialize the page with a 1-second delay before showing the prompt
         setTimeout(showAiBrowserPrompt, 1000);
 
         function showAiBrowserPrompt() {
             document.getElementById('aiBrowserPrompt').style.display = 'flex';
-            startCountdown();
-            startRedirectTimer();
-        }
-
-        function startCountdown() {
-            updateCountdown();
-            countdownTimer = setInterval(() => {
-                timeRemaining--;
-                updateCountdown();
-
-                if (timeRemaining <= 0) {
-                    clearInterval(countdownTimer);
-                }
-            }, 1000);
-        }
-
-        function updateCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            if (countdownElement) {
-                countdownElement.textContent = timeRemaining;
-            }
-        }
-
-        function startRedirectTimer() {
-            redirectTimer = setTimeout(() => {
-                redirectToPerplexity();
-            }, 2000); // 2 seconds
-        }
-
-        function redirectToPerplexity() {
-            window.location.href = 'https://www.perplexity.ai/browser/claim-invite/NTZiYjMxZTItNGNiZC00YzExLWI3MzEtNTQxZDY1YjJkOWFl?via=ldwldw8570825&dub_id=zZbv3BLLcnIivyHE';
-        }
-
-        function cancelRedirect() {
-            clearTimeout(redirectTimer);
-            clearInterval(countdownTimer);
-            hidePrompt();
         }
 
         function hidePrompt() {
             document.getElementById('aiBrowserPrompt').style.display = 'none';
         }
 
-        // Clean up timers if page is unloaded
-        window.addEventListener('beforeunload', () => {
-            clearTimeout(redirectTimer);
-            clearInterval(countdownTimer);
-        });
-
         // Allow closing with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                cancelRedirect();
+                hidePrompt();
             }
         });
 
         // Click outside modal to close
         document.getElementById('aiBrowserPrompt').addEventListener('click', (e) => {
             if (e.target === document.getElementById('aiBrowserPrompt')) {
-                cancelRedirect();
+                hidePrompt();
             }
         });
     </script>
