@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- AI Browser Advertisement Slide-in -->
-<div id="ai-browser-ad" class="ai-browser-ad">
+<!-- <div id="ai-browser-ad" class="ai-browser-ad">
     <div class="ad-content">
         <button class="ad-close" aria-label="关闭广告">&times;</button>
         <div class="ad-header">
@@ -18,7 +18,7 @@
             {{ T.index.ai_browser_download }}
         </a>
     </div>
-</div>
+</div> -->
 
 <section class="hero" id="hero">
     <div class="container">
@@ -190,76 +190,76 @@
         }
 
         // AI Browser Advertisement functionality with error handling
-        try {
-            const adElement = document.getElementById('ai-browser-ad');
-            const closeButton = document.querySelector('.ad-close');
+        // try {
+        //     const adElement = document.getElementById('ai-browser-ad');
+        //     const closeButton = document.querySelector('.ad-close');
 
-            if (!adElement || !closeButton) {
-                console.error('Ad elements not found - advertisement will not work');
-                return;
-            }
+        //     if (!adElement || !closeButton) {
+        //         console.error('Ad elements not found - advertisement will not work');
+        //         return;
+        //     }
 
-            let hasShown = sessionStorage.getItem('aiBrowserAdShown');
+        //     let hasShown = sessionStorage.getItem('aiBrowserAdShown');
 
-            // Function to show the ad
-            function showAd() {
-                if (adElement) {
-                    adElement.classList.add('show');
-                    sessionStorage.setItem('aiBrowserAdShown', 'true');
-                    console.log('AI Browser ad shown successfully');
-                }
-            }
+        //     // Function to show the ad
+        //     function showAd() {
+        //         if (adElement) {
+        //             adElement.classList.add('show');
+        //             sessionStorage.setItem('aiBrowserAdShown', 'true');
+        //             console.log('AI Browser ad shown successfully');
+        //         }
+        //     }
 
-            // Function to hide the ad
-            function hideAd() {
-                if (adElement) {
-                    adElement.classList.remove('show');
-                    console.log('AI Browser ad hidden');
-                }
-            }
+        //     // Function to hide the ad
+        //     function hideAd() {
+        //         if (adElement) {
+        //             adElement.classList.remove('show');
+        //             console.log('AI Browser ad hidden');
+        //         }
+        //     }
 
-            // Close button functionality
-            closeButton.addEventListener('click', hideAd);
+        //     // Close button functionality
+        //     closeButton.addEventListener('click', hideAd);
 
-            // Show ad after 5 seconds
-            setTimeout(showAd, 1000);
+        //     // Show ad after 5 seconds
+        //     setTimeout(showAd, 1000);
 
-            // Alternative: Show ad when user scrolls 30% of the page
-            let scrollTriggered = false;
-            window.addEventListener('scroll', function() {
-                if (!scrollTriggered && !hasShown) {
-                    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                    if (scrollPercentage > 30) {
-                        showAd();
-                        scrollTriggered = true;
-                    }
-                }
-            });
+        //     // Alternative: Show ad when user scrolls 30% of the page
+        //     let scrollTriggered = false;
+        //     window.addEventListener('scroll', function() {
+        //         if (!scrollTriggered && !hasShown) {
+        //             const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        //             if (scrollPercentage > 30) {
+        //                 showAd();
+        //                 scrollTriggered = true;
+        //             }
+        //         }
+        //     });
 
-            // Track clicks on the CTA button with error handling
-            const ctaButton = document.querySelector('.ad-cta');
-            if (ctaButton) {
-                ctaButton.addEventListener('click', function() {
-                    try {
-                        if (typeof gtag === 'function') {
-                            gtag('event', 'click', {
-                                'event_category': 'AI Browser Ad',
-                                'event_label': 'Perplexity CTA Click',
-                                'transport_type': 'beacon'
-                            });
-                        } else {
-                            console.warn('gtag function not available - analytics tracking disabled');
-                        }
-                    } catch (error) {
-                        console.error('Error tracking CTA click:', error);
-                    }
-                });
-            }
+        //     // Track clicks on the CTA button with error handling
+        //     const ctaButton = document.querySelector('.ad-cta');
+        //     if (ctaButton) {
+        //         ctaButton.addEventListener('click', function() {
+        //             try {
+        //                 if (typeof gtag === 'function') {
+        //                     gtag('event', 'click', {
+        //                         'event_category': 'AI Browser Ad',
+        //                         'event_label': 'Perplexity CTA Click',
+        //                         'transport_type': 'beacon'
+        //                     });
+        //                 } else {
+        //                     console.warn('gtag function not available - analytics tracking disabled');
+        //                 }
+        //             } catch (error) {
+        //                 console.error('Error tracking CTA click:', error);
+        //             }
+        //         });
+        //     }
 
-            console.log('AI Browser advertisement setup completed successfully');
-        } catch (error) {
-            console.error('Error setting up AI Browser advertisement:', error);
-        }
+        //     console.log('AI Browser advertisement setup completed successfully');
+        // } catch (error) {
+        //     console.error('Error setting up AI Browser advertisement:', error);
+        // }
     });
 </script>
 {% endblock %}
