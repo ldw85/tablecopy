@@ -75,6 +75,8 @@ async function build() {
                     path: lang === config.defaultLang ? `/${page}.html` : `/${lang}/${page}.html`,
                     // 生成 canonical URL
                     canonicalUrl: `${config.baseUrl}${lang === config.defaultLang ? '' : '/' + lang}/${page}.html`,
+                    // 添加相对路径深度信息
+                    depth: lang === config.defaultLang ? 0 : 1, // 根目录为0，语言子目录为1
                 },
                 // 用于 hreflang 的语言备用链接
                 alternates: config.languages.map(altLang => ({

@@ -26,7 +26,7 @@
         <p class="slogan">{{ T.index.hero_slogan }}</p>
         <a href="#install" class="cta-button" onclick="gtag_report_conversion()">{{ T.index.hero_cta }}</a>
         <div class="demo-gif-container">
-           <video src="/assets/tablecopy_show.mov" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
+           <video src="{{ '../assets/tablecopy_show.mov' if page.depth else '/assets/tablecopy_show.mov' }}" controls style="width:100%;min-width:600px;display:block;margin:0 auto;">
                Your browser does not support the video tag.
            </video>
         </div>
@@ -37,6 +37,142 @@
     <div class="container">
         <h2 class="section-title">{{ T.index.why_title }}</h2>
         <p>{{ T.index.why_p }}</p>
+    </div>
+</section>
+
+<!-- EEAT Webpage to Excel Section -->
+<section id="webpage-to-excel-guide" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">{{ T.index.webpage_to_excel_section.title }}</h2>
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 50px; color: #555;">{{ T.index.webpage_to_excel_section.subtitle }}</p>
+
+        <!-- Methods Comparison -->
+        <h3 style="text-align: center; margin-bottom: 40px;">{{ T.index.webpage_to_excel_section.methods_title }}</h3>
+
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Method 1: TableCopy (Recommended) -->
+            <div class="card" style="border: 3px solid #28a745; position: relative;">
+                <div style="position: absolute; top: -15px; left: 20px; background: #28a745; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em;">
+                    {{ T.common.nav_install }}
+                </div>
+                <h3>{{ T.index.webpage_to_excel_section.method1_title }}</h3>
+                <p>{{ T.index.webpage_to_excel_section.method1_description }}</p>
+                <ul style="margin-top: 20px;">
+                    {% for benefit in T.index.webpage_to_excel_section.method1_benefits %}
+                    <li style="margin-bottom: 10px;">{{ benefit | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Method 2: Excel Web Query -->
+            <div class="card">
+                <h3>{{ T.index.webpage_to_excel_section.method2_title }}</h3>
+                <p>{{ T.index.webpage_to_excel_section.method2_description }}</p>
+                <ul style="color: #dc3545;">
+                    {% for limitation in T.index.webpage_to_excel_section.method2_limitations %}
+                    <li style="margin-bottom: 10px;">{{ limitation | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Method 3: Manual Copy-Paste -->
+            <div class="card">
+                <h3>{{ T.index.webpage_to_excel_section.method3_title }}</h3>
+                <p>{{ T.index.webpage_to_excel_section.method3_description }}</p>
+                <ul style="color: #dc3545;">
+                    {% for problem in T.index.webpage_to_excel_section.method3_problems %}
+                    <li style="margin-bottom: 10px;">{{ problem | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Method 4: Programming Solutions -->
+            <div class="card">
+                <h3>{{ T.index.webpage_to_excel_section.method4_title }}</h3>
+                <p>{{ T.index.webpage_to_excel_section.method4_description }}</p>
+                <ul style="color: #dc3545;">
+                    {% for challenge in T.index.webpage_to_excel_section.method4_challenges %}
+                    <li style="margin-bottom: 10px;">{{ challenge | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Expert Testimonials -->
+<section id="testimonials">
+    <div class="container">
+        <h2 class="section-title">{{ T.index.expert_testimonials.title }}</h2>
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div class="card" style="text-align: center; padding: 30px;">
+                <div style="font-size: 3em; margin-bottom: 20px;">💼</div>
+                <blockquote style="font-style: italic; margin-bottom: 20px; line-height: 1.6;">
+                    "{{ T.index.expert_testimonials.testimonial1.quote }}"
+                </blockquote>
+                <cite style="font-weight: bold;">— {{ T.index.expert_testimonials.testimonial1.name }}</cite>
+                <div style="color: #666; font-size: 0.9em; margin-top: 5px;">{{ T.index.expert_testimonials.testimonial1.role }}</div>
+            </div>
+            <div class="card" style="text-align: center; padding: 30px;">
+                <div style="font-size: 3em; margin-bottom: 20px;">🔬</div>
+                <blockquote style="font-style: italic; margin-bottom: 20px; line-height: 1.6;">
+                    "{{ T.index.expert_testimonials.testimonial2.quote }}"
+                </blockquote>
+                <cite style="font-weight: bold;">— {{ T.index.expert_testimonials.testimonial2.name }}</cite>
+                <div style="color: #666; font-size: 0.9em; margin-top: 5px;">{{ T.index.expert_testimonials.testimonial2.role }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Table -->
+<section id="comparison" style="background-color: var(--bg-color);">
+    <div class="container" style="max-width: 1000px;">
+        <h2 class="section-title">{{ T.index.comparison_table.title }}</h2>
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-top: 30px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <thead>
+                <tr style="background: #f8f9fa;">
+                    {% for header in T.index.comparison_table.headers %}
+                    <th style="padding: 15px; text-align: left; border-bottom: 2px solid #dee2e6; font-weight: 600;">{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in T.index.comparison_table.rows %}
+                <tr style="border-bottom: 1px solid #dee2e6;">
+                    <td style="padding: 15px; font-weight: 600; background: #f8f9fa;">{{ row.feature }}</td>
+                    <td style="padding: 15px; text-align: center; font-weight: bold; color: #28a745;">{{ row.tablecopy }}</td>
+                    <td style="padding: 15px; text-align: center;">{{ row.excel }}</td>
+                    <td style="padding: 15px; text-align: center;">{{ row.manual }}</td>
+                    <td style="padding: 15px; text-align: center;">{{ row.python }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Step by Step Guide -->
+<section id="step-guide">
+    <div class="container">
+        <h2 class="section-title">{{ T.index.step_by_step_guide.title }}</h2>
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">📱</div>
+                <h3>{{ T.index.step_by_step_guide.step1.title }}</h3>
+                <p style="margin-top: 15px;">{{ T.index.step_by_step_guide.step1.description }}</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">🌐</div>
+                <h3>{{ T.index.step_by_step_guide.step2.title }}</h3>
+                <p style="margin-top: 15px;">{{ T.index.step_by_step_guide.step2.description }}</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">⚡</div>
+                <h3>{{ T.index.step_by_step_guide.step3.title }}</h3>
+                <p style="margin-top: 15px;">{{ T.index.step_by_step_guide.step3.description }}</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -100,6 +236,11 @@
     <div class="container">
         <h2 class="section-title">{{ T.index.blog_title }}</h2>
         <div class="grid-layout">
+            <div class="card" style="border-left: 4px solid #3498db;">
+                <h3><a href="/blog/html-to-excel-converter.html">HTML to Excel Converter: The Ultimate Solution for Perfect Table Exports</a></h3>
+                <p>Converting HTML tables to Excel shouldn't be complicated. Learn how to perfectly export web data to Excel with our comprehensive guide that solves formatting issues forever.</p>
+                <a href="/blog/html-to-excel-converter.html" class="read-more">{{ T.index.blog_read_more }}</a>
+            </div>
             <div class="card">
                 <h3><a href="/blog/how-to-copy-a-column-from-a-website.html">How to Copy a Column from a Website: All The Best Methods</a></h3>
                 <p>Stop wrestling with jumbled data. This guide reveals 3 proven methods to perfectly copy a single column from any web page table into Excel or Sheets.</p>
@@ -125,8 +266,10 @@
 </section>
 
 <section id="faq">
-    <div class="container" style="max-width: 800px;">
+    <div class="container" style="max-width: 900px;">
         <h2 class="section-title">{{ T.index.faq_title }}</h2>
+
+        <!-- Webpage to Excel specific FAQs -->
         <div class="faq-item">
             <button class="faq-question">{{ T.index.faq1_q }}<span class="icon">+</span></button>
             <div class="faq-answer"><p>{{ T.index.faq1_a }}</p></div>
@@ -142,6 +285,14 @@
         <div class="faq-item">
             <button class="faq-question">{{ T.index.faq4_q }}<span class="icon">+</span></button>
             <div class="faq-answer"><p>{{ T.index.faq4_a }}</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">{{ T.index.faq5_q }}<span class="icon">+</span></button>
+            <div class="faq-answer"><p>{{ T.index.faq5_a }}</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">{{ T.index.faq6_q }}<span class="icon">+</span></button>
+            <div class="faq-answer"><p>{{ T.index.faq6_a }}</p></div>
         </div>
     </div>
 </section>

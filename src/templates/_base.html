@@ -17,10 +17,10 @@
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ defaultLangUrl }}">
 
-    <link rel="icon" type="image/png" href="/assets/tc_icon.png">
+    <link rel="icon" type="image/png" href="{{ '../assets/tc_icon.png' if page.depth else '/assets/tc_icon.png' }}">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="{{ '../assets/css/main.css' if page.depth else '/assets/css/main.css' }}">
     {% block head_extra %}{% endblock %}
 
     <!-- Google tag (gtag.js) -->
@@ -60,8 +60,8 @@ function gtag_report_conversion(url) {
 
     {% include "templates/_footer.html" %}
 
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/bookmarklet-loader.js"></script>
+    <script src="{{ '../assets/js/main.js' if page.depth else '/assets/js/main.js' }}"></script>
+    <script src="{{ '../assets/js/bookmarklet-loader.js' if page.depth else '/assets/js/bookmarklet-loader.js' }}"></script>
     {% block scripts_extra %}{% endblock %}
 </body>
 </html>
