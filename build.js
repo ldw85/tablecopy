@@ -56,6 +56,14 @@ async function build() {
     await fs.copy(sitemapSrc, sitemapDist);
     console.log('✅ Copied sitemap.xml to dist root.');
 
+    // 2.2 复制 _redirects 文件到根目录（Cloudflare Pages 配置）
+    const redirectsSrc = path.join(config.srcDir, '_redirects');
+    const redirectsDist = path.join(config.distDir, '_redirects');
+    if (await fs.pathExists(redirectsSrc)) {
+        await fs.copy(redirectsSrc, redirectsDist);
+        console.log('✅ Copied _redirects to dist root.');
+    }
+
     // 3. 加载所有翻译文件
     const allTranslations = {};
     for (const lang of config.languages) {
