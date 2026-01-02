@@ -1,2 +1,6 @@
 # Ezoic Ads.txt Redirect
 /ads.txt https://srv.adstxtmanager.com/19390/tablecopy.pro 301
+
+# Web to Web Tools redirect (merged)
+/web-to.html /web-tools.html 301
+/*/web-to.html /web-tools.html 301

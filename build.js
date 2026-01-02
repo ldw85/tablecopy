@@ -75,6 +75,10 @@ async function build() {
     for (const lang of config.languages) {
         for (const page of pages) {
             const context = {
+                // 配置变量
+                config: {
+                    defaultLang: config.defaultLang,
+                },
                 // 页面变量
                 page: {
                     name: page,

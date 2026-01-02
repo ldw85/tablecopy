@@ -11,10 +11,20 @@
         "nav_web_to_pdf": "网页转PDF",
         "nav_web_to_markdown": "网页转Markdown",
         "nav_web_to_text": "网页转文本",
+        "nav_send_to_ai": "发送给AI",
+        "nav_qr_code": "二维码",
+        "nav_translator": "翻译",
+        "nav_enable_copy": "解除复制限制",
+        "nav_dark_mode": "夜间模式",
+        "nav_wayback": "网页历史",
+        "nav_highlight": "高亮结构",
         "nav_about": "关于我们",
         "nav_contact": "联系我们",
         "nav_privacy": "隐私政策",
-        "nav_terms": "服务条款"
+        "nav_terms": "服务条款",
+        "nav_image_downloader": "图片下载器",
+        "toolbox_badge": "工具箱",
+        "nav_web_to_converter": "网页转换器"
     },
     "index": {
         "meta_title": "网页转Excel转换器 - 完美复制任何网页表格到Excel | TableCopy",
@@ -182,7 +192,11 @@
         "faq6_a": "虽然TableCopy设计用于单页转换，但它的速度（每次转换3秒）使得处理多个页面高效。对于企业批量处理，请考虑我们的专业API解决方案。",
         "community_title": "分享与交流",
         "community_p": "如果您觉得这个工具好用，请分享给您的朋友！有任何建议或想法，欢迎通过以下渠道联系我们。",
-        "footer_p": "© 2025 表格助手. 由 Gemini AI 强力驱动."
+        "footer_p": "© 2025 表格助手. 由 Gemini AI 强力驱动.",
+        "toolbox_collections_title": "工具箱集合",
+        "toolbox_collections_subtitle": "更喜欢一站式？使用我们的工具箱，一个书签即可访问多个工具。",
+        "individual_tools_title": "单独工具",
+        "individual_tools_subtitle": "更喜欢专用书签？每个工具都可以单独使用，快速访问。"
     },
     "web-to-image": {
         "meta_title": "网页转 图片 - Web to Image | TableCopy",
@@ -549,5 +563,458 @@
         "section13_email": "support@tablecopy.pro",
         "section13_label2": "X (Twitter)",
         "section13_twitter_url": "https://x.com/tablecopy_tiny"
+    },
+    "send-to-ai": {
+        "meta_title": "发送给AI - 快速发送文本到ChatGPT、Claude和Perplexity | TableCopy",
+        "meta_description": "一键将网页选中的文本发送到ChatGPT、Claude或Perplexity。浏览时获取AI助手的最快方式。",
+        "meta_keywords": "发送给ai, chatgpt书签, claude书签, perplexity书签, ai助手, 文本发送ai",
+        "logo": "发送给AI",
+        "hero_h1": "一键发送网页文本到AI",
+        "hero_slogan": "快速将任何网页选中的文本发送到ChatGPT、Claude或Perplexity，获得即时AI助手。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 发送给AI",
+        "feature_list": [
+            "<strong>多AI支持：</strong> 无缝支持ChatGPT、Claude和Perplexity。",
+            "<strong>一键传输：</strong> 无需手动复制粘贴。只需选中并点击。",
+            "<strong>隐私优先：</strong> 直接连接到AI服务。无中间商，不收集数据。",
+            "<strong>轻量快速：</strong> 纯书签工具。无需安装，无后台进程。"
+        ],
+        "use_cases_title": "使用场景 - AI赋能",
+        "use_cases_list": [
+            {
+                "h3": "📝 快速研究",
+                "p": "浏览时选择问题或文本，直接发送给AI获得即时解释、摘要或分析。"
+            },
+            {
+                "h3": "✍️ 内容创作",
+                "p": "在研究时获得AI写作、改写或扩展想法的帮助。非常适合博主、作家和内容创作者。"
+            },
+            {
+                "h3": "🔍 文本分析",
+                "p": "使用AI洞察分析产品评论、新闻文章或学术论文。提取关键要点，获取智能摘要。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住紫色的「发送给AI」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "发送给AI",
+        "install_step3_h3": "完成！选中并发送",
+        "install_step3_p": "在任何网页上选中文本，然后点击此书签将其发送到您选择的AI服务。",
+        "footer_p": "© 2025 发送给AI。由 TableCopy 提供支持。",
+        "alert_select_text": "请先选择文本！",
+        "modal_title": "选择AI服务",
+        "chatgpt": "ChatGPT",
+        "claude": "Claude",
+        "perplexity": "Perplexity",
+        "send_button": "发送",
+        "copy_to_clipboard": "复制到剪贴板",
+        "copied_message": "文本已复制！正在打开AI服务...",
+        "open_button": "打开",
+        "cancel_button": "关闭"
+    },
+    "qr-code-generator": {
+        "meta_title": "二维码生成器 - 为任何网页创建二维码 | TableCopy",
+        "meta_description": "即时为任何网页URL生成二维码。非常适合在移动设备、打印材料或演示文稿中分享链接。",
+        "meta_keywords": "二维码生成器, 网页二维码, url转二维码, 书签工具, 免费二维码",
+        "logo": "二维码生成器",
+        "hero_h1": "即时生成二维码",
+        "hero_slogan": "一键为任何网页创建二维码。下载、分享或打印二维码，方便移动设备访问。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 二维码生成器",
+        "feature_list": [
+            "<strong>即时生成：</strong> 在毫秒内为当前页面URL创建二维码。",
+            "<strong>高质量：</strong> 生成清晰、可扫描的二维码，适合打印和数字使用。",
+            "<strong>一键下载：</strong> 将二维码下载为PNG图像，用于演示文稿、传单或文档。",
+            "<strong>不收集数据：</strong> 所有处理都在您的浏览器本地进行。您的URL保持私密。"
+        ],
+        "use_cases_title": "使用场景 - 分享任何内容",
+        "use_cases_list": [
+            {
+                "h3": "📱 移动分享",
+                "p": "即时将桌面网页分享给移动设备。生成二维码，用手机摄像头扫描。"
+            },
+            {
+                "h3": "📄 打印材料",
+                "p": "在名片、传单、海报或演示文稿中添加二维码。直接链接到在线资源或落地页。"
+            },
+            {
+                "h3": "🎓 教育与活动",
+                "p": "教师和活动组织者可以快速为资源、注册页面或讲义创建二维码。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住青色的「二维码」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "二维码",
+        "install_step3_h3": "完成！点击生成",
+        "install_step3_p": "在任何页面上点击此书签，即可为该页面即时生成二维码。",
+        "footer_p": "© 2025 二维码生成器。由 TableCopy 提供支持。",
+        "modal_title": "当前页面的二维码",
+        "download_button": "下载PNG",
+        "generating": "正在生成二维码...",
+        "success": "二维码已生成！",
+        "error": "生成二维码失败"
+    },
+    "web-translator": {
+        "meta_title": "网页翻译 - 即时翻译任何网页 | TableCopy",
+        "meta_description": "使用Google Translate将任何网页翻译成您的语言。一键书签工具，即时翻译网页。",
+        "meta_keywords": "网页翻译, 翻译网页, google翻译书签, 网页翻译器, 免费翻译",
+        "logo": "网页翻译",
+        "hero_h1": "即时翻译任何网页",
+        "hero_slogan": "一键打破语言障碍。使用Google Translate将任何网页翻译成您的首选语言。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 网页翻译",
+        "feature_list": [
+            "<strong>即时翻译：</strong> 使用Google Translate强大的引擎，翻译准确快速。",
+            "<strong>自动语言检测：</strong> 自动检测页面的源语言。",
+            "<strong>80+种语言：</strong> 支持全球80多种语言的互译。",
+            "<strong>保留布局：</strong> 翻译期间保持原始页面结构和格式。"
+        ],
+        "use_cases_title": "使用场景 - 全球访问",
+        "use_cases_list": [
+            {
+                "h3": "🌍 研究与学习",
+                "p": "访问外语研究论文、新闻文章和教育内容。打破学习中的语言障碍。"
+            },
+            {
+                "h3": "🛒 电子商务与购物",
+                "p": "通过将产品页面、评论和描述翻译成您的母语，在国际网站上购物。"
+            },
+            {
+                "h3": "📰 全球新闻",
+                "p": "阅读来自世界各地的新闻和观点。通过翻译国际新闻来源获得多样化观点。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住蓝色的「翻译」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "翻译",
+        "install_step3_h3": "完成！点击翻译",
+        "install_step3_p": "在任何页面上点击此书签，将其翻译成您的浏览器语言。",
+        "footer_p": "© 2025 网页翻译。由 TableCopy 提供支持。",
+        "redirecting": "正在跳转到谷歌翻译...",
+        "error": "翻译页面失败"
+    },
+    "enable-copy": {
+        "meta_title": "解除复制限制 - 从任何网站移除复制限制 | TableCopy",
+        "meta_description": "从任何网站移除右键和复制限制。即时重新启用文本选择、复制和上下文菜单。",
+        "meta_keywords": "解除复制, 移除复制限制, 允许复制, 绕过复制保护, 启用右键",
+        "logo": "解除复制限制",
+        "hero_h1": "即时移除复制限制",
+        "hero_slogan": "在任何网站上重新启用右键、文本选择和复制。一键绕过烦人的复制限制。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 解除复制限制",
+        "feature_list": [
+            "<strong>即时解锁：</strong> 立即移除复制、选择和上下文菜单限制。",
+            "<strong>通用兼容：</strong> 适用于阻止右键、文本选择或复制的网站。",
+            "<strong>简单干净：</strong> 无复杂界面。只需点击即可使用。",
+            "<strong>隐私优先：</strong> 所有操作都在本地。不收集或传输数据。"
+        ],
+        "use_cases_title": "使用场景 - 重新掌控",
+        "use_cases_list": [
+            {
+                "h3": "📚 研究与学习",
+                "p": "从研究论文、文章和在线书籍中复制引用、摘录和参考资料用于学习。"
+            },
+            {
+                "h3": "💼 专业用途",
+                "p": "从竞争对手网站、行业报告和专业资源中无限制地收集信息。"
+            },
+            {
+                "h3": "📝 内容策展",
+                "p": "从以前受限的网站策划内容用于博客、社交媒体或演示文稿。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住绿色的「解除复制」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "解除复制",
+        "install_step3_h3": "完成！点击解除",
+        "install_step3_p": "在任何受限页面上点击此书签以移除复制限制。",
+        "footer_p": "© 2025 解除复制。由 TableCopy 提供支持。",
+        "success_message": "复制限制已解除！现在可以选择和复制文本。"
+    },
+    "dark-mode": {
+        "meta_title": "夜间模式 - 为任何网站添加夜间模式 | TableCopy",
+        "meta_description": "即时为任何网站启用夜间模式。通过一键夜间模式书签减少眼睛疲劳并节省电池。",
+        "meta_keywords": "夜间模式, 暗黑模式, 网页夜间模式, 书签工具, 护眼",
+        "logo": "夜间模式",
+        "hero_h1": "为任何网站添加夜间模式",
+        "hero_slogan": "将明亮的网站转换为舒适的夜间模式。一键减少眼睛疲劳并节省电池。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 夜间模式",
+        "feature_list": [
+            "<strong>即时转换：</strong> 使用优化的颜色对比度将任何网站转换为夜间模式。",
+            "<strong>开启/关闭切换：</strong> 在夜间模式和原始网站设计之间轻松切换。",
+            "<strong>眼睛舒适：</strong> 减少蓝光和眩光，特别适合夜间舒适浏览。",
+            "<strong>省电：</strong> 夜间模式可以延长OLED和AMOLED屏幕的电池寿命。"
+        ],
+        "use_cases_title": "使用场景 - 舒适浏览",
+        "use_cases_list": [
+            {
+                "h3": "🌙 夜间浏览",
+                "p": "在弱光环境下舒适浏览，无眼睛疲劳。非常适合深夜阅读或研究。"
+            },
+            {
+                "h3": "💻 延长工作时段",
+                "p": "在长时间工作期间减少眼睛疲劳。夜间模式更易于眼睛长时间使用。"
+            },
+            {
+                "h3": "🔋 电池优化",
+                "p": "节省配备OLED屏幕的笔记本电脑和移动设备的电池寿命。暗像素消耗更少电力。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住深灰色的「夜间模式」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "夜间模式",
+        "install_step3_h3": "完成！点击切换",
+        "install_step3_p": "在任何页面上点击此书签以开启或关闭夜间模式。",
+        "footer_p": "© 2025 夜间模式。由 TableCopy 提供支持。",
+        "modal_title": "夜间模式",
+        "toggle_on": "夜间模式：开启",
+        "toggle_off": "夜间模式：关闭",
+        "enabled": "夜间模式已启用",
+        "disabled": "夜间模式已禁用"
+    },
+    "wayback-machine": {
+        "meta_title": "网页历史 - 查看网页历史 | TableCopy",
+        "meta_description": "使用Internet Archive Wayback Machine即时查看任何网页的存档版本。查看网站的过去。",
+        "meta_keywords": "网页历史, 网页存档, internet archive, 查看旧网站, 存档页面",
+        "logo": "网页历史",
+        "hero_h1": "即时查看网页历史",
+        "hero_slogan": "使用Internet Archive Wayback Machine访问任何网站的存档版本。查看网络的历史。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 网页历史",
+        "feature_list": [
+            "<strong>即时访问：</strong> 一键访问1996年至今的8010亿+存档网页。",
+            "<strong>历史研究：</strong> 查看网站随时间的演变。非常适合研究和怀旧。",
+            "<strong>死链恢复：</strong> 访问不再存在或已被移动的页面内容。",
+            "<strong>通用覆盖：</strong> 适用于任何有存档快照的网站。"
+        ],
+        "use_cases_title": "使用场景 - 时间旅行",
+        "use_cases_list": [
+            {
+                "h3": "🔍 历史研究",
+                "p": "研究人员、记者和历史学家可以追踪网站和内容如何随时间变化。"
+            },
+            {
+                "h3": "🔗 死链恢复",
+                "p": "访问断开或删除的链接中的内容。查找不再存在的页面的存档版本。"
+            },
+            {
+                "h3": "🎨 网页设计灵感",
+                "p": "查看热门网站在过去的样子。追踪设计趋势和网页界面的演变。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住棕色的「Wayback」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "Wayback",
+        "install_step3_h3": "完成！点击查看历史",
+        "install_step3_p": "在任何页面上点击此书签，在Wayback Machine上查看其存档历史。",
+        "footer_p": "© 2025 Wayback Machine工具。由 TableCopy 提供支持。",
+        "redirecting": "正在打开Wayback Machine...",
+        "no_archives": "此页面没有存档"
+    },
+    "highlight-structure": {
+        "meta_title": "高亮结构 - 可视化网页布局 | TableCopy",
+        "meta_description": "高亮任何网页上的所有div和标题。可视化页面结构用于调试、SEO分析或网页开发。",
+        "meta_keywords": "高亮结构, 可视化网页, 页面结构, 网页调试, seo分析",
+        "logo": "高亮结构",
+        "hero_h1": "可视化网页结构",
+        "hero_slogan": "查看任何网页的隐藏结构。高亮div和标题用于调试、分析或学习网页设计。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 高亮结构",
+        "feature_list": [
+            "<strong>颜色编码可视化：</strong> 为div和每个标题级别(h1-h6)使用不同颜色，便于识别。",
+            "<strong>开启/关闭切换：</strong> 无需重新加载页面即可即时切换高亮显示。",
+            "<strong>开发者友好：</strong> 网页开发者、设计师和SEO专业人士的必备工具。",
+            "<strong>教育性：</strong> 通过直观地查看底层结构学习网页是如何构建的。"
+        ],
+        "use_cases_title": "使用场景 - 看透幕后",
+        "use_cases_list": [
+            {
+                "h3": "👨‍💻 网页开发",
+                "p": "调试布局问题，理解复杂的页面结构，识别元素的嵌套。"
+            },
+            {
+                "h3": "🔍 SEO分析",
+                "p": "快速检查标题层次(h1-h6)和页面结构。确保正确的语义HTML以获得更好的SEO。"
+            },
+            {
+                "h3": "📚 学习网页设计",
+                "p": "视觉学习者可以看到网站的构建方式。理解div和标题如何创建页面布局。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住橙色的「高亮」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "高亮",
+        "install_step3_h3": "完成！点击高亮",
+        "install_step3_p": "在任何页面上点击此书签以开启或关闭结构高亮。",
+        "footer_p": "© 2025 高亮结构。由 TableCopy 提供支持。",
+        "modal_title": "页面结构高亮",
+        "toggle_on": "高亮：开启",
+        "toggle_off": "高亮：关闭",
+        "enabled": "结构高亮已启用",
+        "disabled": "结构高亮已禁用"
+    },
+    "image-downloader": {
+        "meta_title": "图片下载器 - 从任何网页提取高清图片 | TableCopy",
+        "meta_description": "一键下载任何网页的所有高清图片。按尺寸筛选，预览缩略图，并导出为ZIP文件。",
+        "meta_keywords": "图片下载器, 从网页提取图片, 下载网页图片, 批量图片下载, 图片抓取工具",
+        "logo": "图片下载器",
+        "hero_h1": "一键下载任何网页的所有图片",
+        "hero_slogan": "从任何网页一键提取高清图片。筛选、预览，并下载为ZIP格式。",
+        "install_cta": "立即安装",
+        "features_title": "功能 — 图片下载器",
+        "feature_list": [
+            "<strong>智能图片检测：</strong>自动查找所有高清图片，包括懒加载和背景图片。",
+            "<strong>智能过滤：</strong>跳过图标、缩略图和小图片。按尺寸、类型和维度筛选。",
+            "<strong>画廊预览：</strong>可视化缩略图画廊，显示图片尺寸和文件类型信息。",
+            "<strong>批量下载：</strong>将选中的图片或所有图片一次性下载为便捷的ZIP文件。",
+            "<strong>隐私优先：</strong>所有处理都在您的浏览器本地进行。您的数据保持私密。"
+        ],
+        "use_cases_title": "使用场景 - 图片收集",
+        "use_cases_list": [
+            {
+                "h3": "🎨 设计灵感",
+                "p": "从网站、作品集和设计博客收集设计灵感。建立您的视觉参考库。"
+            },
+            {
+                "h3": "📦 产品研究",
+                "p": "从电商网站收集产品图片，用于比较、研究或制作演示材料。"
+            },
+            {
+                "h3": "📰 内容策划",
+                "p": "从文章、博客和画廊提取图片，用于内容创作和社交媒体分享。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "用鼠标左键按住紫色的「图片下载器」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "图片下载器",
+        "install_step3_h3": "完成！点击下载",
+        "install_step3_p": "在任何有图片的页面上，点击此书签即可提取并下载它们。"
+    },
+    "web-tools": {
+        "meta_title": "网页工具 - 13个必备浏览器工具集成一个书签 | TableCopy",
+        "meta_description": "夜间模式、解除复制限制、二维码、翻译、图片下载、网页转换等。13个必备浏览器工具统一集成在一个书签中。",
+        "meta_keywords": "网页工具, 浏览器工具, 夜间模式, 解除复制限制, 二维码, 网页翻译, 图片下载, 网页转换, pdf, 图片, word, markdown, 书签工具",
+        "logo": "网页工具",
+        "hero_h1": "13个必备网页工具<br>集成一个书签中",
+        "hero_slogan": "夜间模式、解除复制限制、二维码、翻译、网页转换等。所有您喜爱的浏览器工具集中在一处。",
+        "install_cta": "安装网页工具",
+        "features_title": "13个工具，无限可能",
+        "feature_list": [
+            "🌙 <strong>夜间模式</strong>：为任意网站启用暗黑模式",
+            "📋 <strong>解除复制限制</strong>：移除网站的复制限制",
+            "🔍 <strong>结构高亮</strong>：可视化HTML元素结构",
+            "📷 <strong>图片下载器</strong>：提取高分辨率图片",
+            "📱 <strong>二维码生成</strong>：为任意页面创建二维码",
+            "🤖 <strong>发送到AI</strong>：发送文本到ChatGPT、Claude或Perplexity",
+            "🌐 <strong>网页翻译</strong>：使用谷歌翻译翻译页面",
+            "⏮️ <strong>时光机</strong>：在互联网档案馆查看页面",
+            "📄 <strong>保存为PDF</strong>：将网页保存为可搜索的PDF文档",
+            "🖼️ <strong>保存为图片</strong>：将网页截图保存为PNG图片",
+            "📝 <strong>保存为Word</strong>：将网页转换为可编辑的Word文档",
+            "📋 <strong>保存为Markdown</strong>：从任何文章中提取干净的Markdown",
+            "📃 <strong>保存为纯文本</strong>：从任何网页获取无干扰的纯文本"
+        ],
+        "use_cases_title": "适用场景",
+        "use_cases_list": [
+            {
+                "h3": "📱 移动用户",
+                "p": "在任意网站上启用暗黑模式和复制功能，即使网站屏蔽了这些功能。"
+            },
+            {
+                "h3": "🌍 多语言用户",
+                "p": "无需离开页面即可即时翻译成任何语言。"
+            },
+            {
+                "h3": "🔬 研究人员",
+                "p": "下载图片、生成二维码、分析页面结构、以多种格式保存文章。"
+            },
+            {
+                "h3": "🎨 内容创作者",
+                "p": "提取图片、复制受限内容、通过二维码分享页面、将网页内容转换为各种格式。"
+            },
+            {
+                "h3": "📚 学生与专业人士",
+                "p": "将网页保存为PDF、图片或文档，以便离线阅读、存档和引用。"
+            }
+        ],
+        "install_title": "3秒安装，永久使用",
+        "install_step1_h3": "按住按钮",
+        "install_step1_p": "点击并按住紫色的网页工具按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键步骤：</strong>将按钮拖到浏览器的书签栏或收藏栏，然后松开鼠标。",
+        "bookmarklet_button_text": "网页工具",
+        "install_step3_h3": "完成！点击使用",
+        "install_step3_p": "在任意页面上点击此书签即可访问全部13个工具。",
+        "also_available_title": "也可单独安装",
+        "also_available_desc": "更喜欢独立书签？每个工具也可以单独安装：",
+        "install_individually": "单独安装",
+        "footer_p": "© 2025 网页工具。由 TableCopy 驱动。"
+    },
+    "web-to": {
+        "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
+        "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
+        "meta_keywords": "web converter, web to pdf, web to image, web to word, bookmarklet, web tools",
+        "logo": "网页转换器",
+        "hero_h1": "5 Web Conversion Tools<br>in One Bookmark",
+        "hero_slogan": "PDF, Image, Word, Markdown, Text. All your web conversion tools in one place.",
+        "install_cta": "Install Web Converter",
+        "features_title": "5 Conversion Tools, Endless Possibilities",
+        "feature_list": [
+            "📄 <strong>Web to PDF</strong>: Save webpages as searchable PDF documents",
+            "🖼️ <strong>Web to Image</strong>: Capture full-page screenshots as PNG images",
+            "📝 <strong>Web to Word</strong>: Convert webpages to editable Word documents",
+            "📋 <strong>Web to Markdown</strong>: Extract clean Markdown from any article",
+            "📃 <strong>Web to Text</strong>: Get distraction-free text from any webpage"
+        ],
+        "use_cases_title": "Perfect For",
+        "use_cases_list": [
+            {
+                "h3": "📚 Researchers & Students",
+                "p": "Archive academic papers and articles in multiple formats for citation and offline reading."
+            },
+            {
+                "h3": "✍️ Content Creators",
+                "p": "Convert web content to various formats for repurposing across different platforms."
+            },
+            {
+                "h3": "📊 Professionals",
+                "p": "Save reports, invoices, and documentation in your preferred format for records and sharing."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the green 'Web Converter' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Done! Click to Convert",
+        "install_step3_p": "On any page, click this bookmark to choose your conversion format.",
+        "also_available_title": "Also Available Individually",
+        "also_available_desc": "Prefer individual bookmarks? Each conversion tool is also available separately:",
+        "footer_p": "© 2025 Web Converter. Powered by TableCopy."
     }
 }

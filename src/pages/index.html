@@ -297,9 +297,37 @@
     </div>
 </section>
 
-<section id="other-tools" style="background-color: var(--bg-color);">
+<section id="toolbox-collections" style="background-color: var(--bg-color);">
     <div class="container">
-        <h2 class="section-title">{{ T.common.nav_tools }}</h2>
+        <h2 class="section-title">{{ T.index.toolbox_collections_title }}</h2>
+        <p class="section-subtitle">{{ T.index.toolbox_collections_subtitle }}</p>
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card toolbox-card" style="border: 3px solid #9B59B6; position: relative;">
+                <div style="position: absolute; top: -15px; left: 20px; background: #9B59B6; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 12px;">
+                    {{ T.common.toolbox_badge }}
+                </div>
+                <h3><a href="{{ 'web-tools.html' | path(page.lang) }}">{{ T['web-tools'].logo }}</a></h3>
+                <p>{{ T['web-tools'].meta_description }}</p>
+                <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="tool-tag">🌙 Dark Mode</span>
+                    <span class="tool-tag">📋 Enable Copy</span>
+                    <span class="tool-tag">🔍 Highlight</span>
+                    <span class="tool-tag">📷 Images</span>
+                    <span class="tool-tag">📱 QR Code</span>
+                    <span class="tool-tag">🤖 Send to AI</span>
+                    <span class="tool-tag">🌐 Translate</span>
+                    <span class="tool-tag">⏮️ Wayback</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="individual-tools">
+    <div class="container">
+        <h2 class="section-title">{{ T.index.individual_tools_title }}</h2>
+        <p class="section-subtitle">{{ T.index.individual_tools_subtitle }}</p>
         <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
             <div class="card">
                 <h3><a href="{{ 'web-to-pdf.html' | path(page.lang) }}">{{ T['web-to-pdf'].logo }}</a></h3>
@@ -320,6 +348,38 @@
             <div class="card">
                 <h3><a href="{{ 'web-to-text.html' | path(page.lang) }}">{{ T['web-to-text'].logo }}</a></h3>
                 <p>{{ T['web-to-text'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'send-to-ai.html' | path(page.lang) }}">{{ T['send-to-ai'].logo }}</a></h3>
+                <p>{{ T['send-to-ai'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'qr-code-generator.html' | path(page.lang) }}">{{ T['qr-code-generator'].logo }}</a></h3>
+                <p>{{ T['qr-code-generator'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'web-translator.html' | path(page.lang) }}">{{ T['web-translator'].logo }}</a></h3>
+                <p>{{ T['web-translator'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'enable-copy.html' | path(page.lang) }}">{{ T['enable-copy'].logo }}</a></h3>
+                <p>{{ T['enable-copy'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'dark-mode.html' | path(page.lang) }}">{{ T['dark-mode'].logo }}</a></h3>
+                <p>{{ T['dark-mode'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'wayback-machine.html' | path(page.lang) }}">{{ T['wayback-machine'].logo }}</a></h3>
+                <p>{{ T['wayback-machine'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'highlight-structure.html' | path(page.lang) }}">{{ T['highlight-structure'].logo }}</a></h3>
+                <p>{{ T['highlight-structure'].meta_description }}</p>
+            </div>
+            <div class="card">
+                <h3><a href="{{ 'image-downloader.html' | path(page.lang) }}">{{ T['image-downloader'].logo }}</a></h3>
+                <p>{{ T['image-downloader'].meta_description }}</p>
             </div>
         </div>
     </div>

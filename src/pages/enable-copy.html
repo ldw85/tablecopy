@@ -1,0 +1,84 @@
+{% extends "templates/_base.html" %}
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{{ '../assets/css/page.css' if page.depth else '/assets/css/page.css' }}">
+    <style>
+        :root { --primary-color: #2ECC71; } /* Green */
+        .bookmarklet-button {
+            border-color: #27AE60;
+            animation-name: pulse-enable-copy;
+        }
+        @keyframes pulse-enable-copy {
+            0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>{{ T['enable-copy'].hero_h1 }}</h1>
+        <h2 class="slogan">{{ T['enable-copy'].hero_slogan }}</h2>
+        <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: white; padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;" onclick="gtag_report_conversion()">{{ T['enable-copy'].install_cta }}</a>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">{{ T['enable-copy'].features_title }}</h2>
+        <ul>
+            {% for item in T['enable-copy'].feature_list %}
+                <li>{{ item | safe }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<section id="use-cases" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">{{ T['enable-copy'].use_cases_title }}</h2>
+        <div class="grid-layout">
+            {% for item in T['enable-copy'].use_cases_list %}
+            <div class="card">
+                <h3>{{ item.h3 }}</h3>
+                <p>{{ item.p }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="install">
+    <div class="container">
+        <h2 class="section-title">{{ T['enable-copy'].install_title }}</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>{{ T['enable-copy'].install_step1_h3 }}</h3>
+                <p>{{ T['enable-copy'].install_step1_p }}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>{{ T['enable-copy'].install_step2_h3 }}</h3>
+                <a href="" id="bookmarklet-link" class="bookmarklet-button" title="Drag me to your bookmarks bar" onkeydown="gtag_report_conversion()">{{ T['enable-copy'].bookmarklet_button_text }}</a>
+                <p>{{ T['enable-copy'].install_step2_p | safe }}</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>{{ T['enable-copy'].install_step3_h3 }}</h3>
+                <p>{{ T['enable-copy'].install_step3_p }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setupBookmarklet('{{ "../assets/js/tool-enable-copy.js" if page.depth else "/assets/js/tool-enable-copy.js" }}', "{{ T.index.alert_text }}");
+    });
+</script>
+{% endblock %}

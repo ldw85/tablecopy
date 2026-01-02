@@ -14,7 +14,17 @@
         "nav_about": "私たちについて",
         "nav_contact": "お問い合わせ",
         "nav_privacy": "プライバシーポリシー",
-        "nav_terms": "利用規約"
+        "nav_terms": "利用規約",
+        "nav_send_to_ai": "Send to AI",
+        "nav_qr_code": "QR Code",
+        "nav_translator": "Translator",
+        "nav_enable_copy": "Enable Copy",
+        "nav_dark_mode": "Dark Mode",
+        "nav_wayback": "Wayback Machine",
+        "nav_highlight": "Highlight Structure",
+        "nav_image_downloader": "画像ダウンローダー",
+        "toolbox_badge": "ツールボックス",
+        "nav_web_to_converter": "Webコンバーター"
     },
     "index": {
         "meta_title": "Table Copy - ワンクリックでWebテーブルをExcelにコピー、もう面倒な書式設定は不要",
@@ -182,7 +192,11 @@
         "blog_read_more": "続きを読む →",
         "community_title": "共有＆接続",
         "community_p": "このツールが役立つと思ったら、友達と共有してください！フィードバックやアイデアについては、お問い合わせください。",
-        "footer_p": "© 2025 Table Copy. Gemini AI搭載。"
+        "footer_p": "© 2025 Table Copy. Gemini AI搭載。",
+        "toolbox_collections_title": "ツールボックスコレクション",
+        "toolbox_collections_subtitle": "オールインワンをお好みですか？ツールボックスを使用して、1つのブックマークで複数のツールにアクセスしましょう。",
+        "individual_tools_title": "個別ツール",
+        "individual_tools_subtitle": "専用ブックマークをお好みですか？各ツールは個別に利用でき、素早くアクセスできます。"
     },
     "web-to-image": {
         "meta_title": "Webから画像へ - Webページを画像に変換 | TableCopy",
@@ -550,5 +564,398 @@
         "section13_email": "support@tablecopy.pro",
         "section13_label2": "X (Twitter)",
         "section13_twitter_url": "https://x.com/tablecopy_tiny"
+    },
+    "send-to-ai": {
+        "meta_title": "Send to AI - Quick Text Transfer to ChatGPT, Claude & Perplexity | TableCopy",
+        "meta_description": "Send selected text from any webpage to ChatGPT, Claude, or Perplexity with one click. The fastest way to get AI assistance while browsing.",
+        "meta_keywords": "send to ai, chatgpt bookmarklet, claude bookmarklet, perplexity bookmarklet, ai assistant, text to ai",
+        "logo": "Send to AI",
+        "hero_h1": "Send Web Text to AI in One Click",
+        "hero_slogan": "Quickly send selected text from any webpage to ChatGPT, Claude, or Perplexity for instant AI assistance.",
+        "install_cta": "Install Now",
+        "features_title": "Features — Send to AI",
+        "feature_list": [
+            "<strong>Multi-AI Support:</strong> Works seamlessly with ChatGPT, Claude, and Perplexity.",
+            "<strong>One-Click Transfer:</strong> No need to copy-paste manually. Just select and click.",
+            "<strong>Privacy-Focused:</strong> Direct connection to AI services. No intermediaries or data collection.",
+            "<strong>Lightweight & Fast:</strong> Pure bookmarklet. No installation, no background processes."
+        ],
+        "use_cases_title": "Use Cases - Powered by AI",
+        "use_cases_list": [
+            {
+                "h3": "📝 Quick Research",
+                "p": "Select questions or text while browsing and send them directly to AI for instant explanations, summaries, or analysis."
+            },
+            {
+                "h3": "✍️ Content Creation",
+                "p": "Get AI help with writing, paraphrasing, or expanding on ideas while researching. Perfect for bloggers, writers, and content creators."
+            },
+            {
+                "h3": "🔍 Text Analysis",
+                "p": "Analyze product reviews, news articles, or academic papers with AI insights. Extract key points and get intelligent summaries."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the purple 'Send to AI' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Send to AI",
+        "install_step3_h3": "Done! Select and Send",
+        "install_step3_p": "Select any text on a webpage, then click this bookmark to send it to your chosen AI service.",
+        "footer_p": "© 2025 Send to AI. Powered by TableCopy.",
+        "alert_select_text": "Please select text first!",
+        "modal_title": "Choose AI Service",
+        "chatgpt": "ChatGPT",
+        "claude": "Claude",
+        "perplexity": "Perplexity",
+        "send_button": "Send",
+        "copy_to_clipboard": "Copy to Clipboard",
+        "copied_message": "Text copied! Opening AI service...",
+        "open_button": "Open",
+        "cancel_button": "Cancel"
+    },
+    "qr-code-generator": {
+        "meta_title": "QR Code Generator - Create QR Codes for Any Webpage | TableCopy",
+        "meta_description": "Generate QR codes for any webpage URL instantly. Perfect for sharing links on mobile devices, print materials, or presentations.",
+        "meta_keywords": "qr code generator, webpage qr code, url to qr code, bookmarklet, free qr code",
+        "logo": "QR Code Generator",
+        "hero_h1": "Generate QR Codes Instantly",
+        "hero_slogan": "Create QR codes for any webpage with one click. Download, share, or print QR codes for easy mobile access.",
+        "install_cta": "Install Now",
+        "features_title": "Features — QR Code Generator",
+        "feature_list": [
+            "<strong>Instant Generation:</strong> Creates QR codes for the current page URL in milliseconds.",
+            "<strong>High Quality:</strong> Generates crisp, scannable QR codes perfect for print and digital use.",
+            "<strong>One-Click Download:</strong> Download QR codes as PNG images for use in presentations, flyers, or documents.",
+            "<strong>No Data Collection:</strong> All processing happens locally in your browser. Your URLs stay private."
+        ],
+        "use_cases_title": "Use Cases - Share Anything",
+        "use_cases_list": [
+            {
+                "h3": "📱 Mobile Sharing",
+                "p": "Share desktop webpages with mobile devices instantly. Generate a QR code and scan with your phone camera."
+            },
+            {
+                "h3": "📄 Print Materials",
+                "p": "Add QR codes to business cards, flyers, posters, or presentations. Link directly to online resources or landing pages."
+            },
+            {
+                "h3": "🎓 Education & Events",
+                "p": "Teachers and event organizers can quickly create QR codes for resources, registration pages, or handouts."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the cyan 'QR Code' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "QR Code",
+        "install_step3_h3": "Done! Click to Generate",
+        "install_step3_p": "On any page, click this bookmark to instantly generate a QR code for that page.",
+        "footer_p": "© 2025 QR Code Generator. Powered by TableCopy.",
+        "modal_title": "QR Code for Current Page",
+        "download_button": "Download PNG",
+        "generating": "Generating QR code...",
+        "success": "QR code generated!",
+        "error": "Failed to generate QR code"
+    },
+    "web-translator": {
+        "meta_title": "Web Translator - Translate Any Webpage Instantly | TableCopy",
+        "meta_description": "Translate any webpage to your language using Google Translate. One-click bookmarklet for instant webpage translation.",
+        "meta_keywords": "web translator, translate webpage, google translate bookmarklet, page translator, free translation",
+        "logo": "Web Translator",
+        "hero_h1": "Translate Any Webpage Instantly",
+        "hero_slogan": "Break language barriers with one click. Translate any webpage to your preferred language using Google Translate.",
+        "install_cta": "Install Now",
+        "features_title": "Features — Web Translator",
+        "feature_list": [
+            "<strong>Instant Translation:</strong> Uses Google Translate's powerful engine for accurate, fast translations.",
+            "<strong>Auto Language Detection:</strong> Automatically detects the page's source language.",
+            "<strong>80+ Languages:</strong> Supports translation to and from over 80 languages worldwide.",
+            "<strong>Preserves Layout:</strong> Maintains the original page structure and formatting during translation."
+        ],
+        "use_cases_title": "Use Cases - Global Access",
+        "use_cases_list": [
+            {
+                "h3": "🌍 Research & Learning",
+                "p": "Access research papers, news articles, and educational content in foreign languages. Break down language barriers in learning."
+            },
+            {
+                "h3": "🛒 E-commerce & Shopping",
+                "p": "Shop on international websites by translating product pages, reviews, and descriptions into your native language."
+            },
+            {
+                "h3": "📰 Global News",
+                "p": "Read news and perspectives from around the world. Get diverse viewpoints by translating international news sources."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the blue 'Translate' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Translate",
+        "install_step3_h3": "Done! Click to Translate",
+        "install_step3_p": "On any page, click this bookmark to translate it to your browser's language.",
+        "footer_p": "© 2025 Web Translator. Powered by TableCopy.",
+        "redirecting": "Redirecting to Google Translate...",
+        "error": "Failed to translate page"
+    },
+    "enable-copy": {
+        "meta_title": "Enable Copy - Remove Copy Restrictions from Any Website | TableCopy",
+        "meta_description": "Remove right-click and copy restrictions from any website. Re-enable text selection, copying, and context menus instantly.",
+        "meta_keywords": "enable copy, remove copy restrictions, allow copy, bypass copy protection, right-click enable",
+        "logo": "Enable Copy",
+        "hero_h1": "Remove Copy Restrictions Instantly",
+        "hero_slogan": "Re-enable right-click, text selection, and copying on any website. Bypass annoying copy restrictions with one click.",
+        "install_cta": "Install Now",
+        "features_title": "Features — Enable Copy",
+        "feature_list": [
+            "<strong>Instant Unlock:</strong> Removes copy, select, and context menu restrictions immediately.",
+            "<strong>Universal Compatibility:</strong> Works on websites that block right-click, text selection, or copying.",
+            "<strong>Simple & Clean:</strong> No complex interface. Just click and it works.",
+            "<strong>Privacy-First:</strong> All operations are local. No data is collected or transmitted."
+        ],
+        "use_cases_title": "Use Cases - Regain Control",
+        "use_cases_list": [
+            {
+                "h3": "📚 Research & Study",
+                "p": "Copy quotes, excerpts, and references from research papers, articles, and online books for your studies."
+            },
+            {
+                "h3": "💼 Professional Use",
+                "p": "Gather information from competitor sites, industry reports, and professional resources without restrictions."
+            },
+            {
+                "h3": "📝 Content Curation",
+                "p": "Curate content for blogs, social media, or presentations by copying text from previously restricted websites."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the green 'Enable Copy' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Enable Copy",
+        "install_step3_h3": "Done! Click to Enable",
+        "install_step3_p": "On any restricted page, click this bookmark to remove copy restrictions.",
+        "footer_p": "© 2025 Enable Copy. Powered by TableCopy.",
+        "success_message": "Copy restrictions removed! You can now select and copy text."
+    },
+    "dark-mode": {
+        "meta_title": "Dark Mode - Add Dark Mode to Any Website | TableCopy",
+        "meta_description": "Enable dark mode on any website instantly. Reduce eye strain and save battery with one-click dark mode bookmarklet.",
+        "meta_keywords": "dark mode, night mode, website dark mode, bookmarklet, eye protection",
+        "logo": "Dark Mode",
+        "hero_h1": "Dark Mode for Any Website",
+        "hero_slogan": "Transform bright websites into comfortable dark mode. Reduce eye strain and save battery with one click.",
+        "install_cta": "Install Now",
+        "features_title": "Features — Dark Mode",
+        "feature_list": [
+            "<strong>Instant Transformation:</strong> Converts any website to dark mode with optimized color contrast.",
+            "<strong>Toggle On/Off:</strong> Easily switch between dark mode and the original site design.",
+            "<strong>Eye Comfort:</strong> Reduces blue light and glare for comfortable browsing, especially at night.",
+            "<strong>Battery Saving:</strong> Dark mode can extend battery life on OLED and AMOLED screens."
+        ],
+        "use_cases_title": "Use Cases - Comfortable Browsing",
+        "use_cases_list": [
+            {
+                "h3": "🌙 Night Browsing",
+                "p": "Browse comfortably in low-light environments without straining your eyes. Perfect for late-night reading or research."
+            },
+            {
+                "h3": "💻 Extended Work Sessions",
+                "p": "Reduce eye fatigue during long work sessions. Dark mode is easier on the eyes for extended periods."
+            },
+            {
+                "h3": "🔋 Battery Optimization",
+                "p": "Save battery life on laptops and mobile devices with OLED screens. Dark pixels consume less power."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the dark gray 'Dark Mode' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Dark Mode",
+        "install_step3_h3": "Done! Click to Toggle",
+        "install_step3_p": "On any page, click this bookmark to toggle dark mode on or off.",
+        "footer_p": "© 2025 Dark Mode. Powered by TableCopy.",
+        "modal_title": "Dark Mode",
+        "toggle_on": "Dark Mode: ON",
+        "toggle_off": "Dark Mode: OFF",
+        "enabled": "Dark mode enabled",
+        "disabled": "Dark mode disabled"
+    },
+    "wayback-machine": {
+        "meta_title": "Wayback Machine - View Webpage History | TableCopy",
+        "meta_description": "Instantly view archived versions of any webpage using the Internet Archive Wayback Machine. See how websites looked in the past.",
+        "meta_keywords": "wayback machine, webpage history, internet archive, view old websites, archived pages",
+        "logo": "Wayback Machine",
+        "hero_h1": "View Webpage History Instantly",
+        "hero_slogan": "Access archived versions of any website using the Internet Archive Wayback Machine. See the web as it was.",
+        "install_cta": "Install Now",
+        "features_title": "Features — Wayback Machine",
+        "feature_list": [
+            "<strong>Instant Access:</strong> One-click access to 801 billion+ archived web pages from 1996 to present.",
+            "<strong>Historical Research:</strong> See how websites looked and evolved over time. Perfect for research and nostalgia.",
+            "<strong>Dead Link Recovery:</strong> Access content from pages that no longer exist or have been moved.",
+            "<strong>Universal Coverage:</strong> Works on any website with archived snapshots available."
+        ],
+        "use_cases_title": "Use Cases - Time Travel",
+        "use_cases_list": [
+            {
+                "h3": "🔍 Historical Research",
+                "p": "Researchers, journalists, and historians can track how websites and content changed over time."
+            },
+            {
+                "h3": "🔗 Dead Link Recovery",
+                "p": "Access content from broken or removed links. Find archived versions of pages that no longer exist."
+            },
+            {
+                "h3": "🎨 Web Design Inspiration",
+                "p": "See how popular websites looked in the past. Track design trends and evolution of web interfaces."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the brown 'Wayback' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Wayback",
+        "install_step3_h3": "Done! Click to View History",
+        "install_step3_p": "On any page, click this bookmark to view its archived history on Wayback Machine.",
+        "footer_p": "© 2025 Wayback Machine Tool. Powered by TableCopy.",
+        "redirecting": "Opening Wayback Machine...",
+        "no_archives": "No archives found for this page"
+    },
+    "highlight-structure": {
+        "meta_title": "Highlight Structure - Visualize Webpage Layout | TableCopy",
+        "meta_description": "Highlight all divs and headers on any webpage. Visualize page structure for debugging, SEO analysis, or web development.",
+        "meta_keywords": "highlight structure, visualize webpage, page structure, web debugging, seo analysis",
+        "logo": "Highlight Structure",
+        "hero_h1": "Visualize Webpage Structure",
+        "hero_slogan": "See the hidden structure of any webpage. Highlight divs and headers for debugging, analysis, or learning web design.",
+        "install_cta": "Install Now",
+        "features_title": "Features — Highlight Structure",
+        "feature_list": [
+            "<strong>Color-Coded Visualization:</strong> Different colors for divs and each heading level (h1-h6) for easy identification.",
+            "<strong>Toggle On/Off:</strong> Instantly toggle highlighting on or off without reloading the page.",
+            "<strong>Developer Friendly:</strong> Essential tool for web developers, designers, and SEO professionals.",
+            "<strong>Educational:</strong> Learn how webpages are built by seeing the underlying structure visually."
+        ],
+        "use_cases_title": "Use Cases - See Behind the Curtain",
+        "use_cases_list": [
+            {
+                "h3": "👨‍💻 Web Development",
+                "p": "Debug layout issues, understand complex page structures, and identify nesting of elements."
+            },
+            {
+                "h3": "🔍 SEO Analysis",
+                "p": "Quickly check heading hierarchy (h1-h6) and page structure. Ensure proper semantic HTML for better SEO."
+            },
+            {
+                "h3": "📚 Learning Web Design",
+                "p": "Visual learners can see how websites are constructed. Understand how divs and headings create page layouts."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the orange 'Highlight' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Highlight",
+        "install_step3_h3": "Done! Click to Highlight",
+        "install_step3_p": "On any page, click this bookmark to toggle structure highlighting on or off.",
+        "footer_p": "© 2025 Highlight Structure. Powered by TableCopy.",
+        "modal_title": "Page Structure Highlight",
+        "toggle_on": "Highlighting: ON",
+        "toggle_off": "Highlighting: OFF",
+        "enabled": "Structure highlighting enabled",
+        "disabled": "Structure highlighting disabled"
+    },
+    "image-downloader": {
+        "meta_title": "画像ダウンローダー - 任意のWebページから高解像度画像を抽出 | TableCopy",
+        "meta_description": "ワンクリックで任意のWebページからすべての高解像度画像をダウンロード。サイズでフィルタリング、サムネイルプレビュー、ZIPファイルでエクスポート。",
+        "meta_keywords": "画像ダウンローダー, Webページから画像抽出, Webページ画像ダウンロード, 一括画像ダウンロード, 画像スクレイパー",
+        "logo": "画像ダウンローダー",
+        "hero_h1": "任意のWebページからすべての画像をダウンロード",
+        "hero_slogan": "ワンクリックで任意のWebページから高解像度画像を抽出。フィルタリング、プレビュー、ZIPでダウンロード。",
+        "install_cta": "今すぐインストール",
+        "features_title": "機能 — 画像ダウンローダー",
+        "feature_list": [
+            "<strong>スマート画像検出:</strong> 遅延読み込み画像や背景画像を含む、すべての高解像度画像を自動的に検出。",
+            "<strong>インテリジェントフィルタリング:</strong> アイコン、サムネイル、小さな画像をスキップ。サイズ、タイプ、寸法でフィルタリング。",
+            "<strong>ギャラリープレビュー:</strong> 画像の寸法とファイルタイプ情報を表示する視覚的なサムネイルギャラリー。",
+            "<strong>一括ダウンロード:</strong> 選択した画像またはすべての画像を便利なZIPファイルとして一度にダウンロード。",
+            "<strong>プライバシー重視:</strong> すべての処理はブラウザ内でローカルに行われます。データはプライベートのままです。"
+        ],
+        "use_cases_title": "使用例 - 画像収集",
+        "use_cases_list": [
+            {
+                "h3": "🎨 デザインインスピレーション",
+                "p": "Webサイト、ポートフォリオ、デザインブログからデザインインスピレーションを収集。ビジュアルリファレンスライブラリを構築。"
+            },
+            {
+                "h3": "📦 製品リサーチ",
+                "p": "Eコマースサイトから製品画像を収集して、比較、リサーチ、プレゼンテーション資料に活用。"
+            },
+            {
+                "h3": "📰 コンテンツキュレーション",
+                "p": "記事、ブログ、ギャラリーから画像を抽出して、コンテンツ作成やソーシャルメディア共有に活用。"
+            }
+        ],
+        "install_title": "3秒でインストール、ずっと使える",
+        "install_step1_h3": "ボタンを長押し",
+        "install_step1_p": "紫色の「画像ダウンローダー」ボタンをクリックして長押しします。",
+        "install_step2_h3": "ブックマークバーにドラッグ",
+        "install_step2_p": "<strong>重要なステップ:</strong> ボタンをブラウザの「ブックマークバー」または「お気に入りバー」にドラッグして、マウスを離します。",
+        "bookmarklet_button_text": "画像ダウンローダー",
+        "install_step3_h3": "完了！クリックしてダウンロード",
+        "install_step3_p": "画像がある任意のページで、このブックマークをクリックして抽出・ダウンロードします。"
+    },
+    "web-to": {
+        "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
+        "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
+        "meta_keywords": "web converter, web to pdf, web to image, web to word, bookmarklet, web tools",
+        "logo": "Webコンバーター",
+        "hero_h1": "5 Web Conversion Tools<br>in One Bookmark",
+        "hero_slogan": "PDF, Image, Word, Markdown, Text. All your web conversion tools in one place.",
+        "install_cta": "Install Web Converter",
+        "features_title": "5 Conversion Tools, Endless Possibilities",
+        "feature_list": [
+            "📄 <strong>Web to PDF</strong>: Save webpages as searchable PDF documents",
+            "🖼️ <strong>Web to Image</strong>: Capture full-page screenshots as PNG images",
+            "📝 <strong>Web to Word</strong>: Convert webpages to editable Word documents",
+            "📋 <strong>Web to Markdown</strong>: Extract clean Markdown from any article",
+            "📃 <strong>Web to Text</strong>: Get distraction-free text from any webpage"
+        ],
+        "use_cases_title": "Perfect For",
+        "use_cases_list": [
+            {
+                "h3": "📚 Researchers & Students",
+                "p": "Archive academic papers and articles in multiple formats for citation and offline reading."
+            },
+            {
+                "h3": "✍️ Content Creators",
+                "p": "Convert web content to various formats for repurposing across different platforms."
+            },
+            {
+                "h3": "📊 Professionals",
+                "p": "Save reports, invoices, and documentation in your preferred format for records and sharing."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the green 'Web Converter' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Done! Click to Convert",
+        "install_step3_p": "On any page, click this bookmark to choose your conversion format.",
+        "also_available_title": "Also Available Individually",
+        "also_available_desc": "Prefer individual bookmarks? Each conversion tool is also available separately:",
+        "footer_p": "© 2025 Web Converter. Powered by TableCopy."
     }
 }

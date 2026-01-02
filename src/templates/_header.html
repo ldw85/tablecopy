@@ -1,6 +1,6 @@
 <nav class="navbar" id="main-nav">
     <div class="container">
-        <a href="{{ '/' if page.lang == 'zh' else '/' + page.lang + '/' }}" class="logo">{{ T[page.name].logo }}</a>
+        <a href="{{ '/' if page.lang == config.defaultLang or page.lang == 'zh' else '/' + page.lang + '/' }}" class="logo">{{ T[page.name].logo }}</a>
         
         <div style="display:flex; align-items:center; gap: 20px;">
             <ul class="nav-links">
@@ -13,7 +13,7 @@
                     <li><a href="#install" class="cta-button" style="padding: 8px 16px; box-shadow: none;">{{ T.common.nav_install }}</a></li>
                 {% else %}
                     {# 其他页面只显示返回首页的链接 #}
-                    <li><a href="{{ '/' if page.lang == 'zh' else '/' + page.lang + '/' }}">{{ T.common.nav_home }}</a></li>
+                    <li><a href="{{ '/' if page.lang == config.defaultLang or page.lang == 'zh' else '/' + page.lang + '/' }}">{{ T.common.nav_home }}</a></li>
                 {% endif %}
             </ul>
 

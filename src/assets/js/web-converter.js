@@ -17,6 +17,16 @@
         return;
     }
 
+    // Check if being called from unified toolbox with a specific converter type
+    const autoExecType = window.__WEB_CONVERTER_TYPE__;
+    if (autoExecType) {
+        // Clear the flag
+        delete window.__WEB_CONVERTER_TYPE__;
+
+        // Don't show UI, just execute the specific converter
+        // We'll load the UI first (needed for status display), then auto-execute
+    }
+
     // 1. 定义UI样式和HTML结构
     const CSS_PREFIX = 'web-converter-';
     const STYLES = `
@@ -511,6 +521,44 @@
     // 4. 启动并绑定事件
     function init() {
         const overlay = injectUI();
+
+        // Map converter types to their functions and element IDs
+        const converterMap = {
+            'pdf': { func: saveAsPdf, id: `${CSS_PREFIX}save-pdf` },
+            'image': { func: saveAsImage, id: `${CSS_PREFIX}save-image` },
+            'word': { func: saveAsWord, id: `${CSS_PREFIX}save-word` },
+            'markdown': { func: saveAsMarkdown, id: `${CSS_PREFIX}save-markdown` },
+            'text': { func: saveAsText, id: `${CSS_PREFIX}save-text` }
+        };
+
+        // If auto-executing from unified toolbox
+        if (autoExecType && converterMap[autoExecType]) {
+            // Store reference to unified toolbox for restoration
+            const unifiedToolbox = window.__WEB_TOOLBOX_REF__;
+
+            // Auto-execute the converter
+            setTimeout(() => {
+                converterMap[autoExecType].func();
+            }, 100);
+
+            // After converter finishes, show unified toolbox again
+            window.__restoreWebToolbox = function() {
+                if (unifiedToolbox) {
+                    unifiedToolbox.style.display = 'flex';
+                    window.__WEB_TOOLBOX_REF__ = null;
+                }
+            };
+
+            // Modify cleanup to restore toolbox
+            const cleanupCopy = cleanup;
+            cleanup = function() {
+                cleanupCopy();
+                if (window.__restoreWebToolbox) {
+                    window.__restoreWebToolbox();
+                    delete window.__restoreWebToolbox;
+                }
+            };
+        }
 
         document.getElementById(`${CSS_PREFIX}save-pdf`).addEventListener('click', saveAsPdf);
         document.getElementById(`${CSS_PREFIX}save-image`).addEventListener('click', saveAsImage);

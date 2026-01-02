@@ -488,3 +488,31 @@ section {
         font-size: 13px;
     }
 }
+
+/* Toolbox Cards Styles */
+.toolbox-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.toolbox-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.tool-tag {
+    display: inline-block;
+    background: #f0f2f5;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
