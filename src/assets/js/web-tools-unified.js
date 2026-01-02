@@ -244,7 +244,7 @@
         // Web Tools (8 tools)
         'dark-mode': {
             id: 'dark-mode',
-            script: '/assets/js/tool-dark-mode.js',
+            script: 'https://tablecopy.pro/assets/js/tool-dark-mode.js',
             cssPrefix: 'dark-',
             name: t('tool_dark_mode'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>`,
@@ -253,7 +253,7 @@
         },
         'enable-copy': {
             id: 'enable-copy',
-            script: '/assets/js/tool-enable-copy.js',
+            script: 'https://tablecopy.pro/assets/js/tool-enable-copy.js',
             cssPrefix: 'ecopy-',
             name: t('tool_enable_copy'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>`,
@@ -262,7 +262,7 @@
         },
         'highlight-structure': {
             id: 'highlight-structure',
-            script: '/assets/js/tool-highlight-structure.js',
+            script: 'https://tablecopy.pro/assets/js/tool-highlight-structure.js',
             cssPrefix: 'highlight-',
             name: t('tool_highlight_structure'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>`,
@@ -271,7 +271,7 @@
         },
         'image-downloader': {
             id: 'image-downloader',
-            script: '/assets/js/tool-image-downloader.js',
+            script: 'https://tablecopy.pro/assets/js/tool-image-downloader.js',
             cssPrefix: 'imgdl-',
             name: t('tool_image_downloader'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>`,
@@ -280,7 +280,7 @@
         },
         'qr-code': {
             id: 'qr-code',
-            script: '/assets/js/tool-qr-code.js',
+            script: 'https://tablecopy.pro/assets/js/tool-qr-code.js',
             cssPrefix: 'qr-',
             name: t('tool_qr_code'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-3 0h2v2h-2v-2zm-3 3h2v2h-2v-2zm3 0h2v2h-2v-2zm3 0h3v2h-3v-2zm-6 3h2v2h-2v-2zm3 0h2v2h-2v-2zm3 0h3v2h-3v-2z"/></svg>`,
@@ -289,7 +289,7 @@
         },
         'send-to-ai': {
             id: 'send-to-ai',
-            script: '/assets/js/tool-send-to-ai.js',
+            script: 'https://tablecopy.pro/assets/js/tool-send-to-ai.js',
             cssPrefix: 'ai-',
             name: t('tool_send_to_ai'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>`,
@@ -298,7 +298,7 @@
         },
         'translate': {
             id: 'translate',
-            script: '/assets/js/tool-translate.js',
+            script: 'https://tablecopy.pro/assets/js/tool-translate.js',
             cssPrefix: 'trans-',
             name: t('tool_translate'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>`,
@@ -307,7 +307,7 @@
         },
         'wayback': {
             id: 'wayback',
-            script: '/assets/js/tool-wayback.js',
+            script: 'https://tablecopy.pro/assets/js/tool-wayback.js',
             cssPrefix: 'wayback-',
             name: t('tool_wayback'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>`,
@@ -317,7 +317,7 @@
         // Web Converters (5 tools)
         'converter-pdf': {
             id: 'converter-pdf',
-            script: '/assets/js/web-converter.js',
+            script: 'https://tablecopy.pro/assets/js/web-converter.js',
             converterType: 'pdf',
             name: t('tool_pdf'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9.5 11.5c0 .83-.67 1.5-1.5 1.5H7v2H5.5V9H8c.83 0 1.5.67 1.5 1.5v1zm-1.5-1H7v1h1v-1zm7 3.5H15v-1h-1.5v-1H15v-1h-2.5V9h4v6h-1.5zm-5-3.5c0-.83.67-1.5 1.5-1.5h2.5v6H13V9h-1.5c-.83 0-1.5.67-1.5 1.5v4h-1.5V9h1.5v2.5zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"></path></svg>`,
@@ -326,7 +326,7 @@
         },
         'converter-image': {
             id: 'converter-image',
-            script: '/assets/js/web-converter.js',
+            script: 'https://tablecopy.pro/assets/js/web-converter.js',
             converterType: 'image',
             name: t('tool_image'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"></path></svg>`,
@@ -335,7 +335,7 @@
         },
         'converter-word': {
             id: 'converter-word',
-            script: '/assets/js/web-converter.js',
+            script: 'https://tablecopy.pro/assets/js/web-converter.js',
             converterType: 'word',
             name: t('tool_word'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm8 7h-2v8h2v-8zm-4 0H8v8h2v-8zm8-6.17L19.17 8H18V2.83z"></path></svg>`,
@@ -344,7 +344,7 @@
         },
         'converter-markdown': {
             id: 'converter-markdown',
-            script: '/assets/js/web-converter.js',
+            script: 'https://tablecopy.pro/assets/js/web-converter.js',
             converterType: 'markdown',
             name: t('tool_markdown'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.56 15.2c.29-.29.44-.68.44-1.07v-4.26c0-.39-.15-.78-.44-1.07l-2.13-2.13c-.29-.29-.68-.44-1.07-.44H6.63c-.79 0-1.44.65-1.44 1.44v8.58c0 .79.65 1.44 1.44 1.44h12.86c.39 0 .78-.15 1.07-.44l.01-.01zm-3.5-4.52H15.5v3.5h-1.5v-3.5h-1.56L15 8.1l2.56 2.58zM9.5 14H8v-4h1.5v4zm3.5 0h-1.5V8.5H13v5.5z"></path></svg>`,
@@ -353,7 +353,7 @@
         },
         'converter-text': {
             id: 'converter-text',
-            script: '/assets/js/web-converter.js',
+            script: 'https://tablecopy.pro/assets/js/web-converter.js',
             converterType: 'text',
             name: t('tool_text'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>`,
