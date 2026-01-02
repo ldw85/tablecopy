@@ -1,0 +1,181 @@
+{% extends "templates/_base.html" %}
+
+{% block head_extra %}
+<style>
+    .legal-document {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+        padding: 0 20px;
+    }
+    .legal-document h2 {
+        margin-top: 50px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--primary-color);
+        color: var(--dark-color);
+    }
+    .legal-document h3 {
+        margin-top: 30px;
+        color: var(--dark-color);
+        font-size: 1.3em;
+    }
+    .legal-document h4 {
+        margin-top: 20px;
+        color: #555;
+        font-size: 1.1em;
+    }
+    .legal-document p {
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .legal-document ul {
+        padding-left: 30px;
+        margin-bottom: 20px;
+    }
+    .legal-document li {
+        margin-bottom: 10px;
+        color: #333;
+    }
+    .legal-document strong {
+        color: var(--dark-color);
+    }
+    .last-updated {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary-color);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        font-size: 24px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        z-index: 1000;
+    }
+    .back-to-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 768px) {
+        .legal-document {
+            padding: 0 15px;
+        }
+        .legal-document h2 {
+            margin-top: 35px;
+        }
+        .back-to-top {
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding-top: 120px; padding-bottom: 60px;">
+    <div class="container">
+        <h1>{{ T.privacy.page_title }}</h1>
+        <p class="last-updated">{{ T.privacy.last_updated }}</p>
+    </div>
+</section>
+
+<section class="legal-document">
+    <div class="container">
+        <p>{{ T.privacy.intro_p }}</p>
+
+        <h2>{{ T.privacy.section1_title }}</h2>
+        <h3>{{ T.privacy.section1_1_title }}</h3>
+        <p>{{ T.privacy.section1_1_p }}</p>
+        <ul>
+            <li>{{ T.privacy.section1_1_item1 }}</li>
+            <li>{{ T.privacy.section1_1_item2 }}</li>
+            <li>{{ T.privacy.section1_1_item3 }}</li>
+            <li>{{ T.privacy.section1_1_item4 }}</li>
+            <li>{{ T.privacy.section1_1_item5 }}</li>
+        </ul>
+
+        <h3>{{ T.privacy.section1_2_title }}</h3>
+        <p>{{ T.privacy.section1_2_p }}</p>
+        <ul>
+            <li>{{ T.privacy.section1_2_item1 }}</li>
+            <li>{{ T.privacy.section1_2_item2 }}</li>
+        </ul>
+
+        <h2>{{ T.privacy.section2_title }}</h2>
+        <h3>{{ T.privacy.section2_1_title }}</h3>
+        <p>{{ T.privacy.section2_1_p }}</p>
+
+        <h3>{{ T.privacy.section2_2_title }}</h3>
+        <p>{{ T.privacy.section2_2_p }}</p>
+
+        <h2>{{ T.privacy.section3_title }}</h2>
+        <h3>{{ T.privacy.section3_1_title }}</h3>
+        <p>{{ T.privacy.section3_1_p }}</p>
+        <ul>
+            <li>{{ T.privacy.section3_1_item1 }}</li>
+            <li>{{ T.privacy.section3_1_item2 }}</li>
+            <li>{{ T.privacy.section3_1_item3 }}</li>
+        </ul>
+
+        <h3>{{ T.privacy.section3_2_title }}</h3>
+        <p>{{ T.privacy.section3_2_p }}</p>
+
+        <h2>{{ T.privacy.section4_title }}</h2>
+        <h3>{{ T.privacy.section4_1_title }}</h3>
+        <p>{{ T.privacy.section4_1_p }}</p>
+
+        <h3>{{ T.privacy.section4_2_title }}</h3>
+        <p>{{ T.privacy.section4_2_p }}</p>
+
+        <h2>{{ T.privacy.section5_title }}</h2>
+        <h3>{{ T.privacy.section5_1_title }}</h3>
+        <p>{{ T.privacy.section5_1_p }}</p>
+
+        <h3>{{ T.privacy.section5_2_title }}</h3>
+        <p>{{ T.privacy.section5_2_p }}</p>
+
+        <h2>{{ T.privacy.section6_title }}</h2>
+        <h3>{{ T.privacy.section6_1_title }}</h3>
+        <p>{{ T.privacy.section6_1_p }}</p>
+        <ul>
+            <li>{{ T.privacy.section6_1_item1 }}</li>
+            <li>{{ T.privacy.section6_1_item2 }}</li>
+            <li>{{ T.privacy.section6_1_item3 }}</li>
+        </ul>
+
+        <h3>{{ T.privacy.section6_2_title }}</h3>
+        <p>{{ T.privacy.section6_2_p }}</p>
+
+        <h3>{{ T.privacy.section6_3_title }}</h3>
+        <p>{{ T.privacy.section6_3_p }}</p>
+
+        <h2>{{ T.privacy.section7_title }}</h2>
+        <p>{{ T.privacy.section7_p }}</p>
+
+        <h2>{{ T.privacy.section8_title }}</h2>
+        <p>{{ T.privacy.section8_p }}</p>
+
+        <h2>{{ T.privacy.section9_title }}</h2>
+        <p>{{ T.privacy.section9_p }}</p>
+
+        <h2>{{ T.privacy.section10_title }}</h2>
+        <p>{{ T.privacy.section10_p }}</p>
+        <p><strong>Email:</strong> <a href="mailto:support@tablecopy.pro">support@tablecopy.pro</a></p>
+    </div>
+</section>
+
+<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+{% endblock %}

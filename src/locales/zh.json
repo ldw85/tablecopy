@@ -10,7 +10,11 @@
         "nav_tools": "其他工具",
         "nav_web_to_pdf": "网页转PDF",
         "nav_web_to_markdown": "网页转Markdown",
-        "nav_web_to_text": "网页转文本"
+        "nav_web_to_text": "网页转文本",
+        "nav_about": "关于我们",
+        "nav_contact": "联系我们",
+        "nav_privacy": "隐私政策",
+        "nav_terms": "服务条款"
     },
     "index": {
         "meta_title": "网页转Excel转换器 - 完美复制任何网页表格到Excel | TableCopy",
@@ -58,106 +62,112 @@
         "blog_title": "来自我们的博客",
         "blog_read_more": "阅读更多 →",
         "webpage_to_excel_section": {
-        "title": "如何转换任何网页为Excel：专业解决方案",
-        "subtitle": "2025年网页转Excel转换的专业指南，经证实的有效方法",
-        "methods_title": "网页表格转Excel的4种方法",
-        "method1_title": "方法1：TableCopy（推荐）- 一键专业解决方案",
-        "method1_description": "将网页表格转换为Excel的最有效方法，完美格式化处理。由数据专业人士设计，这个书签工具能处理传统HTML表格和其他工具无法识别的现代div布局。",
-        "method1_benefits": [
-            "✅ <strong>完美格式：</strong>保留表格结构、数据类型和特殊字符",
-            "✅ <strong>通用兼容性：</strong>适用于任何网站，包括复杂的JavaScript渲染内容",
-            "✅ <strong>多种导出格式：</strong>Excel、CSV、TSV、JSON和HTML源代码",
-            "✅ <strong>隐私优先：</strong>100%客户端处理，无数据上传到服务器",
-            "✅ <strong>专业级别：</strong>全球金融分析师、研究人员和数据科学家的首选"
-        ],
-        "method2_title": "方法2：Excel网页查询 - 内置功能但有局限性",
-        "method2_description": "Excel原生的从网络获取数据功能可以提取基本表格，但难以处理现代网站和复杂布局。",
-        "method2_limitations": [
-            "❌ 无法处理JavaScript渲染内容和动态表格",
-            "❌ 不能处理div表格布局",
-            "❌ 需要技术设置和维护",
-            "❌ 网站结构变化时经常损坏"
-        ],
-        "method3_title": "方法3：手动复制粘贴 - 免费但令人沮丧",
-        "method3_description": "最常见的方法但导致格式灾难、数据丢失和数小时的清理工作。",
-        "method3_problems": [
-            "❌ 表格坍缩成单列",
-            "❌ 数据丢失和格式损坏",
-            "❌ 每次转换都需要手动清理",
-            "❌ 不适合专业使用"
-        ],
-        "method4_title": "方法4：编程解决方案 - 功能强大但复杂",
-        "method4_description": "使用Python（BeautifulSoup、Pandas）或JavaScript的自定义脚本提供最大灵活性，但需要编码技能和持续维护。",
-        "method4_challenges": [
-            "❌ 需要编程知识",
-            "❌ 设置和维护开销",
-            "❌ 对简单转换来说过度复杂",
-            "❌ 对非技术用户不实用"
-        ]
-    },
-    "expert_testimonials": {
-        "title": "全球数据专业人士信赖之选",
-        "testimonial1": {
-            "name": "陈思明",
-            "role": "高级金融分析师，财富500强公司",
-            "quote": "TableCopy彻底改变了我们的工作流程。我们现在可以在几秒钟而不是几小时内从财务报告中提取财务数据。准确性完美，我们完全消除了数据录入错误。"
+            "title": "如何转换任何网页为Excel：专业解决方案",
+            "subtitle": "2025年网页转Excel转换的专业指南，经证实的有效方法",
+            "methods_title": "网页表格转Excel的4种方法",
+            "method1_title": "方法1：TableCopy（推荐）- 一键专业解决方案",
+            "method1_description": "将网页表格转换为Excel的最有效方法，完美格式化处理。由数据专业人士设计，这个书签工具能处理传统HTML表格和其他工具无法识别的现代div布局。",
+            "method1_benefits": [
+                "✅ <strong>完美格式：</strong>保留表格结构、数据类型和特殊字符",
+                "✅ <strong>通用兼容性：</strong>适用于任何网站，包括复杂的JavaScript渲染内容",
+                "✅ <strong>多种导出格式：</strong>Excel、CSV、TSV、JSON和HTML源代码",
+                "✅ <strong>隐私优先：</strong>100%客户端处理，无数据上传到服务器",
+                "✅ <strong>专业级别：</strong>全球金融分析师、研究人员和数据科学家的首选"
+            ],
+            "method2_title": "方法2：Excel网页查询 - 内置功能但有局限性",
+            "method2_description": "Excel原生的从网络获取数据功能可以提取基本表格，但难以处理现代网站和复杂布局。",
+            "method2_limitations": [
+                "❌ 无法处理JavaScript渲染内容和动态表格",
+                "❌ 不能处理div表格布局",
+                "❌ 需要技术设置和维护",
+                "❌ 网站结构变化时经常损坏"
+            ],
+            "method3_title": "方法3：手动复制粘贴 - 免费但令人沮丧",
+            "method3_description": "最常见的方法但导致格式灾难、数据丢失和数小时的清理工作。",
+            "method3_problems": [
+                "❌ 表格坍缩成单列",
+                "❌ 数据丢失和格式损坏",
+                "❌ 每次转换都需要手动清理",
+                "❌ 不适合专业使用"
+            ],
+            "method4_title": "方法4：编程解决方案 - 功能强大但复杂",
+            "method4_description": "使用Python（BeautifulSoup、Pandas）或JavaScript的自定义脚本提供最大灵活性，但需要编码技能和持续维护。",
+            "method4_challenges": [
+                "❌ 需要编程知识",
+                "❌ 设置和维护开销",
+                "❌ 对简单转换来说过度复杂",
+                "❌ 对非技术用户不实用"
+            ]
         },
-        "testimonial2": {
-            "name": "Dr. Michael Rodriguez",
-            "role": "研究科学家，MIT",
-            "quote": "作为每天处理复杂数据表的研究人员，TableCopy不可或缺。它能完美处理学术来源、政府数据库和科学出版物。我的数据收集时间减少了80%。"
-        }
-    },
-    "comparison_table": {
-        "title": "网页转Excel转换器对比",
-        "headers": ["功能", "TableCopy", "Excel网页查询", "手动复制粘贴", "Python脚本"],
-        "rows": [
-            {
-                "feature": "设置时间",
-                "tablecopy": "3秒",
-                "excel": "5-10分钟",
-                "manual": "无需设置",
-                "python": "几小时到几天"
+        "expert_testimonials": {
+            "title": "全球数据专业人士信赖之选",
+            "testimonial1": {
+                "name": "陈思明",
+                "role": "高级金融分析师，财富500强公司",
+                "quote": "TableCopy彻底改变了我们的工作流程。我们现在可以在几秒钟而不是几小时内从财务报告中提取财务数据。准确性完美，我们完全消除了数据录入错误。"
             },
-            {
-                "feature": "成功率",
-                "tablecopy": "98%+",
-                "excel": "60%",
-                "manual": "20%",
-                "python": "95%（如果编码正确）"
-            },
-            {
-                "feature": "所需技术技能",
-                "tablecopy": "无需技能",
-                "excel": "基础",
-                "manual": "无需技能",
-                "python": "高级"
-            },
-            {
-                "feature": "数据准确性",
-                "tablecopy": "100%",
-                "excel": "70%",
-                "manual": "30%",
-                "python": "95%"
+            "testimonial2": {
+                "name": "Dr. Michael Rodriguez",
+                "role": "研究科学家，MIT",
+                "quote": "作为每天处理复杂数据表的研究人员，TableCopy不可或缺。它能完美处理学术来源、政府数据库和科学出版物。我的数据收集时间减少了80%。"
             }
-        ]
-    },
-    "step_by_step_guide": {
-        "title": "分步指南：30秒内转换任何网页为Excel",
-        "step1": {
-            "title": "第1步：安装网页转Excel转换器",
-            "description": "访问TableCopy.pro并将书签工具拖到浏览器工具栏。无需下载或安装。"
         },
-        "step2": {
-            "title": "第2步：导航到目标网页",
-            "description": "转到包含您要转换表格的任何网站。点击表格中的任意位置选择它。"
+        "comparison_table": {
+            "title": "网页转Excel转换器对比",
+            "headers": [
+                "功能",
+                "TableCopy",
+                "Excel网页查询",
+                "手动复制粘贴",
+                "Python脚本"
+            ],
+            "rows": [
+                {
+                    "feature": "设置时间",
+                    "tablecopy": "3秒",
+                    "excel": "5-10分钟",
+                    "manual": "无需设置",
+                    "python": "几小时到几天"
+                },
+                {
+                    "feature": "成功率",
+                    "tablecopy": "98%+",
+                    "excel": "60%",
+                    "manual": "20%",
+                    "python": "95%（如果编码正确）"
+                },
+                {
+                    "feature": "所需技术技能",
+                    "tablecopy": "无需技能",
+                    "excel": "基础",
+                    "manual": "无需技能",
+                    "python": "高级"
+                },
+                {
+                    "feature": "数据准确性",
+                    "tablecopy": "100%",
+                    "excel": "70%",
+                    "manual": "30%",
+                    "python": "95%"
+                }
+            ]
         },
-        "step3": {
-            "title": "第3步：一键转换",
-            "description": "点击工具栏中的TableCopy书签。选择导出格式（Excel、CSV或JSON），然后直接粘贴到电子表格中。"
-        }
-    },
-    "faq_title": "网页转Excel转换常见问题",
+        "step_by_step_guide": {
+            "title": "分步指南：30秒内转换任何网页为Excel",
+            "step1": {
+                "title": "第1步：安装网页转Excel转换器",
+                "description": "访问TableCopy.pro并将书签工具拖到浏览器工具栏。无需下载或安装。"
+            },
+            "step2": {
+                "title": "第2步：导航到目标网页",
+                "description": "转到包含您要转换表格的任何网站。点击表格中的任意位置选择它。"
+            },
+            "step3": {
+                "title": "第3步：一键转换",
+                "description": "点击工具栏中的TableCopy书签。选择导出格式（Excel、CSV或JSON），然后直接粘贴到电子表格中。"
+            }
+        },
+        "faq_title": "网页转Excel转换常见问题",
         "faq1_q": "如何将网页转换为Excel而不丢失格式？",
         "faq1_a": "使用TableCopy的专业网页转Excel转换器。它会自动保留表格结构、数据类型和格式。与经常破坏格式的手动复制粘贴不同，TableCopy在所有网站上保持100%的数据完整性。",
         "faq2_q": "我可以转换密码保护的网页为Excel吗？",
@@ -291,47 +301,47 @@
         "install_step2_p": "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
         "bookmarklet_button_text": "网页转换器",
         "install_step3_h3": "完成！点击使用",
-         "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！"
-     },
-     "web-to-markdown": {
-         "meta_title": "网页转Markdown - 将任何网页转换为干净的Markdown | TableCopy",
-         "meta_description": "网页转Markdown是一款免费的书签工具，可将任何网页文章转换为干净、可读的Markdown (.md) 格式。非常适合开发者、博主和笔记用户。",
-         "meta_keywords": "网页转markdown, 保存网页为markdown, html转markdown, 文章转markdown, 书签工具, 免费工具",
-         "logo": "网页转Markdown",
-         "hero_h1": "一键将网页转换为干净的Markdown",
-         "hero_slogan": "立即将任何网页文章变成干净的.md文件，随时可用在您的笔记、博客或文档中。",
-         "install_cta": "立即使用",
-         "features_title": "功能亮点 — 网页转Markdown",
-         "feature_list": [
-             "<strong>干净且可读的输出：</strong>使用强大的`turndown`库将HTML转换为结构良好、可读性强的Markdown。",
-             "<strong>智能内容提取：</strong>自动聚焦于页面的主要内容（如`<article>`或`<main>`），以避免广告和侧边栏等杂乱内容。",
-             "<strong>轻量与安全：</strong>纯粹的JavaScript书签工具。所有转换都在您的浏览器本地进行，确保您的数据隐私安全。"
-         ],
-         "other_promo": "需要其他格式？试试我们的：<a href=\"/zh/web-to-pdf.html\">网页转PDF</a>、<a href=\"/zh/web-to-image.html\">网页转图片</a>或<a href=\"/zh/web-to-word.html\">网页转Word</a>转换器。",
-         "use_cases_title": "使用场景 - 内容归档与再利用",
-         "use_cases_list": [
-             {
-                 "h3": "✍️ 开发者与博主",
-                 "p": "从网上快速抓取代码片段、教程和文章，并将其转换为Markdown，用于您的博客文章或技术文档。保留代码块和格式。"
-             },
-             {
-                 "h3": "📚 笔记用户与学生",
-                 "p": "将有趣的文章和研究资料以干净、可编辑的格式保存到您最喜欢的笔记应用（如Obsidian、Joplin或Notion）中。非常适合建立个人知识库。"
-             },
-             {
-                 "h3": "🔄 内容创作者",
-                 "p": "轻松归档网页内容以供离线阅读，或将其再利用于新闻通讯和社交媒体。Markdown是一种易于编辑和管理的通用格式。"
-             }
-         ],
-         "install_title": "三秒安装，永久使用",
-         "install_step1_h3": "按住下方按钮",
-         "install_step1_p": "请用鼠标左键点住黑色的“网页转换器”按钮。",
-         "install_step2_h3": "拖到书签栏",
-         "install_step2_p": "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
-         "bookmarklet_button_text": "网页转换器",
-         "install_step3_h3": "完成！点击使用",
-         "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！",
-         "footer_p": "© 2025 网页转Markdown. 由 Gemini AI 强力驱动。"
+        "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！"
+    },
+    "web-to-markdown": {
+        "meta_title": "网页转Markdown - 将任何网页转换为干净的Markdown | TableCopy",
+        "meta_description": "网页转Markdown是一款免费的书签工具，可将任何网页文章转换为干净、可读的Markdown (.md) 格式。非常适合开发者、博主和笔记用户。",
+        "meta_keywords": "网页转markdown, 保存网页为markdown, html转markdown, 文章转markdown, 书签工具, 免费工具",
+        "logo": "网页转Markdown",
+        "hero_h1": "一键将网页转换为干净的Markdown",
+        "hero_slogan": "立即将任何网页文章变成干净的.md文件，随时可用在您的笔记、博客或文档中。",
+        "install_cta": "立即使用",
+        "features_title": "功能亮点 — 网页转Markdown",
+        "feature_list": [
+            "<strong>干净且可读的输出：</strong>使用强大的`turndown`库将HTML转换为结构良好、可读性强的Markdown。",
+            "<strong>智能内容提取：</strong>自动聚焦于页面的主要内容（如`<article>`或`<main>`），以避免广告和侧边栏等杂乱内容。",
+            "<strong>轻量与安全：</strong>纯粹的JavaScript书签工具。所有转换都在您的浏览器本地进行，确保您的数据隐私安全。"
+        ],
+        "other_promo": "需要其他格式？试试我们的：<a href=\"/zh/web-to-pdf.html\">网页转PDF</a>、<a href=\"/zh/web-to-image.html\">网页转图片</a>或<a href=\"/zh/web-to-word.html\">网页转Word</a>转换器。",
+        "use_cases_title": "使用场景 - 内容归档与再利用",
+        "use_cases_list": [
+            {
+                "h3": "✍️ 开发者与博主",
+                "p": "从网上快速抓取代码片段、教程和文章，并将其转换为Markdown，用于您的博客文章或技术文档。保留代码块和格式。"
+            },
+            {
+                "h3": "📚 笔记用户与学生",
+                "p": "将有趣的文章和研究资料以干净、可编辑的格式保存到您最喜欢的笔记应用（如Obsidian、Joplin或Notion）中。非常适合建立个人知识库。"
+            },
+            {
+                "h3": "🔄 内容创作者",
+                "p": "轻松归档网页内容以供离线阅读，或将其再利用于新闻通讯和社交媒体。Markdown是一种易于编辑和管理的通用格式。"
+            }
+        ],
+        "install_title": "三秒安装，永久使用",
+        "install_step1_h3": "按住下方按钮",
+        "install_step1_p": "请用鼠标左键点住黑色的“网页转换器”按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键一步：</strong>将按钮拖拽到你的浏览器“书签栏”或“收藏夹栏”上，然后松开鼠标。",
+        "bookmarklet_button_text": "网页转换器",
+        "install_step3_h3": "完成！点击使用",
+        "install_step3_p": "在任何想转换的页面，点击这个书签即可开始！",
+        "footer_p": "© 2025 网页转Markdown. 由 Gemini AI 强力驱动。"
     },
     "web-to-text": {
         "meta_title": "网页转文本 - 从任何网页提取纯净文本 | TableCopy",
@@ -371,5 +381,173 @@
         "bookmarklet_button_text": "网页转换器",
         "install_step3_h3": "完成！点击使用",
         "install_step3_p": "在任何想阅读的页面，点击这个书签即可开始！"
+    },
+    "about": {
+        "meta_title": "关于我们 - TableCopy | 网页表格转Excel转换器",
+        "meta_description": "了解TableCopy的使命——让网页数据提取变得简单、快速且注重隐私。由数据专业人士为数据专业人士打造。",
+        "hero_h1": "关于TableCopy",
+        "hero_subtitle": "让网页数据提取变得简单、快速且注重隐私",
+        "mission_title": "我们的使命",
+        "mission_p": "在TableCopy，我们坚信从网页提取数据应该简单、快速且安全。我们的使命是为专业人士、学生和企业提供工具，让网页数据易于获取，同时不损害隐私或无需专业技术知识。",
+        "what_we_do_title": "我们做什么",
+        "what_we_do_p1": "TableCopy提供一系列轻量级的基于浏览器的工具，帮助您将网页表格转换为Excel、PDF、图片、Word文档等格式。我们的旗舰工具可以将网页表格以完美的格式复制到Excel，为您节省数小时的手工工作。",
+        "what_we_do_p2": "与需要安装软件或将数据发送到外部服务器的传统解决方案不同，所有TableCopy工具完全在您的浏览器中运行。您的数据永远不会离开您的设备，确保完全的隐私和安全。",
+        "values_title": "我们的价值观",
+        "values_list": [
+            {
+                "title": "隐私至上",
+                "description": "我们不收集、存储或传输您的数据。所有处理都在您的浏览器本地进行，让您完全掌控自己的信息。"
+            },
+            {
+                "title": "以用户为中心的设计",
+                "description": "我们的工具由了解您痛点数据专业人士设计。我们在构建的每个产品中都优先考虑简单性、效率和可靠性。"
+            },
+            {
+                "title": "持续改进",
+                "description": "我们根据用户反馈和不断发展的网络技术不断更新工具，确保您始终获得最佳的数据提取体验。"
+            }
+        ],
+        "story_title": "我们的故事",
+        "story_p": "TableCopy诞生于挫折感。作为拥有超过15年网络爬取和数据分析经验的数据专业人士，我们在将网页表格转换为Excel时，每天都在为格式损坏、数据丢失和数小时的清理工作而苦恼。我们测试了所有可用的方法——手动复制粘贴、Excel网页查询、Python脚本和无数浏览器扩展。每种方法都无法提供我们所需的简单性和可靠性。因此我们构建了TableCopy，这是一个结合企业级准确性和消费级简单性的工具。如今，TableCopy被全球金融分析师、研究人员、电商经理和学生信赖，用于高效安全地提取网页数据。"
+    },
+    "contact": {
+        "meta_title": "联系我们 - TableCopy",
+        "meta_description": "与TableCopy团队联系，获取支持、反馈或咨询。我们期待听到您的声音！",
+        "hero_h1": "联系我们",
+        "hero_subtitle": "我们期待听到您的声音",
+        "intro_p": "有问题、反馈或建议吗？我们在这里帮助！无论您需要技术支持、想要报告错误，还是有改进工具的想法，请随时与我们联系。",
+        "methods_title": "联系方式",
+        "email_label": "邮箱",
+        "email_value": "support@tablecopy.pro",
+        "email_desc": "用于一般咨询、错误报告和功能建议",
+        "twitter_label": "X (Twitter)",
+        "twitter_value": "@tablecopy_tiny",
+        "twitter_desc": "关注我们获取最新动态、技巧和快速支持",
+        "topics_title": "我们可以帮助您",
+        "topic1": "技术支持和故障排除",
+        "topic2": "功能请求和产品反馈",
+        "topic3": "错误报告和问题反馈",
+        "response_time_title": "响应时间",
+        "response_time_p": "我们通常在工作日24-48小时内回复所有咨询。对于紧急技术问题，请提供有关您的浏览器、操作系统和遇到的具体问题的详细信息。",
+        "community_title": "加入我们的社区",
+        "community_p": "在X（Twitter）上关注我们，获取最新更新、提示和技巧。我们喜欢听到用户的声音，经常分享用户故事和使用TableCopy的创意方式。如果您觉得我们的工具有帮助，请与您的朋友和同事分享！"
+    },
+    "privacy": {
+        "meta_title": "隐私政策 - TableCopy",
+        "meta_description": "了解TableCopy如何保护您的隐私。不收集数据，不存储，全部本地处理。您的数据保留在您的设备上。",
+        "page_title": "隐私政策",
+        "last_updated": "最后更新：2025年1月1日",
+        "intro_p": "在TableCopy，我们非常重视您的隐私。本隐私政策解释了我们如何处理信息。由于TableCopy被设计为隐私优先的工具，所有数据都在您的浏览器中本地处理，因此我们对数据的方法与大多数网络服务根本不同。",
+        "section1_title": "1. 我们收集的信息",
+        "section1_1_title": "1.1 我们不收集的信息",
+        "section1_1_p": "TableCopy旨在尊重您的隐私。我们不收集：",
+        "section1_1_item1": "个人信息（姓名、电子邮件地址、电话号码、邮寄地址）",
+        "section1_1_item2": "使用数据或浏览历史",
+        "section1_1_item3": "位置数据或设备指纹信息",
+        "section1_1_item4": "您复制或转换的表格内容",
+        "section1_1_item5": "您使用我们的工具处理的任何文件或数据",
+        "section1_2_title": "1.2 自动收集的信息",
+        "section1_2_p": "与大多数网站一样，我们收集浏览器自动发送的基本技术信息：",
+        "section1_2_item1": "网络服务器日志（IP地址、浏览器类型、引用页面）- 这些日志会在30天后自动删除，仅用于基本分析和安全目的",
+        "section1_2_item2": "Google Analytics数据（IP地址已匿名）- 您可以使用浏览器插件或禁用JavaScript来选择退出",
+        "section2_title": "2. 我们如何使用信息",
+        "section2_1_title": "2.1 核心处理",
+        "section2_1_p": "TableCopy是一个客户端书签工具。这意味着所有处理都直接在您的浏览器中进行。当您点击书签工具时，JavaScript会在您的设备上本地运行以从网页中提取表格。不会向我们的服务器发送任何数据。",
+        "section2_2_title": "2.2 无数据存储",
+        "section2_2_p": "我们没有用于存储数据的数据库。我们无法访问、查看或检索您转换的表格。一旦您关闭浏览器或离开页面，处理的数据就会从我们的系统中永远消失。",
+        "section3_title": "3. 数据处理和位置",
+        "section3_1_title": "3.1 客户端处理",
+        "section3_1_p": "所有TableCopy操作都在您的浏览器中100%本地进行：",
+        "section3_1_item1": "表格提取使用JavaScript在您的设备上进行",
+        "section3_1_item2": "文件转换（Excel、PDF等）在本地生成",
+        "section3_1_item3": "处理期间不会向外部服务器传输任何数据",
+        "section3_2_title": "3.2 无服务器传输",
+        "section3_2_p": "我们的书签工具与外部服务器通信的唯一时间是加载初始脚本。之后，所有操作都完全离线并在您的浏览器本地进行。",
+        "section4_title": "4. Cookie和本地存储",
+        "section4_1_title": "4.1 必要Cookie",
+        "section4_1_p": "我们仅在基本功能（如记住您的语言偏好）方面使用最少的Cookie和本地存储。这些Cookie不会跟踪您的行为或收集个人信息。",
+        "section4_2_title": "4.2 分析",
+        "section4_2_p": "我们使用Google Analytics来了解访问者如何使用我们的网站。这有助于我们改进工具和内容。Google Analytics可能会收集有关您的浏览器、设备和大概位置的信息。您可以通过使用浏览器扩展或调整浏览器设置来禁用Google Analytics。",
+        "section5_title": "5. 第三方服务",
+        "section5_1_title": "5.1 CDN服务",
+        "section5_1_p": "我们使用第三方内容分发网络（CDN）来提供静态资产，如JavaScript库和字体。这些服务可能会记录基本的技术信息，但它们无法访问您的个人数据或您处理的内容。",
+        "section5_2_title": "5.2 分析",
+        "section5_2_p": "如上所述，我们使用Google Analytics进行网站分析。Google的隐私政策适用于他们收集的数据。您可以在以下地址查看Google的隐私实践：https://policies.google.com/privacy",
+        "section6_title": "6. 您的隐私权利（GDPR/CCPA）",
+        "section6_1_title": "6.1 您在GDPR下的权利（欧盟用户）",
+        "section6_1_p": "如果您位于欧盟，根据《通用数据保护条例》（GDPR），您拥有某些权利。但是，由于TableCopy不收集个人数据，大多数GDPR权利不适用：",
+        "section6_1_item1": "访问权：您可以请求确认没有处理个人数据",
+        "section6_1_item2": "更正权：不适用（未存储个人数据）",
+        "section6_1_item3": "删除权：不适用（未存储个人数据）",
+        "section6_2_title": "6.2 您在CCPA下的权利（加州居民）",
+        "section6_2_p": "如果您是加州居民，根据《加州消费者隐私法案》（CCPA），您拥有某些权利。由于TableCopy不出售个人信息也不收集个人数据，这些权利有限：",
+        "section6_3_title": "6.3 数据访问和删除",
+        "section6_3_p": "由于我们不收集或存储个人数据，因此您无法访问或删除任何数据。如果您有任何疑问或顾虑，请使用下面的信息与我们联系。",
+        "section7_title": "7. 儿童隐私",
+        "section7_p": "TableCopy不面向13岁以下的儿童。我们不会故意收集13岁以下儿童的个人信息。如果您是父母或监护人，认为您的孩子向我们提供了个人信息，请立即与我们联系。",
+        "section8_title": "8. 国际数据传输",
+        "section8_p": "由于所有处理都在您的浏览器本地进行，我们不收集或存储个人数据，因此不存在国际数据传输。您的数据永远不会离开您的设备。",
+        "section9_title": "9. 政策更新",
+        "section9_p": "我们可能会不时更新本隐私政策，以反映我们的实践、技术或法律要求的变化。我们将在此页面上发布更新的政策，并修订「最后更新」日期。我们鼓励您定期查看本政策。",
+        "section10_title": "10. 联系我们",
+        "section10_p": "如果您对本隐私政策或我们的数据做法有任何疑问、顾虑或请求，请联系我们："
+    },
+    "terms": {
+        "meta_title": "服务条款 - TableCopy",
+        "meta_description": "TableCopy免费网络转换工具的服务条款和使用指南。了解您的权利和责任。",
+        "page_title": "服务条款",
+        "last_updated": "最后更新：2025年1月1日",
+        "intro_p": "欢迎使用TableCopy。这些服务条款管辖您对我们网站和工具的使用。通过访问或使用TableCopy，您同意这些条款。如果您不同意，请不要使用我们的服务。",
+        "section1_title": "1. 接受条款",
+        "section1_p": "通过访问和使用TableCopy，您接受并同意受这些服务条款的约束。如果您不同意这些条款，请不要使用我们的网站或工具。我们保留随时修改这些条款的权利，您继续使用服务即构成接受任何更改。",
+        "section2_title": "2. 服务描述",
+        "section2_1_title": "2.1 免费服务",
+        "section2_1_p": "TableCopy免费提供。使用我们的工具无需支付任何费用、订阅或隐藏成本。您可以将TableCopy用于个人、教育或商业目的，而无需付费。",
+        "section2_2_title": "2.2 「按原样」提供",
+        "section2_2_p": "服务按「原样」提供，不提供任何形式的明示或暗示的保证。我们不保证服务将不中断、及时、安全或无错误。",
+        "section3_title": "3. 用户责任",
+        "section3_1_title": "3.1 正当使用",
+        "section3_1_p": "您同意仅将TableCopy用于合法目的，并遵守这些条款。您对在您帐户下发生的所有活动或通过您使用服务负责。",
+        "section3_1_item1": "遵守所有适用的法律法规",
+        "section3_1_item2": "尊重他人的知识产权",
+        "section3_1_item3": "不使用服务传输恶意代码或有害内容",
+        "section3_2_title": "3.2 禁止的活动",
+        "section3_2_p": "您不得使用TableCopy来：",
+        "section3_2_item1": "逆向工程、反编译或反汇编书签工具代码",
+        "section3_2_item2": "将工具用于任何非法或未经授权的目的",
+        "section3_2_item3": "试图未经授权访问我们的系统或网络",
+        "section3_2_item4": "干扰或中断服务或连接到服务的服务器",
+        "section4_title": "4. 知识产权",
+        "section4_1_title": "4.1 所有权",
+        "section4_1_p": "TableCopy的所有内容、功能和功能，包括但不限于文本、图形、徽标和软件，均归TableCopy所有，受国际版权、商标和其他知识产权法的保护。",
+        "section4_2_title": "4.2 开源组件",
+        "section4_2_p": "TableCopy使用某些开源库和组件。这些组件根据其各自的开源许可证进行许可，可能授予您额外的权利。这些组件的归属和许可信息可以在我们的代码存储库中找到。",
+        "section5_title": "5. 责任限制",
+        "section5_1_title": "5.1 免责声明",
+        "section5_1_p": "在法律允许的最大范围内，TableCopy放弃所有明示或暗示的保证，包括但不限于适销性、特定用途适用性和非侵权性的保证。",
+        "section5_1_item1": "任何内容或信息的准确性或可靠性",
+        "section5_1_item2": "服务的可用性或性能",
+        "section5_1_item3": "任何可能感染您的计算机或设备的病毒或其他有害组件",
+        "section5_2_title": "5.2 责任上限",
+        "section5_2_p": "在适用法律允许的最大范围内，TableCopy不对因使用服务而产生或与之相关的任何间接、偶然、特殊或后果性损害承担责任。这包括但不限于利润、数据或其他无形损失的损害。在任何情况下，TableCopy的总责任都不应超过您为服务支付的金额（由于服务是免费的，因此为$0）。",
+        "section6_title": "6. 终止",
+        "section6_p": "我们保留因违反这些服务条款而立即终止或暂停您访问TableCopy的权利，无需事先通知。终止后，您使用服务的权利将立即停止。",
+        "section7_title": "7. 管辖法律和司法管辖权",
+        "section7_p": "这些服务条款应受TableCopy所在司法管辖区的法律管辖并根据其解释，不考虑其法律冲突条款。因这些条款引起的任何法律诉讼或程序将排他性地在该司法管辖区的联邦或州法院提起。",
+        "section8_title": "8. 争议解决",
+        "section8_p": "如果您对这些条款或服务有任何争议或索赔，我们建议首先通过support@tablecopy.pro联系我们，以非正式方式解决问题。我们致力于与您合作，找到满意的解决方案。",
+        "section9_title": "9. 条款修改",
+        "section9_p": "我们保留随时修改这些服务条款的权利。所有更改在发布时立即生效。您在更改后继续使用服务即构成接受新条款。我们将更新本页面顶部的「最后更新」日期以反映任何修改。",
+        "section10_title": "10. 可分离性",
+        "section10_p": "如果这些服务条款的任何条款被认为是不可执行或无效的，则该条款将被限制或消除到最低必要程度，以便其余条款将继续完全有效。",
+        "section11_title": "11. 弃权",
+        "section11_p": "我们未能执行这些条款的任何权利或规定不被视为对这些权利的放弃。对这些条款的任何规定的任何放弃只有在签署书面文件时才有效。",
+        "section12_title": "12. 完整协议",
+        "section12_p": "这些服务条款构成您与TableCopy之间关于您使用服务的完整协议，并取代您与TableCopy之间的所有先前协议和沟通。",
+        "section13_title": "13. 联系信息",
+        "section13_label1": "邮箱",
+        "section13_email": "support@tablecopy.pro",
+        "section13_label2": "X (Twitter)",
+        "section13_twitter_url": "https://x.com/tablecopy_tiny"
     }
 }

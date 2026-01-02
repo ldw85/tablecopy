@@ -1,7 +1,27 @@
 <footer class="footer">
     <div class="container">
+        <!-- Legal & Info Links -->
+        <div class="footer-links">
+            <a href="{{ 'about.html' | path(page.lang) }}">{{ T.common.nav_about }}</a>
+            <a href="{{ 'contact.html' | path(page.lang) }}">{{ T.common.nav_contact }}</a>
+            <a href="{{ 'privacy.html' | path(page.lang) }}">{{ T.common.nav_privacy }}</a>
+            <a href="{{ 'terms.html' | path(page.lang) }}">{{ T.common.nav_terms }}</a>
+        </div>
+
+        <!-- Contact Info -->
+        <p class="footer-email">
+            Email: <a href="mailto:support@tablecopy.pro">support@tablecopy.pro</a>
+        </p>
+
+        <!-- Social Media -->
+        <p class="footer-social">
+            <a href="https://x.com/tablecopy_tiny" target="_blank" rel="noopener noreferrer">
+                X (Twitter): @tablecopy_tiny
+            </a>
+        </p>
+
+        <!-- Copyright -->
         {% set page_key = page.name | replace("blog/", "blog-") %}
-        <p>{{ T[page_key].footer_p | safe }}</p>
-        <p>Email: <a href="mailto:support@tablecopy.pro">support@tablecopy.pro</a></p>
+        <p class="footer-copyright">{{ T[page_key].footer_p | safe }}</p>
     </div>
 </footer>

@@ -1,4 +1,4 @@
- {
+{
     "lang_code": "es",
     "common": {
         "nav_home": "Inicio",
@@ -6,7 +6,15 @@
         "nav_use_cases": "Casos de Uso",
         "nav_blog": "Blog",
         "nav_faq": "Preguntas Frecuentes",
-        "nav_install": "Instalar Ahora"
+        "nav_install": "Instalar Ahora",
+        "nav_tools": "Otras Herramientas",
+        "nav_web_to_pdf": "Web a PDF",
+        "nav_web_to_markdown": "Web a Markdown",
+        "nav_web_to_text": "Web a Texto",
+        "nav_about": "Acerca de",
+        "nav_contact": "Contacto",
+        "nav_privacy": "Política de Privacidad",
+        "nav_terms": "Términos de Servicio"
     },
     "index": {
         "meta_title": "Table Copy - Copia Tablas Web a Excel con Un Clic, Sin Formatos Desordenados",
@@ -53,7 +61,113 @@
         "use_case3_p": "Recopila eficientemente datos de Wikipedia, sitios académicos e informes gubernamentales para trabajos e investigaciones, aumentando significativamente tu productividad en la revisión de literatura.",
         "blog_title": "De Nuestro Blog",
         "blog_read_more": "Leer Más →",
-        "faq_title": "Preguntas Frecuentes (FAQ)",
+        "webpage_to_excel_section": {
+            "title": "Cómo Convertir Cualquier Página Web a Excel: Soluciones Profesionales",
+            "subtitle": "Guía experta para la conversión de páginas web a Excel con métodos probados que funcionan en 2025",
+            "methods_title": "4 Métodos para Convertir Tablas de Páginas Web a Excel",
+            "method1_title": "Método 1: TableCopy (Recomendado) - Solución Profesional de Un Clic",
+            "method1_description": "El método más eficiente para convertir tablas de páginas web a Excel con un formato perfecto. Diseñado por profesionales de datos, este bookmarklet maneja tanto las tablas HTML tradicionales como los diseños modernos basados en divs que otras herramientas pasan por alto.",
+            "method1_benefits": [
+                "✅ <strong>Formato Perfecto:</strong> Preserva la estructura de la tabla, los tipos de datos y los caracteres especiales",
+                "✅ <strong>Compatibilidad Universal:</strong> Funciona con cualquier sitio web, incluido el contenido complejo renderizado con JavaScript",
+                "✅ <strong>Múltiples Formatos de Exportación:</strong> Excel, CSV, TSV, JSON y código fuente HTML",
+                "✅ <strong>Privacidad Primero:</strong> Procesamiento 100% del lado del cliente, no se suben datos a servidores",
+                "✅ <strong>Nivel Profesional:</strong> Utilizado por analistas financieros, investigadores y científicos de datos en todo el mundo"
+            ],
+            "method2_title": "Método 2: Consultas Web de Excel - Integrado pero Limitado",
+            "method2_description": "La función nativa de Excel 'Obtener Datos de la Web' puede extraer tablas básicas pero tiene dificultades con los sitios web modernos y diseños complejos.",
+            "method2_limitations": [
+                "❌ Falla en contenido renderizado con JavaScript y tablas dinámicas",
+                "❌ No puede manejar diseños de tablas basados en divs",
+                "❌ Requiere configuración y mantenimiento técnicos",
+                "❌ A menudo se rompe cuando las estructuras del sitio web cambian"
+            ],
+            "method3_title": "Método 3: Copiar y Pegar Manual - Gratis pero Frustrante",
+            "method3_description": "El enfoque más común pero conduce a desastres de formato, pérdida de datos y horas de trabajo de limpieza.",
+            "method3_problems": [
+                "❌ Las tablas colapsan en columnas únicas",
+                "❌ Datos perdidos y formato roto",
+                "❌ Limpieza manual requerida para cada conversión",
+                "❌ No adecuado para uso profesional"
+            ],
+            "method4_title": "Método 4: Soluciones de Programación - Potentes pero Complejas",
+            "method4_description": "Los scripts personalizados que usan Python (BeautifulSoup, Pandas) o JavaScript ofrecen máxima flexibilidad pero requieren habilidades de programación y mantenimiento continuo.",
+            "method4_challenges": [
+                "❌ Requiere conocimientos de programación",
+                "❌ Sobrecarga de configuración y mantenimiento",
+                "❌ Excesivo para conversiones simples",
+                "❌ No práctico para usuarios no técnicos"
+            ]
+        },
+        "expert_testimonials": {
+            "title": "Confiado por Profesionales de Datos en Todo el Mundo",
+            "testimonial1": {
+                "name": "Sarah Chen",
+                "role": "Analista Financiera Senior, Fortune 500",
+                "quote": "TableCopy ha revolucionado nuestro flujo de trabajo. Ahora podemos extraer datos financieros de informes trimestrales en segundos en lugar de horas. La precisión es perfecta y hemos eliminado por completo los errores de entrada de datos."
+            },
+            "testimonial2": {
+                "name": "Dr. Michael Rodriguez",
+                "role": "Científico Investigador, MIT",
+                "quote": "Como investigador que lidia diariamente con tablas de datos complejas, TableCopy es indispensable. Maneja fuentes académicas, bases de datos gubernamentales y publicaciones científicas sin fallas. Mi tiempo de recopilación de datos ha disminuido en un 80%."
+            }
+        },
+        "comparison_table": {
+            "title": "Comparación de Convertidores de Páginas Web a Excel",
+            "headers": [
+                "Característica",
+                "TableCopy",
+                "Consulta Web de Excel",
+                "Copiar y Pegar Manual",
+                "Scripts de Python"
+            ],
+            "rows": [
+                {
+                    "feature": "Tiempo de Configuración",
+                    "tablecopy": "3 segundos",
+                    "excel": "5-10 minutos",
+                    "manual": "Ninguno",
+                    "python": "Horas a días"
+                },
+                {
+                    "feature": "Tasa de Éxito",
+                    "tablecopy": "98%+",
+                    "excel": "60%",
+                    "manual": "20%",
+                    "python": "95% (si se codifica correctamente)"
+                },
+                {
+                    "feature": "Habilidades Técnicas Requeridas",
+                    "tablecopy": "Ninguna",
+                    "excel": "Básicas",
+                    "manual": "Ninguna",
+                    "python": "Avanzadas"
+                },
+                {
+                    "feature": "Precisión de Datos",
+                    "tablecopy": "100%",
+                    "excel": "70%",
+                    "manual": "30%",
+                    "python": "95%"
+                }
+            ]
+        },
+        "step_by_step_guide": {
+            "title": "Paso a Paso: Convierte Cualquier Página Web a Excel en 30 Segundos",
+            "step1": {
+                "title": "Paso 1: Instala el Convertidor de Páginas Web a Excel",
+                "description": "Visita TableCopy.pro y arrastra el bookmarklet a la barra de herramientas de tu navegador. No se requiere descarga ni instalación."
+            },
+            "step2": {
+                "title": "Paso 2: Navega a Tu Página Web Objetivo",
+                "description": "Ve a cualquier sitio web que contenga la tabla que deseas convertir. Haz clic en cualquier lugar de la tabla para seleccionarla."
+            },
+            "step3": {
+                "title": "Paso 3: Convierte con Un Clic",
+                "description": "Haz clic en el bookmarklet de TableCopy en tu barra de herramientas. Elige tu formato de exportación (Excel, CSV o JSON) y pega directamente en tu hoja de cálculo."
+            }
+        },
+        "faq_title": "Preguntas Frecuentes Sobre la Conversión de Páginas Web a Excel",
         "faq1_q": "¿Es segura esta herramienta? ¿Subirá mis datos?",
         "faq1_a": "Absolutamente segura. Table Copy es una herramienta 100% del lado del cliente. Todo el reconocimiento y procesamiento de datos ocurre localmente en tu navegador. Nunca se envía ni se almacena nada en ningún servidor.",
         "faq2_q": "¿En qué se diferencia de una extensión de navegador?",
@@ -62,6 +176,10 @@
         "faq3_a": "Es compatible con la gran mayoría de las tablas que usan etiquetas `<table>` estándar o estructuras de `<div>` compatibles con ARIA. En páginas construidas con frameworks de frontend extremadamente complejos o no estándar, podría no funcionar perfectamente. Estamos mejorando continuamente el algoritmo.",
         "faq4_q": "¿Es esta herramienta gratuita? ¿Costará dinero en el futuro?",
         "faq4_a": "Sí, el bookmarklet actual siempre será gratuito. Creemos que las buenas herramientas deben ser ampliamente accesibles. En el futuro, podríamos lanzar una extensión de navegador de pago más potente (p. ej., con scraping de varias páginas, tareas programadas), pero la funcionalidad principal que ves hoy siempre será gratuita.",
+        "faq5_q": "¿Funciona TableCopy con tablas JavaScript dinámicas y aplicaciones de una sola página?",
+        "faq5_a": "Sí, TableCopy captura el estado actual de las tablas en tu navegador, incluido el contenido renderizado con JavaScript, las actualizaciones dinámicas y las aplicaciones de una sola página como sitios web basados en React, Vue o Angular.",
+        "faq6_q": "¿Puedo convertir por lotes múltiples páginas web a Excel?",
+        "faq6_a": "Aunque TableCopy está diseñado para conversiones de una sola página, su velocidad (3 segundos por conversión) lo hace eficiente para procesar múltiples páginas. Para el procesamiento por lotes empresarial, considera nuestras soluciones profesionales de API.",
         "community_title": "Comparte y Conecta",
         "community_p": "Si encuentras útil esta herramienta, ¡compártela con tus amigos! Para comentarios e ideas, contáctanos.",
         "footer_p": "© 2025 Table Copy. Impulsado por Gemini AI."
@@ -224,8 +342,7 @@
         "install_step3_h3": "¡Listo! Haz Clic para Usar",
         "install_step3_p": "En cualquier página que quieras convertir, ¡haz clic en este marcador para empezar!",
         "footer_p": "© 2025 Web a Markdown. Impulsado por Gemini AI."
-    }
-    ,
+    },
     "web-to-text": {
         "meta_title": "Web a Texto - Extrae Texto Limpio de Cualquier Página Web | TableCopy",
         "meta_description": "Web a Texto es un bookmarklet gratuito que extrae el contenido principal de cualquier página web y lo presenta como una versión de texto limpio, sin desorden. Ideal para leer, archivar y reutilizar.",
@@ -264,5 +381,173 @@
         "bookmarklet_button_text": "Web Converter",
         "install_step3_h3": "¡Listo! Haz Clic para Usar",
         "install_step3_p": "En cualquier página que quieras leer, ¡haz clic en este marcador para empezar!"
+    },
+    "about": {
+        "meta_title": "[TRANSLATION NEEDED] About Us - TableCopy | Web Table to Excel Converter",
+        "meta_description": "[TRANSLATION NEEDED] Learn about TableCopy's mission to make web data extraction simple, fast, and privacy-focused. Built by data professionals, for data professionals.",
+        "hero_h1": "About TableCopy",
+        "hero_subtitle": "Making web data extraction simple, fast, and privacy-focused",
+        "mission_title": "Our Mission",
+        "mission_p": "At TableCopy, we believe that extracting data from the web should be simple, fast, and secure. Our mission is to empower professionals, students, and businesses with tools that make web data accessible without compromising privacy or requiring technical expertise.",
+        "what_we_do_title": "What We Do",
+        "what_we_do_p1": "TableCopy provides a suite of lightweight, browser-based tools that help you convert web tables into Excel, PDF, images, Word documents, and more. Our flagship tool copies web tables to Excel with perfect formatting, saving you hours of manual work.",
+        "what_we_do_p2": "Unlike traditional solutions that require software installation or send your data to external servers, all TableCopy tools run entirely in your browser. Your data never leaves your device, ensuring complete privacy and security.",
+        "values_title": "Our Values",
+        "values_list": [
+            {
+                "title": "Privacy First",
+                "description": "We don't collect, store, or transmit your data. All processing happens locally in your browser, giving you complete control over your information."
+            },
+            {
+                "title": "User-Focused Design",
+                "description": "Our tools are designed by data professionals who understand your pain points. We prioritize simplicity, efficiency, and reliability in everything we build."
+            },
+            {
+                "title": "Continuous Improvement",
+                "description": "We're constantly updating our tools based on user feedback and evolving web technologies to ensure you always have the best data extraction experience."
+            }
+        ],
+        "story_title": "Our Story",
+        "story_p": "TableCopy was born from frustration. As data professionals with over 15 years of experience in web scraping and data analysis, we struggled daily with broken formatting, missing data, and hours of cleanup work when converting web tables to Excel. We tested every method available—manual copy-paste, Excel web queries, Python scripts, and countless browser extensions. Each approach failed to deliver the simplicity and reliability we needed. So we built TableCopy, a tool that combines enterprise-grade accuracy with consumer-level simplicity. Today, TableCopy is trusted by financial analysts, researchers, e-commerce managers, and students worldwide to extract web data efficiently and securely."
+    },
+    "contact": {
+        "meta_title": "[TRANSLATION NEEDED] Contact Us - TableCopy",
+        "meta_description": "[TRANSLATION NEEDED] Get in touch with the TableCopy team for support, feedback, or inquiries. We'd love to hear from you!",
+        "hero_h1": "Contact Us",
+        "hero_subtitle": "We'd love to hear from you",
+        "intro_p": "Have a question, feedback, or suggestion? We're here to help! Whether you need technical support, want to report a bug, or have ideas for improving our tools, don't hesitate to reach out.",
+        "methods_title": "How to Reach Us",
+        "email_label": "Email",
+        "email_value": "support@tablecopy.pro",
+        "email_desc": "For general inquiries, bug reports, and feature suggestions",
+        "twitter_label": "X (Twitter)",
+        "twitter_value": "@tablecopy_tiny",
+        "twitter_desc": "Follow us for updates, tips, and quick support",
+        "topics_title": "What We Can Help With",
+        "topic1": "Technical support and troubleshooting",
+        "topic2": "Feature requests and product feedback",
+        "topic3": "Bug reports and issue reporting",
+        "response_time_title": "Response Time",
+        "response_time_p": "We typically respond to all inquiries within 24-48 hours during business days. For urgent technical issues, please include detailed information about your browser, operating system, and the specific problem you're encountering.",
+        "community_title": "Join Our Community",
+        "community_p": "Follow us on X (Twitter) for the latest updates, tips, and tricks. We love hearing from our users and often share user stories and creative ways to use TableCopy. If you find our tools helpful, please share them with your friends and colleagues!"
+    },
+    "privacy": {
+        "meta_title": "[TRANSLATION NEEDED] Privacy Policy - TableCopy",
+        "meta_description": "[TRANSLATION NEEDED] Learn how TableCopy protects your privacy. No data collection, no storage, all local processing. Your data stays on your device.",
+        "page_title": "Privacy Policy",
+        "last_updated": "Last Updated: January 1, 2025",
+        "intro_p": "[TRANSLATION NEEDED] At TableCopy, we take your privacy seriously. This Privacy Policy explains how we handle information. Because TableCopy is designed as a privacy-first tool that processes all data locally in your browser, our approach to data is fundamentally different from most web services.",
+        "section1_title": "1. Information We Collect",
+        "section1_1_title": "1.1 Information We DON'T Collect",
+        "section1_1_p": "TableCopy is designed to respect your privacy. We do NOT collect:",
+        "section1_1_item1": "Personal information (name, email address, phone number, postal address)",
+        "section1_1_item2": "Usage data or browsing history",
+        "section1_1_item3": "Location data or device fingerprinting information",
+        "section1_1_item4": "The content of tables you copy or convert",
+        "section1_1_item5": "Any files or data you process using our tools",
+        "section1_2_title": "1.2 Automatically Collected Information",
+        "section1_2_p": "Like most websites, we collect basic technical information that your browser automatically sends:",
+        "section1_2_item1": "Web server logs (IP address, browser type, referring page) - These logs are automatically deleted after 30 days and are only used for basic analytics and security purposes",
+        "section1_2_item2": "Google Analytics data (with anonymized IP address) - You can opt-out using browser add-ons or by disabling JavaScript",
+        "section2_title": "2. How We Use Information",
+        "section2_1_title": "2.1 Core Processing",
+        "section2_1_p": "TableCopy is a client-side bookmarklet. This means all processing happens directly in your browser. When you click the bookmarklet, JavaScript runs locally on your device to extract tables from the webpage. No data is sent to our servers.",
+        "section2_2_title": "2.2 No Data Storage",
+        "section2_2_p": "We do not have databases to store your data. We cannot access, view, or retrieve the tables you've converted. Once you close your browser or navigate away from the page, the processed data is gone from our systems forever.",
+        "section3_title": "3. Data Processing & Location",
+        "section3_1_title": "3.1 Client-Side Processing",
+        "section3_1_p": "All TableCopy operations are performed 100% locally in your browser:",
+        "section3_1_item1": "Table extraction happens on your device using JavaScript",
+        "section3_1_item2": "File conversions (Excel, PDF, etc.) are generated locally",
+        "section3_1_item3": "No data is transmitted to external servers during processing",
+        "section3_2_title": "3.2 No Server Transmission",
+        "section3_2_p": "The only time our bookmarklet communicates with external servers is to load the initial script. After that, all operations are completely offline and local to your browser.",
+        "section4_title": "4. Cookies & Local Storage",
+        "section4_1_title": "4.1 Essential Cookies",
+        "section4_1_p": "We use minimal cookies and local storage only for essential functionality, such as remembering your language preference. These cookies do not track your behavior or collect personal information.",
+        "section4_2_title": "4.2 Analytics",
+        "section4_2_p": "We use Google Analytics to understand how visitors use our website. This helps us improve our tools and content. Google Analytics may collect information about your browser, device, and approximate location. You can disable Google Analytics by using browser extensions or adjusting your browser settings.",
+        "section5_title": "5. Third-Party Services",
+        "section5_1_title": "5.1 CDN Services",
+        "section5_1_p": "We use third-party Content Delivery Networks (CDNs) to deliver static assets like JavaScript libraries and fonts. These services may log basic technical information, but they do not have access to your personal data or the content you process.",
+        "section5_2_title": "5.2 Analytics",
+        "section5_2_p": "As mentioned above, we use Google Analytics for website analytics. Google's privacy policy applies to the data they collect. You can review Google's privacy practices here: https://policies.google.com/privacy",
+        "section6_title": "6. Your Privacy Rights (GDPR/CCPA)",
+        "section6_1_title": "6.1 Your Rights Under GDPR (EU Users)",
+        "section6_1_p": "If you are located in the European Union, you have certain rights under the General Data Protection Regulation (GDPR). However, since TableCopy does not collect personal data, most GDPR rights are not applicable:",
+        "section6_1_item1": "Right to Access: You can request confirmation that no personal data is being processed",
+        "section6_1_item2": "Right to Rectification: Not applicable (no personal data stored)",
+        "section6_1_item3": "Right to Erasure: Not applicable (no personal data stored)",
+        "section6_2_title": "6.2 Your Rights Under CCPA (California Residents)",
+        "section6_2_p": "If you are a California resident, you have certain rights under the California Consumer Privacy Act (CCPA). Since TableCopy does not sell personal information and does not collect personal data, these rights are limited:",
+        "section6_3_title": "6.3 Data Access & Deletion",
+        "section6_3_p": "Since we do not collect or store personal data, there is no data for you to access or delete. If you have any concerns or questions, please contact us using the information below.",
+        "section7_title": "7. Children's Privacy",
+        "section7_p": "TableCopy is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.",
+        "section8_title": "8. International Data Transfers",
+        "section8_p": "Since all processing is done locally in your browser and we do not collect or store personal data, there are no international data transfers. Your data never leaves your device.",
+        "section9_title": "9. Policy Updates",
+        "section9_p": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will post the updated policy on this page with a revised \"Last Updated\" date. We encourage you to review this policy periodically.",
+        "section10_title": "10. Contact Us",
+        "section10_p": "If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:"
+    },
+    "terms": {
+        "meta_title": "[TRANSLATION NEEDED] Terms of Service - TableCopy",
+        "meta_description": "[TRANSLATION NEEDED] Terms of service and usage guidelines for TableCopy's free web conversion tools. Know your rights and responsibilities.",
+        "page_title": "Terms of Service",
+        "last_updated": "Last Updated: January 1, 2025",
+        "intro_p": "[TRANSLATION NEEDED] Welcome to TableCopy. These Terms of Service govern your use of our website and tools. By accessing or using TableCopy, you agree to these terms. If you do not agree, please do not use our services.",
+        "section1_title": "1. Acceptance of Terms",
+        "section1_p": "By accessing and using TableCopy, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or tools. We reserve the right to modify these terms at any time, and your continued use of the service constitutes acceptance of any changes.",
+        "section2_title": "2. Description of Service",
+        "section2_1_title": "2.1 Free Service",
+        "section2_1_p": "TableCopy is provided free of charge. There are no fees, subscriptions, or hidden costs for using our tools. You may use TableCopy for personal, educational, or commercial purposes without payment.",
+        "section2_2_title": "2.2 \"As Is\" Basis",
+        "section2_2_p": "The service is provided \"as is,\" without warranty of any kind, whether express or implied. We do not guarantee that the service will be uninterrupted, timely, secure, or error-free.",
+        "section3_title": "3. User Responsibilities",
+        "section3_1_title": "3.1 Proper Use",
+        "section3_1_p": "You agree to use TableCopy only for lawful purposes and in accordance with these Terms. You are responsible for all activity that occurs under your account or through your use of the service.",
+        "section3_1_item1": "Comply with all applicable laws and regulations",
+        "section3_1_item2": "Respect the intellectual property rights of others",
+        "section3_1_item3": "Not use the service to transmit malicious code or harmful content",
+        "section3_2_title": "3.2 Prohibited Activities",
+        "section3_2_p": "You may not use TableCopy to:",
+        "section3_2_item1": "Reverse engineer, decompile, or disassemble the bookmarklet code",
+        "section3_2_item2": "Use the tool for any illegal or unauthorized purpose",
+        "section3_2_item3": "Attempt to gain unauthorized access to our systems or networks",
+        "section3_2_item4": "Interfere with or disrupt the service or servers connected to the service",
+        "section4_title": "4. Intellectual Property",
+        "section4_1_title": "4.1 Ownership",
+        "section4_1_p": "All content, features, and functionality of TableCopy, including but not limited to text, graphics, logos, and software, are owned by TableCopy and are protected by international copyright, trademark, and other intellectual property laws.",
+        "section4_2_title": "4.2 Open Source Components",
+        "section4_2_p": "TableCopy utilizes certain open-source libraries and components. These components are licensed under their respective open-source licenses, which may grant you additional rights. Attribution and licensing information for these components can be found in our code repository.",
+        "section5_title": "5. Limitation of Liability",
+        "section5_1_title": "5.1 Disclaimer of Warranties",
+        "section5_1_p": "To the maximum extent permitted by law, TableCopy disclaims all warranties, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.",
+        "section5_1_item1": "The accuracy or reliability of any content or information",
+        "section5_1_item2": "The availability or performance of the service",
+        "section5_1_item3": "Any viruses or other harmful components that may infect your computer or equipment",
+        "section5_2_title": "5.2 Liability Cap",
+        "section5_2_p": "To the maximum extent permitted by applicable law, TableCopy shall not be liable for any indirect, incidental, special, or consequential damages arising out of or related to your use of the service. This includes, but is not limited to, damages for loss of profits, data, or other intangible losses. In no event shall TableCopy's total liability exceed the amount you paid for the service (which is $0, as the service is free).",
+        "section6_title": "6. Termination",
+        "section6_p": "We reserve the right to terminate or suspend your access to TableCopy immediately, without prior notice, for any breach of these Terms of Service. Upon termination, your right to use the service will immediately cease.",
+        "section7_title": "7. Governing Law & Jurisdiction",
+        "section7_p": "These Terms of Service shall be governed by and construed in accordance with the laws of the jurisdiction in which TableCopy is operated, without regard to its conflict of law provisions. Any legal action or proceeding arising under these Terms will be brought exclusively in the federal or state courts located in that jurisdiction.",
+        "section8_title": "8. Dispute Resolution",
+        "section8_p": "If you have any dispute or claim arising out of or relating to these Terms or the service, we recommend contacting us first at support@tablecopy.pro to attempt to resolve the issue informally. We are committed to working with you to find a satisfactory resolution.",
+        "section9_title": "9. Modifications to Terms",
+        "section9_p": "We reserve the right to modify these Terms of Service at any time. All changes are effective immediately when we post them. Your continued use of the service after the changes constitutes acceptance of the new terms. We will update the \"Last Updated\" date at the top of this page to reflect any modifications.",
+        "section10_title": "10. Severability",
+        "section10_p": "If any provision of these Terms of Service is held to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the remaining terms will remain in full force and effect.",
+        "section11_title": "11. Waiver",
+        "section11_p": "Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. Any waiver of any provision of these Terms will be effective only if in writing and signed by us.",
+        "section12_title": "12. Entire Agreement",
+        "section12_p": "These Terms of Service constitute the entire agreement between you and TableCopy regarding your use of the service and supersede all prior agreements and communications between you and TableCopy.",
+        "section13_title": "13. Contact Information",
+        "section13_label1": "Email",
+        "section13_email": "support@tablecopy.pro",
+        "section13_label2": "X (Twitter)",
+        "section13_twitter_url": "https://x.com/tablecopy_tiny"
     }
 }

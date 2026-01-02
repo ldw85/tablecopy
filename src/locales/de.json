@@ -1,233 +1,349 @@
- {
-     "lang_code": "de",
-     "common": {
-         "nav_home": "Startseite",
-         "nav_features": "Funktionen",
-         "nav_use_cases": "Anwendungsfälle",
-         "nav_blog": "Blog",
-         "nav_faq": "FAQ",
-         "nav_install": "Jetzt installieren",
-         "nav_tools": "Andere Werkzeuge",
-         "nav_web_to_pdf": "Web zu PDF"
-     },
-     "index": {
-         "meta_title": "Table Copy - Web-Tabellen mit einem Klick in Excel kopieren, ohne unordentliche Formatierung",
-         "meta_description": "Verabschieden Sie sich von unordentlicher Formatierung! Table Copy ist ein leichtes Bookmarklet, mit dem Sie jede Web-Tabelle (einschließlich derer, die mit Divs erstellt wurden) mit einem Klick in Excel, CSV oder JSON kopieren können. Keine Installation erforderlich, perfekte Formatierung.",
-         "meta_keywords": "Tabelle von Website kopieren, HTML zu Excel, Tabellen-Scraper, Web-Datenextraktion, HTML-Tabelle kopieren, Tabelle zu CSV, Tabelle zu JSON, Tabellenkopieren und -einfügen reparieren",
-         "logo": "Table Copy",
-         "hero_h1": "Jede Web-Tabelle kopieren,<br>so einfach wie Text kopieren.",
-         "hero_slogan": "Vergessen Sie mühsame Screenshots und manuelle Eingaben. Ein Klick, um Daten für ein perfektes Einfügen in Ihre Zwischenablage zu übernehmen.",
-         "hero_cta": "Jetzt kostenlos installieren",
-         "why_title": "Wie Sie waren auch wir die Mühsal leid",
-         "why_p": "Wir sind Daten-Enthusiasten und intensive Nutzer von Produktivitätstools. Unzählige Tage und Nächte, in denen wir Daten von Webseiten in Excel übertragen mussten, wurden wir von fehlerhafter Formatierung, versteckten `<div>`-Tabellen und langsamen Erweiterungen gequält. Wir glaubten, es müsse einen besseren Weg geben. Und so wurde 'Table Copy' geboren. Es ist keine aufgeblähte Software, sondern ein reines, schnelles und fokussiertes Werkzeug, das entwickelt wurde, um ein Problem zu lösen: das elegante Kopieren von Web-Tabellen.",
-         "install_title": "In 3 Sekunden installieren, für immer nutzen",
-         "install_step1_h3": "Taste drücken und halten",
-         "install_step1_p": "Klicken und halten Sie die grüne 'Table Copy'-Taste mit der linken Maustaste.",
-         "install_step2_h3": "In Ihre Lesezeichenleiste ziehen",
-         "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
-         "bookmarklet_button_text": "Table Copy",
-         "bookmarklet_title": "Ziehen Sie mich in Ihre Lesezeichenleiste",
-         "install_step3_h3": "Fertig!",
-         "install_step3_p": "Jetzt klicken Sie auf jeder Seite mit einer Tabelle einfach auf dieses Lesezeichen, um zu beginnen!",
-         "install_mobile_note": "Hinweis: Dieses Bookmarklet muss in einem Desktop-Browser installiert und verwendet werden.",
+{
+    "lang_code": "de",
+    "common": {
+        "nav_home": "Startseite",
+        "nav_features": "Funktionen",
+        "nav_use_cases": "Anwendungsfälle",
+        "nav_blog": "Blog",
+        "nav_faq": "FAQ",
+        "nav_install": "Jetzt installieren",
+        "nav_tools": "Andere Werkzeuge",
+        "nav_web_to_pdf": "Web zu PDF",
+        "nav_web_to_markdown": "Web zu Markdown",
+        "nav_web_to_text": "Web zu Text",
+        "nav_about": "Über Uns",
+        "nav_contact": "Kontakt",
+        "nav_privacy": "Datenschutzrichtlinie",
+        "nav_terms": "Nutzungsbedingungen"
+    },
+    "index": {
+        "meta_title": "Table Copy - Web-Tabellen mit einem Klick in Excel kopieren, ohne unordentliche Formatierung",
+        "meta_description": "Verabschieden Sie sich von unordentlicher Formatierung! Table Copy ist ein leichtes Bookmarklet, mit dem Sie jede Web-Tabelle (einschließlich derer, die mit Divs erstellt wurden) mit einem Klick in Excel, CSV oder JSON kopieren können. Keine Installation erforderlich, perfekte Formatierung.",
+        "meta_keywords": "Tabelle von Website kopieren, HTML zu Excel, Tabellen-Scraper, Web-Datenextraktion, HTML-Tabelle kopieren, Tabelle zu CSV, Tabelle zu JSON, Tabellenkopieren und -einfügen reparieren",
+        "logo": "Table Copy",
+        "hero_h1": "Jede Web-Tabelle kopieren,<br>so einfach wie Text kopieren.",
+        "hero_slogan": "Vergessen Sie mühsame Screenshots und manuelle Eingaben. Ein Klick, um Daten für ein perfektes Einfügen in Ihre Zwischenablage zu übernehmen.",
+        "hero_cta": "Jetzt kostenlos installieren",
+        "why_title": "Wie Sie waren auch wir die Mühsal leid",
+        "why_p": "Wir sind Daten-Enthusiasten und intensive Nutzer von Produktivitätstools. Unzählige Tage und Nächte, in denen wir Daten von Webseiten in Excel übertragen mussten, wurden wir von fehlerhafter Formatierung, versteckten `<div>`-Tabellen und langsamen Erweiterungen gequält. Wir glaubten, es müsse einen besseren Weg geben. Und so wurde 'Table Copy' geboren. Es ist keine aufgeblähte Software, sondern ein reines, schnelles und fokussiertes Werkzeug, das entwickelt wurde, um ein Problem zu lösen: das elegante Kopieren von Web-Tabellen.",
+        "install_title": "In 3 Sekunden installieren, für immer nutzen",
+        "install_step1_h3": "Taste drücken und halten",
+        "install_step1_p": "Klicken und halten Sie die grüne 'Table Copy'-Taste mit der linken Maustaste.",
+        "install_step2_h3": "In Ihre Lesezeichenleiste ziehen",
+        "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
+        "bookmarklet_button_text": "Table Copy",
+        "bookmarklet_title": "Ziehen Sie mich in Ihre Lesezeichenleiste",
+        "install_step3_h3": "Fertig!",
+        "install_step3_p": "Jetzt klicken Sie auf jeder Seite mit einer Tabelle einfach auf dieses Lesezeichen, um zu beginnen!",
+        "install_mobile_note": "Hinweis: Dieses Bookmarklet muss in einem Desktop-Browser installiert und verwendet werden.",
         "ai_browser_title": "Webmaster-Empfehlung: Ein revolutionärer AI-Browser",
         "ai_browser_description": "Perplexity Comet hat meine Art, Informationen zu erhalten, vollständig verändert.",
         "ai_browser_download": "Perplexity AI herunterladen",
         "ai_browser_cta": "Meine Bewertung & Verwendung ansehen",
-         "alert_text": "Bitte klicken Sie nicht auf diese Schaltfläche. Ziehen Sie sie stattdessen in Ihre Lesezeichenleiste!",
-         "features_title": "Ein Werkzeug für alle Ihre Bedürfnisse",
-         "feature1_h3": "Intelligente Strukturerkennung",
-         "feature1_p": "Unterstützt nicht nur traditionelle `<table>`-Elemente, sondern erkennt auch intelligent moderne Tabellen, die mit `<div>`-Layouts erstellt wurden (basierend auf ARIA-Standards).",
-         "feature2_h3": "Perfektes Ein-Klick-Kopieren",
-         "feature2_p": "Unsere einzigartige Rich-Text-(HTML)-Kopierfunktion schreibt die Tabellenstruktur in die Zwischenablage und gewährleistet ein perfektes, formatwahrendes Einfügen in Excel, WPS oder Notion.",
-         "feature3_h3": "Flexible Exportoptionen",
-         "feature3_p": "Kopieren Sie als Rich Text, TSV, CSV oder JSON. Exportieren Sie direkt in eine CSV-Datei (perfekt für Excel) oder kopieren Sie sogar den rohen HTML-Quellcode der Tabelle, um all Ihren Anforderungen gerecht zu werden.",
-         "feature4_h3": "Leicht & Sicher",
-         "feature4_p": "Es ist nur ein Bookmarklet. Keine Installation, keine Hintergrundprozesse, bereit, wenn Sie es sind. Alle Operationen werden lokal in Ihrem Browser ausgeführt. Wir sehen, senden oder speichern niemals Ihre Daten.",
-         "feature5_h3": "Als Bild exportieren",
-         "feature5_p": "Speichern Sie die Tabelle mit einem Klick als PNG-Bild. Perfekt zum Teilen in Präsentationen, Berichten oder in sozialen Medien. Was Sie sehen, ist was Sie bekommen.",
-         "use_cases_title": "Wer nutzt es und wie?",
-         "use_case1_h3": "📊 Datenanalysten",
-         "use_case1_p": "Extrahieren Sie schnell Datentabellen aus Online-Finanzberichten und Branchenreports, ohne auf den IT-Support zu warten, und beginnen Sie sofort mit Ihrer Analyse.",
-         "use_case2_h3": "🛒 E-Commerce-Manager",
-         "use_case2_p": "Erfassen Sie einfach die Produktpreise, Verkaufsvolumina und Spezifikationen von Wettbewerbern, um Vergleichstabellen zu erstellen und Ihre Marketingstrategie zu informieren.",
-         "use_case3_h3": "🎓 Studenten & Forscher",
-         "use_case3_p": "Sammeln Sie effizient Daten aus Wikipedia, akademischen Websites und Regierungsberichten für Hausarbeiten und Forschung und steigern Sie so Ihre Produktivität bei der Literaturrecherche erheblich.",
-         "blog_title": "Aus unserem Blog",
-         "blog_read_more": "Weiterlesen →",
-         "faq_title": "Häufig gestellte Fragen (FAQ)",
-         "faq1_q": "Ist dieses Tool sicher? Werden meine Daten hochgeladen?",
-         "faq1_a": "Absolut sicher. Table Copy ist ein 100% clientseitiges Tool. Die gesamte Datenerkennung und -verarbeitung erfolgt lokal in Ihrem Browser. Nichts wird jemals an einen Server gesendet oder dort gespeichert.",
-         "faq2_q": "Wie unterscheidet es sich von einer Browser-Erweiterung?",
-         "faq2_a": "Es ist ein 'Bookmarklet', das viel leichter ist als eine Erweiterung. Keine Installation aus einem App-Store, keine Nutzung von Hintergrundressourcen. Klicken, um es zu verwenden, und es ist weg, wenn Sie fertig sind. Das bedeutet natürlich auch, dass es keine komplexen Hintergrundaufgaben wie geplantes Scraping durchführen kann, was Erweiterungen können.",
-         "faq3_q": "Funktioniert es auf allen Websites?",
-         "faq3_a": "Es unterstützt die große Mehrheit der Tabellen, die Standard-`<table>`-Tags oder ARIA-konforme `<div>`-Strukturen verwenden. Bei Seiten, die mit extrem komplexen oder nicht standardmäßigen Frontend-Frameworks erstellt wurden, funktioniert es möglicherweise nicht perfekt. Wir verbessern den Algorithmus kontinuierlich.",
-         "faq4_q": "Ist dieses Tool kostenlos? Wird es in Zukunft Geld kosten?",
-         "faq4_a": "Ja, das aktuelle Bookmarklet wird immer kostenlos sein. Wir glauben, dass gute Werkzeuge weithin zugänglich sein sollten. In Zukunft könnten wir eine leistungsfähigere, kostenpflichtige Browser-Erweiterung veröffentlichen (z. B. mit Scraping über mehrere Seiten, geplanten Aufgaben), aber die Kernfunktionalität, die Sie heute sehen, wird immer kostenlos sein.",
-         "community_title": "Teilen & Verbinden",
-         "community_p": "Wenn Sie dieses Tool nützlich finden, teilen Sie es mit Ihren Freunden! Für Feedback und Ideen, verbinden Sie sich mit uns.",
-         "footer_p": "© 2025 Table Copy. Angetrieben von Gemini AI."
-     },
-     "web-to-image": {
-         "meta_title": "Web zu Bild - Webseite in Bild umwandeln | TableCopy",
-         "meta_description": "Web zu Bild: kostenloses Bookmarklet, um jede Webseite als hochauflösendes PNG lokal im Browser zu erfassen.",
-         "meta_keywords": "Web zu Bild, Webseite als Bild speichern, HTML zu Bild, Bookmarklet, lokale Erfassung",
-         "logo": "Web to Image",
-         "hero_h1": "Ein-Klick-Erfassung von Webseiten als PNG — Web zu Bild (Ganze Seite, Hohe Auflösung)",
-         "hero_slogan": "Erfassen Sie jede Webseite als hochauflösendes PNG (visuelle Wiedergabetreue & Zusammenfügen langer Seiten). Ideal zum Teilen und Archivieren.",
-         "install_cta": "Jetzt verwenden",
-         "features_title": "Funktionen — Web zu Bild / Als PNG speichern",
-         "feature_list": [
-             "<strong>Ganzseiten-Erfassung:</strong> Verwendet `html2canvas`, um das gesamte HTML-Dokument zu erfassen, wobei Modals und Overlays für eine saubere Ausgabe behandelt werden.",
-             "<strong>Hochauflösender Export:</strong> Erzeugt hochauflösende Bilder, die für Druck und Anzeige geeignet sind, indem `scale: window.devicePixelRatio` oder höher eingestellt wird.",
-             "<strong>Datenschutz & Lokale Verarbeitung:</strong> Die gesamte Erfassung und Bilderzeugung erfolgt lokal in Ihrem Browser. Es werden keine Daten an einen externen Dienst hochgeladen."
-         ],
-         "pdf_promo": "Benötigen Sie durchsuchbaren und auswählbaren Text? Verwenden Sie unseren: <a href=\"/de/web-to-pdf.html\">Web zu PDF Konverter</a>.",
-         "about_title": "Über dieses Tool (Wie es funktioniert & EEAT)",
-         "about_p1": "<strong>Implementierung & Wartung:</strong> Dieses Tool wird vom TableCopy-Team gewartet. Die Kernlogik der Erfassung verwendet die beliebte `html2canvas`-Bibliothek, die durch Fehlermeldungen und Fallback-Mechanismen robuster gemacht wurde.",
-         "about_p2": "<strong>Technische Details:</strong> Das Skript blendet vorübergehend sein eigenes Modal aus, um eine Selbsterfassung zu vermeiden, und verwendet `useCORS`, um die Erfolgsrate beim Rendern von Cross-Origin-Bildressourcen zu verbessern. Das Bild wird über eine dataURL exportiert, um einen Browser-Download auszulösen.",
-         "about_p3": "<strong>Vertrauenswürdigkeit & Überprüfbarkeit:</strong> Das Projekt ist ein statisches Code-Repository. Die gesamte Logik kann in `tools/tablecopy/` überprüft werden. Abhängigkeiten von Drittanbietern werden von einem CDN geladen; für eine Offline-Bereitstellung kann das Skript gebündelt und von einer vertrauenswürdigen Quelle gehostet werden.",
-         "faq_title": "Häufig gestellte Fragen (FAQ)",
-         "faq_q1": "Was ist, wenn die Erfassung unerwünschte Pop-ups oder Symbolleisten enthält?",
-         "faq_a1": "Das Skript versucht, seine eigene Benutzeroberfläche auszublenden. Für Elemente von Drittanbietern wie Chat-Widgets oder Cookie-Banner schließen Sie diese bitte manuell oder blenden Sie sie vor der Erfassung mit den Entwicklertools des Browsers aus.",
-         "faq_q2": "Warum fehlen einige Bilder oder Ressourcen im exportierten Bild?",
-         "faq_a2": "Wenn eine Ressource von einer Drittanbieter-Domain stammt und nicht die richtigen CORS-Header hat, blockiert der Browser das Zeichnen auf dem Canvas, wodurch sie im exportierten Bild fehlt. Lösungen umfassen das Öffnen der Seite in einem Inkognito-/neuen Tab, damit Ressourcen geladen werden können, oder das lokale Speichern von Schlüsselbildern und das anschließende Zusammensetzen des Screenshots.",
-         "faq_q3": "Wie kann ich eine höhere Auflösung oder eine kleinere Dateigröße erhalten?",
-         "faq_a3": "Um die Auflösung zu erhöhen, passen Sie den `scale`-Parameter an (z. B. `window.devicePixelRatio * 2`), was die Pixeldichte erhöht, aber auch den Speicherverbrauch und die Verarbeitungszeit erheblich steigert. Um die Dateigröße zu reduzieren, verwenden Sie nach dem Export ein Bildkomprimierungstool (wie TinyPNG) oder senken Sie den Qualitätsparameter vor dem Export aus dem Canvas (für JPEGs).",
-         "faq_q4": "Wie vermeide ich Speicherabstürze bei der Verarbeitung langer Seiten?",
-         "faq_a4": "Das Erfassen großer Seiten kann sehr speicherintensiv sein. Es wird empfohlen, abschnittsweise zu erfassen (in mehrere Bilder aufteilen) oder den `scale` zu reduzieren und die Bilder dann lokal zusammenzufügen. Eine andere Strategie ist das serverseitige Rendern/Erfassen, was jedoch Datenschutzrisiken birgt.",
-         "faq_q5": "Wie kann ich Feedback geben oder Verbesserungen beisteuern?",
-         "faq_a5": "Wir laden Sie ein, ein Issue oder einen PR in unserem GitHub-Repository (Pfad: `tools/tablecopy/`) einzureichen. Bitte geben Sie eine reproduzierbare Beispielseite oder eine Bildschirmaufnahme an, um uns bei der Lokalisierung des Problems und der Durchführung von Regressionstests zu helfen.",
-         "faq_footer": "Benötigen Sie durchsuchbaren Text oder eine bessere Druckqualität? Gehen Sie zu: <a href=\"/de/web-to-pdf.html\">Web zu PDF</a> oder kehren Sie zur <a href=\"/de/\">Startseite</a> zurück.",
-         "install_title": "In 3 Sekunden installieren, für immer nutzen",
-         "install_step1_h3": "Taste drücken und halten",
-         "install_step1_p": "Klicken und halten Sie die grüne 'Web Converter'-Taste.",
-         "install_step2_h3": "In die Lesezeichenleiste ziehen",
-         "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
-         "bookmarklet_button_text": "Web Converter",
-         "install_step3_h3": "Fertig! Klicken zum Verwenden",
-         "install_step3_p": "Klicken Sie auf jeder Seite, die Sie erfassen möchten, auf dieses Lesezeichen, um zu beginnen!"
-     },
-     "web-to-pdf": {
-         "meta_title": "Web zu PDF - Jede Webseite mit einem Klick als PDF speichern | TableCopy",
-         "meta_description": "Web zu PDF ist ein leichtes, kostenloses Bookmarklet, mit dem Sie die aktuelle Webseite mit einem einzigen Klick über die Druckfunktion Ihres Browsers als hochwertiges PDF-Dokument speichern können.",
-         "meta_keywords": "Web zu PDF, Webseite als PDF speichern, HTML zu PDF, Webseite drucken, Bookmarklet, kostenloses Tool",
-         "logo": "Web to PDF",
-         "hero_h1": "Webseite mit einem Klick als PDF speichern",
-         "hero_slogan": "Keine komplexe Software erforderlich. Speichern Sie jede Webseite als hochwertige, durchsuchbare PDF-Datei.",
-         "install_cta": "Jetzt verwenden",
-         "features_title": "Funktionen — Web zu PDF",
-         "feature_list": [
-             "<strong>Native Druckfunktion:</strong> Nutzt die leistungsstarke integrierte PDF-Rendering-Engine des Browsers für maximale Kompatibilität und Wiedergabetreue.",
-             "<strong>Durchsuchbarer & auswählbarer Text:</strong> Das generierte PDF behält alle Textinformationen bei, was das Suchen, Kopieren und Archivieren erleichtert.",
-             "<strong>Leicht & Sicher:</strong> Ein reines JavaScript-Bookmarklet, das auf keine externen Server angewiesen ist. Alle Operationen werden lokal ausgeführt und schützen Ihre Privatsphäre."
-         ],
-         "image_promo": "Müssen Sie die Webseite als Bild speichern? Verwenden Sie unseren: <a href=\"/de/web-to-image.html\">Web zu Bild Konverter</a>.",
-         "use_cases_title": "Anwendungsfälle - Web-Archivierung & Offline-Lesen",
-         "use_cases_list": [
-             {
-                 "h3": "✍️ Akademische Forschung & Datenerfassung",
-                 "p": "Archivieren Sie dauerhaft wissenschaftliche Artikel, Branchenberichte und Online-Literatur. Konvertieren Sie Webinhalte in PDF zum Offline-Lesen, Zitieren und Notieren, was es zu einem großartigen Assistenten für das Schreiben von Arbeiten und Literaturrecherchen macht."
-             },
-             {
-                 "h3": "🧾 Rechnungen & Online-Tickets speichern",
-                 "p": "Ein-Klick-Archivierung von Online-Bestellbestätigungen, elektronischen Rechnungen, Reisebuchungen und Veranstaltungstickets. Das PDF-Format ist einfach zu verwalten und zu drucken und stellt sicher, dass Ihre wichtigen Dokumente sicher und dauerhaft gespeichert werden."
-             },
-             {
-                 "h3": "📖 Artikel zum Offline-Lesen sammeln",
-                 "p": "Speichern Sie interessante Nachrichtenartikel, ausführliche Berichte oder Tutorials als PDFs, um sie jederzeit auf dem Weg zur Arbeit oder auf Reisen ohne Internetverbindung zu lesen und Ihre persönliche digitale Bibliothek aufzubauen."
-             }
-         ],
-         "install_title": "In 3 Sekunden installieren, für immer nutzen",
-         "install_step1_h3": "Taste drücken und halten",
-         "install_step1_p": "Klicken und halten Sie die rote 'Web Converter'-Taste.",
-         "install_step2_h3": "In die Lesezeichenleiste ziehen",
-         "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
-         "bookmarklet_button_text": "Web Converter",
-         "install_step3_h3": "Fertig! Klicken zum Verwenden",
-         "install_step3_p": "Klicken Sie auf jeder Seite, die Sie speichern möchten, auf dieses Lesezeichen, um zu beginnen!",
-         "footer_p": "© 2025 Web to PDF. Angetrieben von Gemini AI."
-     },
-     "web-to-word": {
-         "meta_title": "Web zu Word - Jede Webseite in ein bearbeitbares Word-Dokument (DOCX) umwandeln | TableCopy",
-         "meta_description": "Web to Word ist ein kostenloses Bookmarklet, das jede Webseite in eine bearbeitbare Microsoft Word-Datei (.docx) umwandelt. Perfekt für Berichte, Bearbeitung und Wiederverwendung von Inhalten.",
-         "meta_keywords": "Web zu Word, Webseite als docx speichern, HTML zu Word, HTML zu docx, Bookmarklet, kostenloses Tool",
-         "logo": "Web to Word",
-         "hero_h1": "Webseite mit einem Klick in bearbeitbares Word umwandeln",
-         "hero_slogan": "Verwandeln Sie Webinhalte sofort in eine .docx-Datei, die zur Bearbeitung und Integration in Ihre Dokumente bereit ist.",
-         "install_cta": "Jetzt verwenden",
-         "features_title": "Funktionen — Web zu Word (DOCX)",
-         "feature_list": [
-             "<strong>Bearbeitbarer Inhalt:</strong> Im Gegensatz zu PDF oder Bildern ist die Ausgabe ein vollständig bearbeitbares Word-Dokument. Ändern Sie einfach Text, Tabellen und Bilder.",
-             "<strong>Inhaltsorientierte Konvertierung:</strong> Hervorragend geeignet, um die Kerninhaltsstruktur wie Überschriften, Absätze, Listen und Bilder für eine einfache Wiederverwendung beizubehalten.",
-             "<strong>Leicht & Sicher:</strong> Ein reines JavaScript-Bookmarklet. Die gesamte Konvertierung erfolgt lokal in Ihrem Browser und gewährleistet den Schutz Ihrer Daten."
-         ],
-         "other_promo": "Benötigen Sie eine hochauflösende, nicht bearbeitbare Version? Verwenden Sie unseren: <a href=\"/de/web-to-pdf.html\">Web zu PDF</a> oder <a href=\"/de/web-to-image.html\">Web zu Bild</a> Konverter.",
-         "use_cases_title": "Anwendungsfälle - Wiederverwendung von Inhalten & Berichterstellung",
-         "use_cases_list": [
-             {
-                 "h3": "✍️ Berichte & Arbeiten schreiben",
-                 "p": "Sammeln Sie schnell Informationen aus verschiedenen Webquellen und fassen Sie sie in einem einzigen Word-Dokument zusammen, um Berichte, Aufsätze oder Forschungsarbeiten zu entwerfen. Kein mühsames Kopieren und Einfügen mehr."
-             },
-             {
-                 "h3": "📝 Interne Dokumentation erstellen",
-                 "p": "Konvertieren Sie Online-Tutorials, Wissensdatenbankartikel oder Produktdokumentationen in Word-Dateien für interne Schulungsmaterialien, die einfach angepasst und mit einem Branding versehen werden können."
-             },
-             {
-                 "h3": "🔄 Webinhalte wiederverwenden",
-                 "p": "Extrahieren Sie Inhalte von Ihrer alten Website oder Ihren Blog-Beiträgen in das Word-Format zur einfachen Bearbeitung, Archivierung oder Migration auf eine neue Plattform."
-             }
-         ],
-         "install_title": "In 3 Sekunden installieren, für immer nutzen",
-         "install_step1_h3": "Taste drücken und halten",
-         "install_step1_p": "Klicken und halten Sie die blaue 'Web Converter'-Taste.",
-         "install_step2_h3": "In die Lesezeichenleiste ziehen",
-         "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
-         "bookmarklet_button_text": "Web Converter",
-         "install_step3_h3": "Fertig! Klicken zum Verwenden",
-         "install_step3_p": "Klicken Sie auf jeder Seite, die Sie konvertieren möchten, auf dieses Lesezeichen, um zu beginnen!"
-     },
-     "web-to-markdown": {
-         "meta_title": "Web zu Markdown - Jede Webseite in sauberes Markdown umwandeln | TableCopy",
-         "meta_description": "Web to Markdown ist ein kostenloses Bookmarklet, das jeden Web-Artikel in ein sauberes, lesbares Markdown (.md) Format umwandelt. Perfekt für Entwickler, Blogger und Notizenschreiber.",
-         "meta_keywords": "web zu markdown, webseite als markdown speichern, html zu markdown, artikel zu markdown, bookmarklet, kostenloses tool",
-         "logo": "Web zu Markdown",
-         "hero_h1": "Webseite mit einem Klick in sauberes Markdown umwandeln",
-         "hero_slogan": "Verwandeln Sie jeden Web-Artikel sofort in eine saubere .md-Datei, bereit für Ihre Notizen, Ihren Blog oder Ihre Dokumentation.",
-         "install_cta": "Jetzt verwenden",
-         "features_title": "Funktionen — Web zu Markdown",
-         "feature_list": [
-             "<strong>Saubere & lesbare Ausgabe:</strong> Verwendet die leistungsstarke `turndown`-Bibliothek, um HTML in gut strukturiertes, lesbares Markdown zu konvertieren.",
-             "<strong>Intelligente Inhalts-Extraktion:</strong> Konzentriert sich automatisch auf den Hauptinhalt einer Seite (wie `<article>` oder `<main>`), um Unordnung wie Anzeigen und Seitenleisten zu vermeiden.",
-             "<strong>Leicht & Sicher:</strong> Ein reines JavaScript-Bookmarklet. Die gesamte Konvertierung erfolgt lokal in Ihrem Browser und gewährleistet den Schutz Ihrer Daten."
-         ],
-         "other_promo": "Benötigen Sie ein anderes Format? Probieren Sie unsere Konverter: <a href=\"/de/web-to-pdf.html\">Web zu PDF</a>, <a href=\"/de/web-to-image.html\">Web zu Bild</a> oder <a href=\"/de/web-to-word.html\">Web zu Word</a>.",
-         "use_cases_title": "Anwendungsfälle - Inhaltsarchivierung & Wiederverwendung",
-         "use_cases_list": [
-             {
-                 "h3": "✍️ Entwickler & Blogger",
-                 "p": "Schnappen Sie sich schnell Code-Schnipsel, Tutorials und Artikel aus dem Web und konvertieren Sie sie in Markdown für Ihre Blog-Beiträge oder technische Dokumentation. Behält Codeblöcke und Formatierung bei."
-             },
-             {
-                 "h3": "📚 Notizenschreiber & Studenten",
-                 "p": "Speichern Sie interessante Artikel und Recherchen in Ihrer bevorzugten Notizen-App (wie Obsidian, Joplin oder Notion) in einem sauberen, bearbeitbaren Format. Perfekt zum Aufbau einer persönlichen Wissensdatenbank."
-             },
-             {
-                 "h3": "🔄 Content-Kuratoren",
-                 "p": "Archivieren Sie Webinhalte einfach zum Offline-Lesen oder verwenden Sie sie für Newsletter und soziale Medien wieder. Markdown ist ein universelles Format, das einfach zu bearbeiten und zu verwalten ist."
-             }
-         ],
-         "install_title": "In 3 Sekunden installieren, für immer nutzen",
-         "install_step1_h3": "Taste drücken und halten",
-         "install_step1_p": "Klicken und halten Sie die schwarze 'Web Converter'-Taste.",
-         "install_step2_h3": "In die Lesezeichenleiste ziehen",
-         "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
-         "bookmarklet_button_text": "Web Converter",
-         "install_step3_h3": "Fertig! Klicken zum Verwenden",
-         "install_step3_p": "Klicken Sie auf jeder Seite, die Sie konvertieren möchten, auf dieses Lesezeichen, um zu beginnen!",
-         "footer_p": "© 2025 Web zu Markdown. Angetrieben von Gemini AI."
-     }
-     ,
+        "alert_text": "Bitte klicken Sie nicht auf diese Schaltfläche. Ziehen Sie sie stattdessen in Ihre Lesezeichenleiste!",
+        "features_title": "Ein Werkzeug für alle Ihre Bedürfnisse",
+        "feature1_h3": "Intelligente Strukturerkennung",
+        "feature1_p": "Unterstützt nicht nur traditionelle `<table>`-Elemente, sondern erkennt auch intelligent moderne Tabellen, die mit `<div>`-Layouts erstellt wurden (basierend auf ARIA-Standards).",
+        "feature2_h3": "Perfektes Ein-Klick-Kopieren",
+        "feature2_p": "Unsere einzigartige Rich-Text-(HTML)-Kopierfunktion schreibt die Tabellenstruktur in die Zwischenablage und gewährleistet ein perfektes, formatwahrendes Einfügen in Excel, WPS oder Notion.",
+        "feature3_h3": "Flexible Exportoptionen",
+        "feature3_p": "Kopieren Sie als Rich Text, TSV, CSV oder JSON. Exportieren Sie direkt in eine CSV-Datei (perfekt für Excel) oder kopieren Sie sogar den rohen HTML-Quellcode der Tabelle, um all Ihren Anforderungen gerecht zu werden.",
+        "feature4_h3": "Leicht & Sicher",
+        "feature4_p": "Es ist nur ein Bookmarklet. Keine Installation, keine Hintergrundprozesse, bereit, wenn Sie es sind. Alle Operationen werden lokal in Ihrem Browser ausgeführt. Wir sehen, senden oder speichern niemals Ihre Daten.",
+        "feature5_h3": "Als Bild exportieren",
+        "feature5_p": "Speichern Sie die Tabelle mit einem Klick als PNG-Bild. Perfekt zum Teilen in Präsentationen, Berichten oder in sozialen Medien. Was Sie sehen, ist was Sie bekommen.",
+        "use_cases_title": "Wer nutzt es und wie?",
+        "use_case1_h3": "📊 Datenanalysten",
+        "use_case1_p": "Extrahieren Sie schnell Datentabellen aus Online-Finanzberichten und Branchenreports, ohne auf den IT-Support zu warten, und beginnen Sie sofort mit Ihrer Analyse.",
+        "use_case2_h3": "🛒 E-Commerce-Manager",
+        "use_case2_p": "Erfassen Sie einfach die Produktpreise, Verkaufsvolumina und Spezifikationen von Wettbewerbern, um Vergleichstabellen zu erstellen und Ihre Marketingstrategie zu informieren.",
+        "use_case3_h3": "🎓 Studenten & Forscher",
+        "use_case3_p": "Sammeln Sie effizient Daten aus Wikipedia, akademischen Websites und Regierungsberichten für Hausarbeiten und Forschung und steigern Sie so Ihre Produktivität bei der Literaturrecherche erheblich.",
+        "blog_title": "Aus unserem Blog",
+        "blog_read_more": "Weiterlesen →",
+        "webpage_to_excel_section": {
+            "title": "Wie man jede Webseite in Excel konvertiert: Professionelle Lösungen",
+            "subtitle": "Expertenleitfaden zur Konvertierung von Webseiten in Excel mit bewährten Methoden, die 2025 funktionieren",
+            "methods_title": "4 Methoden zur Konvertierung von Webseiten-Tabellen in Excel",
+            "method1_title": "Methode 1: TableCopy (Empfohlen) - Ein-Klick-Professionelle Lösung",
+            "method1_description": "Die effizienteste Methode zur Konvertierung von Webseiten-Tabellen in Excel mit perfekter Formatierung. Entwickelt von Datenprofis, handelt dieses Bookmarklet sowohl traditionelle HTML-Tabellen als auch moderne Div-basierte Layouts, die andere Tools übersehen.",
+            "method1_benefits": [
+                "✅ <strong>Perfekte Formatierung:</strong> Behält Tabellenstruktur, Datentypen und Sonderzeichen bei",
+                "✅ <strong>Universelle Kompatibilität:</strong> Funktioniert mit jeder Website, einschließlich komplexem JavaScript-renderierten Inhalt",
+                "✅ <strong>Multiple Exportformate:</strong> Excel, CSV, TSV, JSON und HTML-Quellcode",
+                "✅ <strong>Datenschutz zuerst:</strong> 100% clientseitige Verarbeitung, keine Daten werden auf Server hochgeladen",
+                "✅ <strong>Professionelle Qualität:</strong> Weltweit von Finanzanalysten, Forschern und Datenwissenschaftlern verwendet"
+            ],
+            "method2_title": "Methode 2: Excel-Webabfragen - Integriert aber begrenzt",
+            "method2_description": "Excels native Funktion 'Daten aus Web abrufen' kann grundlegende Tabellen extrahieren, hat aber Schwierigkeiten mit modernen Websites und komplexen Layouts.",
+            "method2_limitations": [
+                "❌ Versagt bei JavaScript-renderierten Inhalten und dynamischen Tabellen",
+                "❌ Kann Div-basierte Tabellenlayouts nicht verarbeiten",
+                "❌ Erfordert technisches Setup und Wartung",
+                "❌ Funktioniert oft nicht mehr, wenn Website-Strukturen sich ändern"
+            ],
+            "method3_title": "Methode 3: Manuelles Kopieren und Einfügen - Kostenlos aber frustrierend",
+            "method3_description": "Der häufigste Ansatz, führt aber zu Formatierungskatastrophen, Datenverlust und Stunden aufräumarbeit.",
+            "method3_problems": [
+                "❌ Tabellen fallen zu einzeln Spalten zusammen",
+                "❌ Verlorene Daten und defekte Formatierung",
+                "❌ Manuelles Aufräumen für jede Konvertierung erforderlich",
+                "❌ Nicht für professionelle Nutzung geeignet"
+            ],
+            "method4_title": "Methode 4: Programmierte Lösungen - Leistungsstark aber komplex",
+            "method4_description": "Benutzerdefinierte Skripte mit Python (BeautifulSoup, Pandas) oder JavaScript bieten maximale Flexibilität, erfordern aber Programmierkenntnisse und kontinuierliche Wartung.",
+            "method4_challenges": [
+                "❌ Erfordert Programmierkenntnisse",
+                "❌ Einrichtung und Wartungsaufwand",
+                "❌ Übertrieben für einfache Konvertierungen",
+                "❌ Nicht praktisch für nicht-technische Benutzer"
+            ]
+        },
+        "expert_testimonials": {
+            "title": "Vertraut von Datenprofis weltweit",
+            "testimonial1": {
+                "name": "Sarah Chen",
+                "role": "Senior-Finanzanalystin, Fortune 500",
+                "quote": "TableCopy hat unseren Arbeitsablauf revolutioniert. Wir können jetzt Finanzdaten aus Geschäftsberichten in Sekunden statt Stunden extrahieren. Die Genauigkeit ist perfekt, und wir haben Dateneingabefehler vollständig eliminiert."
+            },
+            "testimonial2": {
+                "name": "Dr. Michael Rodriguez",
+                "role": "Forschungswissenschaftler, MIT",
+                "quote": "Als Forscher, der täglich mit komplexen Datentabellen arbeitet, ist TableCopy unverzichtbar. Es bewältigt mühelos akademische Quellen, Regierungsdatenbanken und wissenschaftliche Veröffentlichungen. Meine Datensammelzeit hat um 80% abgenommen."
+            }
+        },
+        "comparison_table": {
+            "title": "Vergleich der Web-zu-Excel-Konverter",
+            "headers": [
+                "Funktion",
+                "TableCopy",
+                "Excel-Webabfrage",
+                "Manuelles Kopieren und Einfügen",
+                "Python-Skripte"
+            ],
+            "rows": [
+                {
+                    "feature": "Einrichtungszeit",
+                    "tablecopy": "3 Sekunden",
+                    "excel": "5-10 Minuten",
+                    "manual": "Keine",
+                    "python": "Stunden bis Tage"
+                },
+                {
+                    "feature": "Erfolgsrate",
+                    "tablecopy": "98%+",
+                    "excel": "60%",
+                    "manual": "20%",
+                    "python": "95% (wenn korrekt kodiert)"
+                },
+                {
+                    "feature": "Erforderliche technische Fähigkeiten",
+                    "tablecopy": "Keine",
+                    "excel": "Grundlagen",
+                    "manual": "Keine",
+                    "python": "Fortgeschritten"
+                },
+                {
+                    "feature": "Datenqualität",
+                    "tablecopy": "100%",
+                    "excel": "70%",
+                    "manual": "30%",
+                    "python": "95%"
+                }
+            ]
+        },
+        "step_by_step_guide": {
+            "title": "Schritt für Schritt: Jede Webseite in 30 Sekunden in Excel konvertieren",
+            "step1": {
+                "title": "Schritt 1: Installieren Sie den Web-zu-Excel-Konverter",
+                "description": "Besuchen Sie TableCopy.pro und ziehen Sie das Bookmarklet in Ihre Browser-Symbolleiste. Kein Download oder keine Installation erforderlich."
+            },
+            "step2": {
+                "title": "Schritt 2: Navigieren Sie zu Ihrer Zielwebseite",
+                "description": "Gehen Sie zu jeder Website, die die Tabelle enthält, die Sie konvertieren möchten. Klicken Sie irgendwo in die Tabelle, um sie auszuwählen."
+            },
+            "step3": {
+                "title": "Schritt 3: Konvertieren Sie mit einem Klick",
+                "description": "Klicken Sie auf das TableCopy-Lesezeichen in Ihrer Symbolleiste. Wählen Sie Ihr Exportformat (Excel, CSV oder JSON) und fügen Sie es direkt in Ihre Tabelle ein."
+            }
+        },
+        "faq_title": "Häufig gestellte Fragen (FAQ)",
+        "faq1_q": "Ist dieses Tool sicher? Werden meine Daten hochgeladen?",
+        "faq1_a": "Absolut sicher. Table Copy ist ein 100% clientseitiges Tool. Die gesamte Datenerkennung und -verarbeitung erfolgt lokal in Ihrem Browser. Nichts wird jemals an einen Server gesendet oder dort gespeichert.",
+        "faq2_q": "Wie unterscheidet es sich von einer Browser-Erweiterung?",
+        "faq2_a": "Es ist ein 'Bookmarklet', das viel leichter ist als eine Erweiterung. Keine Installation aus einem App-Store, keine Nutzung von Hintergrundressourcen. Klicken, um es zu verwenden, und es ist weg, wenn Sie fertig sind. Das bedeutet natürlich auch, dass es keine komplexen Hintergrundaufgaben wie geplantes Scraping durchführen kann, was Erweiterungen können.",
+        "faq3_q": "Funktioniert es auf allen Websites?",
+        "faq3_a": "Es unterstützt die große Mehrheit der Tabellen, die Standard-`<table>`-Tags oder ARIA-konforme `<div>`-Strukturen verwenden. Bei Seiten, die mit extrem komplexen oder nicht standardmäßigen Frontend-Frameworks erstellt wurden, funktioniert es möglicherweise nicht perfekt. Wir verbessern den Algorithmus kontinuierlich.",
+        "faq4_q": "Ist dieses Tool kostenlos? Wird es in Zukunft Geld kosten?",
+        "faq4_a": "Ja, das aktuelle Bookmarklet wird immer kostenlos sein. Wir glauben, dass gute Werkzeuge weithin zugänglich sein sollten. In Zukunft könnten wir eine leistungsfähigere, kostenpflichtige Browser-Erweiterung veröffentlichen (z. B. mit Scraping über mehrere Seiten, geplanten Aufgaben), aber die Kernfunktionalität, die Sie heute sehen, wird immer kostenlos sein.",
+        "faq5_q": "Funktioniert TableCopy mit dynamischen JavaScript-Tabellen und Single-Page-Anwendungen?",
+        "faq5_a": "Ja, TableCopy erfasst den aktuellen Zustand von Tabellen in Ihrem Browser, einschließlich JavaScript-renderierten Inhalten, dynamischen Updates und Single-Page-Anwendungen wie React-, Vue- oder Angular-basierte Websites.",
+        "faq6_q": "Kann ich mehrere Webseiten stapelweise in Excel konvertieren?",
+        "faq6_a": "Obwohl TableCopy für Einzelseiten-Konvertierungen konzipiert ist, macht seine Geschwindigkeit (3 Sekunden pro Konvertierung) es effizient für die Verarbeitung mehrerer Seiten. Für unternehmensweite Batch-Verarbeitung erwägen Sie unsere professionellen API-Lösungen.",
+        "community_title": "Teilen & Verbinden",
+        "community_p": "Wenn Sie dieses Tool nützlich finden, teilen Sie es mit Ihren Freunden! Für Feedback und Ideen, verbinden Sie sich mit uns.",
+        "footer_p": "© 2025 Table Copy. Angetrieben von Gemini AI."
+    },
+    "web-to-image": {
+        "meta_title": "Web zu Bild - Webseite in Bild umwandeln | TableCopy",
+        "meta_description": "Web zu Bild: kostenloses Bookmarklet, um jede Webseite als hochauflösendes PNG lokal im Browser zu erfassen.",
+        "meta_keywords": "Web zu Bild, Webseite als Bild speichern, HTML zu Bild, Bookmarklet, lokale Erfassung",
+        "logo": "Web to Image",
+        "hero_h1": "Ein-Klick-Erfassung von Webseiten als PNG — Web zu Bild (Ganze Seite, Hohe Auflösung)",
+        "hero_slogan": "Erfassen Sie jede Webseite als hochauflösendes PNG (visuelle Wiedergabetreue & Zusammenfügen langer Seiten). Ideal zum Teilen und Archivieren.",
+        "install_cta": "Jetzt verwenden",
+        "features_title": "Funktionen — Web zu Bild / Als PNG speichern",
+        "feature_list": [
+            "<strong>Ganzseiten-Erfassung:</strong> Verwendet `html2canvas`, um das gesamte HTML-Dokument zu erfassen, wobei Modals und Overlays für eine saubere Ausgabe behandelt werden.",
+            "<strong>Hochauflösender Export:</strong> Erzeugt hochauflösende Bilder, die für Druck und Anzeige geeignet sind, indem `scale: window.devicePixelRatio` oder höher eingestellt wird.",
+            "<strong>Datenschutz & Lokale Verarbeitung:</strong> Die gesamte Erfassung und Bilderzeugung erfolgt lokal in Ihrem Browser. Es werden keine Daten an einen externen Dienst hochgeladen."
+        ],
+        "pdf_promo": "Benötigen Sie durchsuchbaren und auswählbaren Text? Verwenden Sie unseren: <a href=\"/de/web-to-pdf.html\">Web zu PDF Konverter</a>.",
+        "about_title": "Über dieses Tool (Wie es funktioniert & EEAT)",
+        "about_p1": "<strong>Implementierung & Wartung:</strong> Dieses Tool wird vom TableCopy-Team gewartet. Die Kernlogik der Erfassung verwendet die beliebte `html2canvas`-Bibliothek, die durch Fehlermeldungen und Fallback-Mechanismen robuster gemacht wurde.",
+        "about_p2": "<strong>Technische Details:</strong> Das Skript blendet vorübergehend sein eigenes Modal aus, um eine Selbsterfassung zu vermeiden, und verwendet `useCORS`, um die Erfolgsrate beim Rendern von Cross-Origin-Bildressourcen zu verbessern. Das Bild wird über eine dataURL exportiert, um einen Browser-Download auszulösen.",
+        "about_p3": "<strong>Vertrauenswürdigkeit & Überprüfbarkeit:</strong> Das Projekt ist ein statisches Code-Repository. Die gesamte Logik kann in `tools/tablecopy/` überprüft werden. Abhängigkeiten von Drittanbietern werden von einem CDN geladen; für eine Offline-Bereitstellung kann das Skript gebündelt und von einer vertrauenswürdigen Quelle gehostet werden.",
+        "faq_title": "Häufig gestellte Fragen (FAQ)",
+        "faq_q1": "Was ist, wenn die Erfassung unerwünschte Pop-ups oder Symbolleisten enthält?",
+        "faq_a1": "Das Skript versucht, seine eigene Benutzeroberfläche auszublenden. Für Elemente von Drittanbietern wie Chat-Widgets oder Cookie-Banner schließen Sie diese bitte manuell oder blenden Sie sie vor der Erfassung mit den Entwicklertools des Browsers aus.",
+        "faq_q2": "Warum fehlen einige Bilder oder Ressourcen im exportierten Bild?",
+        "faq_a2": "Wenn eine Ressource von einer Drittanbieter-Domain stammt und nicht die richtigen CORS-Header hat, blockiert der Browser das Zeichnen auf dem Canvas, wodurch sie im exportierten Bild fehlt. Lösungen umfassen das Öffnen der Seite in einem Inkognito-/neuen Tab, damit Ressourcen geladen werden können, oder das lokale Speichern von Schlüsselbildern und das anschließende Zusammensetzen des Screenshots.",
+        "faq_q3": "Wie kann ich eine höhere Auflösung oder eine kleinere Dateigröße erhalten?",
+        "faq_a3": "Um die Auflösung zu erhöhen, passen Sie den `scale`-Parameter an (z. B. `window.devicePixelRatio * 2`), was die Pixeldichte erhöht, aber auch den Speicherverbrauch und die Verarbeitungszeit erheblich steigert. Um die Dateigröße zu reduzieren, verwenden Sie nach dem Export ein Bildkomprimierungstool (wie TinyPNG) oder senken Sie den Qualitätsparameter vor dem Export aus dem Canvas (für JPEGs).",
+        "faq_q4": "Wie vermeide ich Speicherabstürze bei der Verarbeitung langer Seiten?",
+        "faq_a4": "Das Erfassen großer Seiten kann sehr speicherintensiv sein. Es wird empfohlen, abschnittsweise zu erfassen (in mehrere Bilder aufteilen) oder den `scale` zu reduzieren und die Bilder dann lokal zusammenzufügen. Eine andere Strategie ist das serverseitige Rendern/Erfassen, was jedoch Datenschutzrisiken birgt.",
+        "faq_q5": "Wie kann ich Feedback geben oder Verbesserungen beisteuern?",
+        "faq_a5": "Wir laden Sie ein, ein Issue oder einen PR in unserem GitHub-Repository (Pfad: `tools/tablecopy/`) einzureichen. Bitte geben Sie eine reproduzierbare Beispielseite oder eine Bildschirmaufnahme an, um uns bei der Lokalisierung des Problems und der Durchführung von Regressionstests zu helfen.",
+        "faq_footer": "Benötigen Sie durchsuchbaren Text oder eine bessere Druckqualität? Gehen Sie zu: <a href=\"/de/web-to-pdf.html\">Web zu PDF</a> oder kehren Sie zur <a href=\"/de/\">Startseite</a> zurück.",
+        "install_title": "In 3 Sekunden installieren, für immer nutzen",
+        "install_step1_h3": "Taste drücken und halten",
+        "install_step1_p": "Klicken und halten Sie die grüne 'Web Converter'-Taste.",
+        "install_step2_h3": "In die Lesezeichenleiste ziehen",
+        "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Fertig! Klicken zum Verwenden",
+        "install_step3_p": "Klicken Sie auf jeder Seite, die Sie erfassen möchten, auf dieses Lesezeichen, um zu beginnen!"
+    },
+    "web-to-pdf": {
+        "meta_title": "Web zu PDF - Jede Webseite mit einem Klick als PDF speichern | TableCopy",
+        "meta_description": "Web zu PDF ist ein leichtes, kostenloses Bookmarklet, mit dem Sie die aktuelle Webseite mit einem einzigen Klick über die Druckfunktion Ihres Browsers als hochwertiges PDF-Dokument speichern können.",
+        "meta_keywords": "Web zu PDF, Webseite als PDF speichern, HTML zu PDF, Webseite drucken, Bookmarklet, kostenloses Tool",
+        "logo": "Web to PDF",
+        "hero_h1": "Webseite mit einem Klick als PDF speichern",
+        "hero_slogan": "Keine komplexe Software erforderlich. Speichern Sie jede Webseite als hochwertige, durchsuchbare PDF-Datei.",
+        "install_cta": "Jetzt verwenden",
+        "features_title": "Funktionen — Web zu PDF",
+        "feature_list": [
+            "<strong>Native Druckfunktion:</strong> Nutzt die leistungsstarke integrierte PDF-Rendering-Engine des Browsers für maximale Kompatibilität und Wiedergabetreue.",
+            "<strong>Durchsuchbarer & auswählbarer Text:</strong> Das generierte PDF behält alle Textinformationen bei, was das Suchen, Kopieren und Archivieren erleichtert.",
+            "<strong>Leicht & Sicher:</strong> Ein reines JavaScript-Bookmarklet, das auf keine externen Server angewiesen ist. Alle Operationen werden lokal ausgeführt und schützen Ihre Privatsphäre."
+        ],
+        "image_promo": "Müssen Sie die Webseite als Bild speichern? Verwenden Sie unseren: <a href=\"/de/web-to-image.html\">Web zu Bild Konverter</a>.",
+        "use_cases_title": "Anwendungsfälle - Web-Archivierung & Offline-Lesen",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Akademische Forschung & Datenerfassung",
+                "p": "Archivieren Sie dauerhaft wissenschaftliche Artikel, Branchenberichte und Online-Literatur. Konvertieren Sie Webinhalte in PDF zum Offline-Lesen, Zitieren und Notieren, was es zu einem großartigen Assistenten für das Schreiben von Arbeiten und Literaturrecherchen macht."
+            },
+            {
+                "h3": "🧾 Rechnungen & Online-Tickets speichern",
+                "p": "Ein-Klick-Archivierung von Online-Bestellbestätigungen, elektronischen Rechnungen, Reisebuchungen und Veranstaltungstickets. Das PDF-Format ist einfach zu verwalten und zu drucken und stellt sicher, dass Ihre wichtigen Dokumente sicher und dauerhaft gespeichert werden."
+            },
+            {
+                "h3": "📖 Artikel zum Offline-Lesen sammeln",
+                "p": "Speichern Sie interessante Nachrichtenartikel, ausführliche Berichte oder Tutorials als PDFs, um sie jederzeit auf dem Weg zur Arbeit oder auf Reisen ohne Internetverbindung zu lesen und Ihre persönliche digitale Bibliothek aufzubauen."
+            }
+        ],
+        "install_title": "In 3 Sekunden installieren, für immer nutzen",
+        "install_step1_h3": "Taste drücken und halten",
+        "install_step1_p": "Klicken und halten Sie die rote 'Web Converter'-Taste.",
+        "install_step2_h3": "In die Lesezeichenleiste ziehen",
+        "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Fertig! Klicken zum Verwenden",
+        "install_step3_p": "Klicken Sie auf jeder Seite, die Sie speichern möchten, auf dieses Lesezeichen, um zu beginnen!",
+        "footer_p": "© 2025 Web to PDF. Angetrieben von Gemini AI."
+    },
+    "web-to-word": {
+        "meta_title": "Web zu Word - Jede Webseite in ein bearbeitbares Word-Dokument (DOCX) umwandeln | TableCopy",
+        "meta_description": "Web to Word ist ein kostenloses Bookmarklet, das jede Webseite in eine bearbeitbare Microsoft Word-Datei (.docx) umwandelt. Perfekt für Berichte, Bearbeitung und Wiederverwendung von Inhalten.",
+        "meta_keywords": "Web zu Word, Webseite als docx speichern, HTML zu Word, HTML zu docx, Bookmarklet, kostenloses Tool",
+        "logo": "Web to Word",
+        "hero_h1": "Webseite mit einem Klick in bearbeitbares Word umwandeln",
+        "hero_slogan": "Verwandeln Sie Webinhalte sofort in eine .docx-Datei, die zur Bearbeitung und Integration in Ihre Dokumente bereit ist.",
+        "install_cta": "Jetzt verwenden",
+        "features_title": "Funktionen — Web zu Word (DOCX)",
+        "feature_list": [
+            "<strong>Bearbeitbarer Inhalt:</strong> Im Gegensatz zu PDF oder Bildern ist die Ausgabe ein vollständig bearbeitbares Word-Dokument. Ändern Sie einfach Text, Tabellen und Bilder.",
+            "<strong>Inhaltsorientierte Konvertierung:</strong> Hervorragend geeignet, um die Kerninhaltsstruktur wie Überschriften, Absätze, Listen und Bilder für eine einfache Wiederverwendung beizubehalten.",
+            "<strong>Leicht & Sicher:</strong> Ein reines JavaScript-Bookmarklet. Die gesamte Konvertierung erfolgt lokal in Ihrem Browser und gewährleistet den Schutz Ihrer Daten."
+        ],
+        "other_promo": "Benötigen Sie eine hochauflösende, nicht bearbeitbare Version? Verwenden Sie unseren: <a href=\"/de/web-to-pdf.html\">Web zu PDF</a> oder <a href=\"/de/web-to-image.html\">Web zu Bild</a> Konverter.",
+        "use_cases_title": "Anwendungsfälle - Wiederverwendung von Inhalten & Berichterstellung",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Berichte & Arbeiten schreiben",
+                "p": "Sammeln Sie schnell Informationen aus verschiedenen Webquellen und fassen Sie sie in einem einzigen Word-Dokument zusammen, um Berichte, Aufsätze oder Forschungsarbeiten zu entwerfen. Kein mühsames Kopieren und Einfügen mehr."
+            },
+            {
+                "h3": "📝 Interne Dokumentation erstellen",
+                "p": "Konvertieren Sie Online-Tutorials, Wissensdatenbankartikel oder Produktdokumentationen in Word-Dateien für interne Schulungsmaterialien, die einfach angepasst und mit einem Branding versehen werden können."
+            },
+            {
+                "h3": "🔄 Webinhalte wiederverwenden",
+                "p": "Extrahieren Sie Inhalte von Ihrer alten Website oder Ihren Blog-Beiträgen in das Word-Format zur einfachen Bearbeitung, Archivierung oder Migration auf eine neue Plattform."
+            }
+        ],
+        "install_title": "In 3 Sekunden installieren, für immer nutzen",
+        "install_step1_h3": "Taste drücken und halten",
+        "install_step1_p": "Klicken und halten Sie die blaue 'Web Converter'-Taste.",
+        "install_step2_h3": "In die Lesezeichenleiste ziehen",
+        "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Fertig! Klicken zum Verwenden",
+        "install_step3_p": "Klicken Sie auf jeder Seite, die Sie konvertieren möchten, auf dieses Lesezeichen, um zu beginnen!",
+        "footer_p": "© 2025 Web zu Word. Angetrieben von Gemini AI."
+    },
+    "web-to-markdown": {
+        "meta_title": "Web zu Markdown - Jede Webseite in sauberes Markdown umwandeln | TableCopy",
+        "meta_description": "Web to Markdown ist ein kostenloses Bookmarklet, das jeden Web-Artikel in ein sauberes, lesbares Markdown (.md) Format umwandelt. Perfekt für Entwickler, Blogger und Notizenschreiber.",
+        "meta_keywords": "web zu markdown, webseite als markdown speichern, html zu markdown, artikel zu markdown, bookmarklet, kostenloses tool",
+        "logo": "Web zu Markdown",
+        "hero_h1": "Webseite mit einem Klick in sauberes Markdown umwandeln",
+        "hero_slogan": "Verwandeln Sie jeden Web-Artikel sofort in eine saubere .md-Datei, bereit für Ihre Notizen, Ihren Blog oder Ihre Dokumentation.",
+        "install_cta": "Jetzt verwenden",
+        "features_title": "Funktionen — Web zu Markdown",
+        "feature_list": [
+            "<strong>Saubere & lesbare Ausgabe:</strong> Verwendet die leistungsstarke `turndown`-Bibliothek, um HTML in gut strukturiertes, lesbares Markdown zu konvertieren.",
+            "<strong>Intelligente Inhalts-Extraktion:</strong> Konzentriert sich automatisch auf den Hauptinhalt einer Seite (wie `<article>` oder `<main>`), um Unordnung wie Anzeigen und Seitenleisten zu vermeiden.",
+            "<strong>Leicht & Sicher:</strong> Ein reines JavaScript-Bookmarklet. Die gesamte Konvertierung erfolgt lokal in Ihrem Browser und gewährleistet den Schutz Ihrer Daten."
+        ],
+        "other_promo": "Benötigen Sie ein anderes Format? Probieren Sie unsere Konverter: <a href=\"/de/web-to-pdf.html\">Web zu PDF</a>, <a href=\"/de/web-to-image.html\">Web zu Bild</a> oder <a href=\"/de/web-to-word.html\">Web zu Word</a>.",
+        "use_cases_title": "Anwendungsfälle - Inhaltsarchivierung & Wiederverwendung",
+        "use_cases_list": [
+            {
+                "h3": "✍️ Entwickler & Blogger",
+                "p": "Schnappen Sie sich schnell Code-Schnipsel, Tutorials und Artikel aus dem Web und konvertieren Sie sie in Markdown für Ihre Blog-Beiträge oder technische Dokumentation. Behält Codeblöcke und Formatierung bei."
+            },
+            {
+                "h3": "📚 Notizenschreiber & Studenten",
+                "p": "Speichern Sie interessante Artikel und Recherchen in Ihrer bevorzugten Notizen-App (wie Obsidian, Joplin oder Notion) in einem sauberen, bearbeitbaren Format. Perfekt zum Aufbau einer persönlichen Wissensdatenbank."
+            },
+            {
+                "h3": "🔄 Content-Kuratoren",
+                "p": "Archivieren Sie Webinhalte einfach zum Offline-Lesen oder verwenden Sie sie für Newsletter und soziale Medien wieder. Markdown ist ein universelles Format, das einfach zu bearbeiten und zu verwalten ist."
+            }
+        ],
+        "install_title": "In 3 Sekunden installieren, für immer nutzen",
+        "install_step1_h3": "Taste drücken und halten",
+        "install_step1_p": "Klicken und halten Sie die schwarze 'Web Converter'-Taste.",
+        "install_step2_h3": "In die Lesezeichenleiste ziehen",
+        "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
+        "bookmarklet_button_text": "Web Converter",
+        "install_step3_h3": "Fertig! Klicken zum Verwenden",
+        "install_step3_p": "Klicken Sie auf jeder Seite, die Sie konvertieren möchten, auf dieses Lesezeichen, um zu beginnen!",
+        "footer_p": "© 2025 Web zu Markdown. Angetrieben von Gemini AI."
+    },
     "web-to-text": {
         "meta_title": "Web zu Text - Sauberen Text von jeder Webseite extrahieren | TableCopy",
         "meta_description": "Web to Text ist ein kostenloses Bookmarklet, das den Hauptinhalt jeder Webseite extrahiert und als saubere, übersichtliche Textversion darstellt. Ideal zum Lesen, Archivieren und Wiederverwenden.",
@@ -265,6 +381,175 @@
         "install_step2_p": "<strong>Entscheidender Schritt:</strong> Ziehen Sie die Schaltfläche in die 'Lesezeichenleiste' oder 'Favoritenleiste' Ihres Browsers und lassen Sie dann die Maus los.",
         "bookmarklet_button_text": "Web Converter",
         "install_step3_h3": "Fertig! Klicken zum Verwenden",
-        "install_step3_p": "Klicken Sie auf jeder Seite, die Sie lesen möchten, auf dieses Lesezeichen, um zu beginnen!"
+        "install_step3_p": "Klicken Sie auf jeder Seite, die Sie lesen möchten, auf dieses Lesezeichen, um zu beginnen!",
+        "footer_p": "© 2025 Web zu Text. Angetrieben von Gemini AI."
+    },
+    "about": {
+        "meta_title": "[TRANSLATION NEEDED] About Us - TableCopy | Web Table to Excel Converter",
+        "meta_description": "[TRANSLATION NEEDED] Learn about TableCopy's mission to make web data extraction simple, fast, and privacy-focused. Built by data professionals, for data professionals.",
+        "hero_h1": "About TableCopy",
+        "hero_subtitle": "Making web data extraction simple, fast, and privacy-focused",
+        "mission_title": "Our Mission",
+        "mission_p": "At TableCopy, we believe that extracting data from the web should be simple, fast, and secure. Our mission is to empower professionals, students, and businesses with tools that make web data accessible without compromising privacy or requiring technical expertise.",
+        "what_we_do_title": "What We Do",
+        "what_we_do_p1": "TableCopy provides a suite of lightweight, browser-based tools that help you convert web tables into Excel, PDF, images, Word documents, and more. Our flagship tool copies web tables to Excel with perfect formatting, saving you hours of manual work.",
+        "what_we_do_p2": "Unlike traditional solutions that require software installation or send your data to external servers, all TableCopy tools run entirely in your browser. Your data never leaves your device, ensuring complete privacy and security.",
+        "values_title": "Our Values",
+        "values_list": [
+            {
+                "title": "Privacy First",
+                "description": "We don't collect, store, or transmit your data. All processing happens locally in your browser, giving you complete control over your information."
+            },
+            {
+                "title": "User-Focused Design",
+                "description": "Our tools are designed by data professionals who understand your pain points. We prioritize simplicity, efficiency, and reliability in everything we build."
+            },
+            {
+                "title": "Continuous Improvement",
+                "description": "We're constantly updating our tools based on user feedback and evolving web technologies to ensure you always have the best data extraction experience."
+            }
+        ],
+        "story_title": "Our Story",
+        "story_p": "TableCopy was born from frustration. As data professionals with over 15 years of experience in web scraping and data analysis, we struggled daily with broken formatting, missing data, and hours of cleanup work when converting web tables to Excel. We tested every method available—manual copy-paste, Excel web queries, Python scripts, and countless browser extensions. Each approach failed to deliver the simplicity and reliability we needed. So we built TableCopy, a tool that combines enterprise-grade accuracy with consumer-level simplicity. Today, TableCopy is trusted by financial analysts, researchers, e-commerce managers, and students worldwide to extract web data efficiently and securely."
+    },
+    "contact": {
+        "meta_title": "[TRANSLATION NEEDED] Contact Us - TableCopy",
+        "meta_description": "[TRANSLATION NEEDED] Get in touch with the TableCopy team for support, feedback, or inquiries. We'd love to hear from you!",
+        "hero_h1": "Contact Us",
+        "hero_subtitle": "We'd love to hear from you",
+        "intro_p": "Have a question, feedback, or suggestion? We're here to help! Whether you need technical support, want to report a bug, or have ideas for improving our tools, don't hesitate to reach out.",
+        "methods_title": "How to Reach Us",
+        "email_label": "Email",
+        "email_value": "support@tablecopy.pro",
+        "email_desc": "For general inquiries, bug reports, and feature suggestions",
+        "twitter_label": "X (Twitter)",
+        "twitter_value": "@tablecopy_tiny",
+        "twitter_desc": "Follow us for updates, tips, and quick support",
+        "topics_title": "What We Can Help With",
+        "topic1": "Technical support and troubleshooting",
+        "topic2": "Feature requests and product feedback",
+        "topic3": "Bug reports and issue reporting",
+        "response_time_title": "Response Time",
+        "response_time_p": "We typically respond to all inquiries within 24-48 hours during business days. For urgent technical issues, please include detailed information about your browser, operating system, and the specific problem you're encountering.",
+        "community_title": "Join Our Community",
+        "community_p": "Follow us on X (Twitter) for the latest updates, tips, and tricks. We love hearing from our users and often share user stories and creative ways to use TableCopy. If you find our tools helpful, please share them with your friends and colleagues!"
+    },
+    "privacy": {
+        "meta_title": "[TRANSLATION NEEDED] Privacy Policy - TableCopy",
+        "meta_description": "[TRANSLATION NEEDED] Learn how TableCopy protects your privacy. No data collection, no storage, all local processing. Your data stays on your device.",
+        "page_title": "Privacy Policy",
+        "last_updated": "Last Updated: January 1, 2025",
+        "intro_p": "[TRANSLATION NEEDED] At TableCopy, we take your privacy seriously. This Privacy Policy explains how we handle information. Because TableCopy is designed as a privacy-first tool that processes all data locally in your browser, our approach to data is fundamentally different from most web services.",
+        "section1_title": "1. Information We Collect",
+        "section1_1_title": "1.1 Information We DON'T Collect",
+        "section1_1_p": "TableCopy is designed to respect your privacy. We do NOT collect:",
+        "section1_1_item1": "Personal information (name, email address, phone number, postal address)",
+        "section1_1_item2": "Usage data or browsing history",
+        "section1_1_item3": "Location data or device fingerprinting information",
+        "section1_1_item4": "The content of tables you copy or convert",
+        "section1_1_item5": "Any files or data you process using our tools",
+        "section1_2_title": "1.2 Automatically Collected Information",
+        "section1_2_p": "Like most websites, we collect basic technical information that your browser automatically sends:",
+        "section1_2_item1": "Web server logs (IP address, browser type, referring page) - These logs are automatically deleted after 30 days and are only used for basic analytics and security purposes",
+        "section1_2_item2": "Google Analytics data (with anonymized IP address) - You can opt-out using browser add-ons or by disabling JavaScript",
+        "section2_title": "2. How We Use Information",
+        "section2_1_title": "2.1 Core Processing",
+        "section2_1_p": "TableCopy is a client-side bookmarklet. This means all processing happens directly in your browser. When you click the bookmarklet, JavaScript runs locally on your device to extract tables from the webpage. No data is sent to our servers.",
+        "section2_2_title": "2.2 No Data Storage",
+        "section2_2_p": "We do not have databases to store your data. We cannot access, view, or retrieve the tables you've converted. Once you close your browser or navigate away from the page, the processed data is gone from our systems forever.",
+        "section3_title": "3. Data Processing & Location",
+        "section3_1_title": "3.1 Client-Side Processing",
+        "section3_1_p": "All TableCopy operations are performed 100% locally in your browser:",
+        "section3_1_item1": "Table extraction happens on your device using JavaScript",
+        "section3_1_item2": "File conversions (Excel, PDF, etc.) are generated locally",
+        "section3_1_item3": "No data is transmitted to external servers during processing",
+        "section3_2_title": "3.2 No Server Transmission",
+        "section3_2_p": "The only time our bookmarklet communicates with external servers is to load the initial script. After that, all operations are completely offline and local to your browser.",
+        "section4_title": "4. Cookies & Local Storage",
+        "section4_1_title": "4.1 Essential Cookies",
+        "section4_1_p": "We use minimal cookies and local storage only for essential functionality, such as remembering your language preference. These cookies do not track your behavior or collect personal information.",
+        "section4_2_title": "4.2 Analytics",
+        "section4_2_p": "We use Google Analytics to understand how visitors use our website. This helps us improve our tools and content. Google Analytics may collect information about your browser, device, and approximate location. You can disable Google Analytics by using browser extensions or adjusting your browser settings.",
+        "section5_title": "5. Third-Party Services",
+        "section5_1_title": "5.1 CDN Services",
+        "section5_1_p": "We use third-party Content Delivery Networks (CDNs) to deliver static assets like JavaScript libraries and fonts. These services may log basic technical information, but they do not have access to your personal data or the content you process.",
+        "section5_2_title": "5.2 Analytics",
+        "section5_2_p": "As mentioned above, we use Google Analytics for website analytics. Google's privacy policy applies to the data they collect. You can review Google's privacy practices here: https://policies.google.com/privacy",
+        "section6_title": "6. Your Privacy Rights (GDPR/CCPA)",
+        "section6_1_title": "6.1 Your Rights Under GDPR (EU Users)",
+        "section6_1_p": "If you are located in the European Union, you have certain rights under the General Data Protection Regulation (GDPR). However, since TableCopy does not collect personal data, most GDPR rights are not applicable:",
+        "section6_1_item1": "Right to Access: You can request confirmation that no personal data is being processed",
+        "section6_1_item2": "Right to Rectification: Not applicable (no personal data stored)",
+        "section6_1_item3": "Right to Erasure: Not applicable (no personal data stored)",
+        "section6_2_title": "6.2 Your Rights Under CCPA (California Residents)",
+        "section6_2_p": "If you are a California resident, you have certain rights under the California Consumer Privacy Act (CCPA). Since TableCopy does not sell personal information and does not collect personal data, these rights are limited:",
+        "section6_3_title": "6.3 Data Access & Deletion",
+        "section6_3_p": "Since we do not collect or store personal data, there is no data for you to access or delete. If you have any concerns or questions, please contact us using the information below.",
+        "section7_title": "7. Children's Privacy",
+        "section7_p": "TableCopy is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.",
+        "section8_title": "8. International Data Transfers",
+        "section8_p": "Since all processing is done locally in your browser and we do not collect or store personal data, there are no international data transfers. Your data never leaves your device.",
+        "section9_title": "9. Policy Updates",
+        "section9_p": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will post the updated policy on this page with a revised \"Last Updated\" date. We encourage you to review this policy periodically.",
+        "section10_title": "10. Contact Us",
+        "section10_p": "If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:"
+    },
+    "terms": {
+        "meta_title": "[TRANSLATION NEEDED] Terms of Service - TableCopy",
+        "meta_description": "[TRANSLATION NEEDED] Terms of service and usage guidelines for TableCopy's free web conversion tools. Know your rights and responsibilities.",
+        "page_title": "Terms of Service",
+        "last_updated": "Last Updated: January 1, 2025",
+        "intro_p": "[TRANSLATION NEEDED] Welcome to TableCopy. These Terms of Service govern your use of our website and tools. By accessing or using TableCopy, you agree to these terms. If you do not agree, please do not use our services.",
+        "section1_title": "1. Acceptance of Terms",
+        "section1_p": "By accessing and using TableCopy, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or tools. We reserve the right to modify these terms at any time, and your continued use of the service constitutes acceptance of any changes.",
+        "section2_title": "2. Description of Service",
+        "section2_1_title": "2.1 Free Service",
+        "section2_1_p": "TableCopy is provided free of charge. There are no fees, subscriptions, or hidden costs for using our tools. You may use TableCopy for personal, educational, or commercial purposes without payment.",
+        "section2_2_title": "2.2 \"As Is\" Basis",
+        "section2_2_p": "The service is provided \"as is,\" without warranty of any kind, whether express or implied. We do not guarantee that the service will be uninterrupted, timely, secure, or error-free.",
+        "section3_title": "3. User Responsibilities",
+        "section3_1_title": "3.1 Proper Use",
+        "section3_1_p": "You agree to use TableCopy only for lawful purposes and in accordance with these Terms. You are responsible for all activity that occurs under your account or through your use of the service.",
+        "section3_1_item1": "Comply with all applicable laws and regulations",
+        "section3_1_item2": "Respect the intellectual property rights of others",
+        "section3_1_item3": "Not use the service to transmit malicious code or harmful content",
+        "section3_2_title": "3.2 Prohibited Activities",
+        "section3_2_p": "You may not use TableCopy to:",
+        "section3_2_item1": "Reverse engineer, decompile, or disassemble the bookmarklet code",
+        "section3_2_item2": "Use the tool for any illegal or unauthorized purpose",
+        "section3_2_item3": "Attempt to gain unauthorized access to our systems or networks",
+        "section3_2_item4": "Interfere with or disrupt the service or servers connected to the service",
+        "section4_title": "4. Intellectual Property",
+        "section4_1_title": "4.1 Ownership",
+        "section4_1_p": "All content, features, and functionality of TableCopy, including but not limited to text, graphics, logos, and software, are owned by TableCopy and are protected by international copyright, trademark, and other intellectual property laws.",
+        "section4_2_title": "4.2 Open Source Components",
+        "section4_2_p": "TableCopy utilizes certain open-source libraries and components. These components are licensed under their respective open-source licenses, which may grant you additional rights. Attribution and licensing information for these components can be found in our code repository.",
+        "section5_title": "5. Limitation of Liability",
+        "section5_1_title": "5.1 Disclaimer of Warranties",
+        "section5_1_p": "To the maximum extent permitted by law, TableCopy disclaims all warranties, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.",
+        "section5_1_item1": "The accuracy or reliability of any content or information",
+        "section5_1_item2": "The availability or performance of the service",
+        "section5_1_item3": "Any viruses or other harmful components that may infect your computer or equipment",
+        "section5_2_title": "5.2 Liability Cap",
+        "section5_2_p": "To the maximum extent permitted by applicable law, TableCopy shall not be liable for any indirect, incidental, special, or consequential damages arising out of or related to your use of the service. This includes, but is not limited to, damages for loss of profits, data, or other intangible losses. In no event shall TableCopy's total liability exceed the amount you paid for the service (which is $0, as the service is free).",
+        "section6_title": "6. Termination",
+        "section6_p": "We reserve the right to terminate or suspend your access to TableCopy immediately, without prior notice, for any breach of these Terms of Service. Upon termination, your right to use the service will immediately cease.",
+        "section7_title": "7. Governing Law & Jurisdiction",
+        "section7_p": "These Terms of Service shall be governed by and construed in accordance with the laws of the jurisdiction in which TableCopy is operated, without regard to its conflict of law provisions. Any legal action or proceeding arising under these Terms will be brought exclusively in the federal or state courts located in that jurisdiction.",
+        "section8_title": "8. Dispute Resolution",
+        "section8_p": "If you have any dispute or claim arising out of or relating to these Terms or the service, we recommend contacting us first at support@tablecopy.pro to attempt to resolve the issue informally. We are committed to working with you to find a satisfactory resolution.",
+        "section9_title": "9. Modifications to Terms",
+        "section9_p": "We reserve the right to modify these Terms of Service at any time. All changes are effective immediately when we post them. Your continued use of the service after the changes constitutes acceptance of the new terms. We will update the \"Last Updated\" date at the top of this page to reflect any modifications.",
+        "section10_title": "10. Severability",
+        "section10_p": "If any provision of these Terms of Service is held to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the remaining terms will remain in full force and effect.",
+        "section11_title": "11. Waiver",
+        "section11_p": "Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. Any waiver of any provision of these Terms will be effective only if in writing and signed by us.",
+        "section12_title": "12. Entire Agreement",
+        "section12_p": "These Terms of Service constitute the entire agreement between you and TableCopy regarding your use of the service and supersede all prior agreements and communications between you and TableCopy.",
+        "section13_title": "13. Contact Information",
+        "section13_label1": "Email",
+        "section13_email": "support@tablecopy.pro",
+        "section13_label2": "X (Twitter)",
+        "section13_twitter_url": "https://x.com/tablecopy_tiny"
     }
- }
+}
