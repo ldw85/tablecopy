@@ -1,316 +1,1008 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://w  ww.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Gemini -->
-
-<url>
-  <loc>https://tablecopy.pro/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/blog/how-to-copy-a-column-from-a-website</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/blog/how-to-copy-a-table-from-perplexity-ai</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/blog/how-to-copy-web-tables-to-excel-in-one-click</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/blog/html-to-excel-converter.html</loc>
-  <lastmod>2025-12-18T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- de -->
-<url>
-  <loc>https://tablecopy.pro/de/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/de/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/de/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/de/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/de/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/de/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- es -->
-<url>
-  <loc>https://tablecopy.pro/es/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/es/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/es/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/es/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/es/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/es/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- fr -->
-<url>
-  <loc>https://tablecopy.pro/fr/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/fr/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/fr/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/fr/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/fr/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/fr/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- ja -->
-<url>
-  <loc>https://tablecopy.pro/ja/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ja/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ja/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ja/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ja/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ja/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- ko -->
-<url>
-  <loc>https://tablecopy.pro/ko/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ko/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ko/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ko/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ko/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ko/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- pt -->
-<url>
-  <loc>https://tablecopy.pro/pt/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/pt/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/pt/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/pt/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/pt/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/pt/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- ru -->
-<url>
-  <loc>https://tablecopy.pro/ru/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ru/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ru/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ru/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ru/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/ru/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<!-- zh -->
-<url>
-  <loc>https://tablecopy.pro/zh/</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/zh/web-to-image</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/zh/web-to-pdf</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/zh/web-to-markdown</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/zh/web-to-text</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tablecopy.pro/zh/web-to-word</loc>
-  <lastmod>2025-10-09T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tablecopy.pro/</loc>
+    <lastmod>2026-01-04T05:13:20.205Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/about</loc>
+    <lastmod>2026-01-04T05:13:20.073Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/contact</loc>
+    <lastmod>2026-01-04T05:13:20.098Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:20.137Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:20.149Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:20.158Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:20.182Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/privacy</loc>
+    <lastmod>2026-01-04T05:13:20.214Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:20.230Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:20.239Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/terms</loc>
+    <lastmod>2026-01-04T05:13:20.250Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:20.260Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:20.268Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:20.277Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:20.288Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:20.295Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:20.302Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-tools</loc>
+    <lastmod>2026-01-04T05:13:20.311Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/web-translator</loc>
+    <lastmod>2026-01-04T05:13:20.319Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ai-browser-wave-and-specialist-bookmarks</loc>
+    <lastmod>2026-01-04T05:13:21.258Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/de/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.267Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/de/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.266Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/de/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.266Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/es/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.268Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/es/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.269Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/es/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.269Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/fr/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.267Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/fr/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.267Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/fr/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.267Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.257Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/how-to-copy-a-table-from-perplexity-ai</loc>
+    <lastmod>2026-01-04T05:13:21.256Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.256Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/html-to-excel-converter</loc>
+    <lastmod>2026-01-04T05:13:21.258Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ja/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.261Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ja/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.261Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ja/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.261Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ko/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.266Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ko/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.265Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ko/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.266Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/pt/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.263Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/pt/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.263Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/pt/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.263Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ru/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.262Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ru/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.262Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/ru/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.261Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.257Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/zh/how-to-copy-a-column-from-a-website</loc>
+    <lastmod>2026-01-04T05:13:21.263Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/zh/how-to-copy-web-tables-to-excel-in-one-click</loc>
+    <lastmod>2026-01-04T05:13:21.262Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/blog/zh/web-to-everything-bookmark-tools-complete-guide</loc>
+    <lastmod>2026-01-04T05:13:21.262Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/</loc>
+    <lastmod>2026-01-04T05:13:20.721Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/about</loc>
+    <lastmod>2026-01-04T05:13:20.681Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/contact</loc>
+    <lastmod>2026-01-04T05:13:20.688Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:20.694Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:20.700Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:20.705Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:20.711Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/privacy</loc>
+    <lastmod>2026-01-04T05:13:20.731Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:20.741Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:20.746Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/terms</loc>
+    <lastmod>2026-01-04T05:13:20.751Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:20.756Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:20.760Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:20.765Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:20.770Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:20.777Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:20.785Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-tools</loc>
+    <lastmod>2026-01-04T05:13:20.793Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/de/web-translator</loc>
+    <lastmod>2026-01-04T05:13:20.800Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/</loc>
+    <lastmod>2026-01-04T05:13:20.393Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/about</loc>
+    <lastmod>2026-01-04T05:13:20.325Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/contact</loc>
+    <lastmod>2026-01-04T05:13:20.337Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:20.347Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:20.354Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:20.363Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:20.374Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/privacy</loc>
+    <lastmod>2026-01-04T05:13:20.401Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:20.412Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:20.418Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/terms</loc>
+    <lastmod>2026-01-04T05:13:20.426Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:20.437Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:20.445Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:20.451Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:20.458Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:20.465Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:20.473Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-tools</loc>
+    <lastmod>2026-01-04T05:13:20.486Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/es/web-translator</loc>
+    <lastmod>2026-01-04T05:13:20.493Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/</loc>
+    <lastmod>2026-01-04T05:13:20.862Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/about</loc>
+    <lastmod>2026-01-04T05:13:20.807Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/contact</loc>
+    <lastmod>2026-01-04T05:13:20.815Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:20.821Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:20.830Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:20.838Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:20.846Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/privacy</loc>
+    <lastmod>2026-01-04T05:13:20.867Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:20.875Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:20.880Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/terms</loc>
+    <lastmod>2026-01-04T05:13:20.888Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:20.892Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:20.896Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:20.901Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:20.905Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:20.908Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:20.914Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-tools</loc>
+    <lastmod>2026-01-04T05:13:20.919Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/fr/web-translator</loc>
+    <lastmod>2026-01-04T05:13:20.922Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/</loc>
+    <lastmod>2026-01-04T05:13:20.962Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/about</loc>
+    <lastmod>2026-01-04T05:13:20.928Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/contact</loc>
+    <lastmod>2026-01-04T05:13:20.934Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:20.939Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:20.944Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:20.948Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:20.953Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/privacy</loc>
+    <lastmod>2026-01-04T05:13:20.967Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:20.974Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:20.982Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/terms</loc>
+    <lastmod>2026-01-04T05:13:20.988Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:20.993Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:20.999Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:21.004Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:21.009Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:21.014Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:21.019Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-tools</loc>
+    <lastmod>2026-01-04T05:13:21.025Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ja/web-translator</loc>
+    <lastmod>2026-01-04T05:13:21.034Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/</loc>
+    <lastmod>2026-01-04T05:13:21.076Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/about</loc>
+    <lastmod>2026-01-04T05:13:21.039Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/contact</loc>
+    <lastmod>2026-01-04T05:13:21.043Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:21.048Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:21.053Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:21.058Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:21.065Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/privacy</loc>
+    <lastmod>2026-01-04T05:13:21.087Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:21.095Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:21.100Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/terms</loc>
+    <lastmod>2026-01-04T05:13:21.106Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:21.111Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:21.116Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:21.121Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:21.129Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:21.136Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:21.141Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-tools</loc>
+    <lastmod>2026-01-04T05:13:21.146Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ko/web-translator</loc>
+    <lastmod>2026-01-04T05:13:21.150Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/</loc>
+    <lastmod>2026-01-04T05:13:20.583Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/about</loc>
+    <lastmod>2026-01-04T05:13:20.500Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/contact</loc>
+    <lastmod>2026-01-04T05:13:20.511Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:20.524Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:20.536Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:20.547Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:20.563Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/privacy</loc>
+    <lastmod>2026-01-04T05:13:20.592Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:20.602Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:20.609Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/terms</loc>
+    <lastmod>2026-01-04T05:13:20.617Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:20.624Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:20.634Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:20.641Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:20.647Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:20.654Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:20.659Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-tools</loc>
+    <lastmod>2026-01-04T05:13:20.667Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/pt/web-translator</loc>
+    <lastmod>2026-01-04T05:13:20.673Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/</loc>
+    <lastmod>2026-01-04T05:13:21.192Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/about</loc>
+    <lastmod>2026-01-04T05:13:21.154Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/contact</loc>
+    <lastmod>2026-01-04T05:13:21.159Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:21.163Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:21.167Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:21.171Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:21.177Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/privacy</loc>
+    <lastmod>2026-01-04T05:13:21.197Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:21.203Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:21.207Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/terms</loc>
+    <lastmod>2026-01-04T05:13:21.212Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:21.217Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:21.222Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:21.227Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:21.234Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:21.239Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:21.243Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-tools</loc>
+    <lastmod>2026-01-04T05:13:21.249Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/ru/web-translator</loc>
+    <lastmod>2026-01-04T05:13:21.253Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/</loc>
+    <lastmod>2026-01-04T05:13:19.887Z</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/about</loc>
+    <lastmod>2026-01-04T05:13:19.713Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/contact</loc>
+    <lastmod>2026-01-04T05:13:19.745Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/dark-mode</loc>
+    <lastmod>2026-01-04T05:13:19.781Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/enable-copy</loc>
+    <lastmod>2026-01-04T05:13:19.804Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/highlight-structure</loc>
+    <lastmod>2026-01-04T05:13:19.824Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/image-downloader</loc>
+    <lastmod>2026-01-04T05:13:19.847Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/privacy</loc>
+    <lastmod>2026-01-04T05:13:19.906Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/qr-code-generator</loc>
+    <lastmod>2026-01-04T05:13:19.936Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/send-to-ai</loc>
+    <lastmod>2026-01-04T05:13:19.951Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/terms</loc>
+    <lastmod>2026-01-04T05:13:19.969Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/wayback-machine</loc>
+    <lastmod>2026-01-04T05:13:19.982Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-to-image</loc>
+    <lastmod>2026-01-04T05:13:19.994Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-to-markdown</loc>
+    <lastmod>2026-01-04T05:13:20.004Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-to-pdf</loc>
+    <lastmod>2026-01-04T05:13:20.016Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-to-text</loc>
+    <lastmod>2026-01-04T05:13:20.031Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-to-word</loc>
+    <lastmod>2026-01-04T05:13:20.042Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-tools</loc>
+    <lastmod>2026-01-04T05:13:20.054Z</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tablecopy.pro/zh/web-translator</loc>
+    <lastmod>2026-01-04T05:13:20.064Z</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>

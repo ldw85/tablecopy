@@ -50,11 +50,7 @@ async function build() {
     }
     console.log('✅ Copied static assets.');
 
-    // 2.1 复制 sitemap.xml 到根目录
-    const sitemapSrc = path.join(config.srcDir, 'assets', 'sitemap.xml');
-    const sitemapDist = path.join(config.distDir, 'sitemap.xml');
-    await fs.copy(sitemapSrc, sitemapDist);
-    console.log('✅ Copied sitemap.xml to dist root.');
+    // 2.1 sitemap.xml 将在构建后自动生成
 
     // 2.2 复制 _redirects 文件到根目录（Cloudflare Pages 配置）
     const redirectsSrc = path.join(config.srcDir, '_redirects');
@@ -120,7 +116,108 @@ async function build() {
         console.log('✅ Copied blog posts.');
     }
 
+    // 6. 生成 sitemap.xml
+    await generateSitemap();
+
     console.log('🎉 Build finished successfully! Your site is ready in the "dist" directory.');
+}
+
+// --- Sitemap Generation Function ---
+async function generateSitemap() {
+    console.log('🗺️  Generating sitemap.xml...');
+
+    const urls = [];
+
+    // 递归扫描 dist 目录查找所有 HTML 文件
+    async function scanDir(dir, basePath = '') {
+        const entries = await fs.readdir(dir, { withFileTypes: true });
+
+        for (const entry of entries) {
+            const fullPath = path.join(dir, entry.name);
+            const relativePath = path.join(basePath, entry.name);
+
+            if (entry.isDirectory()) {
+                // 跳过 assets 目录（不需要在 sitemap 中）
+                if (entry.name !== 'assets') {
+                    await scanDir(fullPath, relativePath);
+                }
+            } else if (entry.isFile() && entry.name.endsWith('.html')) {
+                // 获取文件修改时间
+                const stats = await fs.stat(fullPath);
+                const lastmod = stats.mtime.toISOString();
+
+                // 生成 URL
+                let urlPath = relativePath.replace(/\.html$/, '');
+
+                // 特殊处理: 如果文件名是 index，则移除它（使用目录路径）
+                // 例如: "index" -> "", "zh/index" -> "zh", "blog/post" -> "blog/post"
+                if (path.basename(urlPath) === 'index') {
+                    urlPath = path.dirname(urlPath);
+                    // 如果 dirname 返回 "."，则表示是根目录的 index
+                    if (urlPath === '.') {
+                        urlPath = '';
+                    }
+                    // 目录路径添加尾部斜杠
+                    if (urlPath !== '') {
+                        urlPath = urlPath + '/';
+                    }
+                }
+
+                // 确保根路径有斜杠
+                if (urlPath === '') {
+                    urlPath = '/';
+                } else {
+                    urlPath = '/' + urlPath;
+                }
+
+                // 确定优先级
+                const isIndex = path.basename(entry.name) === 'index.html';
+                const priority = isIndex ? '1.00' : '0.80';
+
+                urls.push({
+                    loc: `${config.baseUrl}${urlPath}`,
+                    lastmod: lastmod,
+                    priority: priority,
+                    langOrder: basePath === '' ? 0 : 1, // 用于排序: 根目录在前
+                    path: urlPath
+                });
+            }
+        }
+    }
+
+    await scanDir(config.distDir);
+
+    // 排序: 按语言分组，然后按路径排序
+    urls.sort((a, b) => {
+        // 首先按语言分组（根目录在前）
+        if (a.langOrder !== b.langOrder) {
+            return a.langOrder - b.langOrder;
+        }
+        // 然后按路径排序
+        return a.path.localeCompare(b.path);
+    });
+
+    // 生成 XML
+    const xmlLines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        ...urls.map(url =>
+            `  <url>
+    <loc>${url.loc}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <priority>${url.priority}</priority>
+  </url>`
+        ),
+        '</urlset>'
+    ];
+
+    const xmlContent = xmlLines.join('\n');
+
+    // 写入 sitemap.xml
+    const sitemapPath = path.join(config.distDir, 'sitemap.xml');
+    await fs.writeFile(sitemapPath, xmlContent);
+
+    console.log(`✅ Generated sitemap.xml with ${urls.length} URLs.`);
 }
 
 build().catch(err => {
