@@ -1043,59 +1043,59 @@
         "bookmarklet_button_text": "图片下载器",
         "install_step3_h3": "完成！点击下载",
         "install_step3_p": "在任何有图片的页面上，点击此书签即可提取并下载它们。",
-        "intro_title": "What is a Web Page Image Extractor?",
-        "intro_content": "<p>Our <strong>image extractor from website online</strong> tool is a powerful solution designed to help you <strong>extract image from URL</strong> and <strong>get image from webpage</strong> effortlessly. Whether you need to <strong>rip all images from website</strong>, <strong>extract background image from webpage</strong>, or <strong>export image from webpage</strong>, our tool provides a seamless experience.</p>\n\n<p>This <strong>web page image extractor</strong> works directly in your browser, allowing you to <strong>extract photo from webpage</strong> and <strong>extract picture from website</strong> without any software installation. Simply drag the bookmarklet to your bookmarks bar, click it on any page, and instantly <strong>extract image from website online</strong>.</p>\n\n<h3>Why Use Our Image Downloader?</h3>\n<p>Many users wonder <strong>how to get image from website</strong> or <strong>how to export image from web page</strong> efficiently. Traditional methods involve right-clicking each image individually, which is time-consuming. Our tool automates this process, letting you <strong>rip all images from website</strong> in seconds.</p>\n\n<p>Perfect for designers who need to <strong>copy an image from a web page</strong>, researchers who want to <strong>extract pictures from website</strong> archives, or anyone who needs to <strong>extract photo from website</strong> for analysis. The tool handles <strong>how to extract images from html files</strong> automatically, finding both visible images and background graphics.</p>",
-        "how_to_use_title": "How to Extract Images from Webpages: Step-by-Step Guide",
-        "how_to_use_content": "<h3>Step 1: Install the Bookmarklet</h3>\n<p>Drag the purple \"Image Downloader\" button to your browser's bookmarks bar. This creates a one-click tool you can use on any website.</p>\n\n<h3>Step 2: Navigate to Any Webpage</h3>\n<p>Visit any website containing images you want to download. This works for blogs, e-commerce sites, portfolios, news sites, and more.</p>\n\n<h3>Step 3: Click the Bookmarklet</h3>\n<p>Click the \"Image Downloader\" bookmark in your bookmarks bar. The tool will instantly scan the page and display all images in a gallery view.</p>\n\n<h3>Step 4: Filter and Select Images</h3>\n<p>Browse through the extracted images in the visual gallery. Use filters to show only images above a certain size, specific file types (JPG, PNG, WebP, GIF), or dimensions. Check or uncheck images to select specific ones.</p>\n\n<h3>Step 5: Download as ZIP</h3>\n<p>Click the download button to save all selected images as a ZIP file. The download preserves original filenames and organizes them for easy use.</p>\n\n<h3>Tips for Best Results</h3>\n<ul>\n    <li><strong>For e-commerce sites:</strong> Use minimum size filters to avoid downloading thumbnails and icons</li>\n    <li><strong>For design inspiration:</strong> Lower the size threshold to include all visual elements</li>\n    <li><strong>For research:</strong> Download full galleries and organize by project or topic</li>\n    <li><strong>Background images:</strong> The tool automatically detects CSS background images that aren't visible in traditional save methods</li>\n</ul>",
-        "faq_title": "Frequently Asked Questions",
+        "intro_title": "什么是我们的图片下载器？",
+        "intro_content": "<p>我们的图片下载器是一款基于浏览器的工具，帮你轻松从任何网页获取图片。无论你是在建立情绪板、研究产品，还是归档视觉内容，这个工具都能让流程更高效。</p>\n\n<p>你不需要一张张右键保存图片，可以一键从网站上获取所有图片。工具会找到常规图片、背景图形，甚至包括滚动时才会加载的懒加载内容。它完全在你的浏览器中运行——不会上传到任何外部服务器，所以你的浏览记录保持私密。</p>\n\n<h3>这个工具适合谁？</h3>\n<p><strong>设计师和创意工作者：</strong> 从作品集网站、设计博客和灵感画廊收集视觉参考。通过一次下载更快地建立你的情绪板。</p>\n\n<p><strong>研究者和分析师：</strong> 收集产品图片、截图或视觉数据用于比较和分析。使用尺寸过滤器自动跳过图标和缩略图。</p>\n\n<p><strong>内容创作者：</strong> 从文章和博客文章中策划图片，用于你的内容创作工作流程。批量下载功能让你的下载更有条理。</p>",
+        "how_to_use_title": "如何使用图片下载器",
+        "how_to_use_content": "<h3>第1步：安装书签工具</h3>\n<p>把紫色按钮拖到浏览器的书签栏。只需一秒钟，之后你在任何网站都可以使用这个工具。</p>\n\n<h3>第2步：访问有图片的页面</h3>\n<p>浏览任何网页——博客、网店、作品集网站、新闻文章——任何你看到想要保存的图片的地方。</p>\n\n<h3>第3步：点击书签</h3>\n<p>直接点击你的新书签。工具会扫描整个页面，在精美的画廊视图中显示它找到的所有图片。</p>\n\n<h3>第4步：选择你想要的</h3>\n<p>浏览这些图片，取消勾选你不需要的。你还可以设置过滤器，比如最小文件尺寸，来跳过小文件（图标、logo等）。</p>\n\n<h3>第5步：下载</h3>\n<p>点击下载按钮，你会得到一个包含所有选中图片的ZIP文件。原始文件名会被保留，所以很容易保持有序。</p>\n\n<h3>专业技巧</h3>\n<ul>\n    <li><strong>购物研究：</strong> 设置尺寸过滤器在500x500左右，避免下载缩略图</li>\n    <li><strong>设计灵感：</strong> 保持较低阈值，捕获所有内容，包括小的UI元素</li>\n    <li><strong>背景图形：</strong> 工具会找到CSS背景图片，这些是右键保存无法捕获的</li>\n    <li><strong>大型画廊：</strong> 你可以选择特定图片，而不是下载所有内容</li>\n</ul>",
+        "faq_title": "常见问题",
         "faq_list": [
             {
-                "question": "How do I extract images from a URL?",
-                "answer": "Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file."
+                "question": "如何使用这个工具下载图片？",
+                "answer": "安装书签工具，把它拖到书签栏。然后，当你在任何有想要图片的页面上时，点击书签。工具会显示它找到的所有图片，你可以将它们下载为ZIP文件。"
             },
             {
-                "question": "Can I rip all images from a website at once?",
-                "answer": "Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file."
+                "question": "我可以一次下载网站的所有图片吗？",
+                "answer": "你可以获取当前浏览页面的所有图片。如果想下载网站多个页面的图片，只需在每个页面上运行工具。每次下载会创建自己的ZIP文件。"
             },
             {
-                "question": "How do I extract background images from a webpage?",
-                "answer": "Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics."
+                "question": "这个也能找到背景图片吗？",
+                "answer": "可以。工具会检测CSS背景图片，这些是通常无法通过右键保存的。它扫描页面源代码，所以能捕获通过样式表加载的图片。"
             },
             {
-                "question": "What types of images can I extract?",
-                "answer": "You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size."
+                "question": "支持哪些图片格式？",
+                "answer": "支持所有常见格式：JPG、PNG、WebP、GIF、SVG和BMP。画廊视图会显示每张图片的格式和尺寸，让你了解下载的内容。"
             },
             {
-                "question": "How do I export images from a webpage?",
-                "answer": "After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved."
+                "question": "我可以只下载特定图片吗？",
+                "answer": "当然。工具显示找到的所有图片后，你可以取消勾选不需要的。只有选中的图片会被下载到ZIP文件中。"
             },
             {
-                "question": "Can I extract photos from password-protected websites?",
-                "answer": "Yes, if you're logged into the website in your browser, the bookmarklet can extract images from that page. It works with the same access you have in your browser."
+                "question": "这个在私人或密码保护的网站上能用吗？",
+                "answer": "如果你在浏览器中能看到图片（因为你已登录），工具就可以提取它们。它使用你在浏览器中已有的访问权限。"
             },
             {
-                "question": "Is this image extractor free to use?",
-                "answer": "Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage."
+                "question": "这个真的免费吗？",
+                "answer": "是的，完全免费。没有限制，无需注册，没有隐藏费用。想用多少就用多少。"
             },
             {
-                "question": "How do I copy an image from a web page without right-clicking?",
-                "answer": "Some websites disable right-click. Our bookmarklet bypasses these restrictions by scanning the page source directly, finding all images even when right-click is disabled."
+                "question": "如果网站禁止右键怎么办？",
+                "answer": "这实际上是我们开发这个工具的原因之一。工具直接扫描页面代码，所以即使网站试图禁止右键或复制，它也能工作。"
             },
             {
-                "question": "Can I extract pictures from multiple pages at once?",
-                "answer": "Currently, the tool works on one page at a time. For multiple pages, run the bookmarklet on each page and download the images. Each download creates a separate ZIP file for easy organization."
+                "question": "这会让浏览器变慢吗？",
+                "answer": "不会明显感觉到。工具在你的机器上本地处理，设计得很轻量。在有数百张图片的页面上可能需要一点时间，但也仅此而已。"
             },
             {
-                "question": "How do I extract images from HTML files?",
-                "answer": "If you have saved HTML files locally, open them in your browser and run our bookmarklet. It works on locally saved HTML files just like live websites."
+                "question": "我可以在保存的HTML文件上使用吗？",
+                "answer": "可以。在浏览器中打开HTML文件并点击书签。它的工作方式与在实时网站上完全相同。"
             },
             {
-                "question": "Is my data private when using this tool?",
-                "answer": "Absolutely. All image extraction happens locally in your browser. No data is sent to external servers. Your browsing and downloading activity remains completely private."
+                "question": "我的浏览数据私密吗？",
+                "answer": "完全私密。一切都在你的浏览器中发生——不会向我们的服务器发送任何信息。我们不跟踪你访问的页面或下载的图片。"
             }
         ],
-        "languages_title": "Available in Multiple Languages",
-        "languages_intro": "Our image downloader is available in 9 languages to serve users worldwide:",
+        "languages_title": "支持多种语言",
+        "languages_intro": "我们的图片下载器支持9种语言，服务全球用户：",
         "languages_list": [
             {
                 "h3": "🇨🇳 中文 (Chinese)",

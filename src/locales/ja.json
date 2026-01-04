@@ -1044,59 +1044,59 @@
         "bookmarklet_button_text": "画像ダウンローダー",
         "install_step3_h3": "完了！クリックしてダウンロード",
         "install_step3_p": "画像がある任意のページで、このブックマークをクリックして抽出・ダウンロードします。",
-        "intro_title": "What is a Web Page Image Extractor?",
-        "intro_content": "<p>Our <strong>image extractor from website online</strong> tool is a powerful solution designed to help you <strong>extract image from URL</strong> and <strong>get image from webpage</strong> effortlessly. Whether you need to <strong>rip all images from website</strong>, <strong>extract background image from webpage</strong>, or <strong>export image from webpage</strong>, our tool provides a seamless experience.</p>\n\n<p>This <strong>web page image extractor</strong> works directly in your browser, allowing you to <strong>extract photo from webpage</strong> and <strong>extract picture from website</strong> without any software installation. Simply drag the bookmarklet to your bookmarks bar, click it on any page, and instantly <strong>extract image from website online</strong>.</p>\n\n<h3>Why Use Our Image Downloader?</h3>\n<p>Many users wonder <strong>how to get image from website</strong> or <strong>how to export image from web page</strong> efficiently. Traditional methods involve right-clicking each image individually, which is time-consuming. Our tool automates this process, letting you <strong>rip all images from website</strong> in seconds.</p>\n\n<p>Perfect for designers who need to <strong>copy an image from a web page</strong>, researchers who want to <strong>extract pictures from website</strong> archives, or anyone who needs to <strong>extract photo from website</strong> for analysis. The tool handles <strong>how to extract images from html files</strong> automatically, finding both visible images and background graphics.</p>",
-        "how_to_use_title": "How to Extract Images from Webpages: Step-by-Step Guide",
-        "how_to_use_content": "<h3>Step 1: Install the Bookmarklet</h3>\n<p>Drag the purple \"Image Downloader\" button to your browser's bookmarks bar. This creates a one-click tool you can use on any website.</p>\n\n<h3>Step 2: Navigate to Any Webpage</h3>\n<p>Visit any website containing images you want to download. This works for blogs, e-commerce sites, portfolios, news sites, and more.</p>\n\n<h3>Step 3: Click the Bookmarklet</h3>\n<p>Click the \"Image Downloader\" bookmark in your bookmarks bar. The tool will instantly scan the page and display all images in a gallery view.</p>\n\n<h3>Step 4: Filter and Select Images</h3>\n<p>Browse through the extracted images in the visual gallery. Use filters to show only images above a certain size, specific file types (JPG, PNG, WebP, GIF), or dimensions. Check or uncheck images to select specific ones.</p>\n\n<h3>Step 5: Download as ZIP</h3>\n<p>Click the download button to save all selected images as a ZIP file. The download preserves original filenames and organizes them for easy use.</p>\n\n<h3>Tips for Best Results</h3>\n<ul>\n    <li><strong>For e-commerce sites:</strong> Use minimum size filters to avoid downloading thumbnails and icons</li>\n    <li><strong>For design inspiration:</strong> Lower the size threshold to include all visual elements</li>\n    <li><strong>For research:</strong> Download full galleries and organize by project or topic</li>\n    <li><strong>Background images:</strong> The tool automatically detects CSS background images that aren't visible in traditional save methods</li>\n</ul>",
-        "faq_title": "Frequently Asked Questions",
+        "intro_title": "画像ダウンローダーとは？",
+        "intro_content": "<p>私たちの画像ダウンローダーは、ブラウザベースのツールで、面倒な手間なくあらゆるウェブページから画像を取得できます。ムードボードを作成している、商品をリサーチしている、ビジュアルコンテンツをアーカイブしているなど、このツールがプロセスを効率化します。</p><p>画像を一つずつ右クリックで保存する必要はありません - ワンクリックでウェブサイトからすべての画像をダウンロードできます。ツールは通常の画像、背景グラフィック、スクロールでのみ表示されるレイジーロードコンテンツも見つけます。完全にブラウザ内で動作します—外部サーバーに何もアップロードされないので、閲覧はプライベートのままです。</p><h3>このツールは誰向け？</h3><p><strong>デザイナーとクリエイティブ:</strong> ポートフォリオサイト、デザインブログ、インスピレーションギャラリーからビジュアルリファレンスを収集。一度にすべてをダウンロードして、ムードボードをより速く構築。</p><p><strong>研究者とアナリスト:</strong> 比較と分析のために商品画像、スクリーンショット、またはビジュアルデータを収集。サイズフィルターを使用して、アイコンやサムネイルを自動的にスキップ。</p><p><strong>コンテンツクリエイター:</strong> 記事とブログ投稿から画像をキュレーションして、コンテンツ制作ワークフローへ。バッチダウンロード機能でダウンロードを整理。</p>",
+        "how_to_use_title": "画像ダウンローダーの使い方",
+        "how_to_use_content": "<h3>ステップ1: ブックマークレットをインストール</h3><p>紫のボタンをブックマークバーにドラッグ。数秒で完了し、訪問する任意のサイトでツールを使えるようになります。</p><h3>ステップ2: 画像のあるページを訪問</h3><p>任意のウェブページに移動—ブログ、オンラインストア、ポートフォリオサイト、ニュース記事—保存したい画像が見える場所ならどこでも。</p><h3>ステップ3: ブックマークレットをクリック</h3><p>新しいブックマークをクリックするだけ。ツールはページ全体をスキャンし、見つけたすべての画像をギャラリービューで表示します。</p><h3>ステップ4: 欲しいものを選択</h3><p>画像を閲覧し、不要なもののチェックを外します。最小ファイルサイズなどのフィルターを設定して、小さなもの（アイコン、ロゴなど）をスキップすることも可能。</p><h3>ステップ5: ダウンロード</h3><p>ダウンロードボタンをクリックすると、選択したすべての画像を含むZIPファイルが取得できます。元のファイル名が保持されるので、整理しやすい。</p><h3>プロのヒント</h3><ul><li><strong>買い物リサーチ: サムネイルを避けるため500x500前後でサイズフィルターを設定</li><li><strong>デザインインスピレーション: 小さなUI要素を含むすべてをキャプチャするため閾値を低く維持</li><li><strong>背景グラフィック: ツールは右クリックでキャッチできないCSS背景画像を見つけます</li><li><strong>大きなギャラリー: すべてをダウンロードする代わりに特定の画像を選択可能</li></ul>",
+        "faq_title": "よくある質問",
         "faq_list": [
             {
-                "question": "How do I extract images from a URL?",
-                "answer": "Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file."
+                "question": "画像をダウンロードするにはどう使いますか？",
+                "answer": "ブックマークレットをブックマークバーにドラッグしてインストール。その後、欲しい画像のある任意のページにいるとき、ブックマークをクリックするだけ。ツールが見つけたすべての画像を表示し、ZIPファイルとしてダウンロードできます。"
             },
             {
-                "question": "Can I rip all images from a website at once?",
-                "answer": "Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file."
+                "question": "ウェブサイトのすべての画像を一度にダウンロードできますか？",
+                "answer": "閲覧している現在のページのすべての画像を取得できます。ウェブサイトの複数のページから画像をダウンロードしたい場合、各ページでツールを実行するだけ。各ダウンロードは独自のZIPファイルを作成します。"
             },
             {
-                "question": "How do I extract background images from a webpage?",
-                "answer": "Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics."
+                "question": "背景画像も見つかりますか？",
+                "answer": "はい。ツールは通常右クリックで保存できないCSS背景画像を検出します。ページのソースコードをスキャンするので、スタイルシートを通じて読み込まれる画像もキャプチャします。"
             },
             {
-                "question": "What types of images can I extract?",
-                "answer": "You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size."
+                "question": "どの画像フォーマットが動作しますか？",
+                "answer": "すべての一般的なフォーマット: JPG、PNG、WebP、GIF、SVG、BMP。ギャラリービューは各画像のフォーマットと寸法を表示するので、何を取得しているか分かります。"
             },
             {
-                "question": "How do I export images from a webpage?",
-                "answer": "After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved."
+                "question": "特定の画像だけダウンロードできますか？",
+                "answer": "もちろんです。ツールが見つけたすべての画像を表示した後、不要なもののチェックを外せます。選択した画像のみがZIPファイルにダウンロードされます。"
             },
             {
-                "question": "Can I extract photos from password-protected websites?",
-                "answer": "Yes, if you're logged into the website in your browser, the bookmarklet can extract images from that page. It works with the same access you have in your browser."
+                "question": "プライベートまたはパスワード保護されたサイトでも動作しますか？",
+                "answer": "ブラウザで画像が見えるなら（ログインしているため）、ツールは抽出できます。ブラウザですでに持っている同じアクセスを使用します。"
             },
             {
-                "question": "Is this image extractor free to use?",
-                "answer": "Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage."
+                "question": "本当に無料ですか？",
+                "answer": "はい、完全に無料。制限なし、登録なし、隠れた費用なし。好きなだけ使えます。"
             },
             {
-                "question": "How do I copy an image from a web page without right-clicking?",
-                "answer": "Some websites disable right-click. Our bookmarklet bypasses these restrictions by scanning the page source directly, finding all images even when right-click is disabled."
+                "question": "サイトが右クリックをブロックしている場合は？",
+                "answer": "それは実際、私たちがこれを構築した理由の一つです。ツールはページのコードを直接スキャンするので、サイトが右クリックやコピーをブロックしようとしても機能します。"
             },
             {
-                "question": "Can I extract pictures from multiple pages at once?",
-                "answer": "Currently, the tool works on one page at a time. For multiple pages, run the bookmarklet on each page and download the images. Each download creates a separate ZIP file for easy organization."
+                "question": "ブラウザが遅くなりますか？",
+                "answer": "目立ってはなりません。ツールはマシン上でローカルに処理を行い、軽量に設計されています。数百の画像があるページでは少し時間がかかるかもしれませんが、それだけです。"
             },
             {
-                "question": "How do I extract images from HTML files?",
-                "answer": "If you have saved HTML files locally, open them in your browser and run our bookmarklet. It works on locally saved HTML files just like live websites."
+                "question": "保存したHTMLファイルでも使えますか？",
+                "answer": "もちろん。ブラウザでHTMLファイルを開き、ブックマークレットをクリック。ライブウェブサイトと同じように機能します。"
             },
             {
-                "question": "Is my data private when using this tool?",
-                "answer": "Absolutely. All image extraction happens locally in your browser. No data is sent to external servers. Your browsing and downloading activity remains completely private."
+                "question": "閲覧データはプライベートですか？",
+                "answer": "完全に。すべてがブラウザ内で発生—情報はサーバーに送信されません。どのページを訪問したか、どの画像をダウンロードしたかは追跡していません。"
             }
         ],
-        "languages_title": "Available in Multiple Languages",
-        "languages_intro": "Our image downloader is available in 9 languages to serve users worldwide:",
+        "languages_title": "複数の言語で利用可能",
+        "languages_intro": "私たちの画像ダウンローダーは世界のユーザーにサービスするために9つの言語で利用可能です：",
         "languages_list": [
             {
                 "h3": "🇨🇳 中文 (Chinese)",

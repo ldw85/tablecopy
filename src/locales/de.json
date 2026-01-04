@@ -1045,59 +1045,59 @@
         "bookmarklet_button_text": "Bild-Downloader",
         "install_step3_h3": "Fertig! Klicken zum Herunterladen",
         "install_step3_p": "Klicken Sie auf jeder Seite mit Bildern auf dieses Lesezeichen, um sie zu extrahieren und herunterzuladen.",
-        "intro_title": "What is a Web Page Image Extractor?",
-        "intro_content": "<p>Our <strong>image extractor from website online</strong> tool is a powerful solution designed to help you <strong>extract image from URL</strong> and <strong>get image from webpage</strong> effortlessly. Whether you need to <strong>rip all images from website</strong>, <strong>extract background image from webpage</strong>, or <strong>export image from webpage</strong>, our tool provides a seamless experience.</p>\n\n<p>This <strong>web page image extractor</strong> works directly in your browser, allowing you to <strong>extract photo from webpage</strong> and <strong>extract picture from website</strong> without any software installation. Simply drag the bookmarklet to your bookmarks bar, click it on any page, and instantly <strong>extract image from website online</strong>.</p>\n\n<h3>Why Use Our Image Downloader?</h3>\n<p>Many users wonder <strong>how to get image from website</strong> or <strong>how to export image from web page</strong> efficiently. Traditional methods involve right-clicking each image individually, which is time-consuming. Our tool automates this process, letting you <strong>rip all images from website</strong> in seconds.</p>\n\n<p>Perfect for designers who need to <strong>copy an image from a web page</strong>, researchers who want to <strong>extract pictures from website</strong> archives, or anyone who needs to <strong>extract photo from website</strong> for analysis. The tool handles <strong>how to extract images from html files</strong> automatically, finding both visible images and background graphics.</p>",
-        "how_to_use_title": "How to Extract Images from Webpages: Step-by-Step Guide",
-        "how_to_use_content": "<h3>Step 1: Install the Bookmarklet</h3>\n<p>Drag the purple \"Image Downloader\" button to your browser's bookmarks bar. This creates a one-click tool you can use on any website.</p>\n\n<h3>Step 2: Navigate to Any Webpage</h3>\n<p>Visit any website containing images you want to download. This works for blogs, e-commerce sites, portfolios, news sites, and more.</p>\n\n<h3>Step 3: Click the Bookmarklet</h3>\n<p>Click the \"Image Downloader\" bookmark in your bookmarks bar. The tool will instantly scan the page and display all images in a gallery view.</p>\n\n<h3>Step 4: Filter and Select Images</h3>\n<p>Browse through the extracted images in the visual gallery. Use filters to show only images above a certain size, specific file types (JPG, PNG, WebP, GIF), or dimensions. Check or uncheck images to select specific ones.</p>\n\n<h3>Step 5: Download as ZIP</h3>\n<p>Click the download button to save all selected images as a ZIP file. The download preserves original filenames and organizes them for easy use.</p>\n\n<h3>Tips for Best Results</h3>\n<ul>\n    <li><strong>For e-commerce sites:</strong> Use minimum size filters to avoid downloading thumbnails and icons</li>\n    <li><strong>For design inspiration:</strong> Lower the size threshold to include all visual elements</li>\n    <li><strong>For research:</strong> Download full galleries and organize by project or topic</li>\n    <li><strong>Background images:</strong> The tool automatically detects CSS background images that aren't visible in traditional save methods</li>\n</ul>",
-        "faq_title": "Frequently Asked Questions",
+        "intro_title": "Was ist unser Bild-Downloader?",
+        "intro_content": "<p>Unser Bild-Downloader ist ein browserbasiertes Tool, das Ihnen hilft, Bilder von jeder Webseite einfach zu erhalten. Egal, ob Sie ein Moodboard erstellen, Produkte recherchieren oder visuelle Inhalte archivieren, dieses Tool macht den Prozess effizienter.</p><p>Sie müssen nicht jedes Bild einzeln per Rechtsklick speichern – Sie können alle Bilder von einer Website mit einem Klick herunterladen. Das Tool findet reguläre Bilder, Hintergrundgrafiken und sogar Lazy-Load-Inhalte, die erst beim Scrollen erscheinen. Es läuft vollständig in Ihrem Browser – nichts wird auf externe Server hochgeladen, sodass Ihr Browsing privat bleibt.</p><h3>Für wen ist dieses Tool?</h3><p><strong>Designer und Kreative:</strong> Sammeln Sie visuelle Referenzen von Portfolio-Seiten, Design-Blogs und Inspirationsgalerien. Bauen Sie Ihr Moodboard schneller auf, indem Sie alles auf einmal herunterladen.</p><p><strong>Forscher und Analysten:</strong> Sammeln Sie Produktbilder, Screenshots oder visuelle Daten für Vergleich und Analyse. Verwenden Sie Größenfilter, um automatisch Symbole und Miniaturen zu überspringen.</p><p><strong>Content-Ersteller:</strong> Kuratieren Sie Bilder aus Artikeln und Blog-Posts für Ihren Content-Creation-Workflow. Die Batch-Download-Funktion hält Ihre Downloads organisiert.</p>",
+        "how_to_use_title": "So verwenden Sie den Bild-Downloader",
+        "how_to_use_content": "<h3>Schritt 1: Installieren Sie das Bookmarklet</h3><p>Ziehen Sie den lila Button in Ihre Lesezeichen-Leiste. Es dauert nur eine Sekunde, und danach haben Sie das Tool auf jeder Website bereit.</p><h3>Schritt 2: Besuchen Sie eine Seite mit Bildern</h3><p>Navigieren Sie zu jeder Webseite – Blogs, Online-Shops, Portfolio-Seiten, Nachrichtenartikel – wo immer Sie Bilder sehen, die Sie speichern möchten.</p><h3>Schritt 3: Klicken Sie das Bookmarklet</h3><p>Klicken Sie einfach auf Ihr neues Lesezeichen. Das Tool scannt die gesamte Seite und zeigt alle gefundenen Bilder in einer Galerieansicht an.</p><h3>Schritt 4: Wählen Sie, was Sie möchten</h3><p>Durchsuchen Sie die Bilder und entfernen Sie den Haken bei denen, die Sie nicht benötigen. Sie können auch Filter wie minimale Dateigröße einstellen, um kleine Dinge zu überspringen (Symbole, Logos, etc.).</p><h3>Schritt 5: Download</h3><p>Klicken Sie auf den Download-Button und Sie erhalten eine ZIP-Datei mit allen ausgewählten Bildern. Die ursprünglichen Dateinamen werden beibehalten, damit Sie organisiert bleiben.</p><h3>Profi-Tipps</h3><ul><li><strong>Einkaufs recherche: Stellen Sie einen Größenfilter um 500x500 ein, um Miniaturen zu vermeiden</li><li><strong>Design-Inspiration: Halten Sie den Schwellenwert niedrig, um alles zu erfassen, einschließlich kleiner UI-Elemente</li><li><strong>Hintergrundgrafiken: Das Tool findet CSS-Hintergrundbilder, die Rechtsklick nicht erfassen kann</li><li><strong>Große Galerien: Sie können spezifische Bilder auswählen, statt alles herunterzuladen</li></ul>",
+        "faq_title": "Häufig gestellte Fragen",
         "faq_list": [
             {
-                "question": "How do I extract images from a URL?",
-                "answer": "Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file."
+                "question": "Wie benutze ich das, um Bilder herunterzuladen?",
+                "answer": "Installieren Sie das Bookmarklet, indem Sie es in Ihre Lesezeichen-Leiste ziehen. Dann, wenn Sie auf einer Seite mit gewünschten Bildern sind, klicken Sie einfach das Lesezeichen. Das Tool zeigt alle gefundenen Bilder, und Sie können sie als ZIP-Datei herunterladen."
             },
             {
-                "question": "Can I rip all images from a website at once?",
-                "answer": "Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file."
+                "question": "Kann ich alle Bilder von einer Website auf einmal herunterladen?",
+                "answer": "Sie können alle Bilder von der aktuellen Seite erhalten, die Sie betrachten. Wenn Sie Bilder von mehreren Seiten einer Website herunterladen möchten, führen Sie das Tool einfach auf jeder Seite aus. Jeder Download erstellt seine eigene ZIP-Datei."
             },
             {
-                "question": "How do I extract background images from a webpage?",
-                "answer": "Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics."
+                "question": "Findet das auch Hintergrundbilder?",
+                "answer": "Ja. Das Tool erkennt CSS-Hintergrundbilder, die normalerweise nicht per Rechtsklick gespeichert werden können. Es scannt den Seitenquellcode, erfasst also Bilder, die über Stylesheets geladen werden."
             },
             {
-                "question": "What types of images can I extract?",
-                "answer": "You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size."
+                "question": "Welche Bildformate funktionieren?",
+                "answer": "Alle gängigen: JPG, PNG, WebP, GIF, SVG und BMP. Die Galerieansicht zeigt das Format und die Abmessungen jedes Bilds, sodass Sie wissen, was Sie erhalten."
             },
             {
-                "question": "How do I export images from a webpage?",
-                "answer": "After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved."
+                "question": "Kann ich nur bestimmte Bilder herunterladen?",
+                "answer": "Absolut. Nachdem das Tool alle gefundenen Bilder angezeigt hat, können Sie die nicht gewünschten abwählen. Nur die ausgewählten Bilder werden in der ZIP-Datei heruntergeladen."
             },
             {
-                "question": "Can I extract photos from password-protected websites?",
-                "answer": "Yes, if you're logged into the website in your browser, the bookmarklet can extract images from that page. It works with the same access you have in your browser."
+                "question": "Funktioniert das auf privaten oder passwortgeschützten Websites?",
+                "answer": "Wenn Sie die Bilder in Ihrem Browser sehen können (weil Sie eingeloggt sind), kann das Tool sie extrahieren. Es verwendet denselben Zugriff, den Sie bereits in Ihrem Browser haben."
             },
             {
-                "question": "Is this image extractor free to use?",
-                "answer": "Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage."
+                "question": "Ist das wirklich kostenlos?",
+                "answer": "Ja, völlig kostenlos. Keine Limits, keine Anmeldung, keine versteckten Kosten. Benutzen Sie es so viel Sie wollen."
             },
             {
-                "question": "How do I copy an image from a web page without right-clicking?",
-                "answer": "Some websites disable right-click. Our bookmarklet bypasses these restrictions by scanning the page source directly, finding all images even when right-click is disabled."
+                "question": "Was passiert, wenn eine Seite das Rechtsklicken blockiert?",
+                "answer": "Das ist tatsächlich einer der Gründe, warum wir das gebaut haben. Das Tool scannt den Seitencode direkt, funktioniert also sogar, wenn Websites versuchen, Rechtsklick oder Kopieren zu blockieren."
             },
             {
-                "question": "Can I extract pictures from multiple pages at once?",
-                "answer": "Currently, the tool works on one page at a time. For multiple pages, run the bookmarklet on each page and download the images. Each download creates a separate ZIP file for easy organization."
+                "question": "Wird das meinen Browser verlangsamen?",
+                "answer": "Nicht nennenswert. Das Tool verarbeitet alles lokal auf Ihrem Maschine und ist leichtgewichtig designt. Kann einen Moment auf Seiten mit Hunderte von Bildern dauern, aber das war's dann auch."
             },
             {
-                "question": "How do I extract images from HTML files?",
-                "answer": "If you have saved HTML files locally, open them in your browser and run our bookmarklet. It works on locally saved HTML files just like live websites."
+                "question": "Kann ich das auf gespeicherten HTML-Dateien verwenden?",
+                "answer": "Sicher. Öffnen Sie die HTML-Datei in Ihrem Browser und klicken Sie das Bookmarklet. Es funktioniert genauso wie auf Live-Websites."
             },
             {
-                "question": "Is my data private when using this tool?",
-                "answer": "Absolutely. All image extraction happens locally in your browser. No data is sent to external servers. Your browsing and downloading activity remains completely private."
+                "question": "Sind meine Browser-Daten privat?",
+                "answer": "Völlig. Alles passiert in Ihrem Browser – keine Informationen werden an unsere Server gesendet. Wir verfolgen nicht, welche Seiten Sie besuchen oder welche Bilder Sie herunterladen."
             }
         ],
-        "languages_title": "Available in Multiple Languages",
-        "languages_intro": "Our image downloader is available in 9 languages to serve users worldwide:",
+        "languages_title": "In mehreren Sprachen verfügbar",
+        "languages_intro": "Unser Bild-Downloader ist in 9 Sprachen verfügbar, um Benutzer weltweit zu bedienen:",
         "languages_list": [
             {
                 "h3": "🇨🇳 中文 (Chinese)",
