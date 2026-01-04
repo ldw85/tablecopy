@@ -13,7 +13,63 @@
             70% { box-shadow: 0 0 0 15px rgba(155, 89, 182, 0); }
             100% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0); }
         }
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
     </style>
+{% endblock %}
+
+{% block schema_markup %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "{{ T['image-downloader'].schema_name }}",
+  "description": "{{ T['image-downloader'].schema_description }}",
+  "url": "{{ T['image-downloader'].schema_url }}",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": {{ T['image-downloader'].schema_features | safe }},
+  "browserRequirements": "Requires JavaScript. Works in Chrome, Firefox, Safari, and Edge browsers.",
+  "softwareVersion": "1.0",
+  "author": {
+    "@type": "Organization",
+    "name": "TableCopy"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": {{ T['image-downloader'].schema_faq | safe }}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ T['image-downloader'].schema_howto_name }}",
+  "description": "{{ T['image-downloader'].schema_howto_description }}",
+  "step": {{ T['image-downloader'].schema_howto_steps | safe }}
+}
+</script>
 {% endblock %}
 
 {% block content %}
@@ -25,6 +81,13 @@
     </div>
 </section>
 
+<section id="introduction" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">{{ T['image-downloader'].intro_title }}</h2>
+        {{ T['image-downloader'].intro_content | safe }}
+    </div>
+</section>
+
 <section id="features">
     <div class="container">
         <h2 class="section-title">{{ T['image-downloader'].features_title }}</h2>
@@ -33,6 +96,13 @@
                 <li>{{ item | safe }}</li>
             {% endfor %}
         </ul>
+    </div>
+</section>
+
+<section id="how-to-use">
+    <div class="container">
+        <h2 class="section-title">{{ T['image-downloader'].how_to_use_title }}</h2>
+        {{ T['image-downloader'].how_to_use_content | safe }}
     </div>
 </section>
 
@@ -70,6 +140,34 @@
                 <h3>{{ T['image-downloader'].install_step3_h3 }}</h3>
                 <p>{{ T['image-downloader'].install_step3_p }}</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">{{ T['image-downloader'].faq_title }}</h2>
+        {% for item in T['image-downloader'].faq_list %}
+        <div class="faq-item">
+            <h3>{{ item.question }}</h3>
+            <p>{{ item.answer }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="languages">
+    <div class="container">
+        <h2 class="section-title">{{ T['image-downloader'].languages_title }}</h2>
+        <p>{{ T['image-downloader'].languages_intro }}</p>
+        <div class="grid-layout">
+            {% for item in T['image-downloader'].languages_list %}
+            <div class="card">
+                <h3>{{ item.h3 }}</h3>
+                <p>{{ item.p }}</p>
+                <a href="{{ item.url }}">{{ item.link_text }}</a>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

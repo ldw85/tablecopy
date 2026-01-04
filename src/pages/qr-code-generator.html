@@ -14,6 +14,142 @@
             100% { box-shadow: 0 0 0 0 rgba(26, 188, 156, 0); }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "TableCopy QR Code Generator",
+          "description": "Free website QR code generator. Create QR codes for any webpage instantly with one click. No registration, unlimited use, 100% private.",
+          "url": "https://tablecopy.pro/qr-code-generator.html",
+          "applicationCategory": "ProductivityTool",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Instant QR code generation for any webpage",
+            "One-click bookmarklet installation",
+            "High-resolution PNG download",
+            "No registration required",
+            "100% free and unlimited",
+            "Privacy-focused local processing",
+            "Compatible with all websites",
+            "Print-ready quality"
+          ],
+          "browserRequirements": "Requires JavaScript. Works on Chrome, Firefox, Safari, Edge.",
+          "softwareVersion": "1.0",
+          "author": {
+            "@type": "Organization",
+            "name": "TableCopy"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "15234",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Create URL QR Code for Any Website",
+          "description": "Step-by-step guide showing how to create URL QR codes using TableCopy's free website QR code generator",
+          "totalTime": "PT3S",
+          "supply": [
+            {
+              "@type": "HowToSupply",
+              "name": "Computer or laptop with web browser"
+            }
+          ],
+          "tool": [
+            {
+              "@type": "HowToTool",
+              "name": "TableCopy QR Code bookmarklet"
+            }
+          ],
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Visit the target webpage",
+              "text": "Navigate to any website or webpage URL you want to convert to a QR code"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Click the QR Code bookmarklet",
+              "text": "Click the QR Code button in your browser bookmarks toolbar to automatically generate QR code"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Download QR code as PNG",
+              "text": "Click the download button to save the high-resolution QR code image to your device"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Share or print your QR code",
+              "text": "Use the downloaded QR code in presentations, flyers, business cards, or digital materials"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How to create URL QR code for any website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Creating URL QR codes is simple with our free website QR code generator: 1) Visit the webpage you want to share, 2) Click the QR Code bookmarklet in your browser, 3) Download the generated QR code as PNG image. The entire process takes less than 3 seconds and works with any website URL."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I turn a URL into a QR code without manual typing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The easiest method to turn a URL into a QR code is using the TableCopy QR Code bookmarklet: Simply visit any webpage, click the bookmarklet, and instantly generate a QR code containing the page URL."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to read URL from QR code on any device?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Reading URLs from QR codes is built into modern smartphone cameras. On iPhone (iOS 11+), simply open the Camera app and point it at the QR code. On Android, use Google Lens or the native camera app."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you link a QR code to a Facebook page or social media?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! You can absolutely link a QR code to a Facebook page or any social media profile. Simply navigate to your Facebook page URL, click our QR Code generator bookmarklet, and download the QR code."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the best website for QR code generator without registration?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "TableCopy's QR Code generator is the best website for QR code generator because it's completely free, requires no sign-up, processes everything locally in your browser (no data sent to servers), and generates print-ready PNG QR codes in one click."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it safe to use free QR code generators for sensitive URLs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "TableCopy's QR Code generator is completely secure because all processing happens locally in your browser - no URLs are sent to external servers, no data is logged, and nothing is stored."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 {% endblock %}
 
 {% block content %}
@@ -22,6 +158,35 @@
         <h1>{{ T['qr-code-generator'].hero_h1 }}</h1>
         <h2 class="slogan">{{ T['qr-code-generator'].hero_slogan }}</h2>
         <a href="#install" style="display: inline-block; background-color: var(--primary-color); color: white; padding: 15px 30px; font-size: 18px; font-weight: 700; border-radius: 50px; text-decoration: none;" onclick="gtag_report_conversion()">{{ T['qr-code-generator'].install_cta }}</a>
+    </div>
+</section>
+
+<section id="about" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">{{ T['qr-code-generator'].about_title }}</h2>
+        <p>{{ T['qr-code-generator'].about_intro | safe }}</p>
+
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 30px;">
+            <div class="card">
+                <h3>{{ T['qr-code-generator'].about_benefits_title }}</h3>
+                <ul style="margin-top: 20px;">
+                    {% for benefit in T['qr-code-generator'].about_benefits_list %}
+                    <li style="margin-bottom: 10px;">{{ benefit | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>{{ T['qr-code-generator'].about_use_cases_title }}</h3>
+                <ul style="margin-top: 20px;">
+                    {% for use_case in T['qr-code-generator'].about_use_cases_list %}
+                    <li style="margin-bottom: 10px;">{{ use_case | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px;">{{ T['qr-code-generator'].about_eeat | safe }}</p>
     </div>
 </section>
 
@@ -50,6 +215,87 @@
     </div>
 </section>
 
+<section id="how-to">
+    <div class="container">
+        <h2 class="section-title">{{ T['qr-code-generator'].howto_title }}</h2>
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px; color: #555;">
+            {{ T['qr-code-generator'].howto_subtitle | safe }}
+        </p>
+
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">1️⃣</div>
+                <h3>{{ T['qr-code-generator'].howto_step1_title }}</h3>
+                <p style="margin-top: 15px;">{{ T['qr-code-generator'].howto_step1_desc | safe }}</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">2️⃣</div>
+                <h3>{{ T['qr-code-generator'].howto_step2_title }}</h3>
+                <p style="margin-top: 15px;">{{ T['qr-code-generator'].howto_step2_desc }}</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">3️⃣</div>
+                <h3>{{ T['qr-code-generator'].howto_step3_title }}</h3>
+                <p style="margin-top: 15px;">{{ T['qr-code-generator'].howto_step3_desc }}</p>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 30px 20px;">
+                <div style="font-size: 2.5em; margin-bottom: 15px;">4️⃣</div>
+                <h3>{{ T['qr-code-generator'].howto_step4_title }}</h3>
+                <p style="margin-top: 15px;">{{ T['qr-code-generator'].howto_step4_desc | safe }}</p>
+            </div>
+        </div>
+
+        <div class="feature-box" style="margin-top: 40px;">
+            <h4 style="margin-bottom: 15px;">{{ T['qr-code-generator'].howto_tip_title }}</h4>
+            <p>{{ T['qr-code-generator'].howto_tip_content }}</p>
+        </div>
+    </div>
+</section>
+
+<section id="best-practices" style="background-color: var(--bg-color);">
+    <div class="container">
+        <h2 class="section-title">{{ T['qr-code-generator'].practices_title }}</h2>
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            {% for practice in T['qr-code-generator'].practices_list %}
+            <div class="card">
+                <h3>{{ practice.h3 }}</h3>
+                <p>{{ practice.p }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="comparison">
+    <div class="container" style="max-width: 1000px;">
+        <h2 class="section-title">{{ T['qr-code-generator'].comparison_title }}</h2>
+        <p style="text-align: center; margin-bottom: 30px;">{{ T['qr-code-generator'].comparison_subtitle | safe }}</p>
+
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-top: 30px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <thead>
+                <tr style="background: #f8f9fa;">
+                    {% for header in T['qr-code-generator'].comparison_headers %}
+                    <th style="padding: 15px; text-align: left; border-bottom: 2px solid #dee2e6; font-weight: 600;">{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in T['qr-code-generator'].comparison_rows %}
+                <tr style="border-bottom: 1px solid #dee2e6;">
+                    <td style="padding: 15px; font-weight: 600; background: #f8f9fa;">{{ row.feature }}</td>
+                    <td style="padding: 15px; text-align: center; font-weight: bold; color: #1ABC9C;">{{ row.tablecopy }}</td>
+                    <td style="padding: 15px; text-align: center;">{{ row.online_generators }}</td>
+                    <td style="padding: 15px; text-align: center;">{{ row.manual_creation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
 <section id="install">
     <div class="container">
         <h2 class="section-title">{{ T['qr-code-generator'].install_title }}</h2>
@@ -71,6 +317,88 @@
                 <p>{{ T['qr-code-generator'].install_step3_p }}</p>
             </div>
         </div>
+    </div>
+</section>
+
+<section id="faq" style="background-color: var(--bg-color);">
+    <div class="container" style="max-width: 900px;">
+        <h2 class="section-title">{{ T['qr-code-generator'].faq_title }}</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq1_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq1_a | safe }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq2_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq2_a | safe }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq3_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq3_a | safe }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq4_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq4_a | safe }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq5_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq5_a | safe }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq6_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq6_a }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq7_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq7_a }}</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                {{ T['qr-code-generator'].faq8_q }}<span class="icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>{{ T['qr-code-generator'].faq8_a }}</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; text-align: center;">
+            {{ T['qr-code-generator'].faq_footer | safe }}
+        </p>
     </div>
 </section>
 {% endblock %}

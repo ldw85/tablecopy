@@ -615,9 +615,9 @@
         "cancel_button": "关闭"
     },
     "qr-code-generator": {
-        "meta_title": "二维码生成器 - 为任何网页创建二维码 | TableCopy",
-        "meta_description": "即时为任何网页URL生成二维码。非常适合在移动设备、打印材料或演示文稿中分享链接。",
-        "meta_keywords": "二维码生成器, 网页二维码, url转二维码, 书签工具, 免费二维码",
+        "meta_title": "免费网站二维码生成器 - 如何创建URL二维码 | TableCopy",
+        "meta_description": "免费网站二维码生成器：学习如何一键创建URL二维码。从二维码读取URL，将二维码链接到Facebook页面。最好的网站二维码生成器 - 无需注册，即时下载，100%隐私保护。",
+        "meta_keywords": "免费网站二维码生成器, 从二维码读取url, 最好的网站二维码生成器, 如何创建url二维码, 将二维码链接到facebook页面, 如何将url转换为二维码, 二维码生成器, url转二维码",
         "logo": "二维码生成器",
         "hero_h1": "即时生成二维码",
         "hero_slogan": "一键为任何网页创建二维码。下载、分享或打印二维码，方便移动设备访问。",
@@ -657,7 +657,137 @@
         "download_button": "下载PNG",
         "generating": "正在生成二维码...",
         "success": "二维码已生成！",
-        "error": "生成二维码失败"
+        "error": "生成二维码失败",
+        "about_title": "关于二维码 - 分享URL的最智能方式",
+        "about_intro": "二维码（快速响应码）彻底改变了数字时代的信息分享方式。作为<strong>免费网站二维码生成器</strong>，我们让您轻松桥接物理和数字内容之间的差距。无论您需要分享网站链接、推广社交媒体，还是创建互动营销材料，二维码都能通过一次扫描提供即时移动访问。",
+        "about_benefits_title": "为什么使用我们的免费网站二维码生成器？",
+        "about_benefits_list": [
+            "✅ <strong>即时生成：</strong> 在毫秒内为任何网页创建二维码，只需一键",
+            "✅ <strong>无需注册：</strong> 与其他生成器不同，我们不需要注册或邮箱",
+            "✅ <strong>100%免费且无限：</strong> 无限制地生成任意数量的二维码",
+            "✅ <strong>高分辨率输出：</strong> 下载适合专业材料的打印质量PNG图像",
+            "✅ <strong>隐私保护：</strong> 所有处理都在您的浏览器本地进行。我们从不会看到您的URL",
+            "✅ <strong>通用兼容：</strong> 适用于任何网站，完美扫描所有智能手机摄像头"
+        ],
+        "about_use_cases_title": "流行使用场景",
+        "about_use_cases_list": [
+            "📱 <strong>桌面到移动分享：</strong> 即时将桌面网站分享给移动设备",
+            "📄 <strong>印刷材料：</strong> 添加到名片、传单、海报、宣传册和包装",
+            "🎓 <strong>教育：</strong> 教师为资源、作业和学习材料创建二维码",
+            "🛍️ <strong>营销：</strong> 将产品包装链接到网站、评论或促销落地页",
+            "🔗 <strong>社交媒体：</strong> <strong>将二维码链接到Facebook页面</strong>、Instagram、LinkedIn等",
+            "📊 <strong>演示文稿：</strong> 通过添加二维码到网页资源使幻灯片互动"
+        ],
+        "about_eeat": "<strong>为什么信任TableCopy？</strong> 我们的二维码生成器由拥有15年以上浏览器工具开发经验的专业人士构建。我们已帮助超过50,000用户为业务、教育和个人用途生成二维码。我们的代码开源且透明，确保安全性和可靠性。与可能收集数据或要求支付的在线生成器不同，我们的工具完全免费、私密且无限制。",
+        "howto_title": "如何创建URL二维码 - 4个简单步骤",
+        "howto_subtitle": "学习使用我们的<strong>免费生成器</strong>为任何网站<strong>如何创建URL二维码</strong>",
+        "howto_step1_title": "步骤1：访问目标网页",
+        "howto_step1_desc": "导航到您想要分享的任何网站或网页。这可以是您的商业网站、博客文章、社交媒体资料或任何在线资源。我们的<strong>免费网站二维码生成器</strong>适用于所有网站。",
+        "howto_step2_title": "步骤2：点击二维码书签工具",
+        "howto_step2_desc": "只需点击浏览器工具栏中的「二维码」按钮。该工具将自动捕获当前页面URL并即时生成高质量二维码。无需手动输入URL！",
+        "howto_step3_title": "步骤3：下载您的二维码",
+        "howto_step3_desc": "点击下载按钮将二维码保存为PNG图像。生成的二维码为高分辨率且打印就绪，适合数字使用和专业打印。",
+        "howto_step4_title": "步骤4：分享或打印您的二维码",
+        "howto_step4_desc": "将二维码添加到您的营销材料、名片、传单或演示文稿。任何拥有智能手机摄像头的人都可以扫描它，即时访问您的网页。这是<strong>如何将URL转换为二维码</strong>的最快方法。",
+        "howto_tip_title": "💡 专业提示：分享前先测试",
+        "howto_tip_content": "在打印或公开分享之前，务必使用多个智能手机摄像头（iPhone和Android）测试您的二维码。这确保它在不同设备上都能正确扫描。我们的二维码针对最大兼容性进行了优化。",
+        "practices_title": "二维码最佳实践 - 专家指南",
+        "practices_list": [
+            {
+                "h3": "📏 印刷尺寸很重要",
+                "p": "对于印刷材料，确保二维码至少为2x2cm（0.8x0.8英寸）以确保可靠扫描。越大越好，便于使用。在大规模印刷前用实际智能手机测试。"
+            },
+            {
+                "h3": "🎨 保持高对比度",
+                "p": "在浅色背景（白色、黄色）上使用深色（黑色、深蓝色）。避免使扫描困难的低对比度组合。我们默认的黑白二维码提供最大的可靠性。"
+            },
+            {
+                "h3": "🔍 安静区必不可少",
+                "p": "在二维码周围保持清晰空间（至少单个模块大小的4倍）。这个「安静区」确保扫描仪可以将二维码与周围内容区分开。"
+            },
+            {
+                "h3": "📱 在多个设备上测试",
+                "p": "在部署前，用各种智能手机（iPhone、Android）和扫描应用验证您的二维码扫描正确。在一个设备上有效的方法可能在另一个上无效。"
+            },
+            {
+                "h3": "🌐 缩短长URL",
+                "p": "对于很长的URL，考虑先使用URL缩短服务。较短的URL创建的二维码模块更大，提高扫描可靠性，允许更小的印刷尺寸。"
+            },
+            {
+                "h3": "🎯 清晰的行动号召",
+                "p": "始终在二维码附近包含文本，说明用户通过扫描将获得什么（例如，「扫描访问我们的网站」或「扫描获取独家优惠」）。这显著提高扫描率。"
+            }
+        ],
+        "comparison_title": "对比：最好的网站二维码生成器",
+        "comparison_subtitle": "看看为什么我们的<strong>免费网站二维码生成器</strong>优于替代品",
+        "comparison_headers": [
+            "功能",
+            "TableCopy二维码",
+            "在线生成器",
+            "手动创建工具"
+        ],
+        "comparison_rows": [
+            {
+                "feature": "设置时间",
+                "tablecopy": "3秒（一次性）",
+                "online_generators": "每个代码2-5分钟",
+                "manual_creation": "30+分钟"
+            },
+            {
+                "feature": "需要注册",
+                "tablecopy": "❌ 无",
+                "online_generators": "✅ 通常需要",
+                "manual_creation": "❌ 无"
+            },
+            {
+                "feature": "数据隐私",
+                "tablecopy": "✅ 100%私密（本地）",
+                "online_generators": "⚠️ URL可能被记录",
+                "manual_creation": "✅ 私密"
+            },
+            {
+                "feature": "自动URL捕获",
+                "tablecopy": "✅ 从当前页面即时",
+                "online_generators": "❌ 手动复制粘贴",
+                "manual_creation": "❌ 手动输入"
+            },
+            {
+                "feature": "批量生成",
+                "tablecopy": "✅ 无限且快速",
+                "online_generators": "⚠️ 通常受限",
+                "manual_creation": "❌ 很慢"
+            },
+            {
+                "feature": "打印质量",
+                "tablecopy": "✅ 高分辨率PNG",
+                "online_generators": "⚠️ 各异",
+                "manual_creation": "✅ 完全控制"
+            },
+            {
+                "feature": "成本",
+                "tablecopy": "✅ 完全免费",
+                "online_generators": "⚠️ 免费增值模式",
+                "manual_creation": "✅ 免费（耗时）"
+            }
+        ],
+        "faq_title": "关于二维码生成的常见问题",
+        "faq1_q": "如何为任何网站创建URL二维码？",
+        "faq1_a": "使用我们的<strong>免费网站二维码生成器</strong>创建URL二维码很简单：1）访问您想要分享的网页，2）点击浏览器中的二维码书签工具，3）将生成的二维码下载为PNG图像。整个过程不到3秒，适用于任何网站URL。与需要手动URL输入的在线生成器不同，我们的工具自动捕获当前页面URL，是将URL转换为可扫描二维码的最快方法。",
+        "faq2_q": "如何在不手动输入的情况下将URL转换为二维码？",
+        "faq2_a": "<strong>将URL转换为二维码</strong>的最简单方法是使用TableCopy二维码书签工具：只需访问任何网页，点击书签工具，即可即时生成包含页面URL的二维码。这种方法消除了将URL复制粘贴到在线生成器或下载单独应用程序的需要。我们的<strong>免费网站二维码生成器</strong>自动读取当前页面URL并在毫秒内创建高质量、打印就绪的二维码。然后您可以将其下载为PNG图像，用于演示文稿、传单或名片。",
+        "faq3_q": "如何在任何设备上从二维码读取URL？",
+        "faq3_a": "<strong>从二维码读取URL</strong>已内置现代智能手机摄像头。在iPhone（iOS 11+）上，只需打开相机应用程序并将摄像头对准二维码 - 将显示包含URL链接的通知。在Android上，使用Google Lens或原生相机应用。对于桌面用户， numerous免费二维码扫描应用可以<strong>从二维码图像读取URL</strong>。当有人扫描您的二维码时，他们的设备将即时解码URL并打开网页或提示确认。我们的二维码与所有扫描应用和设备兼容。",
+        "faq4_q": "可以将二维码链接到Facebook页面或社交媒体吗？",
+        "faq4_a": "是的！您绝对可以<strong>将二维码链接到Facebook页面</strong>或任何社交媒体资料。只需导航到您的Facebook页面URL，点击我们的二维码生成器书签工具，然后下载二维码。这适用于Facebook商业页面、个人资料、Instagram、LinkedIn、Twitter和任何其他社交媒体平台。二维码将直接将扫描器定向到您的社交媒体页面，使其成为名片、活动传单或营销材料的完美选择。我们的<strong>免费网站二维码生成器</strong>捕获您正在查看的确切URL，确保二维码指向正确的Facebook页面或资料。",
+        "faq5_q": "什么是最好的无需注册的网站二维码生成器？",
+        "faq5_a": "<strong>最好的网站二维码生成器</strong>应该提供：无需注册要求、即时生成、高质量输出和隐私保护。TableCopy的二维码生成器表现出色，因为它完全免费，无需注册，在浏览器中本地处理所有内容（不会向服务器发送数据），并且一键生成打印就绪的PNG二维码。与收集电子邮件地址或限制使用的在线生成器不同，我们的书签工具无限次使用并尊重您的隐私。它还比基于Web的工具更快，因为无需手动复制粘贴URL - 只需点击并生成。",
+        "faq6_q": "印刷的二维码应该是什么分辨率？",
+        "faq6_a": "为了最佳扫描，印刷的二维码应至少为2x2cm（0.8x0.8英寸），最小分辨率为300 DPI。我们的生成器创建适合数字显示和专业印刷的高分辨率PNG二维码。二维码包含纠错功能，即使部分损坏或遮挡也能保持可扫描。对于大幅面印刷（海报、横幅），按比例缩放二维码以保持最小尺寸要求。在大规模生产之前测试打印您的二维码，以确保它可以用各种智能手机摄像头正确扫描。",
+        "faq7_q": "我可以自定义带颜色或标志的二维码吗？",
+        "faq7_a": "虽然我们的生成器创建标准的黑白二维码以实现最大兼容性，但您可以在下载后在图像编辑软件中自定义它们。最佳实践包括：在浅色和深色区域之间保持足够的对比度，保持三个角位置标记不变，并彻底测试自定义的二维码。避免更改核心数据模式或纠错区域。对于专业品牌推广，请考虑在中心放置一个小标志（二维码具有内置纠错功能来处理此问题），但在部署前始终使用多个扫描应用测试最终结果。",
+        "faq8_q": "对敏感URL使用免费二维码生成器安全吗？",
+        "faq8_a": "对在线二维码生成器的安全顾虑是合理的，因为某些服务可能会收集或跟踪您转换的URL。TableCopy的二维码生成器完全安全，因为所有处理都在您的浏览器本地进行 - 不会将URL发送到外部服务器，不会记录数据，也不会存储任何内容。您的URL在您的设备上保持私密。这使得为内部公司页面、受密码保护的内容或敏感文档生成二维码是安全的。为了最大程度的安全性，在公开分享之前，请始终验证二维码打开预期的URL。",
+        "faq_footer": "需要更多帮助？<a href=\"/contact.html\">联系我们</a>或探索我们的<a href=\"/\">其他网络工具</a>。"
     },
     "web-translator": {
         "meta_title": "网页翻译 - 即时翻译任何网页 | TableCopy",
@@ -702,45 +832,45 @@
         "error": "翻译页面失败"
     },
     "enable-copy": {
-        "meta_title": "解除复制限制 - 从任何网站移除复制限制 | TableCopy",
-        "meta_description": "从任何网站移除右键和复制限制。即时重新启用文本选择、复制和上下文菜单。",
-        "meta_keywords": "解除复制, 移除复制限制, 允许复制, 绕过复制保护, 启用右键",
-        "logo": "解除复制限制",
-        "hero_h1": "即时移除复制限制",
-        "hero_slogan": "在任何网站上重新启用右键、文本选择和复制。一键绕过烦人的复制限制。",
-        "install_cta": "立即安装",
-        "features_title": "功能 — 解除复制限制",
+        "meta_title": "允许复制 - 启用右键并移除任何网站的复制限制 | TableCopy",
+        "meta_description": "在任何网站上启用右键并允许复制。移除复制限制，重新启用文本选择，并即时绕过复制保护。适用于阻止复制的网站。",
+        "meta_keywords": "允许复制, 启用右键, 移除复制限制, 绕过复制保护, 启用复制, 右键启用, 解除复制限制",
+        "logo": "允许复制",
+        "hero_h1": "在任何网站上启用右键并允许复制",
+        "hero_slogan": "即时移除复制限制，重新启用右键、文本选择和复制功能。一键绕过烦人的复制保护。",
+        "install_cta": "安装允许复制",
+        "features_title": "功能 — 允许复制与启用右键",
         "feature_list": [
-            "<strong>即时解锁：</strong> 立即移除复制、选择和上下文菜单限制。",
-            "<strong>通用兼容：</strong> 适用于阻止右键、文本选择或复制的网站。",
-            "<strong>简单干净：</strong> 无复杂界面。只需点击即可使用。",
-            "<strong>隐私优先：</strong> 所有操作都在本地。不收集或传输数据。"
+            "<strong>即时允许复制：</strong> 移除复制限制，立即启用文本选择、右键和复制功能。",
+            "<strong>启用右键：</strong> 在为复制保护而阻止右键的网站上恢复上下文菜单访问。",
+            "<strong>通用绕过：</strong> 适用于任何使用JavaScript禁用复制、选择或上下文菜单的网站。",
+            "<strong>隐私优先：</strong> 所有允许复制操作均在本地执行。不收集或传输数据。"
         ],
-        "use_cases_title": "使用场景 - 重新掌控",
+        "use_cases_title": "使用场景 - 通过允许复制重新掌控",
         "use_cases_list": [
             {
                 "h3": "📚 研究与学习",
-                "p": "从研究论文、文章和在线书籍中复制引用、摘录和参考资料用于学习。"
+                "p": "在研究论文、学术文章和在线书籍上启用右键并允许复制。无限制地复制引用、摘录和参考资料。"
             },
             {
                 "h3": "💼 专业用途",
-                "p": "从竞争对手网站、行业报告和专业资源中无限制地收集信息。"
+                "p": "移除竞争对手网站、行业报告和专业资源上的复制限制。允许复制用于商业分析和研究。"
             },
             {
-                "h3": "📝 内容策展",
-                "p": "从以前受限的网站策划内容用于博客、社交媒体或演示文稿。"
+                "h3": "📝 内容策划",
+                "p": "绕过复制保护，为博客、社交媒体或演示文稿策划内容。在任何网站上启用复制以进行内容聚合。"
             }
         ],
         "install_title": "三秒安装，永久使用",
         "install_step1_h3": "按住下方按钮",
-        "install_step1_p": "用鼠标左键按住绿色的「解除复制」按钮。",
+        "install_step1_p": "用鼠标左键按住绿色的「允许复制」按钮。",
         "install_step2_h3": "拖到书签栏",
         "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
-        "bookmarklet_button_text": "解除复制",
-        "install_step3_h3": "完成！点击解除",
-        "install_step3_p": "在任何受限页面上点击此书签以移除复制限制。",
-        "footer_p": "© 2025 解除复制。由 TableCopy 提供支持。",
-        "success_message": "复制限制已解除！现在可以选择和复制文本。"
+        "bookmarklet_button_text": "允许复制",
+        "install_step3_h3": "完成！点击启用复制",
+        "install_step3_p": "在任何受限页面上，点击此书签以允许复制并启用右键。",
+        "footer_p": "© 2025 允许复制。由 TableCopy 提供支持。",
+        "success_message": "复制限制已移除！现在可以选择和复制文本了。"
     },
     "dark-mode": {
         "meta_title": "夜间模式 - 为任何网站添加夜间模式 | TableCopy",
@@ -912,7 +1042,124 @@
         "install_step2_p": "<strong>关键一步：</strong>将按钮拖动到浏览器的「书签栏」或「收藏夹栏」，然后松开鼠标。",
         "bookmarklet_button_text": "图片下载器",
         "install_step3_h3": "完成！点击下载",
-        "install_step3_p": "在任何有图片的页面上，点击此书签即可提取并下载它们。"
+        "install_step3_p": "在任何有图片的页面上，点击此书签即可提取并下载它们。",
+        "intro_title": "What is a Web Page Image Extractor?",
+        "intro_content": "<p>Our <strong>image extractor from website online</strong> tool is a powerful solution designed to help you <strong>extract image from URL</strong> and <strong>get image from webpage</strong> effortlessly. Whether you need to <strong>rip all images from website</strong>, <strong>extract background image from webpage</strong>, or <strong>export image from webpage</strong>, our tool provides a seamless experience.</p>\n\n<p>This <strong>web page image extractor</strong> works directly in your browser, allowing you to <strong>extract photo from webpage</strong> and <strong>extract picture from website</strong> without any software installation. Simply drag the bookmarklet to your bookmarks bar, click it on any page, and instantly <strong>extract image from website online</strong>.</p>\n\n<h3>Why Use Our Image Downloader?</h3>\n<p>Many users wonder <strong>how to get image from website</strong> or <strong>how to export image from web page</strong> efficiently. Traditional methods involve right-clicking each image individually, which is time-consuming. Our tool automates this process, letting you <strong>rip all images from website</strong> in seconds.</p>\n\n<p>Perfect for designers who need to <strong>copy an image from a web page</strong>, researchers who want to <strong>extract pictures from website</strong> archives, or anyone who needs to <strong>extract photo from website</strong> for analysis. The tool handles <strong>how to extract images from html files</strong> automatically, finding both visible images and background graphics.</p>",
+        "how_to_use_title": "How to Extract Images from Webpages: Step-by-Step Guide",
+        "how_to_use_content": "<h3>Step 1: Install the Bookmarklet</h3>\n<p>Drag the purple \"Image Downloader\" button to your browser's bookmarks bar. This creates a one-click tool you can use on any website.</p>\n\n<h3>Step 2: Navigate to Any Webpage</h3>\n<p>Visit any website containing images you want to download. This works for blogs, e-commerce sites, portfolios, news sites, and more.</p>\n\n<h3>Step 3: Click the Bookmarklet</h3>\n<p>Click the \"Image Downloader\" bookmark in your bookmarks bar. The tool will instantly scan the page and display all images in a gallery view.</p>\n\n<h3>Step 4: Filter and Select Images</h3>\n<p>Browse through the extracted images in the visual gallery. Use filters to show only images above a certain size, specific file types (JPG, PNG, WebP, GIF), or dimensions. Check or uncheck images to select specific ones.</p>\n\n<h3>Step 5: Download as ZIP</h3>\n<p>Click the download button to save all selected images as a ZIP file. The download preserves original filenames and organizes them for easy use.</p>\n\n<h3>Tips for Best Results</h3>\n<ul>\n    <li><strong>For e-commerce sites:</strong> Use minimum size filters to avoid downloading thumbnails and icons</li>\n    <li><strong>For design inspiration:</strong> Lower the size threshold to include all visual elements</li>\n    <li><strong>For research:</strong> Download full galleries and organize by project or topic</li>\n    <li><strong>Background images:</strong> The tool automatically detects CSS background images that aren't visible in traditional save methods</li>\n</ul>",
+        "faq_title": "Frequently Asked Questions",
+        "faq_list": [
+            {
+                "question": "How do I extract images from a URL?",
+                "answer": "Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file."
+            },
+            {
+                "question": "Can I rip all images from a website at once?",
+                "answer": "Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file."
+            },
+            {
+                "question": "How do I extract background images from a webpage?",
+                "answer": "Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics."
+            },
+            {
+                "question": "What types of images can I extract?",
+                "answer": "You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size."
+            },
+            {
+                "question": "How do I export images from a webpage?",
+                "answer": "After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved."
+            },
+            {
+                "question": "Can I extract photos from password-protected websites?",
+                "answer": "Yes, if you're logged into the website in your browser, the bookmarklet can extract images from that page. It works with the same access you have in your browser."
+            },
+            {
+                "question": "Is this image extractor free to use?",
+                "answer": "Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage."
+            },
+            {
+                "question": "How do I copy an image from a web page without right-clicking?",
+                "answer": "Some websites disable right-click. Our bookmarklet bypasses these restrictions by scanning the page source directly, finding all images even when right-click is disabled."
+            },
+            {
+                "question": "Can I extract pictures from multiple pages at once?",
+                "answer": "Currently, the tool works on one page at a time. For multiple pages, run the bookmarklet on each page and download the images. Each download creates a separate ZIP file for easy organization."
+            },
+            {
+                "question": "How do I extract images from HTML files?",
+                "answer": "If you have saved HTML files locally, open them in your browser and run our bookmarklet. It works on locally saved HTML files just like live websites."
+            },
+            {
+                "question": "Is my data private when using this tool?",
+                "answer": "Absolutely. All image extraction happens locally in your browser. No data is sent to external servers. Your browsing and downloading activity remains completely private."
+            }
+        ],
+        "languages_title": "Available in Multiple Languages",
+        "languages_intro": "Our image downloader is available in 9 languages to serve users worldwide:",
+        "languages_list": [
+            {
+                "h3": "🇨🇳 中文 (Chinese)",
+                "p": "从网页提取图片 - 在线图片下载工具",
+                "url": "/zh/image-downloader.html",
+                "link_text": "中文版本 →"
+            },
+            {
+                "h3": "🇺🇸 English",
+                "p": "Extract images from webpages - Online image downloader",
+                "url": "/image-downloader.html",
+                "link_text": "English Version →"
+            },
+            {
+                "h3": "🇪🇸 Español (Spanish)",
+                "p": "Extraer imágenes de páginas web - Descargador de imágenes",
+                "url": "/es/image-downloader.html",
+                "link_text": "Versión en Español →"
+            },
+            {
+                "h3": "🇵🇹 Português (Portuguese)",
+                "p": "Extrair imagens de páginas web - Baixador de imagens",
+                "url": "/pt/image-downloader.html",
+                "link_text": "Versão em Português →"
+            },
+            {
+                "h3": "🇩🇪 Deutsch (German)",
+                "p": "Bilder von Webseiten extrahieren - Bild-Downloader",
+                "url": "/de/image-downloader.html",
+                "link_text": "Deutsche Version →"
+            },
+            {
+                "h3": "🇫🇷 Français (French)",
+                "p": "Extraire des images de pages web - Téléchargeur d'images",
+                "url": "/fr/image-downloader.html",
+                "link_text": "Version Française →"
+            },
+            {
+                "h3": "🇯🇵 日本語 (Japanese)",
+                "p": "ウェブページから画像を抽出 - オンライン画像ダウンローダー",
+                "url": "/ja/image-downloader.html",
+                "link_text": "日本語版 →"
+            },
+            {
+                "h3": "🇰🇷 한국어 (Korean)",
+                "p": "웹페이지에서 이미지 추출 - 온라인 이미지 다운로더",
+                "url": "/ko/image-downloader.html",
+                "link_text": "한국어 버전 →"
+            },
+            {
+                "h3": "🇷🇺 Русский (Russian)",
+                "p": "Извлекать изображения с веб-страниц - Загрузчик изображений",
+                "url": "/ru/image-downloader.html",
+                "link_text": "Русская версия →"
+            }
+        ],
+        "schema_name": "Image Downloader - Extract Image from URL",
+        "schema_description": "Free online tool to extract image from URL and get images from webpage. Rip all images from website, extract background images, photos, and pictures. Batch download as ZIP with filtering options.",
+        "schema_url": "https://tablecopy.pro/zh/image-downloader.html",
+        "schema_features": "[\"Extract image from URL\", \"Get image from webpage\", \"Rip all images from website\", \"Extract background image from webpage\", \"Web page image extractor\", \"Extract photo from webpage\", \"Export image from webpage\", \"Image extractor from website online\", \"Batch download images as ZIP\", \"Filter images by size and type\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"How do I extract images from a URL?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file.\"}}, {\"@type\": \"Question\", \"name\": \"Can I rip all images from a website at once?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file.\"}}, {\"@type\": \"Question\", \"name\": \"How do I extract background images from a webpage?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics.\"}}, {\"@type\": \"Question\", \"name\": \"What types of images can I extract?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size.\"}}, {\"@type\": \"Question\", \"name\": \"How do I export images from a webpage?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved.\"}}, {\"@type\": \"Question\", \"name\": \"Is this image extractor free to use?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage.\"}}]",
+        "schema_howto_name": "How to Extract Images from Webpages",
+        "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
     "web-tools": {
         "meta_title": "网页工具 - 13个必备浏览器工具集成一个书签 | TableCopy",

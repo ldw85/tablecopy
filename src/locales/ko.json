@@ -615,49 +615,179 @@
         "cancel_button": "Cancel"
     },
     "qr-code-generator": {
-        "meta_title": "QR Code Generator - Create QR Codes for Any Webpage | TableCopy",
-        "meta_description": "Generate QR codes for any webpage URL instantly. Perfect for sharing links on mobile devices, print materials, or presentations.",
-        "meta_keywords": "qr code generator, webpage qr code, url to qr code, bookmarklet, free qr code",
-        "logo": "QR Code Generator",
-        "hero_h1": "Generate QR Codes Instantly",
-        "hero_slogan": "Create QR codes for any webpage with one click. Download, share, or print QR codes for easy mobile access.",
-        "install_cta": "Install Now",
-        "features_title": "Features — QR Code Generator",
+        "meta_title": "무료 QR코드 생성기 - URL에서 QR코드 생성 | TableCopy",
+        "meta_description": "무료 QR코드 생성기: 원클릭으로 URL에서 QR코드를 만드는 방법을 알아보세요. QR코드에서 URL 읽기, Facebook 페이지에 QR코드 연결. 등록 없음, 즉시 다운로드, 100% 프라이빗한 최고의 QR코드 생성기 사이트.",
+        "meta_keywords": "무료 qr코드 생성기, qr코드에서 url 읽기, 최고의 qr코드 생성기 사이트, url에서 qr코드 만드는 방법, qr코드를 facebook 페이지에 연결, url을 qr코드로 변환하는 방법, qr코드 생성기, url을 qr코드로",
+        "logo": "QR코드 생성기",
+        "hero_h1": "QR코드 즉시 생성",
+        "hero_slogan": "원클릭으로 모든 웹페이지의 QR코드를 만드세요. 다운로드, 공유 또는 인쇄하여 모바일에서 쉽게 액세스하세요.",
+        "install_cta": "지금 설치",
+        "features_title": "기능 — QR코드 생성기",
         "feature_list": [
-            "<strong>Instant Generation:</strong> Creates QR codes for the current page URL in milliseconds.",
-            "<strong>High Quality:</strong> Generates crisp, scannable QR codes perfect for print and digital use.",
-            "<strong>One-Click Download:</strong> Download QR codes as PNG images for use in presentations, flyers, or documents.",
-            "<strong>No Data Collection:</strong> All processing happens locally in your browser. Your URLs stay private."
+            "<strong>즉시 생성:</strong> 현재 페이지 URL의 QR코드를 밀리초 단위로 생성합니다.",
+            "<strong>고품질:</strong> 인쇄 및 디지털 사용에 완벽한 선명하고 스캔 가능한 QR코드를 생성합니다.",
+            "<strong>원클릭 다운로드:</strong> 프레젠테이션, 전단지 또는 문서에서 사용하기 위해 PNG 이미지로 QR코드를 다운로드하세요.",
+            "<strong>데이터 수집 없음:</strong> 모든 처리는 브라우저에서 로컬로 수행됩니다. URL은 프라이빗으로 유지됩니다."
         ],
-        "use_cases_title": "Use Cases - Share Anything",
+        "use_cases_title": "사용 사례 - 모든 것 공유",
         "use_cases_list": [
             {
-                "h3": "📱 Mobile Sharing",
-                "p": "Share desktop webpages with mobile devices instantly. Generate a QR code and scan with your phone camera."
+                "h3": "📱 모바일 공유",
+                "p": "데스크톱 웹페이지를 모바일 장치와 즉시 공유하세요. QR코드를 생성하고 휴대전화 카메라로 스캔하세요."
             },
             {
-                "h3": "📄 Print Materials",
-                "p": "Add QR codes to business cards, flyers, posters, or presentations. Link directly to online resources or landing pages."
+                "h3": "📄 인쇄물",
+                "p": "명함, 전단지, 포스터 또는 프레젠테이션에 QR코드를 추가하세요. 온라인 리소스 또는 랜딩 페이지에 직접 연결하세요."
             },
             {
-                "h3": "🎓 Education & Events",
-                "p": "Teachers and event organizers can quickly create QR codes for resources, registration pages, or handouts."
+                "h3": "🎓 교육 및 이벤트",
+                "p": "교사와 이벤트 주최자는 리소스, 등록 페이지 또는 배포 자료의 QR코드를 빠르게 만들 수 있습니다."
             }
         ],
-        "install_title": "3-Second Install, Use Forever",
-        "install_step1_h3": "Press and Hold Button",
-        "install_step1_p": "Click and hold the cyan 'QR Code' button.",
-        "install_step2_h3": "Drag to Bookmarks Bar",
-        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
-        "bookmarklet_button_text": "QR Code",
-        "install_step3_h3": "Done! Click to Generate",
-        "install_step3_p": "On any page, click this bookmark to instantly generate a QR code for that page.",
-        "footer_p": "© 2025 QR Code Generator. Powered by TableCopy.",
-        "modal_title": "QR Code for Current Page",
-        "download_button": "Download PNG",
-        "generating": "Generating QR code...",
-        "success": "QR code generated!",
-        "error": "Failed to generate QR code"
+        "install_title": "3초 설치, 영구 사용",
+        "install_step1_h3": "버튼 길게 누르기",
+        "install_step1_p": "청록색 'QR코드' 버튼을 클릭하고 길게 누릅니다.",
+        "install_step2_h3": "북마크 막대로 끌기",
+        "install_step2_p": "<strong>중요한 단계:</strong> 버튼을 브라우저의 '북마크 막대' 또는 '즐겨찾기 막대'로 끌고 마우스를 놓으세요.",
+        "bookmarklet_button_text": "QR코드",
+        "install_step3_h3": "완료! 클릭하여 생성",
+        "install_step3_p": "모든 페이지에서 이 북마크를 클릭하여 해당 페이지의 QR코드를 즉시 생성하세요.",
+        "footer_p": "© 2025 QR코드 생성기. TableCopy 개발.",
+        "modal_title": "현재 페이지의 QR코드",
+        "download_button": "PNG 다운로드",
+        "generating": "QR코드 생성 중...",
+        "success": "QR코드가 생성되었습니다!",
+        "error": "QR코드 생성 실패",
+        "about_title": "QR코드 생성기 정보",
+        "about_intro": "<strong>무료 QR코드 생성기</strong>에 오신 것을 환영합니다. TableCopy를 사용하면 복잡한 도구나 등록 없이<strong>URL에서 QR코드를 만들</strong> 수 있습니다. 우리의 QR코드 생성기는 웹 링크 공유, 인쇄물에서의 사이트 프로모션, 모바일 사용자의 쉬운 콘텐츠 액세스에 이상적입니다. <strong>URL을 QR코드로 변환하는 방법</strong>을 몇 초 안에 배울 수 있습니다.",
+        "about_benefits_title": "우리의 QR코드 생성기를 선택하는 이유",
+        "about_benefits_list": [
+            "<strong>완전 무료:</strong> 우리의 <strong>무료 QR코드 생성기</strong>에는 제한이나 숨겨진 요금이 없습니다. 무료로 무제한 URL QR코드를 만들 수 있습니다.",
+            "<strong>등록 없음:</strong> 다른 서비스와 달리 계정을 만들 필요가 없습니다. 즉시 <strong>URL QR코드를 만드세요</strong>.",
+            "<strong>100% 프라이빗:</strong> 모든 처리는 브라우저에서 로컬로 수행됩니다. URL이 외부 서버로 전송되지 않으며 완전한 보안이 보장됩니다.",
+            "<strong>고해상도:</strong> 전단지, 명함, 포스터와 같은 인쇄물에 완벽한 고해상도 QR코드 PNG를 다운로드하세요.",
+            "<strong>간단한 인터페이스:</strong> 사용 용이성을 염두에 설계되었습니다. 원클릭으로 QR코드를 만드세요. 기술적 경험이 필요하지 않습니다.",
+            "<strong>보편적 호환성:</strong> 모든 웹사이트에서 작동하며 모든 스마트폰 및 QR코드 리더에서 스캔 가능합니다."
+        ],
+        "about_use_cases_title": "이상적인 사용 시나리오",
+        "about_use_cases_list": [
+            "<strong>마케팅 및 이벤트:</strong> 전문적으로 생성된 QR코드로 전단지, 명함, 배너에 웹사이트를 공유하세요.",
+            "<strong>교육:</strong> 교사는 온라인 리소스, 수업 페이지, 학습 자료의 QR코드를 만들 수 있습니다.",
+            "<strong>소셜 미디어:</strong> <strong>QR코드를 Facebook 페이지에 연결하는 방법</strong> 및 기타 플랫폼에서 팔로워를 늘리는 방법을 알아보세요.",
+            "<strong>비즈니스:</strong> QR코드를 통해 고객과 제품 카탈로그, 포트폴리오 또는 연락처 페이지를 공유하세요.",
+            "<strong>프레젠테이션:</strong> 슬라이드에 QR코드를 삽입하여 청중이 실시간으로 리소스에 액세스하도록 하세요.",
+            "<strong>광고:</strong> 랜딩 페이지로 안내하는 인쇄 광고의 QR코드로 캠페인 효과를 추적하세요."
+        ],
+        "about_eeat": "이 <strong>웹사이트 QR코드 생성기</strong>는 15년 이상의 경험을 가진 웹 개발 전문가가 개발했습니다. 우리의 접근 방식은 사용자 프라이버시와 단순성을 우선시합니다. 다른 서비스와 달리 데이터를 수집하지 않고, 광고를 표시하지 않으며, 결제 장벽 뒤에 기능을 숨기지 않습니다. 수백만 명의 사용자가 QR코드 요구사항에 TableCopy를 신뢰합니다.",
+        "howto_title": "URL에서 QR코드를 만드는 방법",
+        "howto_subtitle": "<strong>URL을 QR코드로 변환하는 방법</strong>을 3가지 간단한 단계로 알아보세요. 우리의 <strong>무료 QR코드 생성기</strong>는 모든 웹페이지 공유를 믿을 수 없을 만큼 쉽게 만듭니다.",
+        "howto_step1_title": "대상 웹페이지 방문",
+        "howto_step1_desc": "QR코드로 변환하려는 모든 웹사이트 또는 웹페이지 URL로 이동하세요. Facebook 페이지, 온라인 상점, 블로그, 교육 리소스를 포함한 모든 페이지에서 작동합니다.",
+        "howto_step2_title": "QR코드 버튼 클릭",
+        "howto_step2_desc": "브라우저 도구 모음에서 QR코드 생성기 버튼을 클릭하세요. QR코드 생성기가 해당 URL의 QR코드를 즉시 만듭니다.",
+        "howto_step3_title": "QR코드를 PNG로 다운로드",
+        "howto_step3_desc": "다운로드 버튼을 클릭하여 QR코드를 고해상도 PNG 이미지로 저장하세요. 다운로드한 QR코드는 인쇄 또는 디지털 공유에 완벽합니다.",
+        "howto_step4_title": "QR코드 공유 또는 인쇄",
+        "howto_step4_desc": "다운로드한 QR코드를 프레젠테이션, 전단지, 명함 또는 디지털 자료에서 사용하세요. 모든 스마트폰으로 <strong>QR코드에서 URL을 읽을</strong> 수 있으며 연결된 콘텐츠에 액세스할 수 있습니다.",
+        "howto_tip_title": "전문가 팁: QR코드 테스트",
+        "howto_tip_content": "인쇄하거나 대량으로 공유하기 전에 여러 장치(iPhone 및 Android)에서 QR코드를 스캔하여 제대로 작동하는지 확인하세요. 우리의 <strong>QR코드 생성기</strong>는 100% 신뢰할 수 있는 코드를 만들지만 확인하는 것이 항상 좋은 습관입니다.",
+        "practices_title": "QR코드 모범 사례",
+        "practices_list": [
+            {
+                "h3": "최소 인쇄 크기",
+                "p": "스캔 기능을 보장하려면 최소 2cm x 2cm(0.8 x 0.8인치)의 QR코드를 인쇄하세요. 더 작은 코드는 일부 카메라 장치에서 실패할 수 있습니다."
+            },
+            {
+                "h3": "색상 대비",
+                "p": "밝은 배경(흰색, 노란색)에 어두운 색상(검정색, 네이비)을 사용하세요. 스캔을 어렵게 만드는 낮은 대비 조합을 피하세요."
+            },
+            {
+                "h3": "인쇄 전 테스트",
+                "p": "대량 인쇄 또는 배포 전에 항상 여러 장치와 QR코드 읽기 앱으로 QR코드를 스캔하세요."
+            },
+            {
+                "h3": "짧은 URL 사용",
+                "p": "더 긴 URL은 더 복잡한 QR코드를 만듭니다. 특히 긴 링크의 경우 URL 단축 서비스를 사용하여 더 간단하고 스캔하기 쉬운 코드를 만드세요."
+            },
+            {
+                "h3": "깨끗하게 유지",
+                "p": "인쇄된 QR코드의 경우 주변 영역이 깨끗하고 장애물이 없는지 확인하세요. 정적 구역(모서리 사각형)이 완전히 보여야 합니다."
+            },
+            {
+                "h3": "위치 고려",
+                "p": "QR코드를 액세스하기 쉬운 곳에 배치하세요. 편안한 스캔을 위한 이상적인 높이는 바닥에서 100cm~150cm(40-60인치)입니다."
+            }
+        ],
+        "comparison_title": "비교: TableCopy를 선택하는 이유",
+        "comparison_subtitle": "다양한 방법을 사용한 <strong>URL을 QR코드로 변환하는 방법</strong> 비교. 우리의 <strong>무료 QR코드 생성기</strong>는 속도, 프라이버시, 사용 용이성에서 대안을 능가합니다.",
+        "comparison_headers": [
+            "기능",
+            "TableCopy",
+            "온라인 생성기",
+            "수동 만들기"
+        ],
+        "comparison_rows": [
+            {
+                "feature": "설정 시간",
+                "tablecopy": "3초(북마크 설치)",
+                "online_generators": "QR코드당 1-2분",
+                "manual_creation": "수시간 프로그래밍"
+            },
+            {
+                "feature": "등록 필요",
+                "tablecopy": "아니요",
+                "online_generators": "종종 예",
+                "manual_creation": "아니요"
+            },
+            {
+                "feature": "데이터 프라이버시",
+                "tablecopy": "100% 프라이빗(로컬)",
+                "online_generators": "URL이 서버로 전송됨",
+                "manual_creation": "완전"
+            },
+            {
+                "feature": "자동 URL 캡처",
+                "tablecopy": "예, 현재 URL",
+                "online_generators": "수동 복사-붙여넣기",
+                "manual_creation": "프로그래밍 필요"
+            },
+            {
+                "feature": "모바일 사용",
+                "tablecopy": "제한됨(데스크톱)",
+                "online_generators": "예",
+                "manual_creation": "개발 필요"
+            },
+            {
+                "feature": "사용 제한",
+                "tablecopy": "무제한",
+                "online_generators": "종종 제한됨",
+                "manual_creation": "무제한"
+            },
+            {
+                "feature": "출력 품질",
+                "tablecopy": "고해상도 PNG",
+                "online_generators": "가변",
+                "manual_creation": "사용자 정의 가능"
+            }
+        ],
+        "faq_title": "자주 묻는 질문 - QR코드 생성기",
+        "faq1_q": "모든 웹사이트의 URL에서 QR코드를 만드는 방법은?",
+        "faq1_a": "URL에서 QR코드를 만드는 것은 우리의 <strong>무료 QR코드 생성기</strong>를 사용하면 간단합니다: 1) 공유하려는 웹페이지를 방문하세요, 2) 브라우저에서 QR코드 북마크를 클릭하세요, 3) 생성된 QR코드를 PNG 이미지로 다운로드하세요. 전체 프로세스는 3초 미만이며 모든 웹사이트 URL에서 작동합니다.",
+        "faq2_q": "수동으로 입력하지 않고 URL을 QR코드로 변환하는 방법은?",
+        "faq2_a": "URL을 QR코드로 변환하는 가장 쉬운 방법은 TableCopy QR코드 북마크를 사용하는 것입니다: 모든 웹페이지를 방문하고 북마크를 클릭하여 페이지 URL이 포함된 QR코드를 즉시 생성하세요. URL을 수동으로 복사-붙여넣기할 필요가 없습니다.",
+        "faq3_q": "모든 장치에서 QR코드에서 URL을 읽는 방법은?",
+        "faq3_a": "<strong>QR코드에서 URL 읽기</strong>는 최신 스마트폰 카메라에 통합되어 있습니다. iPhone(iOS 11+)의 경우 카메라 앱을 열고 QR코드를 가리키기만 하면 됩니다. Android의 경우 Google Lens 또는 기본 카메라 앱을 사용하세요.",
+        "faq4_q": "QR코드를 Facebook 페이지에 연결할 수 있나요?",
+        "faq4_a": "네! <strong>QR코드를 Facebook 페이지에 연결할</strong> 수 있습니다. Facebook 페이지 URL로 이동하여 우리의 QR코드 생성기를 클릭하고 QR코드를 다운로드하세요. Facebook 페이지, 프로필, 그룹 및 모든 소셜 미디어 URL에서 완벽하게 작동합니다.",
+        "faq5_q": "등록 없이 최고의 QR코드 생성기 사이트는?",
+        "faq5_a": "TableCopy QR코드 생성기는 완전 무료이며, 등록이 필요 없고, 브라우저에서 모든 것을 로컬로 처리하며(서버에 데이터가 전송되지 않음), 원클릭으로 인쇄 가능한 QR코드를 생성하고 사용 제한이 없기 때문에 <strong>최고의 QR코드 생성기 사이트</strong>입니다.",
+        "faq6_q": "인쇄용 QR코드는 어떤 해상도여야 하나요?",
+        "faq6_a": "인쇄에는 최소 300 DPI 해상도와 2cm x 2cm(0.8 x 0.8인치)의 최소 물리적 크기를 사용하세요. 더 작은 QR코드는 스캔하기 어려울 수 있습니다. 우리의 <strong>QR코드 생성기</strong>는 전문 인쇄에 적합한 고해상도 PNG 이미지를 만듭니다.",
+        "faq7_q": "색상이나 로고로 QR코드를 사용자 정의할 수 있나요?",
+        "faq7_a": "우리의 <strong>무료 QR코드 생성기</strong>는 최대 호환성 및 스캔 기능을 위해 표준 흑백 QR코드를 만듭니다. 색상이나 로고가 있는 사용자 정의 QR코드에는 특수 도구가 필요하지만 스캔 기능이 저하될 수 있습니다. 전문 사용의 경우 사용자 정의 QR코드를 철저히 테스트하는 것이 좋습니다.",
+        "faq8_q": "민감한 URL에 무료 QR코드 생성기를 사용하는 것이 안전한가요?",
+        "faq8_a": "TableCopy QR코드 생성기는 모든 처리가 브라우저에서 로컬로 수행되므로 완전히 안전합니다. URL이 외부 서버로 전송되지 않고, 데이터가 기록되지 않으며, 아무것도 저장되지 않습니다. 이로 인해 민감한 URL, 회사 내부 링크 또는 프라이빗 콘텐츠에 이상적입니다.",
+        "faq_footer": "<strong>URL에서 QR코드를 만드는 방법</strong>에 대해まだ 질문이 있으신가요? 우리의 <strong>무료 QR코드 생성기</strong>는 간단하고 강력하도록 설계되었습니다. 북마크를 설치하고 모든 웹사이트의 QR코드 만들기를 지금 시작하세요."
     },
     "web-translator": {
         "meta_title": "Web Translator - Translate Any Webpage Instantly | TableCopy",
@@ -702,45 +832,45 @@
         "error": "Failed to translate page"
     },
     "enable-copy": {
-        "meta_title": "Enable Copy - Remove Copy Restrictions from Any Website | TableCopy",
-        "meta_description": "Remove right-click and copy restrictions from any website. Re-enable text selection, copying, and context menus instantly.",
-        "meta_keywords": "enable copy, remove copy restrictions, allow copy, bypass copy protection, right-click enable",
-        "logo": "Enable Copy",
-        "hero_h1": "Remove Copy Restrictions Instantly",
-        "hero_slogan": "Re-enable right-click, text selection, and copying on any website. Bypass annoying copy restrictions with one click.",
-        "install_cta": "Install Now",
-        "features_title": "Features — Enable Copy",
+        "meta_title": "복사 허용 - 모든 웹사이트에서 우클릭 활성화 및 복사 제거 제한 | TableCopy",
+        "meta_description": "모든 웹사이트에서 우클릭을 활성화하고 복사를 허용합니다. 복사 제한을 제거하고, 텍스트 선택을 재활성화하며, 복사 보호를 즉시 우회합니다.",
+        "meta_keywords": "복사 허용, 우클릭 활성화, 복사 제한 제거, 복사 보호 우회, 복사 활성화",
+        "logo": "복사 허용",
+        "hero_h1": "모든 웹사이트에서 우클릭 활성화 및 복사 허용",
+        "hero_slogan": "복사 제한을 제거하고 우클릭, 텍스트 선택, 복사를 즉시 재활성화합니다. 원클릭으로 복사 보호를 우회하세요.",
+        "install_cta": "복사 허용 설치",
+        "features_title": "기능 — 복사 허용 및 우클릭 활성화",
         "feature_list": [
-            "<strong>Instant Unlock:</strong> Removes copy, select, and context menu restrictions immediately.",
-            "<strong>Universal Compatibility:</strong> Works on websites that block right-click, text selection, or copying.",
-            "<strong>Simple & Clean:</strong> No complex interface. Just click and it works.",
-            "<strong>Privacy-First:</strong> All operations are local. No data is collected or transmitted."
+            "<strong>즉시 복사 허용:</strong>복사 제한을 제거하고 텍스트 선택, 우클릭, 복사를 즉시 활성화합니다.",
+            "<strong>우클릭 활성화:</strong>복사 보호를 위해 우클릭을 차단하는 웹사이트에서 컨텍스트 메뉴 액세스를 복원합니다.",
+            "<strong>보편적 우회:</strong>복사, 선택, 컨텍스트 메뉴를 비활성화하는 JavaScript를 사용하는 모든 웹사이트에서 작동합니다.",
+            "<strong>프라이버시 우선:</strong>복사 허용의 모든 작업은 로컬입니다. 데이터 수집이나 전송이 없습니다."
         ],
-        "use_cases_title": "Use Cases - Regain Control",
+        "use_cases_title": "사용 사례 — 복사 허용으로 제어권 회복",
         "use_cases_list": [
             {
-                "h3": "📚 Research & Study",
-                "p": "Copy quotes, excerpts, and references from research papers, articles, and online books for your studies."
+                "h3": "📚 연구 및 학습",
+                "p": "연구 논문, 학술 기사, 온라인 도서에서 우클릭을 활성화하고 복사를 허용합니다. 제한 없이 인용, 발췌, 참고문헌을 복사할 수 있습니다."
             },
             {
-                "h3": "💼 Professional Use",
-                "p": "Gather information from competitor sites, industry reports, and professional resources without restrictions."
+                "h3": "💼 전문적 사용",
+                "p": "경쟁사 웹사이트, 산업 보고서, 전문 자원의 복사 제한을 제거합니다. 비즈니스 분석 및 연구를 위해 복사를 허용합니다."
             },
             {
-                "h3": "📝 Content Curation",
-                "p": "Curate content for blogs, social media, or presentations by copying text from previously restricted websites."
+                "h3": "📝 콘텐츠 큐레이션",
+                "p": "블로그, 소셜 미디어, 프레젠테이션을 위한 콘텐츠를 큐레이션하기 위해 복사 보호를 우회합니다. 콘텐츠 집계를 위해 모든 웹사이트에서 복사를 활성화합니다."
             }
         ],
-        "install_title": "3-Second Install, Use Forever",
-        "install_step1_h3": "Press and Hold Button",
-        "install_step1_p": "Click and hold the green 'Enable Copy' button.",
-        "install_step2_h3": "Drag to Bookmarks Bar",
-        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
-        "bookmarklet_button_text": "Enable Copy",
-        "install_step3_h3": "Done! Click to Enable",
-        "install_step3_p": "On any restricted page, click this bookmark to remove copy restrictions.",
-        "footer_p": "© 2025 Enable Copy. Powered by TableCopy.",
-        "success_message": "Copy restrictions removed! You can now select and copy text."
+        "install_title": "3초 설치, 영구 사용",
+        "install_step1_h3": "버튼 누르기",
+        "install_step1_p": "녹색 \"복사 허용\" 버튼을 왼쪽 마우스 버튼으로 클릭하고 누르고 있습니다.",
+        "install_step2_h3": "북마크 바로 드래그",
+        "install_step2_p": "<strong>중요한 단계:</strong>버튼을 브라우저의 \"북마크 바\" 또는 \"즐겨찾기 바\"로 드래그한 다음 마우스를 놓습니다.",
+        "bookmarklet_button_text": "복사 허용",
+        "install_step3_h3": "완료! 클릭하여 활성화",
+        "install_step3_p": "제한된 페이지에서 이 북마크를 클릭하여 복사를 허용하고 우클릭을 활성화합니다.",
+        "footer_p": "© 2025 복사 허용. TableCopy에서 개발했습니다.",
+        "success_message": "복사 제한이 제거되었습니다! 이제 텍스트를 선택하고 복사할 수 있습니다."
     },
     "dark-mode": {
         "meta_title": "Dark Mode - Add Dark Mode to Any Website | TableCopy",
@@ -912,7 +1042,124 @@
         "install_step2_p": "<strong>중요한 단계:</strong> 버튼을 브라우저의 '북마크 바' 또는 '즐겨찾기 바'로 드래그한 다음 마우스를 놓습니다.",
         "bookmarklet_button_text": "이미지 다운로더",
         "install_step3_h3": "완료! 클릭하여 다운로드",
-        "install_step3_p": "이미지가 있는 모든 페이지에서 이 북마크를 클릭하여 추출 및 다운로드하세요."
+        "install_step3_p": "이미지가 있는 모든 페이지에서 이 북마크를 클릭하여 추출 및 다운로드하세요.",
+        "intro_title": "What is a Web Page Image Extractor?",
+        "intro_content": "<p>Our <strong>image extractor from website online</strong> tool is a powerful solution designed to help you <strong>extract image from URL</strong> and <strong>get image from webpage</strong> effortlessly. Whether you need to <strong>rip all images from website</strong>, <strong>extract background image from webpage</strong>, or <strong>export image from webpage</strong>, our tool provides a seamless experience.</p>\n\n<p>This <strong>web page image extractor</strong> works directly in your browser, allowing you to <strong>extract photo from webpage</strong> and <strong>extract picture from website</strong> without any software installation. Simply drag the bookmarklet to your bookmarks bar, click it on any page, and instantly <strong>extract image from website online</strong>.</p>\n\n<h3>Why Use Our Image Downloader?</h3>\n<p>Many users wonder <strong>how to get image from website</strong> or <strong>how to export image from web page</strong> efficiently. Traditional methods involve right-clicking each image individually, which is time-consuming. Our tool automates this process, letting you <strong>rip all images from website</strong> in seconds.</p>\n\n<p>Perfect for designers who need to <strong>copy an image from a web page</strong>, researchers who want to <strong>extract pictures from website</strong> archives, or anyone who needs to <strong>extract photo from website</strong> for analysis. The tool handles <strong>how to extract images from html files</strong> automatically, finding both visible images and background graphics.</p>",
+        "how_to_use_title": "How to Extract Images from Webpages: Step-by-Step Guide",
+        "how_to_use_content": "<h3>Step 1: Install the Bookmarklet</h3>\n<p>Drag the purple \"Image Downloader\" button to your browser's bookmarks bar. This creates a one-click tool you can use on any website.</p>\n\n<h3>Step 2: Navigate to Any Webpage</h3>\n<p>Visit any website containing images you want to download. This works for blogs, e-commerce sites, portfolios, news sites, and more.</p>\n\n<h3>Step 3: Click the Bookmarklet</h3>\n<p>Click the \"Image Downloader\" bookmark in your bookmarks bar. The tool will instantly scan the page and display all images in a gallery view.</p>\n\n<h3>Step 4: Filter and Select Images</h3>\n<p>Browse through the extracted images in the visual gallery. Use filters to show only images above a certain size, specific file types (JPG, PNG, WebP, GIF), or dimensions. Check or uncheck images to select specific ones.</p>\n\n<h3>Step 5: Download as ZIP</h3>\n<p>Click the download button to save all selected images as a ZIP file. The download preserves original filenames and organizes them for easy use.</p>\n\n<h3>Tips for Best Results</h3>\n<ul>\n    <li><strong>For e-commerce sites:</strong> Use minimum size filters to avoid downloading thumbnails and icons</li>\n    <li><strong>For design inspiration:</strong> Lower the size threshold to include all visual elements</li>\n    <li><strong>For research:</strong> Download full galleries and organize by project or topic</li>\n    <li><strong>Background images:</strong> The tool automatically detects CSS background images that aren't visible in traditional save methods</li>\n</ul>",
+        "faq_title": "Frequently Asked Questions",
+        "faq_list": [
+            {
+                "question": "How do I extract images from a URL?",
+                "answer": "Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file."
+            },
+            {
+                "question": "Can I rip all images from a website at once?",
+                "answer": "Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file."
+            },
+            {
+                "question": "How do I extract background images from a webpage?",
+                "answer": "Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics."
+            },
+            {
+                "question": "What types of images can I extract?",
+                "answer": "You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size."
+            },
+            {
+                "question": "How do I export images from a webpage?",
+                "answer": "After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved."
+            },
+            {
+                "question": "Can I extract photos from password-protected websites?",
+                "answer": "Yes, if you're logged into the website in your browser, the bookmarklet can extract images from that page. It works with the same access you have in your browser."
+            },
+            {
+                "question": "Is this image extractor free to use?",
+                "answer": "Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage."
+            },
+            {
+                "question": "How do I copy an image from a web page without right-clicking?",
+                "answer": "Some websites disable right-click. Our bookmarklet bypasses these restrictions by scanning the page source directly, finding all images even when right-click is disabled."
+            },
+            {
+                "question": "Can I extract pictures from multiple pages at once?",
+                "answer": "Currently, the tool works on one page at a time. For multiple pages, run the bookmarklet on each page and download the images. Each download creates a separate ZIP file for easy organization."
+            },
+            {
+                "question": "How do I extract images from HTML files?",
+                "answer": "If you have saved HTML files locally, open them in your browser and run our bookmarklet. It works on locally saved HTML files just like live websites."
+            },
+            {
+                "question": "Is my data private when using this tool?",
+                "answer": "Absolutely. All image extraction happens locally in your browser. No data is sent to external servers. Your browsing and downloading activity remains completely private."
+            }
+        ],
+        "languages_title": "Available in Multiple Languages",
+        "languages_intro": "Our image downloader is available in 9 languages to serve users worldwide:",
+        "languages_list": [
+            {
+                "h3": "🇨🇳 中文 (Chinese)",
+                "p": "从网页提取图片 - 在线图片下载工具",
+                "url": "/zh/image-downloader.html",
+                "link_text": "中文版本 →"
+            },
+            {
+                "h3": "🇺🇸 English",
+                "p": "Extract images from webpages - Online image downloader",
+                "url": "/image-downloader.html",
+                "link_text": "English Version →"
+            },
+            {
+                "h3": "🇪🇸 Español (Spanish)",
+                "p": "Extraer imágenes de páginas web - Descargador de imágenes",
+                "url": "/es/image-downloader.html",
+                "link_text": "Versión en Español →"
+            },
+            {
+                "h3": "🇵🇹 Português (Portuguese)",
+                "p": "Extrair imagens de páginas web - Baixador de imagens",
+                "url": "/pt/image-downloader.html",
+                "link_text": "Versão em Português →"
+            },
+            {
+                "h3": "🇩🇪 Deutsch (German)",
+                "p": "Bilder von Webseiten extrahieren - Bild-Downloader",
+                "url": "/de/image-downloader.html",
+                "link_text": "Deutsche Version →"
+            },
+            {
+                "h3": "🇫🇷 Français (French)",
+                "p": "Extraire des images de pages web - Téléchargeur d'images",
+                "url": "/fr/image-downloader.html",
+                "link_text": "Version Française →"
+            },
+            {
+                "h3": "🇯🇵 日本語 (Japanese)",
+                "p": "ウェブページから画像を抽出 - オンライン画像ダウンローダー",
+                "url": "/ja/image-downloader.html",
+                "link_text": "日本語版 →"
+            },
+            {
+                "h3": "🇰🇷 한국어 (Korean)",
+                "p": "웹페이지에서 이미지 추출 - 온라인 이미지 다운로더",
+                "url": "/ko/image-downloader.html",
+                "link_text": "한국어 버전 →"
+            },
+            {
+                "h3": "🇷🇺 Русский (Russian)",
+                "p": "Извлекать изображения с веб-страниц - Загрузчик изображений",
+                "url": "/ru/image-downloader.html",
+                "link_text": "Русская версия →"
+            }
+        ],
+        "schema_name": "Image Downloader - Extract Image from URL",
+        "schema_description": "Free online tool to extract image from URL and get images from webpage. Rip all images from website, extract background images, photos, and pictures. Batch download as ZIP with filtering options.",
+        "schema_url": "https://tablecopy.pro/ko/image-downloader.html",
+        "schema_features": "[\"Extract image from URL\", \"Get image from webpage\", \"Rip all images from website\", \"Extract background image from webpage\", \"Web page image extractor\", \"Extract photo from webpage\", \"Export image from webpage\", \"Image extractor from website online\", \"Batch download images as ZIP\", \"Filter images by size and type\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"How do I extract images from a URL?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all images from that URL. You can then preview, filter, and download them as a ZIP file.\"}}, {\"@type\": \"Question\", \"name\": \"Can I rip all images from a website at once?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes! Our tool allows you to extract all images from the current page. For entire websites, navigate to each page and run the tool. The batch download feature lets you save all extracted images as a single ZIP file.\"}}, {\"@type\": \"Question\", \"name\": \"How do I extract background images from a webpage?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Our image downloader automatically detects CSS background images that aren't visible through traditional right-click methods. When you run the bookmarklet, it finds both regular images and background graphics.\"}}, {\"@type\": \"Question\", \"name\": \"What types of images can I extract?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can extract all common image formats including JPG, PNG, WebP, GIF, SVG, and BMP. The tool shows image dimensions and file sizes, allowing you to filter by type and size.\"}}, {\"@type\": \"Question\", \"name\": \"How do I export images from a webpage?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"After extracting images using our tool, select the ones you want (or select all) and click the download button. The tool creates a ZIP file containing all selected images with their original filenames preserved.\"}}, {\"@type\": \"Question\", \"name\": \"Is this image extractor free to use?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes, our online image extractor is completely free with no limitations. Extract as many images as you need from any webpage.\"}}]",
+        "schema_howto_name": "How to Extract Images from Webpages",
+        "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
     "web-to": {
         "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
