@@ -3,12 +3,12 @@
  * Web Tools Toolbox
  * =============================================================
  *
- * A unified toolbox for 8 essential browser tools.
+ * A unified toolbox for 5 essential browser tools.
  * Click any tool to launch it. Click "Back to Tools" to return.
  *
  * Tools:
- * - Dark Mode, Enable Copy, Highlight Structure, Image Downloader
- * - QR Code, Send to AI, Web Translator, Wayback Machine
+ * - Enable Copy, Highlight Structure, Image Downloader
+ * - QR Code, Wayback Machine
  *
  * Version: 1.0
  */
@@ -37,13 +37,10 @@
             modal_title: "Web Tools",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "Dark Mode",
             tool_enable_copy: "Enable Copy",
             tool_highlight_structure: "Highlight Structure",
             tool_image_downloader: "Image Downloader",
             tool_qr_code: "QR Code",
-            tool_send_to_ai: "Send to AI",
-            tool_translate: "Web Translator",
             tool_wayback: "Wayback Machine",
             loading_tool: "Loading tool...",
             error_loading: "Failed to load tool. Please try again."
@@ -52,13 +49,10 @@
             modal_title: "网页工具",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "夜间模式",
             tool_enable_copy: "解除复制限制",
             tool_highlight_structure: "结构高亮",
             tool_image_downloader: "图片下载器",
             tool_qr_code: "二维码生成",
-            tool_send_to_ai: "发送到AI",
-            tool_translate: "网页翻译",
             tool_wayback: "时光机",
             loading_tool: "正在加载工具...",
             error_loading: "工具加载失败，请重试。"
@@ -67,13 +61,10 @@
             modal_title: "Herramientas Web",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "Modo Oscuro",
             tool_enable_copy: "Habilitar Copiar",
             tool_highlight_structure: "Resaltar Estructura",
             tool_image_downloader: "Descargador de Imágenes",
             tool_qr_code: "Código QR",
-            tool_send_to_ai: "Enviar a IA",
-            tool_translate: "Traductor Web",
             tool_wayback: "Máquina del Tiempo",
             loading_tool: "Cargando herramienta...",
             error_loading: "Error al cargar la herramienta. Inténtelo de nuevo."
@@ -82,13 +73,10 @@
             modal_title: "Ferramentas Web",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "Modo Escuro",
             tool_enable_copy: "Permitir Copiar",
             tool_highlight_structure: "Destacar Estrutura",
             tool_image_downloader: "Baixador de Imagens",
             tool_qr_code: "Código QR",
-            tool_send_to_ai: "Enviar para IA",
-            tool_translate: "Tradutor Web",
             tool_wayback: "Máquina do Tempo",
             loading_tool: "Carregando ferramenta...",
             error_loading: "Falha ao carregar ferramenta. Tente novamente."
@@ -97,13 +85,10 @@
             modal_title: "Web-Tools",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "Dunkelmodus",
             tool_enable_copy: "Kopieren Aktivieren",
             tool_highlight_structure: "Struktur Hervorheben",
             tool_image_downloader: "Bild-Downloader",
             tool_qr_code: "QR-Code",
-            tool_send_to_ai: "An KI Senden",
-            tool_translate: "Web-Übersetzer",
             tool_wayback: "Zeitmaschine",
             loading_tool: "Tool wird geladen...",
             error_loading: "Tool konnte nicht geladen werden. Bitte versuchen Sie es erneut."
@@ -112,13 +97,10 @@
             modal_title: "Outils Web",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "Mode Sombre",
             tool_enable_copy: "Activer la Copie",
             tool_highlight_structure: "Mettre en Structure",
             tool_image_downloader: "Téléchargeur d'Images",
             tool_qr_code: "Code QR",
-            tool_send_to_ai: "Envoyer à l'IA",
-            tool_translate: "Traducteur Web",
             tool_wayback: "Machine à Remonter le Temps",
             loading_tool: "Chargement de l'outil...",
             error_loading: "Échec du chargement de l'outil. Veuillez réessayer."
@@ -127,13 +109,10 @@
             modal_title: "ウェブツール",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "ダークモード",
             tool_enable_copy: "コピーを有効にする",
             tool_highlight_structure: "構造のハイライト",
             tool_image_downloader: "画像ダウンローダー",
             tool_qr_code: "QRコード",
-            tool_send_to_ai: "AIに送る",
-            tool_translate: "ウェブ翻訳",
             tool_wayback: "ウェイバックマシン",
             loading_tool: "ツールを読み込み中...",
             error_loading: "ツールの読み込みに失敗しました。もう一度お試しください。"
@@ -142,13 +121,10 @@
             modal_title: "웹 도구",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "다크 모드",
             tool_enable_copy: "복사 활성화",
             tool_highlight_structure: "구조 강조",
             tool_image_downloader: "이미지 다운로더",
             tool_qr_code: "QR 코드",
-            tool_send_to_ai: "AI로 보내기",
-            tool_translate: "웹 번역기",
             tool_wayback: "웨이백 머신",
             loading_tool: "도구 로드 중...",
             error_loading: "도구 로드 실패. 다시 시도해 주세요."
@@ -157,13 +133,10 @@
             modal_title: "Веб-инструменты",
             close_button: "×",
             footer_logo: "TableCopy.pro",
-            tool_dark_mode: "Темный режим",
             tool_enable_copy: "Разрешить копирование",
             tool_highlight_structure: "Выделить структуру",
             tool_image_downloader: "Загрузчик изображений",
             tool_qr_code: "QR-код",
-            tool_send_to_ai: "Отправить в ИИ",
-            tool_translate: "Веб-переводчик",
             tool_wayback: "Машина времени",
             loading_tool: "Загрузка инструмента...",
             error_loading: "Не удалось загрузить инструмент. Попробуйте снова."
@@ -176,16 +149,6 @@
     // 3. Tool Registry
     // ============================================
     const TOOL_REGISTRY = {
-        'dark-mode': {
-            id: 'dark-mode',
-            script: '/assets/js/tool-dark-mode.js',
-            cssPrefix: 'dark-',
-            name: t('tool_dark_mode'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>`,
-            color: '#34495E',
-            description: 'Toggle dark mode on any website',
-            category: 'toggle'
-        },
         'enable-copy': {
             id: 'enable-copy',
             script: '/assets/js/tool-enable-copy.js',
@@ -225,26 +188,6 @@
             color: '#1ABC9C',
             description: 'Generate QR code for current page URL',
             category: 'modal'
-        },
-        'send-to-ai': {
-            id: 'send-to-ai',
-            script: '/assets/js/tool-send-to-ai.js',
-            cssPrefix: 'ai-',
-            name: t('tool_send_to_ai'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>`,
-            color: '#9B59B6',
-            description: 'Send selected text to ChatGPT, Claude, or Perplexity',
-            category: 'modal'
-        },
-        'translate': {
-            id: 'translate',
-            script: '/assets/js/tool-translate.js',
-            cssPrefix: 'trans-',
-            name: t('tool_translate'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>`,
-            color: '#3498DB',
-            description: 'Translate current page using Google Translate',
-            category: 'one-shot'
         },
         'wayback': {
             id: 'wayback',
@@ -414,10 +357,6 @@
             <button id="${CSS_PREFIX}close" title="Close">${t('close_button')}</button>
             <h3>${t('modal_title')}</h3>
             <div class="button-container">
-                <button class="tool-button" data-tool="dark-mode">
-                    ${TOOL_REGISTRY['dark-mode'].icon}
-                    <span>${TOOL_REGISTRY['dark-mode'].name}</span>
-                </button>
                 <button class="tool-button" data-tool="enable-copy">
                     ${TOOL_REGISTRY['enable-copy'].icon}
                     <span>${TOOL_REGISTRY['enable-copy'].name}</span>
@@ -429,18 +368,6 @@
                 <button class="tool-button" data-tool="image-downloader">
                     ${TOOL_REGISTRY['image-downloader'].icon}
                     <span>${TOOL_REGISTRY['image-downloader'].name}</span>
-                </button>
-                <button class="tool-button" data-tool="qr-code">
-                    ${TOOL_REGISTRY['qr-code'].icon}
-                    <span>${TOOL_REGISTRY['qr-code'].name}</span>
-                </button>
-                <button class="tool-button" data-tool="send-to-ai">
-                    ${TOOL_REGISTRY['send-to-ai'].icon}
-                    <span>${TOOL_REGISTRY['send-to-ai'].name}</span>
-                </button>
-                <button class="tool-button" data-tool="translate">
-                    ${TOOL_REGISTRY['translate'].icon}
-                    <span>${TOOL_REGISTRY['translate'].name}</span>
                 </button>
                 <button class="tool-button" data-tool="wayback">
                     ${TOOL_REGISTRY['wayback'].icon}

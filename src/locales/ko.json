@@ -11,17 +11,16 @@
         "nav_web_to_pdf": "웹을 PDF로",
         "nav_web_to_markdown": "웹을 마크다운으로",
         "nav_web_to_text": "웹을 텍스트로",
+        "nav_web_to_image": "웹을 이미지로",
+        "nav_web_to_word": "웹을 Word로",
         "nav_about": "회사 소개",
         "nav_contact": "문의하기",
         "nav_privacy": "개인정보 처리방침",
         "nav_terms": "서비스 약관",
-        "nav_send_to_ai": "Send to AI",
-        "nav_qr_code": "QR Code",
-        "nav_translator": "Translator",
-        "nav_enable_copy": "Enable Copy",
-        "nav_dark_mode": "Dark Mode",
-        "nav_wayback": "Wayback Machine",
-        "nav_highlight": "Highlight Structure",
+        "nav_qr_code": "QR 코드",
+        "nav_enable_copy": "복사 활성화",
+        "nav_wayback": "웨이백 머신",
+        "nav_highlight": "구조 강조",
         "nav_image_downloader": "이미지 다운로더",
         "toolbox_badge": "도구상자",
         "nav_web_to_converter": "웹 변환기"
@@ -1203,5 +1202,65 @@
         "also_available_title": "Also Available Individually",
         "also_available_desc": "Prefer individual bookmarks? Each conversion tool is also available separately:",
         "footer_p": "© 2025 Web Converter. Powered by TableCopy."
+    },
+    "web-tools": {
+        "meta_title": "Web Tools - 13 Essential Browser Tools in One Bookmark | TableCopy",
+        "meta_description": "Dark mode, enable copy, QR codes, translation, image downloader, web converters, and more. 13 essential browser tools unified in one convenient bookmark.",
+        "meta_keywords": "web tools, browser tools, dark mode, enable copy, QR code, web translator, image downloader, web converter, pdf, image, word, markdown, bookmarklet",
+        "logo": "Web Tools",
+        "hero_h1": "13 Essential Web Tools<br>in One Bookmark",
+        "hero_slogan": "Dark mode, enable copy, QR codes, translation, web converters, and more. All your favorite browser tools in one place.",
+        "install_cta": "Install Web Tools",
+        "features_title": "13 Tools, Endless Possibilities",
+        "feature_list": [
+            "🌙 <strong>Dark Mode</strong>: Enable dark mode on any website",
+            "📋 <strong>Enable Copy</strong>: Remove copy restrictions from websites",
+            "🔍 <strong>Highlight Structure</strong>: Visualize HTML element structure",
+            "📷 <strong>Image Downloader</strong>: Extract high-resolution images",
+            "📱 <strong>QR Code Generator</strong>: Create QR codes for any page",
+            "🤖 <strong>Send to AI</strong>: Send text to ChatGPT, Claude, or Perplexity",
+            "🌐 <strong>Web Translator</strong>: Translate pages with Google Translate",
+            "⏮️ <strong>Wayback Machine</strong>: View pages in Internet Archive",
+            "📄 <strong>Save as PDF</strong>: Save webpages as searchable PDF documents",
+            "🖼️ <strong>Save as Image</strong>: Capture full-page screenshots as PNG images",
+            "📝 <strong>Save as Word</strong>: Convert webpages to editable Word documents",
+            "📋 <strong>Save as Markdown</strong>: Extract clean Markdown from any article",
+            "📃 <strong>Save as Text</strong>: Get distraction-free text from any webpage"
+        ],
+        "use_cases_title": "Perfect For",
+        "use_cases_list": [
+            {
+                "h3": "📱 Mobile Users",
+                "p": "Enable dark mode and copy on any site, even sites that block these features."
+            },
+            {
+                "h3": "🌍 Multilingual Users",
+                "p": "Instant translation to any language without leaving the page."
+            },
+            {
+                "h3": "🔬 Researchers",
+                "p": "Download images, generate QR codes, analyze page structure, and save articles in multiple formats."
+            },
+            {
+                "h3": "🎨 Content Creators",
+                "p": "Extract images, copy restricted content, share pages via QR codes, and convert web content to various formats."
+            },
+            {
+                "h3": "📚 Students & Professionals",
+                "p": "Save webpages as PDF, images, or documents for offline reading, archiving, and citation."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the purple 'Web Tools' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Web Tools",
+        "install_step3_h3": "Done! Click to Open",
+        "install_step3_p": "On any page, click this bookmark to access all 13 tools.",
+        "also_available_title": "Also Available Individually",
+        "also_available_desc": "Prefer individual bookmarks? Each tool is also available separately:",
+        "install_individually": "Install Individually",
+        "footer_p": "© 2025 Web Tools. Powered by TableCopy."
     }
 }

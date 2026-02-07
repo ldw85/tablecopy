@@ -144,6 +144,9 @@ table-export-pro/
 - 增强 `popup.js` 的用户界面功能
 - 优化 `background.js` 的数据处理能力
 
+### 启动
+- 在dist目录下运行serve命令，可访问http://localhost:3000
+
 ## 常见问题
 
 ### Q: 插件无法检测到表格？

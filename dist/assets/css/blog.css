@@ -1,0 +1,236 @@
+/* Blog Styles */
+.blog-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.blog-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+.blog-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.blog-header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.blog-content h1 {
+    font-size: 2em;
+    margin-bottom: 24px;
+    color: #1a1a2e;
+}
+
+.blog-content h2 {
+    font-size: 1.6em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+.blog-content h3 {
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    color: #4a5568;
+}
+
+.blog-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4a5568;
+}
+
+.blog-content ul, .blog-content ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.blog-content li {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.blog-content code {
+    background: #f7fafc;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.9em;
+    color: #e53e3e;
+}
+
+.blog-content pre {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 24px 0;
+}
+
+.blog-content pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+.blog-content th, .blog-content td {
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.blog-content th {
+    background: #f7fafc;
+    font-weight: 600;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 20px;
+    margin: 24px 0;
+    color: #718096;
+    font-style: italic;
+}
+
+.blog-content strong {
+    color: #2d3748;
+}
+
+/* Blog Grid for Index */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.blog-card {
+    background: #f7fafc;
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.blog-card h3 {
+    margin: 0 0 12px 0;
+}
+
+.blog-card h3 a {
+    color: #2d3748;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.blog-card h3 a:hover {
+    color: #667eea;
+}
+
+.blog-card p {
+    color: #718096;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.blog-card .meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85em;
+    color: #a0aec0;
+}
+
+.blog-card .category {
+    color: #667eea;
+    font-weight: 500;
+}
+
+/* Tool Links Section */
+.tool-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 40px 0;
+}
+
+.tool-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #4a5568;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.tool-link:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* Blog Footer */
+.blog-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #e2e8f0;
+    color: #718096;
+}
+
+.blog-footer a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.blog-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 1.8em;
+    }
+
+    .blog-content {
+        padding: 24px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}

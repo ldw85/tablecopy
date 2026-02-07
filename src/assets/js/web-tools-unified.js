@@ -3,9 +3,9 @@
  * Unified Web Tools Toolbox
  * =============================================================
  *
- * A unified toolbox for 13 essential browser tools.
+ * A unified toolbox for 10 essential browser tools.
  * Tools are organized into two categories:
- * - Web Tools (8 tools): Dark Mode, Enable Copy, Highlight, etc.
+ * - Web Tools (5 tools): Enable Copy, Highlight, etc.
  * - Web Converters (5 tools): PDF, Image, Word, Markdown, Text
  *
  * Version: 2.0
@@ -41,13 +41,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "Web Tools",
             category_converters: "Web Converters",
-            tool_dark_mode: "Dark Mode",
             tool_enable_copy: "Enable Copy",
             tool_highlight_structure: "Highlight Structure",
             tool_image_downloader: "Image Downloader",
             tool_qr_code: "QR Code",
-            tool_send_to_ai: "Send to AI",
-            tool_translate: "Web Translator",
             tool_wayback: "Wayback Machine",
             tool_pdf: "Save as PDF",
             tool_image: "Save as Image",
@@ -63,13 +60,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "网页工具",
             category_converters: "转换工具",
-            tool_dark_mode: "夜间模式",
             tool_enable_copy: "解除复制限制",
             tool_highlight_structure: "结构高亮",
             tool_image_downloader: "图片下载器",
             tool_qr_code: "二维码生成",
-            tool_send_to_ai: "发送到AI",
-            tool_translate: "网页翻译",
             tool_wayback: "时光机",
             tool_pdf: "保存为PDF",
             tool_image: "保存为图片",
@@ -85,13 +79,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "Herramientas Web",
             category_converters: "Conversores",
-            tool_dark_mode: "Modo Oscuro",
             tool_enable_copy: "Habilitar Copiar",
             tool_highlight_structure: "Resaltar Estructura",
             tool_image_downloader: "Descargador de Imágenes",
             tool_qr_code: "Código QR",
-            tool_send_to_ai: "Enviar a IA",
-            tool_translate: "Traductor Web",
             tool_wayback: "Máquina del Tiempo",
             tool_pdf: "Guardar como PDF",
             tool_image: "Guardar como Imagen",
@@ -107,13 +98,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "Ferramentas Web",
             category_converters: "Conversores",
-            tool_dark_mode: "Modo Escuro",
             tool_enable_copy: "Permitir Copiar",
             tool_highlight_structure: "Destacar Estrutura",
             tool_image_downloader: "Baixador de Imagens",
             tool_qr_code: "Código QR",
-            tool_send_to_ai: "Enviar para IA",
-            tool_translate: "Tradutor Web",
             tool_wayback: "Máquina do Tempo",
             tool_pdf: "Salvar como PDF",
             tool_image: "Salvar como Imagem",
@@ -129,13 +117,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "Web-Tools",
             category_converters: "Konverter",
-            tool_dark_mode: "Dunkelmodus",
             tool_enable_copy: "Kopieren Aktivieren",
             tool_highlight_structure: "Struktur Hervorheben",
             tool_image_downloader: "Bild-Downloader",
             tool_qr_code: "QR-Code",
-            tool_send_to_ai: "An KI Senden",
-            tool_translate: "Web-Übersetzer",
             tool_wayback: "Zeitmaschine",
             tool_pdf: "Als PDF speichern",
             tool_image: "Als Bild speichern",
@@ -151,13 +136,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "Outils Web",
             category_converters: "Convertisseurs",
-            tool_dark_mode: "Mode Sombre",
             tool_enable_copy: "Activer la Copie",
             tool_highlight_structure: "Mettre en Structure",
             tool_image_downloader: "Téléchargeur d'Images",
             tool_qr_code: "Code QR",
-            tool_send_to_ai: "Envoyer à l'IA",
-            tool_translate: "Traducteur Web",
             tool_wayback: "Machine à Remonter le Temps",
             tool_pdf: "Enregistrer en PDF",
             tool_image: "Enregistrer en Image",
@@ -173,13 +155,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "ウェブツール",
             category_converters: "コンバーター",
-            tool_dark_mode: "ダークモード",
             tool_enable_copy: "コピーを有効にする",
             tool_highlight_structure: "構造のハイライト",
             tool_image_downloader: "画像ダウンローダー",
             tool_qr_code: "QRコード",
-            tool_send_to_ai: "AIに送る",
-            tool_translate: "ウェブ翻訳",
             tool_wayback: "ウェイバックマシン",
             tool_pdf: "PDFとして保存",
             tool_image: "画像として保存",
@@ -195,13 +174,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "웹 도구",
             category_converters: "변환기",
-            tool_dark_mode: "다크 모드",
             tool_enable_copy: "복사 활성화",
             tool_highlight_structure: "구조 강조",
             tool_image_downloader: "이미지 다운로더",
             tool_qr_code: "QR 코드",
-            tool_send_to_ai: "AI로 보내기",
-            tool_translate: "웹 번역기",
             tool_wayback: "웨이백 머신",
             tool_pdf: "PDF로 저장",
             tool_image: "이미지로 저장",
@@ -217,13 +193,10 @@
             footer_logo: "TableCopy.pro",
             category_tools: "Веб-инструменты",
             category_converters: "Конвертеры",
-            tool_dark_mode: "Темный режим",
             tool_enable_copy: "Разрешить копирование",
             tool_highlight_structure: "Выделить структуру",
             tool_image_downloader: "Загрузчик изображений",
             tool_qr_code: "QR-код",
-            tool_send_to_ai: "Отправить в ИИ",
-            tool_translate: "Веб-переводчик",
             tool_wayback: "Машина времени",
             tool_pdf: "Сохранить как PDF",
             tool_image: "Сохранить как изображение",
@@ -241,16 +214,7 @@
     // 3. Tool Registry
     // ============================================
     const TOOL_REGISTRY = {
-        // Web Tools (8 tools)
-        'dark-mode': {
-            id: 'dark-mode',
-            script: 'https://tablecopy.pro/assets/js/tool-dark-mode.js',
-            cssPrefix: 'dark-',
-            name: t('tool_dark_mode'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>`,
-            color: '#34495E',
-            category: 'tools'
-        },
+        // Web Tools (5 tools)
         'enable-copy': {
             id: 'enable-copy',
             script: 'https://tablecopy.pro/assets/js/tool-enable-copy.js',
@@ -276,33 +240,6 @@
             name: t('tool_image_downloader'),
             icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>`,
             color: '#9B59B6',
-            category: 'tools'
-        },
-        'qr-code': {
-            id: 'qr-code',
-            script: 'https://tablecopy.pro/assets/js/tool-qr-code.js',
-            cssPrefix: 'qr-',
-            name: t('tool_qr_code'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-3 0h2v2h-2v-2zm-3 3h2v2h-2v-2zm3 0h2v2h-2v-2zm3 0h3v2h-3v-2zm-6 3h2v2h-2v-2zm3 0h2v2h-2v-2zm3 0h3v2h-3v-2z"/></svg>`,
-            color: '#1ABC9C',
-            category: 'tools'
-        },
-        'send-to-ai': {
-            id: 'send-to-ai',
-            script: 'https://tablecopy.pro/assets/js/tool-send-to-ai.js',
-            cssPrefix: 'ai-',
-            name: t('tool_send_to_ai'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>`,
-            color: '#9B59B6',
-            category: 'tools'
-        },
-        'translate': {
-            id: 'translate',
-            script: 'https://tablecopy.pro/assets/js/tool-translate.js',
-            cssPrefix: 'trans-',
-            name: t('tool_translate'),
-            icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>`,
-            color: '#3498DB',
             category: 'tools'
         },
         'wayback': {
@@ -557,10 +494,6 @@
                     <span>${t('category_tools')}</span>
                 </div>
                 <div class="button-container">
-                    <button class="tool-button" data-tool="dark-mode">
-                        ${TOOL_REGISTRY['dark-mode'].icon}
-                        <span>${TOOL_REGISTRY['dark-mode'].name}</span>
-                    </button>
                     <button class="tool-button" data-tool="enable-copy">
                         ${TOOL_REGISTRY['enable-copy'].icon}
                         <span>${TOOL_REGISTRY['enable-copy'].name}</span>
@@ -572,18 +505,6 @@
                     <button class="tool-button" data-tool="image-downloader">
                         ${TOOL_REGISTRY['image-downloader'].icon}
                         <span>${TOOL_REGISTRY['image-downloader'].name}</span>
-                    </button>
-                    <button class="tool-button" data-tool="qr-code">
-                        ${TOOL_REGISTRY['qr-code'].icon}
-                        <span>${TOOL_REGISTRY['qr-code'].name}</span>
-                    </button>
-                    <button class="tool-button" data-tool="send-to-ai">
-                        ${TOOL_REGISTRY['send-to-ai'].icon}
-                        <span>${TOOL_REGISTRY['send-to-ai'].name}</span>
-                    </button>
-                    <button class="tool-button" data-tool="translate">
-                        ${TOOL_REGISTRY['translate'].icon}
-                        <span>${TOOL_REGISTRY['translate'].name}</span>
                     </button>
                     <button class="tool-button" data-tool="wayback">
                         ${TOOL_REGISTRY['wayback'].icon}
