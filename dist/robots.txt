@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow access to certain paths if needed
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://tablecopy.pro/sitemap.xml
