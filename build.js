@@ -60,6 +60,14 @@ async function build() {
         console.log('✅ Copied _redirects to dist root.');
     }
 
+    // 2.3 复制 robots.txt 到根目录
+    const robotsSrc = path.join(config.srcDir, 'robots.txt');
+    const robotsDist = path.join(config.distDir, 'robots.txt');
+    if (await fs.pathExists(robotsSrc)) {
+        await fs.copy(robotsSrc, robotsDist);
+        console.log('✅ Copied robots.txt to dist root.');
+    }
+
     // 3. 加载所有翻译文件
     const allTranslations = {};
     for (const lang of config.languages) {

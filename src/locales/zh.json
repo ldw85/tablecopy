@@ -1221,9 +1221,9 @@
         "footer_p": "© 2025 网页工具。由 TableCopy 驱动。"
     },
     "web-to": {
-        "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
-        "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
-        "meta_keywords": "web converter, web to pdf, web to image, web to word, bookmarklet, web tools",
+        "meta_title": "网页转换器 - 一个书签包含5个必备转换工具 | TableCopy",
+        "meta_description": "将网页转换为PDF、图片、Word、Markdown或文本。5个必备转换工具集于一个便捷的书签中。",
+        "meta_keywords": "网页转换器, 网页转PDF, 网页转图片, 网页转Word, bookmarklet, 网页工具",
         "logo": "网页转换器",
         "hero_h1": "5 Web Conversion Tools<br>in One Bookmark",
         "hero_slogan": "PDF, Image, Word, Markdown, Text. All your web conversion tools in one place.",
@@ -1262,5 +1262,11 @@
         "also_available_title": "Also Available Individually",
         "also_available_desc": "Prefer individual bookmarks? Each conversion tool is also available separately:",
         "footer_p": "© 2025 Web Converter. Powered by TableCopy."
+    },
+    "blog_column_copy": {
+        "meta_title": "如何从网站复制列：所有最佳方法",
+        "meta_description": "不再为混乱的数据苦恼。本指南揭示了3种经过验证的方法，可将任何网页表格中的单列完美复制到Excel或表格中。",
+        "meta_keywords": "从网站复制列, 从网页表格提取列, 网页表格转Excel列",
+        "author": "TableCopy 团队"
     }
 }

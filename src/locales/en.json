@@ -1258,5 +1258,11 @@
         "also_available_desc": "Prefer individual bookmarks? Each tool is also available separately:",
         "install_individually": "Install Individually",
         "footer_p": "© 2025 Web Tools. Powered by TableCopy."
+    },
+    "blog_column_copy": {
+        "meta_title": "How to Copy a Column from a Website: All The Best Methods",
+        "meta_description": "Stop wrestling with jumbled data. This guide reveals 3 proven methods to perfectly copy a single column from any web page table into Excel or Sheets.",
+        "meta_keywords": "copy column from website, extract column from web table, web table to excel column",
+        "author": "TableCopy Team"
     }
 }

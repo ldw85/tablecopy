@@ -111,6 +111,15 @@
     font-weight: 600;
 }
 
+.blog-content table a {
+    text-decoration: underline;
+    color: #007185;
+}
+
+.blog-content table a:hover {
+    color: #005f8d;
+}
+
 .blog-content blockquote {
     border-left: 4px solid #667eea;
     padding-left: 20px;
