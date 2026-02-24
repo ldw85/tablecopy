@@ -22,6 +22,7 @@
         "nav_wayback": "웨이백 머신",
         "nav_highlight": "구조 강조",
         "nav_image_downloader": "이미지 다운로더",
+        "nav_video_downloader": "비디오 다운로더",
         "toolbox_badge": "도구상자",
         "nav_web_to_converter": "웹 변환기"
     },
@@ -1160,6 +1161,144 @@
         "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
         "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
+    "video-downloader": {
+        "meta_title": "모든 웹페이지에서 비디오 추출 - 모든 비디오 다운로드 | TableCopy",
+        "meta_description": "모든 웹페이지에서 비디오를 추출하고 다운로드하는 무료 온라인 도구. 임베디드 플레이어를 포함한 모든 비디오를 찾고, 필터 옵션으로 ZIP으로 다운로드하세요.",
+        "meta_keywords": "비디오 다운로더, 웹페이지에서 비디오 다운로드, 웹사이트에서 비디오 추출, 웹에서 비디오 립, 배치 비디오 다운로드",
+        "logo": "비디오 다운로더",
+        "hero_h1": "모든 웹페이지에서 모든 비디오 다운로드",
+        "hero_slogan": "원클릭으로 모든 웹페이지에서 비디오 추출. 필터, 미리보기, ZIP 다운로드.",
+        "install_cta": "지금 설치",
+        "intro_title": "비디오 다운로더란?",
+        "intro_content": "<p>비디오 다운로더는 모든 웹페이지에서 비디오를 추출하는 강력한 북마크렛입니다. 비디오 요소, 임베디드 플레이어, 스트리밍 콘텐츠를 자동으로 감지합니다. 북마크를 클릭하기만 하면 페이지를 스캔하고 비디오를 다운로드합니다.</p><p>튜토리얼 비디오, 제품 데모 또는 교육 콘텐츠를 저장하든, 당사의 도구를 사용하면 비디오를 기기에 쉽게 다운로드할 수 있습니다.</p>",
+        "features_title": "기능 - 비디오 다운로더",
+        "feature_list": [
+            "<strong>스마트 비디오 감지:</strong>HTML5 비디오 태그, 임베디드 플레이어, 스트리밍 콘텐츠를 포함한 모든 비디오를 자동으로 찾습니다.",
+            "<strong>스트리밍 비디오 감지:</strong>YouTube, Vimeo 및 기타 스트리밍 플랫폼을 식별합니다(참고: 스트리밍 비디오는 직접 다운로드가 지원되지 않을 수 있음).",
+            "<strong>HLS 지원:</strong>HLS(m3u8) 스트리밍 비디오를 감지하고 지원합니다.",
+            "<strong>갤러리 미리보기:</strong>재생 시간, 해상도, 파일 유형 정보가 있는 비디오 시각적 미리보기.",
+            "<strong>배치 다운로드:</strong>선택한 비디오 또는 모든 비디오를 편리한 ZIP 파일로 한 번에 다운로드합니다.",
+            "<strong>개인정보 보호:</strong>모든 처리는 로컬 브라우저에서 수행됩니다. 데이터는 비공개로 유지됩니다."
+        ],
+        "how_to_use_title": "비디오 다운로더 사용 방법",
+        "how_to_use_content": "<ol><li><strong>설치:</strong>보라색 '비디오 다운로더' 버튼을 북마크 표시줄로 드래그합니다.</li><li><strong>탐색:</strong>다운로드할 비디오가 있는 모든 웹페이지로 이동합니다.</li><li><strong>스캔:</strong>북마크를 클릭하여 페이지에서 비디오를 스캔합니다.</li><li><strong>선택:</strong>필터 또는 수동 선택을 사용하여 다운로드할 비디오를 선택합니다.</li><li><strong>다운로드:</strong>다운로드를 클릭하여 ZIP 파일로 저장하거나 개별 비디오를 다운로드합니다.</li></ol>",
+        "use_cases_title": "사용 사례 - 비디오 컬렉션",
+        "use_cases_list": [
+            {
+                "h3": "교육 콘텐츠",
+                "p": "학습 플랫폼에서 교육 비디오, 튜토리얼, 강의를 다운로드하여 오프라인으로 시청하세요."
+            },
+            {
+                "h3": "비디오 아카이브",
+                "p": "뉴스 사이트, 블로그, 미디어 플랫폼에서 비디오 콘텐츠를 아카이브하여 나중에 참조하세요."
+            },
+            {
+                "h3": "모바일 시청",
+                "p": "여행 중이나 연결이 끊긴 지역에서 오프라인으로 시청하기 위해 비디오를 기기에 다운로드하세요."
+            }
+        ],
+        "install_title": "3초 설치, 영구 사용",
+        "install_step1_h3": "버튼을 길게 누르기",
+        "install_step1_p": "보라색 '비디오 다운로더' 버튼을 클릭하고 길게 누릅니다.",
+        "install_step2_h3": "북마크 표시줄로 드래그",
+        "install_step2_p": "<strong>중요한 단계:</strong>버튼을 브라우저의 '북마크 표시줄' 또는 '즐겨찾기 표시줄'로 드래그한 후 마우스를 놓으세요.",
+        "bookmarklet_button_text": "비디오 다운로더",
+        "install_step3_h3": "완료! 클릭하여 다운로드",
+        "install_step3_p": "비디오가 있는 페이지에서 이 북마크를 클릭하여 추출하고 다운로드하세요.",
+        "faq_title": "자주 묻는 질문",
+        "faq_list": [
+            {
+                "question": "이를 사용하여 비디오를 다운로드하려면 어떻게 해야 합니까?",
+                "answer": "북마크렛을 북마크 표시줄로 드래그하여 설치하세요. 그런 다음 원하는 비디오가 있는 페이지에서 북마크를 클릭하기만 하면 됩니다. 도구가 찾은 모든 비디오를 보여주고 다운로드할 수 있습니다."
+            },
+            {
+                "question": "YouTube 또는 Vimeo 비디오를 다운로드할 수 있습니까?",
+                "answer": "도구는 YouTube 및 Vimeo와 같은 플랫폼의 스트리밍 비디오를 감지하여 목록에 표시합니다. 그러나 플랫폼 제한으로 인해 이러한 스트리밍 비디오의 직접 다운로드가 지원되지 않을 수 있습니다."
+            },
+            {
+                "question": "어떤 비디오 형식이 지원됩니다?",
+                "answer": "도구는 MP4, WebM, OGG 및 HLS(m3u8) 형식을 지원합니다. 갤러리 보기는 각 비디오의 형식과 세부 정보를 보여줍니다."
+            },
+            {
+                "question": "여러 비디오를 한 번에 다운로드할 수 있습니까?",
+                "answer": "네! 확인란을 사용하여 여러 비디오를 선택하거나 '모두 선택'을 클릭한 다음 단일 ZIP 파일로 다운로드하세요."
+            },
+            {
+                "question": "개인 또는 비밀번호保护的 사이트에서 작동합니까?",
+                "answer": "브라우저에서 비디오를 볼 수 있다면(로그인했기 때문에) 도구가 추출할 수 있습니다. 브라우저에 이미 있는 액세스 권한을 사용합니다."
+            },
+            {
+                "question": "정말 무료입니까?",
+                "answer": "네, 완전히 무료입니다. 제한 없이, 가입 없이, 숨겨진 비용 없이 원하시는 만큼 사용하세요."
+            }
+        ],
+        "languages_title": "다양한 언어 지원",
+        "languages_intro": "비디오 다운로더는 전 세계 사용자를 위해 9개 언어로 제공됩니다:",
+        "languages_list": [
+            {
+                "h3": "중국어",
+                "p": "从网页提取视频 - 在线视频下载工具",
+                "url": "/zh/video-downloader.html",
+                "link_text": "中文版本"
+            },
+            {
+                "h3": "English",
+                "p": "Extract videos from webpages - Online video downloader",
+                "url": "/video-downloader.html",
+                "link_text": "English Version"
+            },
+            {
+                "h3": "Español",
+                "p": "Extraer videos de páginas web - Descargador de videos",
+                "url": "/es/video-downloader.html",
+                "link_text": "Versión en Español"
+            },
+            {
+                "h3": "Português",
+                "p": "Extrair vídeos de páginas web - Baixador de vídeos",
+                "url": "/pt/video-downloader.html",
+                "link_text": "Versão em Português"
+            },
+            {
+                "h3": "Deutsch",
+                "p": "Videos von Webseiten extrahieren - Video-Downloader",
+                "url": "/de/video-downloader.html",
+                "link_text": "Deutsche Version"
+            },
+            {
+                "h3": "Français",
+                "p": "Extraire des vidéos de pages web - Téléchargeur de vidéos",
+                "url": "/fr/video-downloader.html",
+                "link_text": "Version Française"
+            },
+            {
+                "h3": "日本語",
+                "p": "ウェブページから動画を抽出 - オンライン動画ダウンローダー",
+                "url": "/ja/video-downloader.html",
+                "link_text": "日本語版"
+            },
+            {
+                "h3": "한국어",
+                "p": "웹페이지에서 비디오 추출 - 온라인 비디오 다운로더",
+                "url": "/ko/video-downloader.html",
+                "link_text": "한국어 버전"
+            },
+            {
+                "h3": "Русский",
+                "p": "Извлекать видео с веб-страниц - Загрузчик видео",
+                "url": "/ru/video-downloader.html",
+                "link_text": "Русская версия"
+            }
+        ],
+        "schema_name": "비디오 다운로더 - 웹페이지에서 비디오 추출",
+        "schema_description": "모든 웹페이지에서 비디오를 추출하고 다운로드하는 무료 온라인 도구. 임베디드 플레이어를 포함한 모든 비디오를 찾고, 필터 옵션으로 ZIP으로 다운로드하세요.",
+        "schema_url": "https://tablecopy.pro/ko/video-downloader.html",
+        "schema_features": "[\"웹페이지에서 비디오 추출\", \"웹사이트에서 비디오 다운로드\", \"웹에서 비디오 립\", \"ZIP로 배치 비디오 다운로드\", \"크기와 유형별로 비디오 필터링\", \"HLS 비디오 지원\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"웹페이지에서 비디오를 어떻게 추출합니까?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"북마크렛을 설치하고, 모든 웹페이지에 방문한 다음 클릭하기만 하면 됩니다. 자동으로 해당 페이지의 모든 비디오를 스캔하고 추출합니다.\"}}, {\"@type\": \"Question\", \"name\": \"YouTube 비디오를 다운로드할 수 있습니까?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"도구는 YouTube 및 기타 스트리밍 비디오를 감지하지만 플랫폼 제한으로 인해 직접 다운로드가 지원되지 않을 수 있습니다.\"}}, {\"@type\": \"Question\", \"name\": \"어떤 형식이 지원됩니다?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"MP4, WebM, OGG 및 HLS(m3u8) 형식이 지원됩니다.\"}}]",
+        "schema_howto_name": "웹페이지에서 비디오를 추출하는 방법",
+        "schema_howto_description": "비디오 다운로더 북마크렛을 사용하여 모든 웹페이지에서 비디오를 추출하는 단계별 가이드",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"북마크렛 설치\", \"text\": \"보라색 비디오 다운로더 버튼을 브라우저의 북마크 표시줄로 드래그합니다\"}, {\"@type\": \"HowToStep\", \"name\": \"모든 웹페이지로 이동\", \"text\": \"다운로드할 비디오가 있는 모든 웹사이트를 방문합니다\"}, {\"@type\": \"HowToStep\", \"name\": \"북마크렛 클릭\", \"text\": \"북마크 표시줄에서 비디오 다운로더 북마크를 클릭하여 페이지를 스캔합니다\"}, {\"@type\": \"HowToStep\", \"name\": \"비디오 필터링 및 선택\", \"text\": \"추출된 비디오를 찾아보고 필터를 사용하여 특정 비디오를 선택합니다\"}, {\"@type\": \"HowToStep\", \"name\": \"비디오 다운로드\", \"text\": \"다운로드 버튼을 클릭하여 선택한 비디오를 ZIP 파일로 저장하거나 개별적으로 다운로드합니다\"}]"
+    },
     "web-to": {
         "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
         "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
@@ -1208,18 +1347,16 @@
         "meta_description": "Dark mode, enable copy, QR codes, translation, image downloader, web converters, and more. 13 essential browser tools unified in one convenient bookmark.",
         "meta_keywords": "web tools, browser tools, dark mode, enable copy, QR code, web translator, image downloader, web converter, pdf, image, word, markdown, bookmarklet",
         "logo": "Web Tools",
-        "hero_h1": "13 Essential Web Tools<br>in One Bookmark",
+        "hero_h1": "11 Essential Web Tools<br>in One Bookmark",
         "hero_slogan": "Dark mode, enable copy, QR codes, translation, web converters, and more. All your favorite browser tools in one place.",
         "install_cta": "Install Web Tools",
-        "features_title": "13 Tools, Endless Possibilities",
+        "features_title": "11 Tools, Endless Possibilities",
         "feature_list": [
             "🌙 <strong>Dark Mode</strong>: Enable dark mode on any website",
             "📋 <strong>Enable Copy</strong>: Remove copy restrictions from websites",
             "🔍 <strong>Highlight Structure</strong>: Visualize HTML element structure",
             "📷 <strong>Image Downloader</strong>: Extract high-resolution images",
             "📱 <strong>QR Code Generator</strong>: Create QR codes for any page",
-            "🤖 <strong>Send to AI</strong>: Send text to ChatGPT, Claude, or Perplexity",
-            "🌐 <strong>Web Translator</strong>: Translate pages with Google Translate",
             "⏮️ <strong>Wayback Machine</strong>: View pages in Internet Archive",
             "📄 <strong>Save as PDF</strong>: Save webpages as searchable PDF documents",
             "🖼️ <strong>Save as Image</strong>: Capture full-page screenshots as PNG images",
@@ -1257,7 +1394,7 @@
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
         "bookmarklet_button_text": "Web Tools",
         "install_step3_h3": "Done! Click to Open",
-        "install_step3_p": "On any page, click this bookmark to access all 13 tools.",
+        "install_step3_p": "On any page, click this bookmark to access all 11 tools.",
         "also_available_title": "Also Available Individually",
         "also_available_desc": "Prefer individual bookmarks? Each tool is also available separately:",
         "install_individually": "Install Individually",

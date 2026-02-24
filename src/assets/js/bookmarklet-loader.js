@@ -12,6 +12,7 @@ function setupBookmarklet(scriptPath, alertText) {
      */
     function minifyJS(code) {
         let inString = false; // ', " or `
+        let stringChar = false; // the character that started the string
         let inComment = false; // // or /*
         let minified = '';
         for (let i = 0; i < code.length; i++) {
@@ -19,13 +20,17 @@ function setupBookmarklet(scriptPath, alertText) {
             const nextChar = code[i + 1];
 
             if (inString) {
+                // 在字符串内部，直接复制所有字符，不做任何处理
                 minified += char;
-                if (char === '\\') { // 处理转义字符
-                    minified += nextChar;
+                if (char === '\\' && i + 1 < code.length) { // 处理转义字符
+                    minified += code[i + 1];
                     i++;
-                } else if (char === inString) {
+                } else if (char === stringChar) {
+                    // 字符串结束
                     inString = false;
+                    stringChar = false;
                 }
+                // 注意：在模板字符串内，双引号和单引号不会结束字符串（因为 stringChar 是反引号）
             } else if (inComment) {
                 if (inComment === '//' && char === '\n') inComment = false;
                 if (inComment === '/*' && char === '*' && nextChar === '/') {
@@ -35,14 +40,19 @@ function setupBookmarklet(scriptPath, alertText) {
             } else {
                 if (char === '/' && nextChar === '/') { inComment = '//'; i++; }
                 else if (char === '/' && nextChar === '*') { inComment = '/*'; i++; }
-                else if (char === "'" || char === '"' || char === '`') { inString = char; minified += char; }
+                else if (char === "'" || char === '"' || char === '`') {
+                    inString = true;
+                    stringChar = char;
+                    minified += char;
+                }
                 else if (/\s/.test(char)) {
-                    // 如果周围是类单词字符，或者需要分隔操作符（如 `+ +` 或 `- -`），则添加一个空格
-                    if (minified.length > 0 && !/\s$/.test(minified) && /[a-zA-Z0-9_$]/.test(minified.slice(-1)) && /[a-zA-Z0-9_$]/.test(nextChar)) {
+                    // 处理空白字符 - 只在非字符串区域内
+                    if (minified.length > 0 && !/\s$/.test(minified) && /[a-zA-Z0-9_$]/.test(minified.slice(-1)) && nextChar && /[a-zA-Z0-9_$]/.test(nextChar)) {
                         minified += ' ';
-                    } else if (/[+-]/.test(minified.slice(-1)) && minified.slice(-1) === nextChar) {
+                    } else if (minified.length > 0 && /[+-]$/.test(minified) && nextChar === minified.slice(-1)) {
                         minified += ' ';
                     }
+                    // 其他空白字符直接跳过
                 } else {
                     minified += char;
                 }
@@ -61,7 +71,7 @@ function setupBookmarklet(scriptPath, alertText) {
         .then(scriptContent => {
             const minifiedScript = minifyJS(scriptContent);
             const bookmarkletHref = `javascript:!function(){${encodeURIComponent(minifiedScript)}}();`;
-            
+
             const bookmarkletLink = document.getElementById('bookmarklet-link');
             if (bookmarkletLink) {
                 bookmarkletLink.setAttribute('href', bookmarkletHref);

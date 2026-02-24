@@ -22,6 +22,7 @@
         "nav_privacy": "Privacy Policy",
         "nav_terms": "Terms of Service",
         "nav_image_downloader": "Image Downloader",
+        "nav_video_downloader": "Video Downloader",
         "toolbox_badge": "Toolbox",
         "nav_web_to_converter": "Web Converter"
     },
@@ -1199,23 +1200,159 @@
         "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
         "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
+    "video-downloader": {
+        "meta_title": "Extract Video from Any Webpage - Download All Videos | TableCopy",
+        "meta_description": "Free online tool to extract and download videos from any webpage. Find all videos including embedded players, download as ZIP with filtering options.",
+        "meta_keywords": "video downloader, download video from webpage, extract video from website, rip video from web, batch download videos",
+        "logo": "Video Downloader",
+        "hero_h1": "Download All Videos from Any Webpage",
+        "hero_slogan": "Extract videos from any webpage with one click. Filter, preview, and download as ZIP.",
+        "install_cta": "Install Now",
+        "intro_title": "What is Our Video Downloader?",
+        "intro_content": "<p>Our Video Downloader is a powerful bookmarklet that extracts videos from any webpage. It automatically detects video elements, embedded players, and streaming content. Simply click the bookmark to scan the page and download videos.</p><p>Whether you're saving tutorial videos, product demos, or educational content, our tool makes it easy to download videos directly to your device.</p>",
+        "features_title": "Features — Video Downloader",
+        "feature_list": [
+            "<strong>Smart Video Detection:</strong> Automatically finds all videos including HTML5 video tags, embedded players, and streaming content.",
+            "<strong>Streaming Video Detection:</strong> Identifies YouTube, Vimeo, and other streaming platforms (note: direct download may not be available for streaming videos).",
+            "<strong>HLS Support:</strong> Detects and supports HLS (m3u8) streaming videos.",
+            "<strong>Gallery Preview:</strong> Visual video preview with duration, resolution, and file type information.",
+            "<strong>Batch Download:</strong> Download selected videos or all videos at once as a convenient ZIP file.",
+            "<strong>Privacy-Focused:</strong> All processing happens locally in your browser. Your data stays private."
+        ],
+        "how_to_use_title": "How to Use the Video Downloader",
+        "how_to_use_content": "<ol><li><strong>Install:</strong> Drag the purple 'Video Downloader' button to your bookmarks bar.</li><li><strong>Navigate:</strong> Go to any webpage containing videos you want to download.</li><li><strong>Scan:</strong> Click the bookmark to scan the page for videos.</li><li><strong>Select:</strong> Choose which videos to download using filters or manual selection.</li><li><strong>Download:</strong> Click download to save as a ZIP file or download individual videos.</li></ol>",
+        "use_cases_title": "Use Cases - Video Collection",
+        "use_cases_list": [
+            {
+                "h3": "Educational Content",
+                "p": "Download educational videos, tutorials, and courses from learning platforms for offline viewing."
+            },
+            {
+                "h3": "Video Archives",
+                "p": "Archive video content from news sites, blogs, and media platforms for future reference."
+            },
+            {
+                "h3": "Mobile Viewing",
+                "p": "Download videos to your device for offline viewing during travel or in areas with poor connectivity."
+            }
+        ],
+        "install_title": "3-Second Install, Use Forever",
+        "install_step1_h3": "Press and Hold Button",
+        "install_step1_p": "Click and hold the purple 'Video Downloader' button.",
+        "install_step2_h3": "Drag to Bookmarks Bar",
+        "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
+        "bookmarklet_button_text": "Video Downloader",
+        "install_step3_h3": "Done! Click to Download",
+        "install_step3_p": "On any page with videos, click this bookmark to extract and download them.",
+        "faq_title": "Frequently Asked Questions",
+        "faq_list": [
+            {
+                "question": "How do I use this to download videos?",
+                "answer": "Install the bookmarklet by dragging it to your bookmarks bar. Then, when you're on any page with videos you want, just click the bookmark. The tool will show you all the videos it found, and you can download them."
+            },
+            {
+                "question": "Can I download YouTube or Vimeo videos?",
+                "answer": "The tool detects streaming videos from platforms like YouTube and Vimeo and displays them in the list. However, due to platform restrictions, direct download may not be available for these streaming videos."
+            },
+            {
+                "question": "What video formats are supported?",
+                "answer": "The tool supports MP4, WebM, OGG, and HLS (m3u8) formats. The gallery view shows you the format and details of each video."
+            },
+            {
+                "question": "Can I download multiple videos at once?",
+                "answer": "Yes! Select multiple videos using the checkboxes or click 'Select All', then download them as a single ZIP file."
+            },
+            {
+                "question": "Does this work on private or password-protected sites?",
+                "answer": "If you can see the videos in your browser (because you're logged in), the tool can extract them. It uses whatever access you already have in your browser."
+            },
+            {
+                "question": "Is this really free?",
+                "answer": "Yes, completely free. No limits, no sign-ups, no hidden costs. Use it as much as you want."
+            }
+        ],
+        "languages_title": "Available in Multiple Languages",
+        "languages_intro": "Our video downloader is available in 9 languages to serve users worldwide:",
+        "languages_list": [
+            {
+                "h3": "Chinese",
+                "p": "从网页提取视频 - 在线视频下载工具",
+                "url": "/zh/video-downloader.html",
+                "link_text": "中文版本"
+            },
+            {
+                "h3": "English",
+                "p": "Extract videos from webpages - Online video downloader",
+                "url": "/video-downloader.html",
+                "link_text": "English Version"
+            },
+            {
+                "h3": "Spanish",
+                "p": "Extraer videos de páginas web - Descargador de videos",
+                "url": "/es/video-downloader.html",
+                "link_text": "Versión en Español"
+            },
+            {
+                "h3": "Portuguese",
+                "p": "Extrair vídeos de páginas web - Baixador de vídeos",
+                "url": "/pt/video-downloader.html",
+                "link_text": "Versão em Português"
+            },
+            {
+                "h3": "German",
+                "p": "Videos von Webseiten extrahieren - Video-Downloader",
+                "url": "/de/video-downloader.html",
+                "link_text": "Deutsche Version"
+            },
+            {
+                "h3": "French",
+                "p": "Extraire des vidéos de pages web - Téléchargeur de vidéos",
+                "url": "/fr/video-downloader.html",
+                "link_text": "Version Française"
+            },
+            {
+                "h3": "Japanese",
+                "p": "ウェブページから動画を抽出 - オンライン動画ダウンローダー",
+                "url": "/ja/video-downloader.html",
+                "link_text": "日本語版"
+            },
+            {
+                "h3": "Korean",
+                "p": "웹페이지에서 비디오 추출 - 온라인 비디오 다운로더",
+                "url": "/ko/video-downloader.html",
+                "link_text": "한국어 버전"
+            },
+            {
+                "h3": "Russian",
+                "p": "Извлекать видео с веб-страниц - Загрузчик видео",
+                "url": "/ru/video-downloader.html",
+                "link_text": "Русская версия"
+            }
+        ],
+        "schema_name": "Video Downloader - Extract Video from Webpage",
+        "schema_description": "Free online tool to extract and download videos from any webpage. Find all videos including embedded players, download as ZIP with filtering options.",
+        "schema_url": "https://tablecopy.pro/video-downloader.html",
+        "schema_features": "[\"Extract video from webpage\", \"Download video from website\", \"Rip video from web\", \"Batch download videos as ZIP\", \"Filter videos by size and type\", \"HLS video support\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"How do I extract videos from a webpage?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Simply install our bookmarklet, visit any webpage, and click the bookmarklet. It will automatically scan and extract all videos from that page.\"}}, {\"@type\": \"Question\", \"name\": \"Can I download YouTube videos?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The tool detects YouTube and other streaming videos but direct download may not be available due to platform restrictions.\"}}, {\"@type\": \"Question\", \"name\": \"What formats are supported?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"MP4, WebM, OGG, and HLS (m3u8) formats are supported.\"}}]",
+        "schema_howto_name": "How to Extract Videos from Webpages",
+        "schema_howto_description": "Step-by-step guide to extract videos from any webpage using the Video Downloader bookmarklet",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Video Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing videos you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Video Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Videos\", \"text\": \"Browse through extracted videos and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download Videos\", \"text\": \"Click the download button to save selected videos as a ZIP file or download individually\"}]"
+    },
     "web-tools": {
         "meta_title": "Web Tools - 13 Essential Browser Tools in One Bookmark | TableCopy",
         "meta_description": "Dark mode, enable copy, QR codes, translation, image downloader, web converters, and more. 13 essential browser tools unified in one convenient bookmark.",
         "meta_keywords": "web tools, browser tools, dark mode, enable copy, QR code, web translator, image downloader, web converter, pdf, image, word, markdown, bookmarklet",
         "logo": "Web Tools",
-        "hero_h1": "13 Essential Web Tools<br>in One Bookmark",
+        "hero_h1": "11 Essential Web Tools<br>in One Bookmark",
         "hero_slogan": "Dark mode, enable copy, QR codes, translation, web converters, and more. All your favorite browser tools in one place.",
         "install_cta": "Install Web Tools",
-        "features_title": "13 Tools, Endless Possibilities",
+        "features_title": "11 Tools, Endless Possibilities",
         "feature_list": [
             "🌙 <strong>Dark Mode</strong>: Enable dark mode on any website",
             "📋 <strong>Enable Copy</strong>: Remove copy restrictions from websites",
             "🔍 <strong>Highlight Structure</strong>: Visualize HTML element structure",
             "📷 <strong>Image Downloader</strong>: Extract high-resolution images",
             "📱 <strong>QR Code Generator</strong>: Create QR codes for any page",
-            "🤖 <strong>Send to AI</strong>: Send text to ChatGPT, Claude, or Perplexity",
-            "🌐 <strong>Web Translator</strong>: Translate pages with Google Translate",
             "⏮️ <strong>Wayback Machine</strong>: View pages in Internet Archive",
             "📄 <strong>Save as PDF</strong>: Save webpages as searchable PDF documents",
             "🖼️ <strong>Save as Image</strong>: Capture full-page screenshots as PNG images",
@@ -1253,7 +1390,7 @@
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
         "bookmarklet_button_text": "Web Tools",
         "install_step3_h3": "Done! Click to Open",
-        "install_step3_p": "On any page, click this bookmark to access all 13 tools.",
+        "install_step3_p": "On any page, click this bookmark to access all 11 tools.",
         "also_available_title": "Also Available Individually",
         "also_available_desc": "Prefer individual bookmarks? Each tool is also available separately:",
         "install_individually": "Install Individually",

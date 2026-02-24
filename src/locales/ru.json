@@ -23,6 +23,7 @@
         "nav_wayback": "Wayback Machine",
         "nav_highlight": "Highlight Structure",
         "nav_image_downloader": "Загрузчик Изображений",
+        "nav_video_downloader": "Загрузчик Видео",
         "toolbox_badge": "Панель инструментов",
         "nav_web_to_converter": "Веб-конвертер"
     },
@@ -1162,6 +1163,144 @@
         "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
         "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
+    "video-downloader": {
+        "meta_title": "Извлечение видео с любой веб-страницы - Скачать все видео | TableCopy",
+        "meta_description": "Бесплатный онлайн-инструмент для извлечения и загрузки видео с любой веб-страницы. Найдите все видео, включая встроенные плееры, загрузите как ZIP с параметрами фильтрации.",
+        "meta_keywords": "загрузчик видео, скачать видео с веб-страницы, извлечь видео с сайта, рип видео с интернета, пакетная загрузка видео",
+        "logo": "Загрузчик Видео",
+        "hero_h1": "Скачать все видео с любой веб-страницы",
+        "hero_slogan": "Извлекайте видео с любой веб-страницы в один клик. Фильтруйте, просматривайте и загружайте как ZIP.",
+        "install_cta": "Установить сейчас",
+        "intro_title": "Что такое Загрузчик Видео?",
+        "intro_content": "<p>Загрузчик Видео - это мощный букмарклет, который извлекает видео с любой веб-страницы. Он автоматически обнаруживает видеоэлементы, встроенные плееры и потоковый контент. Просто нажмите на закладку, чтобы просканировать страницу и загрузить видео.</p><p>Сохраняете ли вы обучающие видео, демонстрации продуктов или образовательный контент, наш инструмент упрощает загрузку видео непосредственно на ваше устройство.</p>",
+        "features_title": "Функции - Загрузчик Видео",
+        "feature_list": [
+            "<strong>Умное обнаружение видео:</strong>Автоматически находит все видео, включая теги HTML5 video, встроенные плееры и потоковый контент.",
+            "<strong>Обнаружение потокового видео:</strong>Определяет YouTube, Vimeo и другие потоковые платформы (примечание: прямая загрузка может быть недоступна для потокового видео).",
+            "<strong>Поддержка HLS:</strong>Обнаруживает и поддерживает потоковое видео HLS (m3u8).",
+            "<strong>Предпросмотр в галерее:</strong>Визуальный предпросмотр видео с информацией о длительности, разрешении и типе файла.",
+            "<strong>Пакетная загрузка:</strong>Загружайте выбранные видео или все видео сразу в удобном ZIP-файле.",
+            "<strong>Конфиденциальность:</strong>Вся обработка выполняется локально в вашем браузере. Ваши данные остаются приватными."
+        ],
+        "how_to_use_title": "Как использовать Загрузчик Видео",
+        "how_to_use_content": "<ol><li><strong>Установка:</strong>Перетащите фиолетовую кнопку 'Загрузчик Видео' на панель закладок.</li><li><strong>Навигация:</strong>Перейдите на любую веб-страницу с видео, которые хотите загрузить.</li><li><strong>Сканирование:</strong>Нажмите на закладку, чтобы просканировать страницу на наличие видео.</li><li><strong>Выбор:</strong>Выберите, какие видео загрузить, используя фильтры или ручной выбор.</li><li><strong>Загрузка:</strong>Нажмите 'Загрузить', чтобы сохранить как ZIP-файл или загрузить отдельные видео.</li></ol>",
+        "use_cases_title": "Варианты использования - Коллекция видео",
+        "use_cases_list": [
+            {
+                "h3": "Образовательный контент",
+                "p": "Загружайте образовательные видео, уроки и курсы с обучающих платформ для офлайн-просмотра."
+            },
+            {
+                "h3": "Видеоархивы",
+                "p": "Архивируйте видеоконтент с новостных сайтов, блогов и медиаплатформ для дальнейшего использования."
+            },
+            {
+                "h3": "Просмотр на мобильном",
+                "p": "Загружайте видео на устройство для офлайн-просмотра во время путешествий или в местах с плохим соединением."
+            }
+        ],
+        "install_title": "Установка за 3 секунды, использование навсегда",
+        "install_step1_h3": "Нажмите и удерживайте кнопку",
+        "install_step1_p": "Нажмите и удерживайте фиолетовую кнопку 'Загрузчик Видео'.",
+        "install_step2_h3": "Перетащите на панель закладок",
+        "install_step2_p": "<strong>Важный шаг:</strong>Перетащите кнопку на 'Панель закладок' или 'Панель избранного' браузера, затем отпустите мышь.",
+        "bookmarklet_button_text": "Загрузчик Видео",
+        "install_step3_h3": "Готово! Нажмите для загрузки",
+        "install_step3_p": "На любой странице с видео нажмите на эту закладку, чтобы извлечь и загрузить их.",
+        "faq_title": "Часто задаваемые вопросы",
+        "faq_list": [
+            {
+                "question": "Как использовать это для загрузки видео?",
+                "answer": "Установите букмарклет, перетащив его на панель закладок. Затем, находясь на любой странице с нужными видео, просто нажмите на закладку. Инструмент покажет все найденные видео, и вы сможете их загрузить."
+            },
+            {
+                "question": "Могу ли я загрузить видео с YouTube или Vimeo?",
+                "answer": "Инструмент обнаруживает потоковое видео с платформ типа YouTube и Vimeo и отображает его в списке. Однако из-за ограничений платформ прямая загрузка может быть недоступна для такого потокового видео."
+            },
+            {
+                "question": "Какие форматы видео поддерживаются?",
+                "answer": "Инструмент поддерживает форматы MP4, WebM, OGG и HLS (m3u8). Галерея показывает формат и детали каждого видео."
+            },
+            {
+                "question": "Могу ли я загрузить несколько видео одновременно?",
+                "answer": "Да! Выберите несколько видео с помощью флажков или нажмите 'Выбрать все', затем загрузите их как один ZIP-файл."
+            },
+            {
+                "question": "Это работает на частных или защищенных паролем сайтах?",
+                "answer": "Если вы видите видео в браузере (потому что вошли в систему), инструмент может их извлечь. Он использует тот доступ, который у вас уже есть в браузере."
+            },
+            {
+                "question": "Это действительно бесплатно?",
+                "answer": "Да, полностью бесплатно. Без ограничений, без регистрации, без скрытых платежей. Используйте сколько угодно."
+            }
+        ],
+        "languages_title": "Доступно на нескольких языках",
+        "languages_intro": "Наш загрузчик видео доступен на 9 языках для пользователей по всему миру:",
+        "languages_list": [
+            {
+                "h3": "Китайский",
+                "p": "从网页提取视频 - 在线视频下载工具",
+                "url": "/zh/video-downloader.html",
+                "link_text": "中文版本"
+            },
+            {
+                "h3": "English",
+                "p": "Extract videos from webpages - Online video downloader",
+                "url": "/video-downloader.html",
+                "link_text": "English Version"
+            },
+            {
+                "h3": "Español",
+                "p": "Extraer videos de páginas web - Descargador de videos",
+                "url": "/es/video-downloader.html",
+                "link_text": "Versión en Español"
+            },
+            {
+                "h3": "Português",
+                "p": "Extrair vídeos de páginas web - Baixador de vídeos",
+                "url": "/pt/video-downloader.html",
+                "link_text": "Versão em Português"
+            },
+            {
+                "h3": "Deutsch",
+                "p": "Videos von Webseiten extrahieren - Video-Downloader",
+                "url": "/de/video-downloader.html",
+                "link_text": "Deutsche Version"
+            },
+            {
+                "h3": "Français",
+                "p": "Extraire des vidéos de pages web - Téléchargeur de vidéos",
+                "url": "/fr/video-downloader.html",
+                "link_text": "Version Française"
+            },
+            {
+                "h3": "日本語",
+                "p": "ウェブページから動画を抽出 - オンライン動画ダウンローダー",
+                "url": "/ja/video-downloader.html",
+                "link_text": "日本語版"
+            },
+            {
+                "h3": "한국어",
+                "p": "웹페이지에서 비디오 추출 - 온라인 비디오 다운로더",
+                "url": "/ko/video-downloader.html",
+                "link_text": "한국어 버전"
+            },
+            {
+                "h3": "Русский",
+                "p": "Извлекать видео с веб-страниц - Загрузчик видео",
+                "url": "/ru/video-downloader.html",
+                "link_text": "Русская версия"
+            }
+        ],
+        "schema_name": "Загрузчик видео - Извлечение видео с веб-страницы",
+        "schema_description": "Бесплатный онлайн-инструмент для извлечения и загрузки видео с любой веб-страницы. Найдите все видео, включая встроенные плееры, загрузите как ZIP с параметрами фильтрации.",
+        "schema_url": "https://tablecopy.pro/ru/video-downloader.html",
+        "schema_features": "[\"Извлечь видео с веб-страницы\", \"Скачать видео с сайта\", \"Рипнуть видео из интернета\", \"Пакетная загрузка видео как ZIP\", \"Фильтровать видео по размеру и типу\", \"Поддержка HLS видео\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"Как извлечь видео с веб-страницы?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Просто установите наш букмарклет, посетите любую веб-страницу и нажмите на него. Он автоматически просканирует и извлечет все видео с этой страницы.\"}}, {\"@type\": \"Question\", \"name\": \"Могу ли я загрузить видео с YouTube?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Инструмент обнаруживает YouTube и другое потоковое видео, но прямая загрузка может быть недоступна из-за ограничений платформ.\"}}, {\"@type\": \"Question\", \"name\": \"Какие форматы поддерживаются?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Поддерживаются форматы MP4, WebM, OGG и HLS (m3u8).\"}}]",
+        "schema_howto_name": "Как извлекать видео с веб-страниц",
+        "schema_howto_description": "Пошаговое руководство по извлечению видео с любой веб-страницы с помощью букмарклета Загрузчик Видео",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Установить букмарклет\", \"text\": \"Перетащите фиолетовую кнопку Загрузчика Видео на панель закладок браузера\"}, {\"@type\": \"HowToStep\", \"name\": \"Перейти на любую веб-страницу\", \"text\": \"Посетите любой веб-сайт с видео, которые хотите загрузить\"}, {\"@type\": \"HowToStep\", \"name\": \"Нажать на букмарклет\", \"text\": \"Нажмите на закладку Загрузчика Видео на панели закладок, чтобы просканировать страницу\"}, {\"@type\": \"HowToStep\", \"name\": \"Отфильтровать и выбрать видео\", \"text\": \"Просмотрите извлеченные видео и используйте фильтры для выбора конкретных\"}, {\"@type\": \"HowToStep\", \"name\": \"Загрузить видео\", \"text\": \"Нажмите кнопку загрузки, чтобы сохранить выбранные видео как ZIP-файл или загрузить по отдельности\"}]"
+    },
     "web-to": {
         "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
         "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
@@ -1210,18 +1349,16 @@
         "meta_description": "Dark mode, enable copy, QR codes, translation, image downloader, web converters, and more. 13 essential browser tools unified in one convenient bookmark.",
         "meta_keywords": "web tools, browser tools, dark mode, enable copy, QR code, web translator, image downloader, web converter, pdf, image, word, markdown, bookmarklet",
         "logo": "Web Tools",
-        "hero_h1": "13 Essential Web Tools<br>in One Bookmark",
+        "hero_h1": "11 Essential Web Tools<br>in One Bookmark",
         "hero_slogan": "Dark mode, enable copy, QR codes, translation, web converters, and more. All your favorite browser tools in one place.",
         "install_cta": "Install Web Tools",
-        "features_title": "13 Tools, Endless Possibilities",
+        "features_title": "11 Tools, Endless Possibilities",
         "feature_list": [
             "🌙 <strong>Dark Mode</strong>: Enable dark mode on any website",
             "📋 <strong>Enable Copy</strong>: Remove copy restrictions from websites",
             "🔍 <strong>Highlight Structure</strong>: Visualize HTML element structure",
             "📷 <strong>Image Downloader</strong>: Extract high-resolution images",
             "📱 <strong>QR Code Generator</strong>: Create QR codes for any page",
-            "🤖 <strong>Send to AI</strong>: Send text to ChatGPT, Claude, or Perplexity",
-            "🌐 <strong>Web Translator</strong>: Translate pages with Google Translate",
             "⏮️ <strong>Wayback Machine</strong>: View pages in Internet Archive",
             "📄 <strong>Save as PDF</strong>: Save webpages as searchable PDF documents",
             "🖼️ <strong>Save as Image</strong>: Capture full-page screenshots as PNG images",
@@ -1259,7 +1396,7 @@
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
         "bookmarklet_button_text": "Web Tools",
         "install_step3_h3": "Done! Click to Open",
-        "install_step3_p": "On any page, click this bookmark to access all 13 tools.",
+        "install_step3_p": "On any page, click this bookmark to access all 11 tools.",
         "also_available_title": "Also Available Individually",
         "also_available_desc": "Prefer individual bookmarks? Each tool is also available separately:",
         "install_individually": "Install Individually",

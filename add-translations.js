@@ -10,20 +10,7 @@ const srcDir = path.join(__dirname, 'src/locales');
 
 // English master translations (from en.json)
 const enTranslations = {
-    sendToAi: {
-        nav: "Send to AI",
-        meta_title: "Send to AI - Quick Text Transfer to ChatGPT, Claude & Perplexity | TableCopy",
-        meta_description: "Send selected text from any webpage to ChatGPT, Claude, or Perplexity with one click. The fastest way to get AI assistance while browsing.",
-        meta_keywords: "send to ai, chatgpt bookmarklet, claude bookmarklet, perplexity bookmarklet, ai assistant, text to ai",
-        logo: "Send to AI",
-        hero_h1: "Send Web Text to AI in One Click",
-        hero_slogan: "Quickly send selected text from any webpage to ChatGPT, Claude, or Perplexity for instant AI assistance.",
-        install_cta: "Install Now",
-        features_title: "Features — Send to AI",
-        install_title: "3-Second Install, Use Forever",
-        bookmarklet_button_text: "Send to AI",
-        modal_title: "Choose AI Service"
-    },
+
     qrCode: {
         nav: "QR Code",
         meta_title: "QR Code Generator - Create QR Codes for Any Webpage | TableCopy",
@@ -37,19 +24,6 @@ const enTranslations = {
         install_title: "3-Second Install, Use Forever",
         bookmarklet_button_text: "QR Code",
         modal_title: "QR Code for Current Page"
-    },
-    translator: {
-        nav: "Translator",
-        meta_title: "Web Translator - Translate Any Webpage Instantly | TableCopy",
-        meta_description: "Translate any webpage to your language using Google Translate. One-click bookmarklet for instant webpage translation.",
-        meta_keywords: "web translator, translate webpage, google translate bookmarklet, page translator, free translation",
-        logo: "Web Translator",
-        hero_h1: "Translate Any Webpage Instantly",
-        hero_slogan: "Break language barriers with one click. Translate any webpage to your preferred language using Google Translate.",
-        install_cta: "Install Now",
-        features_title: "Features — Web Translator",
-        install_title: "3-Second Install, Use Forever",
-        bookmarklet_button_text: "Translate"
     },
     enableCopy: {
         nav: "Enable Copy",

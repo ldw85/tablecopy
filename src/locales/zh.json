@@ -22,6 +22,7 @@
         "nav_privacy": "隐私政策",
         "nav_terms": "服务条款",
         "nav_image_downloader": "图片下载器",
+        "nav_video_downloader": "视频下载器",
         "toolbox_badge": "工具箱",
         "nav_web_to_converter": "网页转换器"
     },
@@ -1160,23 +1161,159 @@
         "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
         "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
+    "video-downloader": {
+        "meta_title": "从任何网页提取视频 - 下载所有视频 | TableCopy",
+        "meta_description": "免费的在线工具，可从任何网页提取和下载视频。查找所有视频，包括嵌入式播放器，支持筛选和ZIP下载。",
+        "meta_keywords": "视频下载器, 从网页下载视频, 从网站提取视频, 批量下载视频",
+        "logo": "视频下载器",
+        "hero_h1": "从任何网页下载所有视频",
+        "hero_slogan": "一键从网页提取视频。支持筛选、预览和ZIP下载。",
+        "install_cta": "立即安装",
+        "intro_title": "什么是视频下载器？",
+        "intro_content": "<p>我们的视频下载器是一个强大的书签小工具，可以从任何网页提取视频。它自动检测视频元素、嵌入式播放器和流媒体内容。只需点击书签即可扫描页面并下载视频。</p><p>无论是保存教学视频、产品演示还是教育内容，我们的工具都能让您轻松地将视频下载到设备上。</p>",
+        "features_title": "功能特点",
+        "feature_list": [
+            "<strong>智能视频检测：</strong>自动查找所有视频，包括HTML5视频标签、嵌入式播放器和流媒体内容。",
+            "<strong>流媒体视频检测：</strong>识别YouTube、Vimeo和其他流媒体平台（注意：流媒体视频可能无法直接下载）。",
+            "<strong>HLS支持：</strong>检测并支持HLS（m3u8）流媒体视频。",
+            "<strong>图库预览：</strong>可视化视频预览，显示时长、分辨率和文件类型信息。",
+            "<strong>批量下载：</strong>选择要下载的视频或一次性下载所有视频，作为便捷的ZIP文件。",
+            "<strong>隐私保护：</strong>所有处理都在本地浏览器中完成。您的数据保持私密。"
+        ],
+        "how_to_use_title": "如何使用视频下载器",
+        "how_to_use_content": "<ol><li><strong>安装：</strong>将紫色的「视频下载器」按钮拖到您的书签栏。</li><li><strong>导航：</strong>打开包含要下载视频的网页。</li><li><strong>扫描：</strong>点击书签扫描页面上的视频。</li><li><strong>选择：</strong>使用筛选器或手动选择要下载的视频。</li><li><strong>下载：</strong>点击下载保存为ZIP文件或单独下载视频。</li></ol>",
+        "use_cases_title": "使用场景",
+        "use_cases_list": [
+            {
+                "h3": "教育内容",
+                "p": "从学习平台下载教育视频、教程和课程，以便离线观看。"
+            },
+            {
+                "h3": "视频存档",
+                "p": "从新闻网站、博客和媒体平台存档视频内容，以供将来参考。"
+            },
+            {
+                "h3": "移动设备观看",
+                "p": "将视频下载到设备上，以便在旅行或网络连接较差的地区离线观看。"
+            }
+        ],
+        "install_title": "3秒安装，永久使用",
+        "install_step1_h3": "按住按钮",
+        "install_step1_p": "点击并按住紫色的「视频下载器」按钮。",
+        "install_step2_h3": "拖到书签栏",
+        "install_step2_p": "<strong>关键步骤：</strong>将按钮拖到浏览器的「书签栏」或「收藏栏」，然后松开鼠标。",
+        "bookmarklet_button_text": "视频下载器",
+        "install_step3_h3": "完成！点击下载",
+        "install_step3_p": "在有视频的页面上，点击此书签即可提取和下载视频。",
+        "faq_title": "常见问题",
+        "faq_list": [
+            {
+                "question": "如何使用这个工具下载视频？",
+                "answer": "将书签小工具拖到书签栏进行安装。然后，在有任何想要视频的页面上，点击书签即可。工具会显示找到的所有视频，您可以下载它们。"
+            },
+            {
+                "question": "可以下载YouTube或Vimeo视频吗？",
+                "answer": "该工具可以检测YouTube和Vimeo等流媒体平台的流媒体视频并在列表中显示。但是，由于平台限制，这些流媒体视频可能无法直接下载。"
+            },
+            {
+                "question": "支持哪些视频格式？",
+                "answer": "该工具支持MP4、WebM、OGG和HLS（m3u8）格式。图库视图会显示每个视频的格式和详细信息。"
+            },
+            {
+                "question": "可以一次下载多个视频吗？",
+                "answer": "可以！使用复选框选择多个视频或点击「全选」，然后将它们作为单个ZIP文件下载。"
+            },
+            {
+                "question": "这适用于私人或密码保护的网站吗？",
+                "answer": "如果您在浏览器中可以看到视频（因为您已登录），该工具就可以提取它们。它使用您在浏览器中已有的访问权限。"
+            },
+            {
+                "question": "这是免费的吗？",
+                "answer": "是的，完全免费。没有限制，无需注册，没有隐藏费用。想用多少就用多少。"
+            }
+        ],
+        "languages_title": "支持多种语言",
+        "languages_intro": "我们的视频下载器支持9种语言，为全球用户提供服务：",
+        "languages_list": [
+            {
+                "h3": "中文",
+                "p": "从网页提取视频 - 在线视频下载工具",
+                "url": "/zh/video-downloader.html",
+                "link_text": "中文版本"
+            },
+            {
+                "h3": "English",
+                "p": "Extract videos from webpages - Online video downloader",
+                "url": "/video-downloader.html",
+                "link_text": "English Version"
+            },
+            {
+                "h3": "Español",
+                "p": "Extraer videos de páginas web - Descargador de videos",
+                "url": "/es/video-downloader.html",
+                "link_text": "Versión en Español"
+            },
+            {
+                "h3": "Português",
+                "p": "Extrair vídeos de páginas web - Baixador de vídeos",
+                "url": "/pt/video-downloader.html",
+                "link_text": "Versão em Português"
+            },
+            {
+                "h3": "Deutsch",
+                "p": "Videos von Webseiten extrahieren - Video-Downloader",
+                "url": "/de/video-downloader.html",
+                "link_text": "Deutsche Version"
+            },
+            {
+                "h3": "Français",
+                "p": "Extraire des vidéos de pages web - Téléchargeur de vidéos",
+                "url": "/fr/video-downloader.html",
+                "link_text": "Version Française"
+            },
+            {
+                "h3": "日本語",
+                "p": "ウェブページから動画を抽出 - オンライン動画ダウンローダー",
+                "url": "/ja/video-downloader.html",
+                "link_text": "日本語版"
+            },
+            {
+                "h3": "한국어",
+                "p": "웹페이지에서 비디오 추출 - 온라인 비디오 다운로더",
+                "url": "/ko/video-downloader.html",
+                "link_text": "한국어 버전"
+            },
+            {
+                "h3": "Русский",
+                "p": "Извлекать видео с веб-страниц - Загрузчик видео",
+                "url": "/ru/video-downloader.html",
+                "link_text": "Русская версия"
+            }
+        ],
+        "schema_name": "视频下载器 - 从网页提取视频",
+        "schema_description": "免费的在线工具，可从任何网页提取和下载视频。查找所有视频，包括嵌入式播放器，支持筛选和ZIP下载。",
+        "schema_url": "https://tablecopy.pro/zh/video-downloader.html",
+        "schema_features": "[\"从网页提取视频\", \"从网站下载视频\", \"从网络提取视频\", \"批量下载视频为ZIP\", \"按大小和类型筛选视频\", \"HLS视频支持\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"如何从网页提取视频？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"只需安装我们的书签小工具，访问任何网页，点击书签小工具即可自动扫描并提取该页面上的所有视频。\"}}, {\"@type\": \"Question\", \"name\": \"可以下载YouTube视频吗？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"该工具可以检测YouTube和其他流媒体视频，但由于平台限制，可能无法直接下载。\"}}, {\"@type\": \"Question\", \"name\": \"支持哪些格式？\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"支持MP4、WebM、OGG和HLS（m3u8）格式。\"}}]",
+        "schema_howto_name": "如何从网页提取视频",
+        "schema_howto_description": "使用视频下载器书签小工具从任何网页提取视频的分步指南",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"安装书签小工具\", \"text\": \"将紫色视频下载器按钮拖到浏览器书签栏\"}, {\"@type\": \"HowToStep\", \"name\": \"打开任何网页\", \"text\": \"访问包含要下载视频的任何网站\"}, {\"@type\": \"HowToStep\", \"name\": \"点击书签小工具\", \"text\": \"点击书签栏中的视频下载器书签来扫描页面\"}, {\"@type\": \"HowToStep\", \"name\": \"筛选和选择视频\", \"text\": \"浏览提取的视频并使用筛选器选择特定视频\"}, {\"@type\": \"HowToStep\", \"name\": \"下载视频\", \"text\": \"点击下载按钮将选定的视频保存为ZIP文件或单独下载\"}]"
+    },
     "web-tools": {
         "meta_title": "网页工具 - 13个必备浏览器工具集成一个书签 | TableCopy",
         "meta_description": "夜间模式、解除复制限制、二维码、翻译、图片下载、网页转换等。13个必备浏览器工具统一集成在一个书签中。",
         "meta_keywords": "网页工具, 浏览器工具, 夜间模式, 解除复制限制, 二维码, 网页翻译, 图片下载, 网页转换, pdf, 图片, word, markdown, 书签工具",
         "logo": "网页工具",
-        "hero_h1": "13个必备网页工具<br>集成一个书签中",
+        "hero_h1": "11个必备网页工具<br>集成一个书签中",
         "hero_slogan": "夜间模式、解除复制限制、二维码、翻译、网页转换等。所有您喜爱的浏览器工具集中在一处。",
         "install_cta": "安装网页工具",
-        "features_title": "13个工具，无限可能",
+        "features_title": "11个工具，无限可能",
         "feature_list": [
             "🌙 <strong>夜间模式</strong>：为任意网站启用暗黑模式",
             "📋 <strong>解除复制限制</strong>：移除网站的复制限制",
             "🔍 <strong>结构高亮</strong>：可视化HTML元素结构",
             "📷 <strong>图片下载器</strong>：提取高分辨率图片",
             "📱 <strong>二维码生成</strong>：为任意页面创建二维码",
-            "🤖 <strong>发送到AI</strong>：发送文本到ChatGPT、Claude或Perplexity",
-            "🌐 <strong>网页翻译</strong>：使用谷歌翻译翻译页面",
             "⏮️ <strong>时光机</strong>：在互联网档案馆查看页面",
             "📄 <strong>保存为PDF</strong>：将网页保存为可搜索的PDF文档",
             "🖼️ <strong>保存为图片</strong>：将网页截图保存为PNG图片",
@@ -1214,7 +1351,7 @@
         "install_step2_p": "<strong>关键步骤：</strong>将按钮拖到浏览器的书签栏或收藏栏，然后松开鼠标。",
         "bookmarklet_button_text": "网页工具",
         "install_step3_h3": "完成！点击使用",
-        "install_step3_p": "在任意页面上点击此书签即可访问全部13个工具。",
+        "install_step3_p": "在任意页面上点击此书签即可访问全部11个工具。",
         "also_available_title": "也可单独安装",
         "also_available_desc": "更喜欢独立书签？每个工具也可以单独安装：",
         "install_individually": "单独安装",

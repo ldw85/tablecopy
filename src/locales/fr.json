@@ -23,6 +23,7 @@
         "nav_wayback": "Wayback Machine",
         "nav_highlight": "Highlight Structure",
         "nav_image_downloader": "Téléchargeur d'Images",
+        "nav_video_downloader": "Téléchargeur de Vidéos",
         "toolbox_badge": "Boîte à Outils",
         "nav_web_to_converter": "Convertisseur Web"
     },
@@ -1162,6 +1163,144 @@
         "schema_howto_description": "Step-by-step guide to extract images from any webpage using the Image Downloader bookmarklet",
         "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Install the Bookmarklet\", \"text\": \"Drag the purple Image Downloader button to your browser's bookmarks bar\"}, {\"@type\": \"HowToStep\", \"name\": \"Navigate to Any Webpage\", \"text\": \"Visit any website containing images you want to download\"}, {\"@type\": \"HowToStep\", \"name\": \"Click the Bookmarklet\", \"text\": \"Click the Image Downloader bookmark in your bookmarks bar to scan the page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filter and Select Images\", \"text\": \"Browse through extracted images and use filters to select specific ones\"}, {\"@type\": \"HowToStep\", \"name\": \"Download as ZIP\", \"text\": \"Click the download button to save all selected images as a ZIP file\"}]"
     },
+    "video-downloader": {
+        "meta_title": "Extraire Vidéo de N'importe Quelle Page Web - Télécharger Toutes les Vidéos | TableCopy",
+        "meta_description": "Outil en ligne gratuit pour extraire et télécharger des vidéos de n'importe quelle page web. Trouvez toutes les vidéos, y compris les lecteurs intégrés, téléchargez en ZIP avec des options de filtre.",
+        "meta_keywords": "téléchargeur de vidéos, télécharger vidéo depuis page web, extraire vidéo de site web, ripper vidéo du web, télécharger vidéos en lot",
+        "logo": "Téléchargeur de Vidéos",
+        "hero_h1": "Téléchargez Toutes les Vidéos de N'importe Quelle Page Web",
+        "hero_slogan": "Extrayez des vidéos de n'importe quelle page web en un clic. Filtrez, prévisualisez et téléchargez en ZIP.",
+        "install_cta": "Installer Maintenant",
+        "intro_title": "Qu'est-ce que notre Téléchargeur de Vidéos?",
+        "intro_content": "<p>Notre Téléchargeur de Vidéos est un puissant bookmarklet qui extrait des vidéos de n'importe quelle page web. Il détecte automatiquement les éléments vidéo, les lecteurs intégrés et le contenu en streaming. Cliquez simplement sur le bookmark pour analyser la page et télécharger les vidéos.</p><p>Que vous sauviez des vidéos tutorielles, des démonstrations de produits ou du contenu éducatif, notre outil facilite le téléchargement de vidéos directement sur votre appareil.</p>",
+        "features_title": "Fonctionnalités - Téléchargeur de Vidéos",
+        "feature_list": [
+            "<strong>Détection Intelligente de Vidéos:</strong> Trouve automatiquement toutes les vidéos, y compris les balises vidéo HTML5, les lecteurs intégrés et le contenu en streaming.",
+            "<strong>Détection de Vidéos en Streaming:</strong> Identifie YouTube, Vimeo et autres plateformes de streaming (note: le téléchargement direct peut ne pas être disponible pour les vidéos en streaming).",
+            "<strong>Support HLS:</strong> Détecte et supporte les vidéos en streaming HLS (m3u8).",
+            "<strong>Aperçu en Galerie:</strong> Aperçu visuel de la vidéo avec informations de durée, résolution et type de fichier.",
+            "<strong>Téléchargement en Lot:</strong> Téléchargez les vidéos sélectionnées ou toutes les vidéos en une fois sous forme de fichier ZIP pratique.",
+            "<strong>Confidentialité:</strong> Tout le traitement se fait localement dans votre navigateur. Vos données restent privées."
+        ],
+        "how_to_use_title": "Comment Utiliser le Téléchargeur de Vidéos",
+        "how_to_use_content": "<ol><li><strong>Installer:</strong> Faites glisser le bouton violet 'Téléchargeur de Vidéos' vers votre barre de favoris.</li><li><strong>Naviguer:</strong> Allez sur n'importe quelle page web contenant des vidéos que vous souhaitez télécharger.</li><li><strong>Analyser:</strong> Cliquez sur le bookmark pour analyser la page à la recherche de vidéos.</li><li><strong>Sélectionner:</strong> Choisissez les vidéos à télécharger en utilisant des filtres ou une sélection manuelle.</li><li><strong>Télécharger:</strong> Cliquez sur télécharger pour enregistrer en fichier ZIP ou télécharger des vidéos individuelles.</li></ol>",
+        "use_cases_title": "Cas d'Usage - Collection de Vidéos",
+        "use_cases_list": [
+            {
+                "h3": "Contenu Éducatif",
+                "p": "Téléchargez des vidéos éducatives, tutoriels et cours depuis des plateformes d'apprentissage pour un visionnage hors ligne."
+            },
+            {
+                "h3": "Archives Vidéo",
+                "p": "Archivez le contenu vidéo de sites d'actualités, blogs et plateformes médiatiques pour référence future."
+            },
+            {
+                "h3": "Visionnage Mobile",
+                "p": "Téléchargez des vidéos sur votre appareil pour un visionnage hors ligne pendant les voyages ou dans les zones avec une mauvaise connexion."
+            }
+        ],
+        "install_title": "Installation de 3 Secondes, Utiliser Pour Toujours",
+        "install_step1_h3": "Appuyez et Maintenez le Bouton",
+        "install_step1_p": "Cliquez et maintenez le bouton violet 'Téléchargeur de Vidéos'.",
+        "install_step2_h3": "Faites Glisser vers la Barre de Favoris",
+        "install_step2_p": "<strong>Étape Cruciale:</strong> Faites glisser le bouton vers la 'Barre de Favoris' de votre navigateur, puis relâchez la souris.",
+        "bookmarklet_button_text": "Téléchargeur de Vidéos",
+        "install_step3_h3": "Terminé! Cliquer pour Télécharger",
+        "install_step3_p": "Sur n'importe quelle page avec des vidéos, cliquez sur ce bookmark pour les extraire et les télécharger.",
+        "faq_title": "Questions Fréquemment Posées",
+        "faq_list": [
+            {
+                "question": "Comment utiliser ceci pour télécharger des vidéos?",
+                "answer": "Installez le bookmarklet en le faisant glisser vers votre barre de favoris. Ensuite, lorsque vous êtes sur une page avec des vidéos que vous voulez, cliquez simplement sur le bookmark. L'outil vous montrera toutes les vidéos qu'il a trouvées, et vous pouvez les télécharger."
+            },
+            {
+                "question": "Puis-je télécharger des vidéos YouTube ou Vimeo?",
+                "answer": "L'outil détecte les vidéos en streaming de plateformes comme YouTube et Vimeo et les affiche dans la liste. Cependant, en raison des restrictions des plateformes, le téléchargement direct peut ne pas être disponible pour ces vidéos en streaming."
+            },
+            {
+                "question": "Quels formats vidéo sont pris en charge?",
+                "answer": "L'outil prend en charge les formats MP4, WebM, OGG et HLS (m3u8). La vue galerie vous montre le format et les détails de chaque vidéo."
+            },
+            {
+                "question": "Puis-je télécharger plusieurs vidéos à la fois?",
+                "answer": "Oui! Sélectionnez plusieurs vidéos en utilisant les cases à cocher ou cliquez sur 'Tout sélectionner', puis téléchargez-les en un seul fichier ZIP."
+            },
+            {
+                "question": "Cela fonctionne-t-il sur des sites privés ou protégés par mot de passe?",
+                "answer": "Si vous pouvez voir les vidéos dans votre navigateur (parce que vous êtes connecté), l'outil peut les extraire. Il utilise l'accès que vous avez déjà dans votre navigateur."
+            },
+            {
+                "question": "Est-ce vraiment gratuit?",
+                "answer": "Oui, complètement gratuit. Pas de limites, pas d'inscription, pas de frais cachés. Utilisez-le autant que vous voulez."
+            }
+        ],
+        "languages_title": "Disponible en Plusieurs Langues",
+        "languages_intro": "Notre téléchargeur de vidéos est disponible en 9 langues pour servir les utilisateurs du monde entier:",
+        "languages_list": [
+            {
+                "h3": "Chinois",
+                "p": "从网页提取视频 - 在线视频下载工具",
+                "url": "/zh/video-downloader.html",
+                "link_text": "中文版本"
+            },
+            {
+                "h3": "English",
+                "p": "Extract videos from webpages - Online video downloader",
+                "url": "/video-downloader.html",
+                "link_text": "English Version"
+            },
+            {
+                "h3": "Español",
+                "p": "Extraer videos de páginas web - Descargador de videos",
+                "url": "/es/video-downloader.html",
+                "link_text": "Versión en Español"
+            },
+            {
+                "h3": "Português",
+                "p": "Extrair vídeos de páginas web - Baixador de vídeos",
+                "url": "/pt/video-downloader.html",
+                "link_text": "Versão em Português"
+            },
+            {
+                "h3": "Deutsch",
+                "p": "Videos von Webseiten extrahieren - Video-Downloader",
+                "url": "/de/video-downloader.html",
+                "link_text": "Deutsche Version"
+            },
+            {
+                "h3": "Français",
+                "p": "Extraire des vidéos de pages web - Téléchargeur de vidéos",
+                "url": "/fr/video-downloader.html",
+                "link_text": "Version Française"
+            },
+            {
+                "h3": "日本語",
+                "p": "ウェブページから動画を抽出 - オンライン動画ダウンローダー",
+                "url": "/ja/video-downloader.html",
+                "link_text": "日本語版"
+            },
+            {
+                "h3": "한국어",
+                "p": "웹페이지에서 비디오 추출 - 온라인 비디오 다운로더",
+                "url": "/ko/video-downloader.html",
+                "link_text": "한국어 버전"
+            },
+            {
+                "h3": "Русский",
+                "p": "Извлекать видео с веб-страниц - Загрузчик видео",
+                "url": "/ru/video-downloader.html",
+                "link_text": "Русская версия"
+            }
+        ],
+        "schema_name": "Téléchargeur de Vidéos - Extraire Vidéo de Page Web",
+        "schema_description": "Outil en ligne gratuit pour extraire et télécharger des vidéos de n'importe quelle page web. Trouvez toutes les vidéos, y compris les lecteurs intégrés, téléchargez en ZIP avec des options de filtre.",
+        "schema_url": "https://tablecopy.pro/fr/video-downloader.html",
+        "schema_features": "[\"Extraire vidéo de page web\", \"Télécharger vidéo de site web\", \"Ripper vidéo du web\", \"Télécharger vidéos en lot comme ZIP\", \"Filtrer vidéos par taille et type\", \"Support vidéo HLS\"]",
+        "schema_faq": "[{\"@type\": \"Question\", \"name\": \"Comment extraire des vidéos d'une page web?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Installez simplement notre bookmarklet, visitez n'importe quelle page web et cliquez sur le bookmarklet. Il analysera et extraira automatiquement toutes les vidéos de cette page.\"}}, {\"@type\": \"Question\", \"name\": \"Puis-je télécharger des vidéos YouTube?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"L'outil détecte YouTube et autres vidéos en streaming mais le téléchargement direct peut ne pas être disponible en raison des restrictions des plateformes.\"}}, {\"@type\": \"Question\", \"name\": \"Quels formats sont pris en charge?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Les formats MP4, WebM, OGG et HLS (m3u8) sont pris en charge.\"}}]",
+        "schema_howto_name": "Comment Extraire des Vidéos de Pages Web",
+        "schema_howto_description": "Guide étape par étape pour extraire des vidéos de n'importe quelle page web en utilisant le bookmarklet Téléchargeur de Vidéos",
+        "schema_howto_steps": "[{\"@type\": \"HowToStep\", \"name\": \"Installer le Bookmarklet\", \"text\": \"Faites glisser le bouton violet Téléchargeur de Vidéos vers la barre de favoris de votre navigateur\"}, {\"@type\": \"HowToStep\", \"name\": \"Naviguer vers N'importe Quelle Page Web\", \"text\": \"Visitez n'importe quel site web contenant des vidéos que vous souhaitez télécharger\"}, {\"@type\": \"HowToStep\", \"name\": \"Cliquer sur le Bookmarklet\", \"text\": \"Cliquez sur le bookmark Téléchargeur de Vidéos dans votre barre de favoris pour analyser la page\"}, {\"@type\": \"HowToStep\", \"name\": \"Filtrer et Sélectionner des Vidéos\", \"text\": \"Parcourez les vidéos extraites et utilisez des filtres pour sélectionner des vidéos spécifiques\"}, {\"@type\": \"HowToStep\", \"name\": \"Télécharger des Vidéos\", \"text\": \"Cliquez sur le bouton de téléchargement pour enregistrer les vidéos sélectionnées comme un fichier ZIP ou télécharger individuellement\"}]"
+    },
     "web-to": {
         "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
         "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
@@ -1210,18 +1349,16 @@
         "meta_description": "Dark mode, enable copy, QR codes, translation, image downloader, web converters, and more. 13 essential browser tools unified in one convenient bookmark.",
         "meta_keywords": "web tools, browser tools, dark mode, enable copy, QR code, web translator, image downloader, web converter, pdf, image, word, markdown, bookmarklet",
         "logo": "Web Tools",
-        "hero_h1": "13 Essential Web Tools<br>in One Bookmark",
+        "hero_h1": "11 Essential Web Tools<br>in One Bookmark",
         "hero_slogan": "Dark mode, enable copy, QR codes, translation, web converters, and more. All your favorite browser tools in one place.",
         "install_cta": "Install Web Tools",
-        "features_title": "13 Tools, Endless Possibilities",
+        "features_title": "11 Tools, Endless Possibilities",
         "feature_list": [
             "🌙 <strong>Dark Mode</strong>: Enable dark mode on any website",
             "📋 <strong>Enable Copy</strong>: Remove copy restrictions from websites",
             "🔍 <strong>Highlight Structure</strong>: Visualize HTML element structure",
             "📷 <strong>Image Downloader</strong>: Extract high-resolution images",
             "📱 <strong>QR Code Generator</strong>: Create QR codes for any page",
-            "🤖 <strong>Send to AI</strong>: Send text to ChatGPT, Claude, or Perplexity",
-            "🌐 <strong>Web Translator</strong>: Translate pages with Google Translate",
             "⏮️ <strong>Wayback Machine</strong>: View pages in Internet Archive",
             "📄 <strong>Save as PDF</strong>: Save webpages as searchable PDF documents",
             "🖼️ <strong>Save as Image</strong>: Capture full-page screenshots as PNG images",
@@ -1259,7 +1396,7 @@
         "install_step2_p": "<strong>Crucial Step:</strong> Drag the button to your browser's 'Bookmarks Bar' or 'Favorites Bar', then release the mouse.",
         "bookmarklet_button_text": "Web Tools",
         "install_step3_h3": "Done! Click to Open",
-        "install_step3_p": "On any page, click this bookmark to access all 13 tools.",
+        "install_step3_p": "On any page, click this bookmark to access all 11 tools.",
         "also_available_title": "Also Available Individually",
         "also_available_desc": "Prefer individual bookmarks? Each tool is also available separately:",
         "install_individually": "Install Individually",
