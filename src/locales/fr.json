@@ -25,7 +25,8 @@
         "nav_image_downloader": "Téléchargeur d'Images",
         "nav_video_downloader": "Téléchargeur de Vidéos",
         "toolbox_badge": "Boîte à Outils",
-        "nav_web_to_converter": "Convertisseur Web"
+        "nav_web_to_converter": "Convertisseur Web",
+        "affiliate_disclosure": "Divulgation d'affiliation: Certains liens sur ce site sont des liens d'affiliation. Nous pouvons gagner une commission lorsque vous cliquez et effectuez un achat sans frais supplémentaires pour vous."
     },
     "index": {
         "meta_title": "Table Copy - Copiez les tableaux Web vers Excel en un clic, sans mise en forme désordonnée",

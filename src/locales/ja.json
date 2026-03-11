@@ -24,7 +24,8 @@
         "nav_image_downloader": "画像ダウンローダー",
         "nav_video_downloader": "動画ダウンローダー",
         "toolbox_badge": "ツールボックス",
-        "nav_web_to_converter": "Webコンバーター"
+        "nav_web_to_converter": "Webコンバーター",
+        "affiliate_disclosure": "アフィリエーションDisclosure：このサイトの一部のリンクはアフィリエーションリンクです。クリックするとPurchaseが発生し、追加費用なしでCommissionを受け取る場合があります。"
     },
     "index": {
         "meta_title": "Table Copy - ワンクリックでWebテーブルをExcelにコピー、もう面倒な書式設定は不要",
