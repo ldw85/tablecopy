@@ -52,7 +52,11 @@
             close_preview: "Close Preview",
             images_selected: "{count} image(s) selected",
             zip_filename: "images-{date}",
-            warning_cors: "Some images couldn't be downloaded due to CORS restrictions"
+            warning_cors: "Some images couldn't be downloaded due to CORS restrictions",
+            copy_links: "Copy Links",
+            copy_links_selected: "Copy Links ({count})",
+            copied: "Copied!",
+            error_copy: "Failed to copy"
         },
         zh: {
             modal_title: "图片下载器",
@@ -89,7 +93,11 @@
             close_preview: "关闭预览",
             images_selected: "已选择 {count} 张图片",
             zip_filename: "图片-{date}",
-            warning_cors: "部分图片因CORS限制无法下载"
+            warning_cors: "部分图片因CORS限制无法下载",
+            copy_links: "复制链接",
+            copy_links_selected: "复制链接 ({count})",
+            copied: "已复制！",
+            error_copy: "复制失败"
         },
         es: {
             modal_title: "Descargador de Imágenes",
@@ -126,7 +134,11 @@
             close_preview: "Cerrar Vista Previa",
             images_selected: "{count} imagen(es) seleccionada(s)",
             zip_filename: "imagenes-{date}",
-            warning_cors: "Algunas imágenes no se pudieron descargar debido a restricciones CORS"
+            warning_cors: "Algunas imágenes no se pudieron descargar debido a restricciones CORS",
+            copy_links: "Copiar Enlaces",
+            copy_links_selected: "Copiar Enlaces ({count})",
+            copied: "¡Copiado!",
+            error_copy: "Error al copiar"
         },
         pt: {
             modal_title: "Baixador de Imagens",
@@ -163,7 +175,11 @@
             close_preview: "Fechar Visualização",
             images_selected: "{count} imagem(ns) selecionada(s)",
             zip_filename: "imagens-{date}",
-            warning_cors: "Algumas imagens não puderam ser baixadas devido a restrições CORS"
+            warning_cors: "Algumas imagens não puderam ser baixadas devido a restrições CORS",
+            copy_links: "Copiar Links",
+            copy_links_selected: "Copiar Links ({count})",
+            copied: "Copiado!",
+            error_copy: "Erro ao copiar"
         },
         de: {
             modal_title: "Bild-Downloader",
@@ -200,7 +216,11 @@
             close_preview: "Vorschau schließen",
             images_selected: "{count} Bild(er) ausgewählt",
             zip_filename: "bilder-{date}",
-            warning_cors: "Einige Bilder konnten aufgrund von CORS-Einschränkungen nicht heruntergeladen werden"
+            warning_cors: "Einige Bilder konnten aufgrund von CORS-Einschränkungen nicht heruntergeladen werden",
+            copy_links: "Links kopieren",
+            copy_links_selected: "Links kopieren ({count})",
+            copied: "Kopiert!",
+            error_copy: "Kopieren fehlgeschlagen"
         },
         fr: {
             modal_title: "Téléchargeur d'Images",
@@ -237,7 +257,11 @@
             close_preview: "Fermer l'Aperçu",
             images_selected: "{count} image(s) sélectionnée(s)",
             zip_filename: "images-{date}",
-            warning_cors: "Certaines images n'ont pas pu être téléchargées en raison des restrictions CORS"
+            warning_cors: "Certaines images n'ont pas pu être téléchargées en raison des restrictions CORS",
+            copy_links: "Copier les liens",
+            copy_links_selected: "Copier les liens ({count})",
+            copied: "Copié !",
+            error_copy: "Échec de la copie"
         },
         ja: {
             modal_title: "画像ダウンローダー",
@@ -274,7 +298,11 @@
             close_preview: "プレビューを閉じる",
             images_selected: "{count}枚の画像が選択されました",
             zip_filename: "画像-{date}",
-            warning_cors: "CORS制限により、一部の画像をダウンロードできませんでした"
+            warning_cors: "CORS制限により、一部の画像をダウンロードできませんでした",
+            copy_links: "リンクをコピー",
+            copy_links_selected: "リンクをコピー ({count})",
+            copied: "コピーしました！",
+            error_copy: "コピーに失敗しました"
         },
         ko: {
             modal_title: "이미지 다운로더",
@@ -311,7 +339,11 @@
             close_preview: "미리보기 닫기",
             images_selected: "{count}개의 이미지가 선택되었습니다",
             zip_filename: "이미지-{date}",
-            warning_cors: "CORS 제한으로 인해 일부 이미지를 다운로드할 수 없습니다"
+            warning_cors: "CORS 제한으로 인해 일부 이미지를 다운로드할 수 없습니다",
+            copy_links: "링크 복사",
+            copy_links_selected: "링크 복사 ({count})",
+            copied: "복사됨!",
+            error_copy: "복사 실패"
         },
         ru: {
             modal_title: "Загрузчик Изображений",
@@ -348,7 +380,11 @@
             close_preview: "Закрыть предпросмотр",
             images_selected: "Выбрано {count} изображений",
             zip_filename: "изображения-{date}",
-            warning_cors: "Некоторые изображения не удалось загрузить из-за ограничений CORS"
+            warning_cors: "Некоторые изображения не удалось загрузить из-за ограничений CORS",
+            copy_links: "Копировать ссылки",
+            copy_links_selected: "Копировать ссылки ({count})",
+            copied: "Скопировано!",
+            error_copy: "Ошибка копирования"
         }
     };
 
@@ -586,6 +622,28 @@
             background-color: #ccc;
             cursor: not-allowed;
         }
+        #${CSS_PREFIX}copy-btn {
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        #${CSS_PREFIX}copy-btn:hover:not(:disabled) {
+            background-color: #5a6268;
+            transform: translateY(-1px);
+        }
+        #${CSS_PREFIX}copy-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #${CSS_PREFIX}copy-btn.copied {
+            background-color: #28a745 !important;
+        }
         #${CSS_PREFIX}empty-state {
             text-align: center;
             padding: 40px;
@@ -802,6 +860,7 @@
                         </div>
                         <div id="${CSS_PREFIX}progress-text"></div>
                     </div>
+                    <button id="${CSS_PREFIX}copy-btn">${t('copy_links')}</button>
                     <button id="${CSS_PREFIX}download-btn">${t('download_all')}</button>
                 </div>
             </div>
@@ -903,6 +962,39 @@
         const count = selectedImages.size;
         btn.textContent = count > 0 ? t('download_selected', { count }) : t('download_all');
         btn.disabled = filteredImages.length === 0;
+        updateCopyButton();
+    }
+
+    function updateCopyButton() {
+        const btn = document.getElementById(`${CSS_PREFIX}copy-btn`);
+        const count = selectedImages.size;
+        btn.textContent = count > 0 ? t('copy_links_selected', { count }) : t('copy_links');
+        btn.disabled = filteredImages.length === 0;
+    }
+
+    async function copyImageLinks() {
+        const imagesToCopy = selectedImages.size > 0
+            ? allImages.filter(img => selectedImages.has(img.url))
+            : filteredImages;
+
+        if (imagesToCopy.length === 0) return;
+
+        const links = imagesToCopy.map(img => img.url).join(',');
+
+        const btn = document.getElementById(`${CSS_PREFIX}copy-btn`);
+
+        try {
+            await navigator.clipboard.writeText(links);
+            btn.textContent = t('copied');
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                updateCopyButton();
+            }, 1500);
+        } catch (error) {
+            console.error(t('error_copy'), error);
+            alert(t('error_copy'));
+        }
     }
 
     function applyFilters() {
@@ -1089,6 +1181,9 @@
         });
 
         document.getElementById(`${CSS_PREFIX}download-btn`).addEventListener('click', downloadAsZip);
+
+        // 复制链接按钮
+        document.getElementById(`${CSS_PREFIX}copy-btn`).addEventListener('click', copyImageLinks);
 
         // ESC关闭
         document.addEventListener('keydown', (e) => {
