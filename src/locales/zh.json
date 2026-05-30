@@ -449,7 +449,7 @@
     },
     "privacy": {
         "meta_title": "隐私政策 - TableCopy",
-        "meta_description": "了解TableCopy如何保护您的隐私。不收集数据，不存储，全部本地处理。您的数据保留在您的设备上。",
+        "meta_description": "了解TableCopy如何保护您的隐私。不收集数据，不存储，全部本地处理。您的数据永远不会离开您的设备。采用隐私优先技术，让您在无忧的情况下进行网页数据提取。",
         "page_title": "隐私政策",
         "last_updated": "最后更新：2025年1月1日",
         "intro_p": "在TableCopy，我们非常重视您的隐私。本隐私政策解释了我们如何处理信息。由于TableCopy被设计为隐私优先的工具，所有数据都在您的浏览器中本地处理，因此我们对数据的方法与大多数网络服务根本不同。",
@@ -875,7 +875,7 @@
     },
     "dark-mode": {
         "meta_title": "夜间模式 - 为任何网站添加夜间模式 | TableCopy",
-        "meta_description": "即时为任何网站启用夜间模式。通过一键夜间模式书签减少眼睛疲劳并节省电池。",
+        "meta_description": "即时为任何网站启用夜间模式。一键减少眼睛疲劳、阻挡蓝光，并在OLED屏幕上节省电池。非常适合夜间浏览、阅读和长时间工作。",
         "meta_keywords": "夜间模式, 暗黑模式, 网页夜间模式, 书签工具, 护眼",
         "logo": "夜间模式",
         "hero_h1": "为任何网站添加夜间模式",
@@ -920,7 +920,7 @@
     },
     "wayback-machine": {
         "meta_title": "网页历史 - 查看网页历史 | TableCopy",
-        "meta_description": "使用Internet Archive Wayback Machine即时查看任何网页的存档版本。查看网站的过去。",
+        "meta_description": "使用Internet Archive Wayback Machine即时查看任何网页的存档版本。访问自1996年以来的数十亿历史页面。恢复死链、研究网站演变或重温复古互联网内容，一键搞定。",
         "meta_keywords": "网页历史, 网页存档, internet archive, 查看旧网站, 存档页面",
         "logo": "网页历史",
         "hero_h1": "即时查看网页历史",
@@ -962,7 +962,7 @@
     },
     "highlight-structure": {
         "meta_title": "高亮结构 - 可视化网页布局 | TableCopy",
-        "meta_description": "高亮任何网页上的所有div和标题。可视化页面结构用于调试、SEO分析或网页开发。",
+        "meta_description": "高亮任何网页上的所有div、标题和结构元素。用这个可视化开发者工具调试CSS、分析SEO结构或学习网页设计。非常适合检查页面布局、识别嵌套元素和了解任意网站的构建方式。",
         "meta_keywords": "高亮结构, 可视化网页, 页面结构, 网页调试, seo分析",
         "logo": "高亮结构",
         "hero_h1": "可视化网页结构",
@@ -1360,7 +1360,7 @@
     },
     "web-to": {
         "meta_title": "网页转换器 - 一个书签包含5个必备转换工具 | TableCopy",
-        "meta_description": "将网页转换为PDF、图片、Word、Markdown或文本。5个必备转换工具集于一个便捷的书签中。",
+        "meta_description": "一键将网页转换为PDF、图片、Word、Markdown或文本。5个必备转换工具集于一个便捷的书签。保存文章离线阅读、 capture网站截图做演示、导出内容进行编辑，或从任意网页提取干净文本。",
         "meta_keywords": "网页转换器, 网页转PDF, 网页转图片, 网页转Word, bookmarklet, 网页工具",
         "logo": "网页转换器",
         "hero_h1": "5 Web Conversion Tools<br>in One Bookmark",

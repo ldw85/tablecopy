@@ -201,7 +201,7 @@
     },
     "web-to-image": {
         "meta_title": "웹을 이미지로 - 웹페이지를 이미지로 변환 | TableCopy",
-        "meta_description": "웹을 이미지로: 브라우저에서 로컬로 모든 웹페이지를 고해상도 PNG로 캡처하는 무료 북마크릿입니다.",
+        "meta_description": "웹을 이미지로: 브라우저에서 로컬로 모든 웹페이지를 고해상도 PNG로 캡처하는 무료 북마크릿입니다. 프레젠테이션, 클라이언트 데모, 디자인 검토 및 시각적 문서를 위한 전체 페이지 스크린샷 캡처에 이상적입니다. 업로드 불필요, 100% 프라이빗.",
         "meta_keywords": "웹을 이미지로, 웹페이지를 이미지로 저장, html을 이미지로, 북마크릿, 로컬 캡처",
         "logo": "Web to Image",
         "hero_h1": "클릭 한 번으로 웹페이지를 PNG로 캡처 — 웹을 이미지로 (전체 페이지, 고해상도)",
@@ -449,7 +449,7 @@
     },
     "privacy": {
         "meta_title": "[TRANSLATION NEEDED] Privacy Policy - TableCopy",
-        "meta_description": "[TRANSLATION NEEDED] Learn how TableCopy protects your privacy. No data collection, no storage, all local processing. Your data stays on your device.",
+        "meta_description": "Learn how TableCopy protects your privacy. No data collection, no storage, all local processing. Your data never leaves your device. Built with privacy-first technology for worry-free web data extraction.",
         "page_title": "Privacy Policy",
         "last_updated": "Last Updated: January 1, 2025",
         "intro_p": "[TRANSLATION NEEDED] At TableCopy, we take your privacy seriously. This Privacy Policy explains how we handle information. Because TableCopy is designed as a privacy-first tool that processes all data locally in your browser, our approach to data is fundamentally different from most web services.",
@@ -509,7 +509,7 @@
     },
     "terms": {
         "meta_title": "[TRANSLATION NEEDED] Terms of Service - TableCopy",
-        "meta_description": "[TRANSLATION NEEDED] Terms of service and usage guidelines for TableCopy's free web conversion tools. Know your rights and responsibilities.",
+        "meta_description": "Terms of service and usage guidelines for TableCopy's free web conversion tools. Learn your rights and responsibilities when using our privacy-focused browser tools. All data processed locally, no tracking, no storage.",
         "page_title": "Terms of Service",
         "last_updated": "Last Updated: January 1, 2025",
         "intro_p": "[TRANSLATION NEEDED] Welcome to TableCopy. These Terms of Service govern your use of our website and tools. By accessing or using TableCopy, you agree to these terms. If you do not agree, please do not use our services.",
@@ -792,7 +792,7 @@
     },
     "web-translator": {
         "meta_title": "Web Translator - Translate Any Webpage Instantly | TableCopy",
-        "meta_description": "Translate any webpage to your language using Google Translate. One-click bookmarklet for instant webpage translation.",
+        "meta_description": "Translate any webpage to your language using Google Translate. One-click bookmarklet for instant webpage translation. Read foreign articles, browse international news, and understand content in 100+ languages. Perfect for travel research, language learning, and accessing global information.",
         "meta_keywords": "web translator, translate webpage, google translate bookmarklet, page translator, free translation",
         "logo": "Web Translator",
         "hero_h1": "Translate Any Webpage Instantly",
@@ -875,7 +875,7 @@
     },
     "dark-mode": {
         "meta_title": "Dark Mode - Add Dark Mode to Any Website | TableCopy",
-        "meta_description": "Enable dark mode on any website instantly. Reduce eye strain and save battery with one-click dark mode bookmarklet.",
+        "meta_description": "Enable dark mode on any website instantly. Reduce eye strain, block blue light, and save battery on OLED screens with one click. Perfect for nighttime browsing, reading, and extended work sessions.",
         "meta_keywords": "dark mode, night mode, website dark mode, bookmarklet, eye protection",
         "logo": "Dark Mode",
         "hero_h1": "Dark Mode for Any Website",
@@ -920,7 +920,7 @@
     },
     "wayback-machine": {
         "meta_title": "Wayback Machine - View Webpage History | TableCopy",
-        "meta_description": "Instantly view archived versions of any webpage using the Internet Archive Wayback Machine. See how websites looked in the past.",
+        "meta_description": "Instantly view archived versions of any webpage using the Internet Archive Wayback Machine. Access billions of historical pages dating back to 1996. Recover dead links, research website evolution, or revisit vintage internet content with one click.",
         "meta_keywords": "wayback machine, webpage history, internet archive, view old websites, archived pages",
         "logo": "Wayback Machine",
         "hero_h1": "View Webpage History Instantly",
@@ -962,7 +962,7 @@
     },
     "highlight-structure": {
         "meta_title": "Highlight Structure - Visualize Webpage Layout | TableCopy",
-        "meta_description": "Highlight all divs and headers on any webpage. Visualize page structure for debugging, SEO analysis, or web development.",
+        "meta_description": "Highlight all divs, headers, and structural elements on any webpage. Debug CSS, analyze SEO structure, or learn web design with this visual developer tool. Perfect for inspecting page layouts, identifying nested elements, and understanding how any site is built.",
         "meta_keywords": "highlight structure, visualize webpage, page structure, web debugging, seo analysis",
         "logo": "Highlight Structure",
         "hero_h1": "Visualize Webpage Structure",
@@ -1302,7 +1302,7 @@
     },
     "web-to": {
         "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
-        "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
+        "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text with one click. 5 essential conversion tools unified in one convenient bookmark. Save articles for offline reading, capture websites for presentations, export content for editing, or extract clean text from any webpage.",
         "meta_keywords": "web converter, web to pdf, web to image, web to word, bookmarklet, web tools",
         "logo": "웹 변환기",
         "hero_h1": "5 Web Conversion Tools<br>in One Bookmark",

@@ -202,7 +202,7 @@
     },
     "web-to-image": {
         "meta_title": "Web a Imagen - Convierte Página Web a Imagen | TableCopy",
-        "meta_description": "Web a Imagen: bookmarklet gratuito para capturar cualquier página web como un PNG de alta resolución localmente en el navegador.",
+        "meta_description": "Web a Imagen: bookmarklet gratuito para capturar cualquier página web como un PNG de alta resolución localmente en el navegador. Perfecto para capturar capturas de pantalla completas para presentaciones, demos de clientes, revisiones de diseño y documentación visual. Sin carga requerida, 100% privado.",
         "meta_keywords": "web a imagen, guardar página web como imagen, html a imagen, bookmarklet, captura local",
         "logo": "Web to Image",
         "hero_h1": "Captura de páginas web a PNG con un clic — Web a Imagen (Página completa, Alta resolución)",
@@ -510,7 +510,7 @@
     },
     "terms": {
         "meta_title": "[TRANSLATION NEEDED] Terms of Service - TableCopy",
-        "meta_description": "[TRANSLATION NEEDED] Terms of service and usage guidelines for TableCopy's free web conversion tools. Know your rights and responsibilities.",
+        "meta_description": "Términos de servicio y directrices de uso para las herramientas gratuitas de conversión web de TableCopy. Conoce tus derechos y responsabilidades al usar nuestras herramientas专注浏览器. Todos los datos procesados localmente, sin seguimiento, sin almacenamiento.",
         "page_title": "Terms of Service",
         "last_updated": "Last Updated: January 1, 2025",
         "intro_p": "[TRANSLATION NEEDED] Welcome to TableCopy. These Terms of Service govern your use of our website and tools. By accessing or using TableCopy, you agree to these terms. If you do not agree, please do not use our services.",
@@ -793,7 +793,7 @@
     },
     "web-translator": {
         "meta_title": "Web Translator - Translate Any Webpage Instantly | TableCopy",
-        "meta_description": "Translate any webpage to your language using Google Translate. One-click bookmarklet for instant webpage translation.",
+        "meta_description": "Traduce cualquier página web a tu idioma usando Google Translate. Bookmarklet de un clic para traducción instantánea de páginas. Lee artículos extranjeros, navega noticias internacionales y entiende contenido en más de 100 idiomas. Perfecto para investigación de viajes, aprendizaje de idiomas y acceso a información global.",
         "meta_keywords": "web translator, translate webpage, google translate bookmarklet, page translator, free translation",
         "logo": "Web Translator",
         "hero_h1": "Translate Any Webpage Instantly",
@@ -876,7 +876,7 @@
     },
     "dark-mode": {
         "meta_title": "Dark Mode - Add Dark Mode to Any Website | TableCopy",
-        "meta_description": "Enable dark mode on any website instantly. Reduce eye strain and save battery with one-click dark mode bookmarklet.",
+        "meta_description": "Habilita el modo oscuro en cualquier sitio web al instante. Reduce la fatiga visuelle, bloquea la luz azules y ahorra batería en pantallas OLED con un clic. Perfecto para navegación nocturna, lectura y sesiones de trabajo prolongadas.",
         "meta_keywords": "dark mode, night mode, website dark mode, bookmarklet, eye protection",
         "logo": "Dark Mode",
         "hero_h1": "Dark Mode for Any Website",
@@ -921,7 +921,7 @@
     },
     "wayback-machine": {
         "meta_title": "Wayback Machine - View Webpage History | TableCopy",
-        "meta_description": "Instantly view archived versions of any webpage using the Internet Archive Wayback Machine. See how websites looked in the past.",
+        "meta_description": "Ve versiones archivadas de cualquier página web usando Internet Archive Wayback Machine. Accede a miles de millones de páginas históricas desde 1996. Recupera enlaces muertos, investiga la evolución de sitios web o revisa contenido vintage de internet con un clic.",
         "meta_keywords": "wayback machine, webpage history, internet archive, view old websites, archived pages",
         "logo": "Wayback Machine",
         "hero_h1": "View Webpage History Instantly",
@@ -963,7 +963,7 @@
     },
     "highlight-structure": {
         "meta_title": "Highlight Structure - Visualize Webpage Layout | TableCopy",
-        "meta_description": "Highlight all divs and headers on any webpage. Visualize page structure for debugging, SEO analysis, or web development.",
+        "meta_description": "Resalta todos los divs, encabezados y elementos estructurales en cualquier página web. Depura CSS, analiza estructura SEO o aprende diseño web con esta herramienta visual. Perfecto para inspeccionar diseños de página, identificar elementos anidados y entender cómo se construye cualquier sitio.",
         "meta_keywords": "highlight structure, visualize webpage, page structure, web debugging, seo analysis",
         "logo": "Highlight Structure",
         "hero_h1": "Visualize Webpage Structure",
@@ -1303,7 +1303,7 @@
     },
     "web-to": {
         "meta_title": "Web Converter - 5 Essential Conversion Tools in One Bookmark | TableCopy",
-        "meta_description": "Convert webpages to PDF, images, Word, Markdown, or text. 5 essential conversion tools unified in one convenient bookmark.",
+        "meta_description": "Convierte páginas web a PDF, imágenes, Word, Markdown o texto con un clic. 5 herramientas de conversión esenciales unite en un conveniente bookmark. Guarda artículos para lectura sin conexión, captura sitios web para presentaciones, exporta contenido para editar o extrae texto limpio de cualquier página web.",
         "meta_keywords": "web converter, web to pdf, web to image, web to word, bookmarklet, web tools",
         "logo": "Conversor Web",
         "hero_h1": "5 Web Conversion Tools<br>in One Bookmark",
