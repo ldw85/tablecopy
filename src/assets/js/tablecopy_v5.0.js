@@ -39,6 +39,8 @@
             alert_library_failed: 'Failed to load the required library. Please check your network or ad blocker.',
             col_menu_copy_comma: 'Copy (Comma-separated)',
             col_menu_copy_newline: 'Copy (Newline-separated)',
+            col_menu_copy_comma_first: 'Copy First Line Only (Comma)',
+            col_menu_copy_newline_first: 'Copy First Line Only (Newline)',
             message_copied: 'Copied to clipboard!'
         },
         zh: {
@@ -67,6 +69,8 @@
             alert_library_failed: '无法加载所需组件。请检查您的网络连接或广告拦截器。',
             col_menu_copy_comma: '复制 (逗号分隔)',
             col_menu_copy_newline: '复制 (换行分隔)',
+            col_menu_copy_comma_first: '仅复制首行 (逗号)',
+            col_menu_copy_newline_first: '仅复制首行 (换行)',
             message_copied: '已复制到剪贴板！'
         }
     };
@@ -617,13 +621,16 @@
         return cleanText;
     }
 
-    function copyColumn(cell, table, separator) {
+    function copyColumn(cell, table, separator, firstLineOnly = false) {
         const columnIndex = cell.cellIndex;
         const columnData = [];
         // [MODIFIED] Iterate over all rows to get the full column data, not just tbody
         table.querySelectorAll('tr').forEach(row => {
             if (row.cells[columnIndex]) {
-                columnData.push(row.cells[columnIndex].innerText.trim());
+                const cellText = row.cells[columnIndex].innerText.trim();
+                // [NEW] If firstLineOnly is true, only take the first line
+                const textToUse = firstLineOnly ? cellText.split('\n')[0].trim() : cellText;
+                columnData.push(textToUse);
             }
         });
         navigator.clipboard.writeText(columnData.join(separator));
@@ -655,13 +662,29 @@
         const menu = document.createElement('div');
         menu.className = `${CSS_PREFIX}col-menu`;
 
+        // Original options
         const commaBtn = document.createElement('button');
         commaBtn.setAttribute('data-separator', ',');
+        commaBtn.setAttribute('data-first-line', 'false');
         commaBtn.innerText = t('col_menu_copy_comma');
+
         const newlineBtn = document.createElement('button');
         newlineBtn.setAttribute('data-separator', '\\n');
+        newlineBtn.setAttribute('data-first-line', 'false');
         newlineBtn.innerText = t('col_menu_copy_newline');
-        menu.append(commaBtn, newlineBtn);
+
+        // [NEW] First line only options
+        const commaFirstBtn = document.createElement('button');
+        commaFirstBtn.setAttribute('data-separator', ',');
+        commaFirstBtn.setAttribute('data-first-line', 'true');
+        commaFirstBtn.innerText = t('col_menu_copy_comma_first');
+
+        const newlineFirstBtn = document.createElement('button');
+        newlineFirstBtn.setAttribute('data-separator', '\\n');
+        newlineFirstBtn.setAttribute('data-first-line', 'true');
+        newlineFirstBtn.innerText = t('col_menu_copy_newline_first');
+
+        menu.append(commaBtn, newlineBtn, commaFirstBtn, newlineFirstBtn);
 
         const rect = cellElement.getBoundingClientRect();
         const overlayRect = overlay.getBoundingClientRect();
@@ -671,7 +694,8 @@
         menu.addEventListener('click', e => {
             if(e.target.tagName === 'BUTTON') {
                 const separator = e.target.getAttribute('data-separator');
-                copyColumn(cellElement, table, separator === '\\n' ? '\n' : ',');
+                const firstLineOnly = e.target.getAttribute('data-first-line') === 'true';
+                copyColumn(cellElement, table, separator === '\\n' ? '\n' : ',', firstLineOnly);
                 showMessage(overlay);
                 menu.remove();
             }
