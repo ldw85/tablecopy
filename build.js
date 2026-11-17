@@ -68,6 +68,14 @@ async function build() {
         console.log('✅ Copied robots.txt to dist root.');
     }
 
+    // 2.4 复制 ads.txt 到根目录（Google AdSense 配置）
+    const adsSrc = path.join(config.srcDir, 'ads.txt');
+    const adsDist = path.join(config.distDir, 'ads.txt');
+    if (await fs.pathExists(adsSrc)) {
+        await fs.copy(adsSrc, adsDist);
+        console.log('✅ Copied ads.txt to dist root.');
+    }
+
     // 3. 加载所有翻译文件
     const allTranslations = {};
     for (const lang of config.languages) {
